@@ -1,0 +1,395 @@
+<?php
+include_once('./_common.php');
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="<?php echo G5_THEME_URL ?>/_Css/poll.css"/>
+<script src="<?php echo G5_THEME_URL ?>/_Js/poll.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+	$("#faq p").hide();
+	$("#faq h3").click(function() {
+		$(this).next("p").slideToggle("fast")
+				.siblings("p:visible").slideUp("fast");
+		$(this).toggleClass("active")
+				.siblings("h3").removeClass("active");
+		});
+});
+//]]>
+</script>
+</head>
+
+<body>
+<p><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/title5.png" width="810" height="164" alt="" /></p>
+<div id="contents" class="w810">
+    <p class="top-info">
+        안녕하세요? 본 설문조사는 <span class="accent">‘직장 내 괴롭힘’ 관련 우리 기관의 실태를 파악</span>하기 위한 것입니다. 조사결과는 <span class="accent">직장 내 괴롭힘
+        실태를 파악하고 향후에 발생 가능한 문제를 예방・완화할 수 있는 방안을 마련하는 데 중요한 자료로 활용</span>됩니다. <span class="accent">응답내용은
+        철저히 비밀이 보장</span>됩니다. 또한 응답하신 내용은 조사의 목적 외에는 활용되지 않습니다. 바쁘시더라도 잠시 시간을 내어
+        적극 협조해 주시기 바랍니다. 감사합니다.
+    </p>
+    <ul class="survey-list">
+        <li>
+            <h3>
+                Q1. 귀하의 성별은 어떻게 되십니까? [1개 선택]
+            </h3>
+            <ul class="survey-answer">
+                <li>
+                    <input type="radio" name="check1" id="check1_1" value="check1_1"></input>
+                    <label for="check1_1">① 남성</label>
+                </li>
+                <li>
+                    <input type="radio" name="check1" id="check1_2" value="check1_2"></input>
+                    <label for="check1_2">② 여성</label>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h3>
+                Q2. 현재 귀하의 나이는 어떻게 되십니까? [1개 선택]
+            </h3>
+            <ul class="survey-answer">
+                <li>
+                    <input type="radio" name="check2" id="check2_1" value="check2_1"></input>
+                    <label for="check2_1">① 만 20~29세</label>
+                </li>
+                <li>
+                    <input type="radio" name="check2" id="check2_2" value="check2_2"></input>
+                    <label for="check2_2">② 만 30~39세</label>
+                </li>
+                <li>
+                    <input type="radio" name="check2" id="check2_3" value="check2_3"></input>
+                    <label for="check2_3">③ 만 40~49세</label>
+                </li>
+                <li>
+                    <input type="radio" name="check2" id="check2_4" value="check2_4"></input>
+                    <label for="check2_4">④ 만 50~59세</label>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h3>
+                Q3. 최근 5년간 우리 기관에서 ‘직장 내 괴롭힘’을 직접적(피해, 가해) 또는 간접적(목격하거나 상담을 해준)으로 경험한 적이 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;있습니까? [1개 선택]
+            </h3>
+            <div class="middle-info">
+                ‘직장 내 괴롭힘’이란 <span class="accent">① 직장에서 근무하는 사람에 대하여 지위 또는 관계의 우위에 있는 사람이 적정한 범위를 넘어 정신적・신체적 고통을
+                 가하거나, ② 조직 차원 또는 다수인이 특정 사람에 대하여 정신적・신체적 고통을 가하는 등 직장 환경을 악화시키는 행위</span>를 말합니다.
+            </div>
+            <ul class="survey-answer">
+                <li>
+                    <input type="radio" name="check3" id="check3_1" value="check3_1"></input>
+                    <label for="check3_1">① 있다.</label>
+                </li>
+                <li>
+                    <input type="radio" name="check3" id="check3_2" value="check3_2"></input>
+                    <label for="check3_2">② 없다.</label>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h3>
+                Q4. 우리 기관에 설치되어 있는 고충상담창구에 귀하께서 실제로 상담한 내용을 선택하여 주세요. [중복 선택]
+            </h3>
+            <ul class="survey-answer">
+                <li>
+                    <input type="checkbox" name="check4" id="check4_1" value="check4_1"></input>
+                    <label for="check4_1">① 성희롱(성폭력)</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="check4" id="check4_2" value="check4_2"></input>
+                    <label for="check4_2">② 직장 내 괴롭힘</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="check4" id="check4_3" value="check4_3"></input>
+                    <label for="check4_3">③ 과도한 스트레스 및 정서상 문제</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="check4" id="check4_4" value="check4_4"></input>
+                    <label for="check4_4">④ 인사평가 등</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="check4" id="check4_5" value="check4_5"></input>
+                    <label for="check4_5">⑤ 근로조건(임금, 근로시간 등)</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="check4" id="check4_6" value="check4_6"></input>
+                    <label for="check4_6">⑥ 기타(　　　　　　　　)</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="check4" id="check4_7" value="check4_7"></input>
+                    <label for="check4_7">⑦ 상담한 적이 없다</label>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h3>
+                Q5. 한국지방재정공제회 노동조합은 직원의 고민, 불만, 고충, 갈등 등에 대해 상담해주거나 해결을 위한 지원을 하고 있습니 　　까? [1개 선택]
+            </h3>
+            <ul class="survey-answer">
+                <li>
+                    <input type="radio" name="check5" id="check5_1" value="check5_1"></input>
+                    <label for="check5_1">① 상담을 하거나 해결을 위해 지원해준다.</label>
+                </li>
+                <br>
+                <li>
+                    <input type="radio" name="check5" id="check5_2" value="check5_2"></input>
+                    <label for="check5_2">② 상담을 하거나 해결을 위해 지원하지 않는다.</label>
+                </li>
+                <br>
+                <li>
+                    <input type="radio" name="check5" id="check5_3" value="check5_3"></input>
+                    <label for="check5_3">③ 상담을 하거나 해결을 위해 지원을 하는지 모르겠다.</label>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h3>
+                Q6. 우리 기관의 특징에 해당하는 것을 선택해 주세요. [중복 선택]
+            </h3>
+            <ul class="survey-answer">
+                <li>
+                    <input type="checkbox" name="check6" id="check6_1" value="check6_1"></input>
+                    <label for="check6_1">① 상사와 부하의 의사소통이 원활하다.</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="check6" id="check6_2" value="check6_2"></input>
+                    <label for="check6_2">② 잔업이 많다. / 휴식을 취하기 어렵다.</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="check6" id="check6_3" value="check6_3"></input>
+                    <label for="check6_3">③ 실패를 허용하지 않는다. / 실패에 대한 허용도가 낮다.</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="check6" id="check6_4" value="check6_4"></input>
+                    <label for="check6_4">④ 직원간의 경쟁이 치열하다. / 평가와 실적과의 연관이 철저하다.</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="check6" id="check6_5" value="check6_5"></input>
+                    <label for="check6_5">⑤ 직원끼리 서로 간섭하지 않는다.</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="check6" id="check6_6" value="check6_6"></input>
+                    <label for="check6_6">⑥ 직원끼리 간섭이 심하다.</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="check6" id="check6_7" value="check6_7"></input>
+                    <label for="check6_7">⑦ 명확한 업무 분담과 역할 분담이 이루어지고 있다.</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="check6" id="check6_8" value="check6_8"></input>
+                    <label for="check6_8">⑧ 직원들이 대부분 늦게 퇴근하는 편이다.</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="check6" id="check6_9" value="check6_9"></input>
+                    <label for="check6_9">⑨ 회식이 자주 있으며 회식 참여가 직접적/간접적으로 강제되는 편이다.</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="check6" id="check6_10" value="check6_10"></input>
+                    <label for="check6_10">⑩ 기타(구체적으로　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　)</label>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h3>
+                Q7. 우리 기관에 해당하는 항목을 선택해 주세요. [행별 1개 선택]
+            </h3>
+            <br>
+            <table width="810" class="t_style4" >
+                <colspan>
+                    <col width="26%" />
+                    <col width="18.5%" />
+                    <col width="18.5%" />
+                    <col width="18.5%" />
+                    <col width="18.5%" />
+                </colspan>
+                <thead>
+                  <tr class="head">
+                    <th>구분</th>
+                    <th>1. 매우 그렇다</th>
+                    <th>2. 그런 편이다</th>
+                    <th>3. 별로 그렇지 않다</th>
+                    <th>4. 전혀 그렇지 않다</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="q">①<p class="con">고민, 불만, 문제라고 느끼는 일을 회사에 말하기 쉽다.</p></td>
+                        <td><input type="radio" name="q1" id="radio1_1" value="1_1" /></td>
+                        <td><input type="radio" name="q1" id="radio1_2" value="1_2" /></td>
+                        <td><input type="radio" name="q1" id="radio1_3" value="1_3" /></td>
+                        <td><input type="radio" name="q1" id="radio1_4" value="1_4" /></td>
+                    </tr>
+                    <tr>
+                        <td class="q">②<p class="con">고민, 불만, 문제라고 느끼는 일을 상사에게 말하기 쉽다.</p></td>
+                        <td><input type="radio" name="q2" id="radio2_1" value="2_1" /></td>
+                        <td><input type="radio" name="q2" id="radio2_2" value="2_2" /></td>
+                        <td><input type="radio" name="q2" id="radio2_3" value="2_3" /></td>
+                        <td><input type="radio" name="q2" id="radio2_4" value="2_4" /></td>
+                    </tr>
+                    <tr>
+                        <td class="q">③<p class="con">동료 간 의사소통이 원활하다.</p></td>
+                        <td><input type="radio" name="q3" id="radio3_1" value="3_1" /></td>
+                        <td><input type="radio" name="q3" id="radio3_2" value="3_2" /></td>
+                        <td><input type="radio" name="q3" id="radio3_3" value="3_3" /></td>
+                        <td><input type="radio" name="q3" id="radio3_4" value="3_4" /></td>
+                    </tr>
+                    <tr>
+                        <td class="q">④<p class="con">업무 외적인 것을 상담할 수 있는 동료가 있다.</p></td>
+                        <td><input type="radio" name="q4" id="radio4_1" value="4_1" /></td>
+                        <td><input type="radio" name="q4" id="radio4_2" value="4_2" /></td>
+                        <td><input type="radio" name="q4" id="radio4_3" value="4_3" /></td>
+                        <td><input type="radio" name="q4" id="radio4_4" value="4_4" /></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+        </li>
+        <li>
+            <h3>
+                Q8. 최근 5년간 귀하의 (직속)상사가 귀하에게 한 모든 행동과 귀하와 같은 직장 동료에게 한 모든 행동을 선택하여 주세요.<br>　　[중복 선택]
+            </h3>
+            <br>
+            <table width="810" class="t_style4" >
+                <colspan>
+                    <col width="47.5%" />
+                    <col width="17.5%" />
+                    <col width="17.5%" />
+                    <col width="17.5%" />
+                </colspan>
+                <thead>
+                  <tr class="head">
+                    <th>구분</th>
+                    <th>1. 직접 겪은 일</th>
+                    <th>2. 목격한 일</th>
+                    <th>3. 해당 없음</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="q">①<p class="con wide">부하직원의 실수에 대해 폭언, 욕설, 인격을 모독하는 발언을 하며 강하게 질책했다.</p></td>
+                        <td><input type="checkbox" name="q5" id="checkbox5_1" value="5_1" /></td>
+                        <td><input type="checkbox" name="q5" id="checkbox5_2" value="5_2" /></td>
+                        <td><input type="checkbox" name="q5" id="checkbox5_3" value="5_3" /></td>
+                    </tr>
+                    <tr>
+                        <td class="q">②<p class="con wide">문서를 던지면서 수정을 지시했다.</p></td>
+                        <td><input type="checkbox" name="q6" id="checkbox6_1" value="6_1" /></td>
+                        <td><input type="checkbox" name="q6" id="checkbox6_2" value="6_2" /></td>
+                        <td><input type="checkbox" name="q6" id="checkbox6_3" value="6_3" /></td>
+                    </tr>
+                    <tr>
+                        <td class="q">③<p class="con wide">부하직원을 질책할 때 사물(펜, 종이 등)을 이용하여 건드렸다.</p></td>
+                        <td><input type="checkbox" name="q7" id="checkbox7_1" value="7_1" /></td>
+                        <td><input type="checkbox" name="q7" id="checkbox7_2" value="7_2" /></td>
+                        <td><input type="checkbox" name="q7" id="checkbox7_3" value="7_3" /></td>
+                    </tr>
+                    <tr>
+                        <td class="q">④<p class="con wide">“앞으로 한번만 더 실수하면 회사생활 접어야 할 거다.”라는 등의 해고 관련 말을 했다.</p></td>
+                        <td><input type="checkbox" name="q8" id="checkbox8_1" value="8_1" /></td>
+                        <td><input type="checkbox" name="q8" id="checkbox8_2" value="8_2" /></td>
+                        <td><input type="checkbox" name="q8" id="checkbox8_3" value="8_3" /></td>
+                    </tr>
+                    <tr>
+                        <td class="q">⑤<p class="con wide">다른 직원들 앞에서 사물(책상, 의자 등)을 치면서 언성을 높여 질책했다.</p></td>
+                        <td><input type="checkbox" name="q9" id="checkbox9_1" value="9_1" /></td>
+                        <td><input type="checkbox" name="q9" id="checkbox9_2" value="9_2" /></td>
+                        <td><input type="checkbox" name="q9" id="checkbox9_3" value="9_3" /></td>
+                    </tr>
+                    <tr>
+                        <td class="q">⑥<p class="con wide">“머리는 폼으로 달고 다니냐”, “월급을 주는게 아깝다.” 등과 같이 무시 또는 조롱하는 말을 했다.</p></td>
+                        <td><input type="checkbox" name="q10" id="checkbox10_1" value="10_1" /></td>
+                        <td><input type="checkbox" name="q10" id="checkbox10_2" value="10_2" /></td>
+                        <td><input type="checkbox" name="q10" id="checkbox10_3" value="10_3" /></td>
+                    </tr>
+                    <tr>
+                        <td class="q">⑦<p class="con wide">아무 이유 없이 본래 업무에서 소외시켰다.<br>(업무배제, 회의 제외, 사무실 외의 장소에 고립 등)</p></td>
+                        <td><input type="checkbox" name="q11" id="checkbox11_1" value="11_1" /></td>
+                        <td><input type="checkbox" name="q11" id="checkbox11_2" value="11_2" /></td>
+                        <td><input type="checkbox" name="q11" id="checkbox11_3" value="11_3" /></td>
+                    </tr>
+                    <tr>
+                        <td class="q">⑧<p class="con wide">업무수행에 필요한 정보를 일부러 주지 않거나 기한에 맞출 수 없는 일을 지시하기도 했다.</p></td>
+                        <td><input type="checkbox" name="q12" id="checkbox12_1" value="12_1" /></td>
+                        <td><input type="checkbox" name="q12" id="checkbox12_2" value="12_2" /></td>
+                        <td><input type="checkbox" name="q12" id="checkbox12_3" value="12_3" /></td>
+                    </tr>
+                    <tr>
+                        <td class="q">⑨<p class="con wide">능력에 걸맞지 않는 아주 낮은 수준의 일을 계속 시켰다.</p></td>
+                        <td><input type="checkbox" name="q13" id="checkbox13_1" value="13_1" /></td>
+                        <td><input type="checkbox" name="q13" id="checkbox13_2" value="13_2" /></td>
+                        <td><input type="checkbox" name="q13" id="checkbox13_3" value="13_3" /></td>
+                    </tr>
+                    <tr>
+                        <td class="q">⑩<p class="con wide">개인적인 취미・성향에 관한 사항을 필요 이상으로 간섭했다. <span class="blue">[개인사항에 대한 간섭]</span></p></td>
+                        <td><input type="checkbox" name="q14" id="checkbox14_1" value="14_1" /></td>
+                        <td><input type="checkbox" name="q14" id="checkbox14_2" value="14_2" /></td>
+                        <td><input type="checkbox" name="q14" id="checkbox14_3" value="14_3" /></td>
+                    </tr>
+                    <tr>
+                        <td class="q">⑪<p class="con wide">지각을 자주 하는 부하직원을 다른 직원들 앞에서 질책했다. <span class="blue">[공개적인 망신 주기]</span></p></td>
+                        <td><input type="checkbox" name="q15" id="checkbox15_1" value="15_1" /></td>
+                        <td><input type="checkbox" name="q15" id="checkbox15_2" value="15_2" /></td>
+                        <td><input type="checkbox" name="q15" id="checkbox15_3" value="15_3" /></td>
+                    </tr>
+                    <tr>
+                        <td class="q">⑫<p class="con wide">명확한 업무지시(업무담당, 업무내용, 업무일정 등)을 하지않아 업무수행을 어렵게 만들었다.</p></td>
+                        <td><input type="checkbox" name="q16" id="checkbox16_1" value="16_1" /></td>
+                        <td><input type="checkbox" name="q16" id="checkbox16_2" value="16_2" /></td>
+                        <td><input type="checkbox" name="q16" id="checkbox16_3" value="16_3" /></td>
+                    </tr>
+                    <tr>
+                        <td class="q">⑬<p class="con wide">업무와 무관한 사적인 일(개인적인 심부름 등)을 지시하거나 간접적으로 강제했다. <span class="blue">[사적노무 강요]</span></p></td>
+                        <td><input type="checkbox" name="q17" id="checkbox17_1" value="17_1" /></td>
+                        <td><input type="checkbox" name="q17" id="checkbox17_2" value="17_2" /></td>
+                        <td><input type="checkbox" name="q17" id="checkbox17_3" value="17_3" /></td>
+                    </tr>
+                    <tr>
+                        <td class="q">⑭<p class="con wide">퇴근 후 또는 휴일에 여러 차례 연락(이메일, 문자, 전화, SNS 등)을 하였다.</p></td>
+                        <td><input type="checkbox" name="q18" id="checkbox18_1" value="18_1" /></td>
+                        <td><input type="checkbox" name="q18" id="checkbox18_2" value="18_2" /></td>
+                        <td><input type="checkbox" name="q18" id="checkbox18_3" value="18_3" /></td>
+                    </tr>
+                    <tr>
+                        <td class="q">⑮<p class="con wide">개인 의사와 상관없이 회식이나 친목모임 참여를 강요했다.</p></td>
+                        <td><input type="checkbox" name="q19" id="checkbox19_1" value="19_1" /></td>
+                        <td><input type="checkbox" name="q19" id="checkbox19_2" value="19_2" /></td>
+                        <td><input type="checkbox" name="q19" id="checkbox19_3" value="19_3" /></td>
+                    </tr>
+                    <tr>
+                        <td class="q">⑯<p class="con wide">명확한 업무지시(업무담당, 업무내용, 업무일정 등)을 하지않아 업무수행을 어렵게 만들었다.</p></td>
+                        <td><input type="checkbox" name="q20" id="checkbox20_1" value="20_1" /></td>
+                        <td><input type="checkbox" name="q20" id="checkbox20_2" value="20_2" /></td>
+                        <td><input type="checkbox" name="q20" id="checkbox20_3" value="20_3" /></td>
+                    </tr>
+                    <tr>
+                        <td class="q">⑰<p class="con wide">기타 폭행, 폭언, 모욕, 협박, 따돌림, 무시, 지나친 감시, 차별, 과도한 업무부여, 사적 노무 지시, 업무배제, 퇴사강요, 정당한 이유 없이 휴가나 병가를 못 쓰도록 하는 행위로 스트레스를 받은 적이 있다.</p></td>
+                        <td><input type="checkbox" name="q21" id="checkbox21_1" value="21_1" /></td>
+                        <td><input type="checkbox" name="q21" id="checkbox21_2" value="21_2" /></td>
+                        <td><input type="checkbox" name="q21" id="checkbox21_3" value="21_3" /></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+        </li>
+        <li>
+            <h3>
+                Q9. Q8번에서 선택한 사항과 관련하여 구체적인 사실관계나 개인적인 의견을 자유롭게 기술해 주세요.
+            </h3>
+            <p class="blue mt5">
+                ※비밀보장 등의 염려가 있다면 IP 추적이 차단되는 ‘레드휘슬’을 통해 작성하여 주시기 바랍니다.
+            </p>
+            <textarea class="textarea" rows="10"></textarea>
+        </li>
+    </ul>
+    
+    <p class="bottom-info">- 귀한 시간을 내어 설문에 응답해 주셔서 진심으로 감사합니다 -</p>
+  
+  <p class="btn"><span class="btn_confirm2"><a href="#"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_confirm2.png" alt="확인" width="auto" height="46" /></a> </span><span class="btn_next2"><a href="#"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_close.png" alt="나가기" width="138" height="46" /></a> </span> </p>
+</div>
+</body>
+</html>

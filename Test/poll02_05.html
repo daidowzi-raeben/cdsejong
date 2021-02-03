@@ -1,0 +1,75 @@
+<?php
+include_once('./_common.php');
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="<?php echo G5_THEME_URL ?>/_Css/poll.css"/>
+<script src="<?php echo G5_THEME_URL ?>/_Js/poll.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+	$("#faq p").hide();
+	$("#faq h3").click(function() {
+		$(this).next("p").slideToggle("fast")
+				.siblings("p:visible").slideUp("fast");
+		$(this).toggleClass("active")
+				.siblings("h3").removeClass("active");
+		});
+});
+//]]>
+</script>
+</head>
+
+<body>
+<p><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/title4.jpg" width="900" height="178" /></p>
+<div id="contents">
+  <table width="830" class="t_style3" >
+  <tr>
+    <th width="150" rowspan="6" class="head"><p>윤리</p>
+      <p class="head">헌장</p></th>
+    <td width="549">세종교육원은 국내 기업 및 공기업에 윤리적 핵심 가치를 제공한다.
+기업과 공기업의 윤리적 기업문화가 정착 될 수 있도록 기여하고, 지속가능한
+성장이 이루어 질 수 있도록 꾸준한 노력을 다한다.  
+</td>
+    <td width="121" class="bold"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;명심한다</td>
+  </tr>
+  <tr>
+    <td>우리는 윤리적 가치를 기본으로 삼아 사회적 가치 창출을 실현 할 수 있도록 전직원이
+노력하여 고객의 신뢰와 사랑을 받는 세종교육원이 되고자 한다.
+이에 모든 임직원은 올바른 행동과 가치판단을 기준으로 윤리헌장을 제정하고 실천한다. 
+</td>
+    <td class="bold"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;명심한다</td>
+  </tr>
+  <tr>
+    <td>우리는 고도의 윤리적 가치를 바탕으로 정직하고 공정한 자세로 업무에 임하며 청렴문화 확산과 투명성 확보에 노력한다.
+</td>
+    <td class="bold"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;명심한다</td>
+  </tr>
+  <tr>
+    <td>우리는 고객의 권익을 최대한 보호하며 친절하고 편리한 서비스 제공에 앞장선다.</td>
+    <td class="bold"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;명심한다</td>
+  </tr>
+  <tr>
+    <td>우리는 화합과 상생의 정신을 바탕으로 협력적인 노사관계를 구축하고, 노사가 함께 공동의 번영을 추구한다.
+</td>
+    <td class="bold"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;명심한다</td>
+  </tr>
+  <tr>
+    <td>우리는 사회 구성원의 일원으로 사회적 책임에 최선을 다하며 지역사회와 국가 발전에 공헌한다.
+</td>
+    <td class="bold"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;명심한다</td>
+  </tr>
+  </table>
+  <p class="sign">20<input type="text" class="i_text" title="레이블 텍스트" size="3">년 <input type="text" class="i_text" title="레이블 텍스트" size="3">월 <input type="text" class="i_text" title="레이블 텍스트" size="3">일<span class="gap">소속<input type="text" class="i_text" title="레이블 텍스트" size="20"></span><span class="gap">이름<input type="text" class="i_text" title="레이블 텍스트" size="20"></span>
+  </p>
+  <p class="explan none" id="row_1">만약 위 질문 중 어느 것이라도 Yes와 No 사이의 선택을 망설이는 항목이 있을 경우, 청탁방지담당관(감사팀장) 또는 윤리경영 담당 직원과의 
+면담(☎02-3274-2072), 그 외 LOFA 헬프라인 시스템(홈페이지, 익명신고 전용 App)을 이용한 내부신고를 통해 윤리적 갈등상황을 함께 
+해결할 수 있습니다.</p>
+  <p class="btn"><span class="btn_sign"><a href="#"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_sign.gif" alt="확인" width="auto" height="46" /></a></span><span class="btn_next"></span></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<?php
+include_once('./_common.php');
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="<?php echo G5_THEME_URL ?>/_Css/poll.css"/>
+<script src="<?php echo G5_THEME_URL ?>/_Js/poll.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+	$("#faq p").hide();
+	$("#faq h3").click(function() {
+		$(this).next("p").slideToggle("fast")
+				.siblings("p:visible").slideUp("fast");
+		$(this).toggleClass("active")
+				.siblings("h3").removeClass("active");
+		});
+});
+//]]>
+</script>
+</head>
+
+<body>
+<p><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/title1_3.jpg" width="900" height="178" /></p>
+<div id="contents">
+	<form name="poll" action="poll01_04.html" method="post">
+	<p class="title subtitle_gap2">3. 사회책임지수</p>
+	<table width="830" class="t_style4" >
+    <thead>
+      <tr class="head">
+        <th style="width:50px;">구분</th>
+        <th>항목</th>
+        <th style="width:100px;">매우<br />
+        그렇지
+        않다</th>
+        <th style="width:50px;">그렇지<br />
+        않다</th>
+        <th style="width:50px;">보통</th>
+        <th style="width:50px;">그렇다</th>
+        <th style="width:50px;">매우<br />
+        그렇다</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td>31문</td>
+        <td class="q">우리 기관의 구성원은 사회공헌활동을 적극 장려하며 지원하고 있다.</span>
+</td>
+        <td><input type="radio" name="q31" id="radio7" value="1" /></td>
+        <td><input type="radio" name="q31" id="radio14" value="2" /></td>
+        <td><input type="radio" name="q31" id="radio39" value="3" /></td>
+        <td><input type="radio" name="q31" id="radio40" value="4" /></td>
+        <td><input type="radio" name="q31" id="radio41" value="5" /></td>
+      </tr>
+      <tr>
+        <td>32문</td>
+        <td class="q">우리 기관은 윤리경영을 통해 정부, 자치단체 및 유관기관 단체 등과의 관계가 개선되었다.
+</span></td>
+        <td><input type="radio" name="q32" id="radio8" value="1" /></td>
+        <td><input type="radio" name="q32" id="radio13" value="2" /></td>
+        <td><input type="radio" name="q32" id="radio44" value="3" /></td>
+        <td><input type="radio" name="q32" id="radio42" value="4" /></td>
+        <td><input type="radio" name="q32" id="radio43" value="5" /></td>
+      </tr>
+      <tr>
+        <td>33문</td>
+        <td class="q">우리 기관은 윤리경영 실천은 기업에 대한 신뢰도를 높여 투명사회에 기여하고 있다.
+</td>
+        <td><input type="radio" name="q33" id="radio9" value="1" /></td>
+        <td><input type="radio" name="q33" id="radio12" value="2" /></td>
+        <td><input type="radio" name="q33" id="radio45" value="3" /></td>
+        <td><input type="radio" name="q33" id="radio46" value="4" /></td>
+        <td><input type="radio" name="q33" id="radio47" value="5" /></td>
+      </tr>
+      <tr>
+        <td>34문</td>
+        <td class="q">우리 기관의 구성원은 물품 장비의 구매, 이용, 폐기에 이르는 전 과정에서 환경문제를 적극적으로 고려하고 있다. <span class="blue">[예 : 공공기관 에너지 이용 합리화 추진 기준 준수]</span></td>
+        <td><input type="radio" name="q34" id="radio10" value="1" /></td>
+        <td><input type="radio" name="q34" id="radio11" value="2" /></td>
+        <td><input type="radio" name="q34" id="radio50" value="3" /></td>
+        <td><input type="radio" name="q34" id="radio49" value="4" /></td>
+        <td><input type="radio" name="q34" id="radio48" value="5" /></td>
+      </tr>
+    </tbody>
+  </table>
+  
+	<p class="btn">
+		<span class="btn_next2">
+			<input type="image" src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_next.gif" alt="다음" width="108" height="46" />
+		</span> 
+		<span class="btn_next2">
+			<a href="javascript:history.back();"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_prev.gif" alt="이전" width="108" height="46" /></a> 
+		</span>
+	</p>
+	<?php
+	foreach($_POST as $key => $value) {
+		if($key != "x" && $key != "y") {
+			echo "<input type='hidden' name='".$key."' value='".$value."'>";
+		}
+	} 
+	?>
+	</form>
+</div>
+</body>
+</html>

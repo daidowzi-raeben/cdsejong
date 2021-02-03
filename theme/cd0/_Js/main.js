@@ -16,13 +16,18 @@ $(function() {
 		slidesToScroll: 1,
 	});
 	
-	/*
+
 	$('.msec-member').find('.login-btn').click(function(){
-		
+		$('.login-input').hide();
+		$('.logout-input').show();
+		$('.login-other').find('.login').hide();
+		$('.login-other').find('.logout').css({'display':'inline-block'});
 	});
 
 	$('.msec-member').find('.logout-btn').click(function(){
-		
+		$('.logout-input').hide();
+		$('.login-input').show();
+		$('.login-other').find('.logout').hide();
+		$('.login-other').find('.login').css({'display':'inline-block'});
 	});
-	*/
 });

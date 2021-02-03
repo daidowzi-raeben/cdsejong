@@ -72,7 +72,8 @@ $adm_menu_cookie = array(
 );
 
 if( ! empty($_COOKIE['g5_admin_btn_gnb']) ){
-    $adm_menu_cookie['container'] = 'container-small';
+    #$adm_menu_cookie['container'] = 'container-small';
+	$adm_menu_cookie['container'] = '';
     $adm_menu_cookie['gnb'] = 'gnb_small';
     $adm_menu_cookie['btn_gnb'] = 'btn_gnb_open';
 }
@@ -106,23 +107,39 @@ function imageview(id, w, h)
 <header id="hd">
     <h1><?php echo $config['cf_title'] ?></h1>
     <div id="hd_top">
-        <button type="button" id="btn_gnb" class="btn_gnb_close <?php echo $adm_menu_cookie['btn_gnb'];?>">메뉴</button>
-       <div id="logo"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>"><img src="<?php echo G5_ADMIN_URL ?>/img/logo.png" alt="<?php echo get_text($config['cf_title']); ?> 관리자"></a></div>
-
+		<!--<button type="button" id="btn_gnb" class="btn_gnb_close <?php echo $adm_menu_cookie['btn_gnb'];?>">메뉴</button>-->
+		<div id="logo"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>"><img src="<?php echo G5_ADMIN_URL ?>/img_cd/admin_logo2.png" alt="<?php echo get_text($config['cf_title']); ?> 관리자"></a></div>
+		
+		<div id="tnb2">
+			<ul>
+				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/member_list.php" class="tnb_service">회원정보관리</a></li>
+				<!--<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/survey_list.php" class="tnb_service">설문관리</a></li>-->
+				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/belong_list.php" class="tnb_service">회원소속관리</a></li>
+				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/process_ce_list.php" class="tnb_service">과정관리</a></li>
+				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/board/board.php?bo_table=e_campaign" class="tnb_service">커뮤니티관리</a></li>
+				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/board/board.php?bo_table=schedule" class="tnb_service">일정관리</a></li>
+				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/learn_list.php" class="tnb_service">학습진도관리</a></li>
+				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/board/board.php?bo_table=notice" class="tnb_service">홈페이지관리</a></li>
+				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/point_list.php" class="tnb_service">마일리지관리</a></li>
+				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/config_form.php" class="tnb_service">시스템관리</a></li>
+			</ul>
+		</div>
+		
         <div id="tnb">
             <ul>
-                <li class="tnb_li"><a href="<?php echo G5_URL ?>/" class="tnb_community" target="_blank" title="커뮤니티 바로가기">커뮤니티 바로가기</a></li>
-                <li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/service.php" class="tnb_service">부가서비스</a></li>
+				<li class="tnb_li"><a href="<?php echo G5_URL ?>/" class="tnb_community" target="_blank" title="홈페이지 바로가기">홈페이지 바로가기</a></li>
+                <!--<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/service.php" class="tnb_service">부가서비스</a></li>
                 <li class="tnb_li"><button type="button" class="tnb_mb_btn">관리자<span class="./img/btn_gnb.png">메뉴열기</span></button>
                     <ul class="tnb_mb_area">
                         <li><a href="<?php echo G5_ADMIN_URL ?>/member_form.php?w=u&amp;mb_id=<?php echo $member['mb_id'] ?>">관리자정보</a></li>
                         <li id="tnb_logout"><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
                     </ul>
-                </li>
+                </li>-->
+				<li class="tnb_li" id="tnb_logout"><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
             </ul>
         </div>
     </div>
-    <nav id="gnb" class="gnb_large <?php echo $adm_menu_cookie['gnb']; ?>">
+    <nav id="gnb" class="gnb_large">
         <h2>관리자 주메뉴</h2>
         <ul class="gnb_ul">
             <?php
@@ -144,7 +161,7 @@ function imageview(id, w, h)
                 $button_title = $menu['menu'.$key][0][1];
             ?>
             <li class="gnb_li<?php echo $current_class;?>">
-                <button type="button" class="btn_op menu-<?php echo $key; ?> menu-order-<?php echo $jj; ?>" title="<?php echo $button_title; ?>"><?php echo $button_title;?></button>
+                <!--<button type="button" class="btn_op menu-<?php echo $key; ?> menu-order-<?php echo $jj; ?>" title="<?php echo $button_title; ?>"><?php echo $button_title;?></button>-->
                 <div class="gnb_oparea_wr">
                     <div class="gnb_oparea">
                         <h3><?php echo $menu['menu'.$key][0][1];?></h3>

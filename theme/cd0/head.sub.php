@@ -54,6 +54,7 @@ if($config['cf_add_meta'])
 	add_stylesheet('<link rel="stylesheet" href="'. G5_THEME_CSS_URL .'/styleDefault.css?ver='.G5_CSS_VER.'">', 0); 
 	add_stylesheet('<link rel="stylesheet" href="'. G5_THEME_CSS_URL .'/layout.css?ver='.G5_CSS_VER.'">', 0); 
 	add_stylesheet('<link rel="stylesheet" href="'. G5_THEME_CSS_URL .'/main.css?ver='.G5_CSS_VER.'">', 0);
+	add_stylesheet('<link rel="stylesheet" href="'. G5_THEME_URL .'/_Css/content.css?ver='.G5_CSS_VER.'">', 0);
 	
 	add_stylesheet('<link rel="stylesheet" href="'. G5_THEME_JS_URL .'/jquery/slick-theme.css?ver='.G5_CSS_VER.'">', 0);
 	add_stylesheet('<link rel="stylesheet" href="'. G5_THEME_JS_URL .'/jquery/slick.css?ver='.G5_CSS_VER.'">', 0);

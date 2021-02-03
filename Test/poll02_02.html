@@ -1,0 +1,120 @@
+<?php
+include_once('./_common.php');
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="<?php echo G5_THEME_URL ?>/_Css/poll.css"/>
+<script src="<?php echo G5_THEME_URL ?>/_Js/poll.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+	$("#faq p").hide();
+	$("#faq h3").click(function() {
+		$(this).next("p").slideToggle("fast")
+				.siblings("p:visible").slideUp("fast");
+		$(this).toggleClass("active")
+				.siblings("h3").removeClass("active");
+		});
+});
+//]]>
+</script>
+</head>
+
+<body>
+<p><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/title1.jpg" width="900" height="178" /></p>
+<div id="contents">
+  <p class="title">2. 부패 위험도 자가진단</p>
+  <p class="sub_text">다음의 각 질문에 “Yes” 또는 “No”로 답해 보시고 “Yes”라고 답한 것이 몇 개나 되는지를 합산한 다음 ‘부패 위험도 
+점수 해석법’에 따른 진단결과를 토대로 내가 부패에 빠질 위험이 어느 정도나 있는지를 스스로 진단 해 보시기바랍니다.
+</p>
+  <table width="830" border="1" cellspacing="0" cellpadding="0" class="t_style1" >
+  <tr>
+    <th>① 현대 사회에서 돈은 성의의 표시이자 마음이기에 업무상일 경우에도 5만원 이하의 <br />
+      소액은 받아도 무방하다고 생각하십니까?</th>
+    <td><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;YES</span><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;NO</span></td>
+  </tr>
+  <tr>
+    <th>② 현 직장과는 별도로 개인적인 사업이나 장사, 파트타임 직업을 가지고 있습니까?</th>
+    <td><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;YES</span><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;NO</span></td>
+  </tr>
+  <tr>
+    <th>③ 특별한 대가나 혜택을 주지는 않았으나 다른 사람들로부터 향응이나 접대를 받은 적이 있습니까?</th>
+    <td><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;YES</span><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;NO</span></td>
+  </tr>
+  <tr>
+    <th>④ 공적인 거래관계에 있는 사람들로부터 돈을 빌리거나 재정적인 의무관계를 지고 있습니까?</th>
+    <td><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;YES</span><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;NO</span></td>
+  </tr>
+  <tr>
+    <th>⑤ 법령에서 정한 사전 승인 없이 금전적 보상이 따르는 다른 기관의 임원을 맡거나 출강하신 적이 있습니까?</th>
+    <td><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;YES</span><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;NO</span></td>
+  </tr>
+  <tr>
+    <th>⑥ 친구나 선배 등 지인들로부터 부탁을 받고 남에게 일 처리를 잘해 달라고 부탁한 적이 있습니까?</th>
+    <td><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;YES</span><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;NO</span></td>
+  </tr>
+  <tr>
+    <th>⑦ 부패한 행위를 하면 발각되는 경우보다 발각되지 않는 경우가 훨씬 많다고 생각하십니까?</th>
+    <td><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;YES</span><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;NO</span></td>
+  </tr>
+  <tr>
+    <th>⑧ 부패한 행위로 인해 체포되더라도 실제로 처벌에까지 이르는 경우가 적다고 생각하십니까?</th>
+    <td><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;YES</span><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;NO</span></td>
+  </tr>
+  <tr>
+    <th>⑨ 행동강령, 청탁금지법령을 준수하면 손해를 보게 된다고 생각하십니까?</th>
+    <td><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;YES</span><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;NO</span></td>
+  </tr>
+  <tr>
+    <th>⑩ 공공기관 직원은 사회적 사명과 보람, 명예는 중요하지 않다고 생각하십니까?</th>
+    <td><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;YES</span><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;NO</span></td>
+  </tr>
+  </table>
+  <p class="btn_explan"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_explan.gif" alt="해설보기" width="126" height="36" class="pointer" onclick="FaqToggleDetail( 'row_1' )"/></p>
+  <div class="explan none" id="row_1">
+    <p class="explan_text">부패 위험도 점수 해석법</p>
+    <p>• 자기 진단 결과 부패 위험도가 높게 나왔다고 해서 반드시 그 사람이 부패한 행위를 하게 된다는 것은 아니다.<br />
+  • 낮게 나온 사람들에 비해 부패의 유혹에 빠질 개연성이 상대적으로 높다는 것을 의미할 뿐이다. 자가 진단 결과 부패 위험도가 높게 나온 
+  사람은 <br />
+  자신이 그런 유혹에 빠질 위험이 높다는 점을 인식하고 평소의 직장 생활에서나 일상생활에서 스스로 조심하고 자신의 대인관계 방식과 
+  업무 처리 <br />
+  방식을 바꿔 간다면 얼마든지 그런 위험에서 자신을 보호할 수 있는 것이다.
+  <br />
+  ※ “Yes”라고 응답한 개수에 따른 진단결과는 다음과 같습니다.<br /></p>
+    <table border="1" cellspacing="0" cellpadding="0" class="t_style2" >
+    <tr>
+      <th class="head">응답개수</th>
+      <td class="head">진단결과</td>
+    </tr>
+    <tr>
+      <th>7개 이상</th>
+      <td>“매우 위험”한 상태임. 즉각적인 생활 및 업무 방식과 태도의 변화를 꾀하여야 합니다. 만일 현재 담당하고 있는 
+직책이 상당한 이권에 영향을 미칠 수 있는 직책이라면 비교적 그렇지 않은 직책으로 전보를 희망하는 것까지도 
+생각해보기 바랍니다.
+</td>
+    </tr>
+    <tr>
+      <th>4개~ 6개</th>
+      <td>“대체로 위험”한 상태임. 직장생활을 처음 시작할 때의 초심으로 돌아가 자신의 삶의 가치와 의미를 되새기,며 
+매사에 부패로부터 자신을 보호하기 위한 세심한 주의를 기울이도록 노력하기 바랍니다.</td>
+    </tr>
+    <tr>
+      <th>2개~ 3개</th>
+      <td>“대체로 안전”한 상태임. 그러나 “예”라고 응답한 사항과 관련해서는 주의를 기울어야 합니다.</td>
+    </tr>
+    <tr>
+      <th>0개~ 1개</th>
+      <td>“매우 안전”한 상태임. 그러나 자만은 금물이며 부패의 유혹은 언제라도 당신을 혼미하게 만들 수 있다는 것을 
+명심하시기 바랍니다.
+</td>
+    </tr>
+    </table>
+  </div>
+  <p class="btn"><span class="btn_confirm"><a href="#"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_confirm.gif" alt="확인" width="auto" height="46" /></a></span><span class="btn_next"><a href="poll02_03.html"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_next.gif" alt="다음" width="108" height="46" /></a></span></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<?php
+include_once('./_common.php');
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="<?php echo G5_THEME_URL ?>/_Css/poll.css"/>
+<script src="<?php echo G5_THEME_URL ?>/_Js/poll.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+	$("#faq p").hide();
+	$("#faq h3").click(function() {
+		$(this).next("p").slideToggle("fast")
+				.siblings("p:visible").slideUp("fast");
+		$(this).toggleClass("active")
+				.siblings("h3").removeClass("active");
+		});
+});
+//]]>
+</script>
+</head>
+
+<body>
+<p><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/title1_5.jpg" width="900" height="178" /></p>
+<div id="contents">
+  <p class="title subtitle_gap2">5. 교육니즈 및 자료 분류</p>
+  <table width="830" class="t_style5" >
+    <thead>
+      <tr class="head">
+        <th> 다음의 아래의 내용을 선택해 주세요. </th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td><p class="ssub_title">문40-1.  우리 회사의 청렴도 제고 및 윤리의식 함양을 위한 교육으로 어떤 방법이 가장 효과적이라고 생각하십니까?</span>
+<p>
+  <input type="radio" name="q40-1" id="radio" value="1" />
+  ① 윤리포털 시스템 교육
+  <input type="radio" name="q40-1" id="radio2" value="2" />
+  ② 워크숍 교육
+  <input type="radio" name="q40-1" id="radio3" value="3" />
+③ 집합교육
+<input type="radio" name="q40-1" id="radio4" value="4" />
+④ 법원공판 등 탐방교육</p><p>
+  <input type="radio" name="q40-1" id="radio5" value="5" />
+  ⑤ 기타(
+  <input name="textfield" type="text" id="textfield" value="여기에 내용을 적어주세요." size="80" />
+  )</p>
+  </td>
+      </tr>
+      <tr>
+        <td><p class="ssub_title">문40-2. 윤리경영 교육을 적극적으로 추진해야 할 사업부문은?</span>
+<p>
+  <input type="radio" name="q40-2" id="radio" value="1" />
+  ①구매계약부문                   
+  <input type="radio" name="q40-2" id="radio2" value="2" />
+  ②자금관련부문
+  <input type="radio" name="q40-2" id="radio3" value="3" />
+  ③인사관련부문</p>
+<p>
+  <input type="radio" name="q40-2" id="radio5" value="4" />
+  ④ 기타(
+  <input name="textfield" type="text" id="textfield" value="여기에 내용을 적어주세요." size="80" />
+  )</p></td>
+      </tr>
+      <tr>
+        <td><p class="ssub_title">문41. 윤리경영과 관련한 전반적인 업무에 대해 건의할 사항이 있으시면 무엇이든 좋으니, 말씀해 주시기 바랍니다.
+</span>
+<p>
+    <input name="textfield" type="text" id="textfield" value="여기에 내용을 적어주세요." size="100" />
+</p></td>
+      </tr>
+      </tbody>
+      <thead>
+      <tr class="head">
+        <th> 지금부터는 자료 분류용 질문입니다.</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><p class="ssub_title">문42.  귀하의 연령대는 어떻게 되십니까?
+</span>
+<p>
+  <input type="radio" name="q42" id="radio" value="1" />
+  ① 20대
+  <input type="radio" name="q42" id="radio2" value="2" />
+  ② 30대
+  <input type="radio" name="q42" id="radio3" value="3" />
+③ 40대
+<input type="radio" name="q42" id="radio4" value="4" />
+④ 50대</p></td>
+      </tr>
+       <tr>
+        <td><p class="ssub_title">문43.  귀하의 총 재직 년수는 어떻게 되십니까?</span>
+          <p>
+  <input type="radio" name="q43" id="radio" value="1" />
+  ① 5년  이하 
+  <input type="radio" name="q43" id="radio2" value="2" />
+  ② 6-10년  
+  <input type="radio" name="q43" id="radio3" value="3" />
+③ 11-15년  
+<input type="radio" name="q43" id="radio4" value="4" />
+④ 16-20년
+<input type="radio" name="q43" id="radio6" value="5" />
+⑤ 21년 이상</p></td>
+      </tr>
+       <tr>
+        <td><p class="ssub_title">문44.  귀하의 직급은 어떻게 되십니까?
+          <p>
+  <input type="radio" name="q44" id="radio" value="1" />
+  ① 20대
+  <input type="radio" name="q44" id="radio2" value="2" />
+  ② 30대
+  <input type="radio" name="q44" id="radio3" value="3" />
+③ 40대
+<input type="radio" name="q44" id="radio4" value="4" />
+④ 50대</p></td>
+      </tr>
+      <tr>
+        <td><p class="ssub_title">문45.  귀하가 속해 있는 소속은 어디에 해당 되십니까?
+          <p>
+  <input type="radio" name="q45" id="radio7" value="1" />
+  ①감사실 
+  <input type="radio" name="q45" id="radio8" value="2" />
+  ②고객경영지원실
+  <input type="radio" name="q45" id="radio9" value="3" />
+③금융부실책임조사본부
+<input type="radio" name="q45" id="radio10" value="4" />
+④정리총괄부
+<input type="radio" name="q45" id="radio11" value="5" />
+⑤금융정리부
+<input type="radio" name="q45" id="radio12" value="6" />
+⑥기금관리부 
+<input type="radio" name="q45" id="radio13" value="7" />
+<br />
+⑦기금운용실
+<input type="radio" name="q45" id="radio14" value="8" />
+⑧기획조정부 
+<input type="radio" name="q45" id="radio15" value="9" />
+⑨리스크총괄부 
+<input type="radio" name="q45" id="radio16" value="10" />
+⑩리스크관리부 
+<input type="radio" name="q45" id="radio17" value="11" />
+⑪저축은행관리부
+<input type="radio" name="q45" id="radio18" value="12" />
+⑫법무실
+<input type="radio" name="q45" id="radio19" value="13" />
+⑬비서실
+<input type="radio" name="q45" id="radio20" value="14" />
+<br />
+⑭혁신경영실 
+<input type="radio" name="q45" id="radio21" value="15" />
+⑮안전관리실 
+<input type="radio" name="q45" id="radio22" value="16" />
+⑯인사지원부 정보시스템실 
+<input type="radio" name="q45" id="radio23" value="18" />
+⑱채권관리부 
+<input type="radio" name="q45" id="radio24" value="19" />
+⑲회수총괄부 
+<input type="radio" name="q45" id="radio25" value="20" />
+⑳PF자산회수부
+<input type="radio" name="q45" id="radio26" value="21" />
+<br />
+㉑홍보실
+<input type="radio" name="q45" id="radio27" value="22" />
+㉒보험리스크관리실 
+<input type="radio" name="q45" id="radio28" value="23" />
+㉓국제협력실
+<input type="radio" name="q45" id="radio29" value="24" />
+㉔프놈펜사무소
+<input type="radio" name="q45" id="radio30" value="25" />
+㉕인재개발실
+<input type="radio" name="q45" id="radio31" value="26" />
+㉖예금보험연구센터 </p></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <p class="btn"><span class="btn_next2"><a href="poll01_05.html"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_end.gif" alt="응답완료" width="auto" height="46" /></a> </span><span class="btn_next2"><a href="poll01_04.html"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_prev.gif" alt="이전" width="108" height="46" /></a> </span> </p>
+</div>
+</body>
+</html>

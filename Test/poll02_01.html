@@ -1,0 +1,70 @@
+<?php
+include_once('./_common.php');
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="<?php echo G5_THEME_URL ?>/_Css/poll.css"/>
+<script src="<?php echo G5_THEME_URL ?>/_Js/poll.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+	$("#faq p").hide();
+	$("#faq h3").click(function() {
+		$(this).next("p").slideToggle("fast")
+				.siblings("p:visible").slideUp("fast");
+		$(this).toggleClass("active")
+				.siblings("h3").removeClass("active");
+		});
+});
+//]]>
+</script>
+</head>
+
+<body>
+<p><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/title1.jpg" width="900" height="178" /></p>
+<div id="contents">
+  <p class="title">1. 윤리적 갈등상황에 대한 자가진단</p>
+  <p class="sub_text">윤리적 갈등 상황에서 올바른 의사결정과 행동을 위하여 그때마다 결단이 필요하며, 상충하는 요구 사이에서 
+  후회 없는 판단을 내리기는 매우 어려운 일입니다. 다음의 질문을 통하여 자신의 의사결정이 윤리 기준에 부합되는지를 
+  판단해보기 바랍니다.</p>
+  <table width="830" border="1" cellspacing="0" cellpadding="0" class="t_style1" >
+  <tr>
+    <th>① 나의 업무행위는 합법적이고 규정을 준수하는 행위인가?</th>
+    <td><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;YES</span><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;NO</span></td>
+  </tr>
+  <tr>
+    <th>② 나의 업무행위는 내가 근무하는 부서의 가치, 원칙, 정책에 위반하지 않는가?</th>
+    <td><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;YES</span><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;NO</span></td>
+  </tr>
+  <tr>
+    <th>③ 나는 업무 수행 판단 시, 도덕적으로 올바른 판단에 입각하여 행동하는가?</th>
+    <td><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;YES</span><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;NO</span></td>
+  </tr>
+  <tr>
+    <th>④ 나의 업무수행으로 부당한 이익이나 손해를 보는 사람이 있는가?</th>
+    <td><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;YES</span><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;NO</span></td>
+  </tr>
+  <tr>
+    <th>⑤ 나는 나의 업무상 재량행위를 적법하게 사용하고 있는가?</th>
+    <td><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;YES</span><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;NO</span></td>
+  </tr>
+  <tr>
+    <th>⑥ 현재 내가 하고 있는 업무행위가 진심으로 나의 행동에 부끄럽게 느끼는가?</th>
+    <td><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;YES</span><span class="gap"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;NO</span></td>
+  </tr>
+  </table>
+  <p class="btn_explan"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_explan.gif" alt="해설보기" width="126" height="36" class="pointer" onclick="FaqToggleDetail( 'row_1' )"/></p>
+  <p class="explan none" id="row_1">만약 위 질문 중 어느 것이라도 Yes와 No 사이의 선택을 망설이는 항목이 있을 경우, 청탁방지담당관(감사팀장) 또는 윤리경영 담당 직원과의 
+면담(☎02-3409-5270), 그 외 SEJONG 헬프라인 시스템(홈페이지, 익명신고 전용 App)을 이용한 내부신고를 통해 윤리적 갈등상황을 함께 
+해결할 수 있습니다.</p>
+  <p class="btn">
+   <span class="btn_confirm"><a href="#"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_confirm.gif" alt="확인" width="auto" height="46" /></a></span><span class="btn_next"><a href="poll02_02.html"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_next.gif" alt="다음" width="108" height="46" /></a>
+   </span>
+  </p>
+</div>
+</body>
+</html>

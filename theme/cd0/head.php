@@ -90,5 +90,15 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
  <!--  <span class="mn-bar"></span>-->
 </header>
 	<!-- s: #container-wrap //-->
+	<?php if ($is_member && basename($_SERVER['PHP_SELF']) != 'index.php') {  ?>
+	<div id="container-wrap"  class="scontainer" >
+		<div class="login-sub logout">
+			<p class="info"><?php echo $member['mb_name']?>님 환영합니다. </p>
+			<a href="#n" class="modify-btn"><span>내 정보수정</span></a>
+			<a href="#n" class="logout-btn"><span>로그아웃</span></a>
+			<!-- <a href="#n" class="login-btn"><span>로그인</span></a> -->
+		</div>
+	<?php } else {  ?>
 	<div id="container-wrap"  class="div-wrap mcontainer" >
 		<div id="contents" class="div-cont">
+	<?php } ?>

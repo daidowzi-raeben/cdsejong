@@ -1,0 +1,88 @@
+<?php
+include_once('./_common.php');
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="<?php echo G5_THEME_URL ?>/_Css/poll.css"/>
+<script src="<?php echo G5_THEME_URL ?>/_Js/poll.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+	$("#faq p").hide();
+	$("#faq h3").click(function() {
+		$(this).next("p").slideToggle("fast")
+				.siblings("p:visible").slideUp("fast");
+		$(this).toggleClass("active")
+				.siblings("h3").removeClass("active");
+		});
+});
+//]]>
+</script>
+</head>
+
+<body>
+<p><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/title3.jpg" width="900" height="178" /></p>
+<div id="contents">
+  <p class="sub_text2">우리회 임직원은 청탁금지법상 제2호 제1호 규정에 따라 ‘공직자등’에 속하는 신분으로서 언제 어디에서든 <br />
+    ‘청탁금지법’을 준수하고 동법의 제정 취지에 따라 부정한 청탁행위와 금품등 수수행위를 하여서는 안 될 것입니다. <br />
+    아래에 열거된 청탁금지법 십계명을 늘 명심하여 ‘신뢰받는 SEJONG人’으로서 청렴한 직장생활과 직장문화 조성에 최선을 다해 주시기 
+  바랍니다. </p>
+  <table width="830" border="1" cellspacing="0" cellpadding="0" class="t_style3" >
+  <tr>
+    <th rowspan="5" class="head"><p>부정청탁</p>
+      <p class="head">금 지</p></th>
+    <td>① 부정청탁 금지사항을 기억한다.</td>
+    <td class="bold"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;명심한다</td>
+  </tr>
+  <tr>
+    <td>② 부정청탁을 하지 않는다.</td>
+    <td class="bold"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;명심한다</td>
+  </tr>
+  <tr>
+    <td>③ 부정청탁을 명시적으로 거절하고 다시 받으면 서면신고 한다.</td>
+    <td class="bold"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;명심한다</td>
+  </tr>
+  <tr>
+    <td>④ 불명확한 경우 신속히 컨설팅을 요청한다.</td>
+    <td class="bold"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;명심한다</td>
+  </tr>
+  <tr>
+    <td>⑤ 공무수행사인(위원회 위원 등)도 부정청탁 및 금품 수수 대상임을 유념한다.</td>
+    <td class="bold"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;명심한다</td>
+  </tr>
+  <tr>
+    <th rowspan="5" class="head">금품수수<br />
+금 지</th>
+    <td>⑥ 처벌기준을 명심한다.</td>
+    <td class="bold"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;명심한다</td>
+  </tr>
+  <tr>
+    <td>⑦ 외부인을 만날 때 유의한다.</td>
+    <td class="bold"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;명심한다</td>
+  </tr>
+  <tr>
+    <td>⑧ 애매한 경우 각자 부담한다.</td>
+    <td class="bold"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;명심한다</td>
+  </tr>
+  <tr>
+    <td>⑨ 영수증은 잘 챙겨 둔다.</td>
+    <td class="bold"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;명심한다</td>
+  </tr>
+  <tr>
+    <td>⑩ 배우자도 대상이라는 사실을 유념한다.</td>
+    <td class="bold"><input type="checkbox" name="checkbox" id="checkbox" />&nbsp;명심한다</td>
+  </tr>
+  </table>
+  <p class="sign">20<input type="text" class="i_text" title="레이블 텍스트" size="3">년 <input type="text" class="i_text" title="레이블 텍스트" size="3">월 <input type="text" class="i_text" title="레이블 텍스트" size="3">일<span class="gap">소속<input type="text" class="i_text" title="레이블 텍스트" size="20"></span><span class="gap">이름<input type="text" class="i_text" title="레이블 텍스트" size="20"></span>
+  </p>
+  <p class="explan none" id="row_1">만약 위 질문 중 어느 것이라도 Yes와 No 사이의 선택을 망설이는 항목이 있을 경우, 청탁방지담당관(감사팀장) 또는 윤리경영 담당 직원과의 
+면담(☎02-3274-2072), 그 외 LOFA 헬프라인 시스템(홈페이지, 익명신고 전용 App)을 이용한 내부신고를 통해 윤리적 갈등상황을 함께 
+해결할 수 있습니다.</p>
+  <p class="btn"><span class="btn_sign"><a href="#"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_sign.gif" alt="확인" width="auto" height="46" /></a></span><span class="btn_next"><a href="poll02_05.html"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_next.gif" alt="다음" width="108" height="46" /></a></span></p>
+</div>
+</body>
+</html>

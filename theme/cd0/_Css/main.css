@@ -13,7 +13,7 @@
 .msec-cont .msec-member .login-input li {margin-top:10px}
 .msec-cont .msec-member .login-input li:first-child{margin-top:0;}
 
-.msec-cont .msec-member .logout-input{margin:20px auto 0 auto; padding-bottom:37px;padding-right:92px;box-sizing:border-box; font-size:0; background:url(../_Img/Main/login_img.gif) no-repeat; width:268px; position:Relative;}
+.msec-cont .msec-member .logout-input{display:none;margin:20px auto 0 auto; padding-bottom:37px;padding-right:92px;box-sizing:border-box; font-size:0; background:url(../_Img/Main/login_img.gif) no-repeat; width:268px; position:Relative;}
 .msec-cont .msec-member .logout-input button{width:86px;background:url(../_Img/Main/msec-login.png) no-repeat center 20px #2b559a; padding-top:40px;box-sizing:border-box; height:90px;display:block;font-weight:600; text-align:center;  font-size:16px; color:#fff; border:none; position:absolute; right:0; top:0;}
 .msec-cont .msec-member .logout-input p{ line-height:25px; font-size:16px;  text-align:left; padding-left:67px; letter-spacing:-0.03em; color:#555;}
 .msec-cont .msec-member .logout-input p span{font-weight:600; color:#111 }

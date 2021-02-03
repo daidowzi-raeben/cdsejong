@@ -1,0 +1,155 @@
+<?php
+include_once('./_common.php');
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="<?php echo G5_THEME_URL ?>/_Css/poll.css"/>
+<script src="<?php echo G5_THEME_URL ?>/_Js/poll.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+	$("#faq p").hide();
+	$("#faq h3").click(function() {
+		$(this).next("p").slideToggle("fast")
+				.siblings("p:visible").slideUp("fast");
+		$(this).toggleClass("active")
+				.siblings("h3").removeClass("active");
+		});
+});
+//]]>
+</script>
+</head>
+
+<body>
+<p><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/title1_1.jpg" width="900" height="178" /></p>
+<div id="contents">
+	<form name="poll" action="poll01_02.html" method="post">
+	<p class="title subtitle_gap2">1. 개인 윤리 지수</p>
+	<table width="830" class="t_style4" >
+    <thead>
+		<tr class="head">
+			<th style="width:50px;">구분</th>
+			<th>항목</th>
+			<th style="width:100px;">매우<br />
+			그렇지
+			않다</th>
+			<th style="width:50px;">그렇지<br />
+			않다</th>
+			<th style="width:50px;">보통</th>
+			<th style="width:50px;">그렇다</th>
+			<th style="width:50px;">매우<br />
+			그렇다</th>
+		</tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1문</td>
+        <td class="q">나는 윤리경영 목적과 목표의 달성이 개인적인 가치관, 비전,  성공 등과 부합된다고 여기며 기꺼이 수용하고 있다.</td>
+        <td><input type="radio" name="q1" id="radio" value="1" /></td>
+        <td><input type="radio" name="q1" id="radio20" value="2" /></td>
+        <td><input type="radio" name="q1" id="radio21" value="3" /></td>
+        <td><input type="radio" name="q1" id="radio26" value="4" /></td>
+        <td><input type="radio" name="q1" id="radio27" value="5" /></td>
+      </tr>
+      <tr>
+        <td>2문</td>
+        <td class="q">나는 윤리경영의 정책 및 프로그램에 적극적 동참 의지를 가지고 있다.</td>
+        <td><input type="radio" name="q2" id="radio2" value="1" /></td>
+        <td><input type="radio" name="q2" id="radio19" value="2" /></td>
+        <td><input type="radio" name="q2" id="radio22" value="3" /></td>
+        <td><input type="radio" name="q2" id="radio25" value="4" /></td>
+        <td><input type="radio" name="q2" id="radio28" value="5" /></td>
+      </tr>
+      <tr>
+        <td>3문</td>
+        <td class="q">나의 윤리의식은 기관에 대한 신뢰 와 평판에 영향을 미친다고 생각한다.       </td>
+        <td><input type="radio" name="q3" id="radio3" value="1" /></td>
+        <td><input type="radio" name="q3" id="radio18" value="2" /></td>
+        <td><input type="radio" name="q3" id="radio23" value="3" /></td>
+        <td><input type="radio" name="q3" id="radio24" value="4" /></td>
+        <td><input type="radio" name="q3" id="radio29" value="5" /></td>
+      </tr>
+      <tr>
+        <td>4문</td>
+        <td class="q">나는 기관의 윤리경영 강조가 나를 비윤리적 행동으로 가지 않도록 인도하고 있다고 생각한다.
+</td>
+        <td><input type="radio" name="q4" id="radio4" value="1" /></td>
+        <td><input type="radio" name="q4" id="radio17" value="2" /></td>
+        <td><input type="radio" name="q4" id="radio32" value="3" /></td>
+        <td><input type="radio" name="q4" id="radio31" value="4" /></td>
+        <td><input type="radio" name="q4" id="radio30" value="5" /></td>
+      </tr>
+      <tr>
+        <td>5문</td>
+        <td class="q">우리 기관의 윤리경영 프로그램에 적극 참여하면, 부패근절에 동참할 수 있다고 생각한다.
+</td>
+        <td><input type="radio" name="q5" id="radio5" value="1" /></td>
+        <td><input type="radio" name="q5" id="radio16" value="2" /></td>
+        <td><input type="radio" name="q5" id="radio33" value="3" /></td>
+        <td><input type="radio" name="q5" id="radio34" value="4" /></td>
+        <td><input type="radio" name="q5" id="radio35" value="5" /></td>
+      </tr>
+      <tr>
+        <td>6문</td>
+        <td class="q">우리 기관은 사소한 비윤리적 행위가 근절되고, 이해관계자와 투명한 거래가 정착 되었다.
+</td>
+        <td><input type="radio" name="q6" id="radio6" value="1" /></td>
+        <td><input type="radio" name="q6" id="radio15" value="2" /></td>
+        <td><input type="radio" name="q6" id="radio38" value="3" /></td>
+        <td><input type="radio" name="q6" id="radio36" value="4" /></td>
+        <td><input type="radio" name="q6" id="radio37" value="5" /></td>
+      </tr>
+      <tr>
+        <td>7문</td>
+        <td class="q">기관은 고객의 불만이나 고충을 수렴하고 조치사항 및 결과를 피드백하는 채널을 공식적으로 운영하고 있다.
+</td>
+        <td><input type="radio" name="q7" id="radio7" value="1" /></td>
+        <td><input type="radio" name="q7" id="radio14" value="2" /></td>
+        <td><input type="radio" name="q7" id="radio39" value="3" /></td>
+        <td><input type="radio" name="q7" id="radio40" value="4" /></td>
+        <td><input type="radio" name="q7" id="radio41" value="5" /></td>
+      </tr>
+      <tr>
+        <td>8문</td>
+        <td class="q">기관은 윤리경영을 통해 “갑”, “을“ 고객 구분 없이 정당하고 공정하게 대응한다.</td>
+        <td><input type="radio" name="q8" id="radio8" value="1" /></td>
+        <td><input type="radio" name="q8" id="radio13" value="2" /></td>
+        <td><input type="radio" name="q8" id="radio44" value="3" /></td>
+        <td><input type="radio" name="q8" id="radio42" value="4" /></td>
+        <td><input type="radio" name="q8" id="radio43" value="5" /></td>
+      </tr>
+      <tr>
+        <td>9문</td>
+        <td class="q">우리 기관은 구성원 중에 기관 내부 정보를 사적으로 이용하거나 제3자에게 제공하는 경우가 있다</td>
+        <td><input type="radio" name="q9" id="radio9" value="1" /></td>
+        <td><input type="radio" name="q9" id="radio12" value="2" /></td>
+        <td><input type="radio" name="q9" id="radio45" value="3" /></td>
+        <td><input type="radio" name="q9" id="radio46" value="4" /></td>
+        <td><input type="radio" name="q9" id="radio47" value="5" /></td>
+      </tr>
+      <tr>
+        <td>10문</td>
+        <td class="q">우리 기관은 윤리경영을 통해 개인정보 보호 및 고객정보 보호를 위해 지속적인 노력을 한다.</td>
+        <td><input type="radio" name="q10" id="radio10" value="1" /></td>
+        <td><input type="radio" name="q10" id="radio11" value="2" /></td>
+        <td><input type="radio" name="q10" id="radio50" value="3" /></td>
+        <td><input type="radio" name="q10" id="radio49" value="4" /></td>
+        <td><input type="radio" name="q10" id="radio48" value="5" /></td>
+      </tr>
+    </tbody>
+	
+  </table>
+  
+	<p class="btn">
+		<span class="btn_next2">
+			<input type="image" src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_next.gif" alt="다음" width="108" height="46" />
+		</span> 
+	</p>
+	</form>
+</div>
+</body>
+</html>

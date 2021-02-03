@@ -1,0 +1,119 @@
+<?php
+include_once('./_common.php');
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="<?php echo G5_THEME_URL ?>/_Css/poll.css"/>
+<script src="<?php echo G5_THEME_URL ?>/_Js/poll.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+	$("#faq p").hide();
+	$("#faq h3").click(function() {
+		$(this).next("p").slideToggle("fast")
+				.siblings("p:visible").slideUp("fast");
+		$(this).toggleClass("active")
+				.siblings("h3").removeClass("active");
+		});
+});
+//]]>
+</script>
+</head>
+
+<body>
+<p><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/title1_4.jpg" width="900" height="178" /></p>
+<div id="contents">
+	<form name="poll" action="poll01_05.html" method="post">
+	<p class="title subtitle_gap2">4. 청렴문화 지수</p>
+  <table width="830" class="t_style4" >
+    <thead>
+      <tr class="head">
+        <th style="width:50px;">구분</th>
+        <th>항목</th>
+        <th style="width:100px;">매우<br />
+        그렇지
+        않다</th>
+        <th style="width:50px;">그렇지<br />
+        않다</th>
+        <th style="width:50px;">보통</th>
+        <th style="width:50px;">그렇다</th>
+        <th style="width:50px;">매우<br />
+        그렇다</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td>35문</td>
+        <td class="q">나를 포함하여 우리 기관 구성원 중에는 다른 직원 또는 업무관련자로부터 금품이나 향응, 편의 등을 수수하고 있다.</span>
+</td>
+        <td><input type="radio" name="q35" id="radio7" value="1" /></td>
+        <td><input type="radio" name="q35" id="radio14" value="2" /></td>
+        <td><input type="radio" name="q35" id="radio39" value="3" /></td>
+        <td><input type="radio" name="q35" id="radio40" value="4" /></td>
+        <td><input type="radio" name="q35" id="radio41" value="5" /></td>
+      </tr>
+      <tr>
+        <td>36문</td>
+        <td class="q">나를 포함하여 우리 기관 구성원 중에는 사익을 위해 부당하게 업무를 처리하는 경우가 있다.
+
+</span></td>
+        <td><input type="radio" name="q36" id="radio8" value="1" /></td>
+        <td><input type="radio" name="q36" id="radio13" value="2" /></td>
+        <td><input type="radio" name="q36" id="radio44" value="3" /></td>
+        <td><input type="radio" name="q36" id="radio42" value="4" /></td>
+        <td><input type="radio" name="q36" id="radio43" value="5" /></td>
+      </tr>
+      <tr>
+        <td>37문</td>
+        <td class="q">나를 포함하여 우리 기관의 구성원들은 업무를 처리할 때 지연, 학연, 혈연관계를 고려하고 있다.</td>
+        <td><input type="radio" name="q37" id="radio9" value="1" /></td>
+        <td><input type="radio" name="q37" id="radio12" value="2" /></td>
+        <td><input type="radio" name="q37" id="radio45" value="3" /></td>
+        <td><input type="radio" name="q37" id="radio46" value="4" /></td>
+        <td><input type="radio" name="q37" id="radio47" value="5" /></td>
+      </tr>
+      <tr>
+        <td>38문</td>
+        <td class="q">나를 포함하여 우리 기관의 구성원들은 업무와 관련하여 부당하게 압력을 행사하거나 청탁하는 행위를 하지 않는다.</td>
+        <td><input type="radio" name="q38" id="radio10" value="1" /></td>
+        <td><input type="radio" name="q38" id="radio11" value="2" /></td>
+        <td><input type="radio" name="q38" id="radio50" value="3" /></td>
+        <td><input type="radio" name="q38" id="radio49" value="4" /></td>
+        <td><input type="radio" name="q38" id="radio48" value="5" /></td>
+      </tr>
+      <tr>
+        <td>39문</td>
+        <td class="q">우리 기관 구성원들은 부정청탁 및 금품등 수수의 금지에 관한 법률(청탁금지법)을 잘 이해하고 실천하고 있다.</td>
+        <td><input type="radio" name="q39" id="radio10" value="1" /></td>
+        <td><input type="radio" name="q39" id="radio11" value="2" /></td>
+        <td><input type="radio" name="q39" id="radio50" value="3" /></td>
+        <td><input type="radio" name="q39" id="radio49" value="4" /></td>
+        <td><input type="radio" name="q39" id="radio48" value="5" /></td>
+      </tr>
+    </tbody>
+  </table>
+  
+	<p class="btn">
+		<span class="btn_next2">
+			<input type="image" src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_next.gif" alt="다음" width="108" height="46" />
+		</span> 
+		<span class="btn_next2">
+			<a href="javascript:history.back();"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_prev.gif" alt="이전" width="108" height="46" /></a> 
+		</span>
+	</p>
+	<?php
+	foreach($_POST as $key => $value) {
+		if($key != "x" && $key != "y") {
+			echo "<input type='hidden' name='".$key."' value='".$value."'>";
+		}
+	} 
+	?>
+	</form>
+</div>
+</body>
+</html>
