@@ -1,8 +1,9 @@
 <?php
 $menu['menu200'] = array (
-    array('200000', '회원정보관리', G5_ADMIN_URL.'/member_list.php', 'member'),
-    array('200100', '회원관리', G5_ADMIN_URL.'/member_list.php', 'mb_list'),
-	array('200200', '회원탈퇴관리', G5_ADMIN_URL.'/member_list.php', 'mb_list')
+    array('200000', '회원정보관리', G5_ADMIN_URL.'/cd.member_list.php', 'member'),
+    array('200100', '회원관리', G5_ADMIN_URL.'/cd.member_list.php', 'mb_list'),
+	array('200200', '회원탈퇴관리', G5_ADMIN_URL.'/cd.member_leavelist.php', 'mb_lvlist'),
+	array('200300', '관리자관리', G5_ADMIN_URL.'/cd.admin_list.php', 'adm_list')
     #array('200300', '회원메일발송', G5_ADMIN_URL.'/mail_list.php', 'mb_mail'),
     #array('200800', '접속자집계', G5_ADMIN_URL.'/visit_list.php', 'mb_visit', 1),
     #array('200810', '접속자검색', G5_ADMIN_URL.'/visit_search.php', 'mb_search', 1),
