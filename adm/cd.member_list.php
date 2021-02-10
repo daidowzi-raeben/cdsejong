@@ -69,6 +69,7 @@ $sql = " select * {$sql_common} {$sql_search} {$sql_order} limit {$from_record},
 $result = sql_query($sql);
 
 $colspan = 16;
+
 ?>
 
 <!--<div class="local_ov01 local_ov">

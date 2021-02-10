@@ -121,7 +121,7 @@ function imageview(id, w, h)
 				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/learn_list.php" class="tnb_service">학습진도관리</a></li>
 				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/point_list.php" class="tnb_service">마일리지관리</a></li>
 				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/board/board.php?bo_table=notice" class="tnb_service">홈페이지관리</a></li>
-				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/config_form.php" class="tnb_service">시스템관리</a></li>
+				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/cd.config_form.php" class="tnb_service">시스템관리</a></li>
 			</ul>
 		</div>
 		
