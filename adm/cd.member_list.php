@@ -5,8 +5,8 @@ include_once('./_common.php');
 auth_check($auth[$sub_menu], 'r');
 
 $sql_common = " from {$g5['member_table']} as m ";
-$sql_common .= " left join {$g5['belong_table']} as b ";
-$sql_common .= " on m.bl_no = b.bl_no ";
+#$sql_common .= " left join {$g5['belong_table']} as b ";
+#$sql_common .= " on m.bl_no = b.bl_no ";
 
 $sql_search = " where (1) and m.mb_level = '1' ";
 if ($stx) {
@@ -100,7 +100,7 @@ $colspan = 16;
 		<input type="submit" name="act_button" value="선택삭제" onclick="document.pressed=this.value" class="btn btn_02">
 		<a href="./memberexcel_down.php?sfl=<?php echo $sfl ?>&amp;stx=<?php echo $stx ?>" onclick="return excel_down(f);" target="_blank" id="member_add" class="btn btn_04">전체EXCEL</a>
 		<a href="./member_excel_form.php" id="member_add" class="btn btn_01">회원일괄등록</a>
-		<a href="./member_form.php" id="member_add" class="btn btn_03">회원추가</a>
+		<a href="./cd.member_form.php" id="member_add" class="btn btn_03">회원추가</a>
 		<?php } ?>
 	</div>
 </div>

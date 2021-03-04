@@ -9,7 +9,9 @@ include_once('./_common.php');
 <title>Untitled Document</title>
 <link rel="stylesheet" type="text/css" href="<?php echo G5_THEME_URL ?>/_Css/poll.css"/>
 <script src="<?php echo G5_THEME_URL ?>/_Js/poll.js"></script>
-<script type="text/javascript">
+	<script src="<?php echo G5_THEME_URL ?>/_Js/jquery/jquery-1.11.3.min.js"></script>
+
+	<script type="text/javascript">
 //<![CDATA[
 $(document).ready(function(){
 	$("#faq p").hide();
@@ -27,8 +29,7 @@ $(document).ready(function(){
 <body>
 <p><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/title1_4.jpg" width="900" height="178" /></p>
 <div id="contents">
-	<form name="poll" action="poll01_05.html" method="post">
-	<p class="title subtitle_gap2">4. 청렴문화 지수</p>
+  <p class="title subtitle_gap2">4. 청렴문화 지수</p>
   <table width="830" class="t_style4" >
     <thead>
       <tr class="head">
@@ -98,22 +99,72 @@ $(document).ready(function(){
     </tbody>
   </table>
   
-	<p class="btn">
-		<span class="btn_next2">
-			<input type="image" src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_next.gif" alt="다음" width="108" height="46" />
-		</span> 
-		<span class="btn_next2">
-			<a href="javascript:history.back();"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_prev.gif" alt="이전" width="108" height="46" /></a> 
-		</span>
-	</p>
-	<?php
-	foreach($_POST as $key => $value) {
-		if($key != "x" && $key != "y") {
-			echo "<input type='hidden' name='".$key."' value='".$value."'>";
-		}
-	} 
-	?>
-	</form>
+  <p class="btn"><span class="btn_next2" id="next"><a href="#n"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_next.gif" alt="다음" width="108" height="46" /></a> </span><span class="btn_next2" id="prev"><a href="#n"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_prev.gif" alt="이전" width="108" height="46" /></a> </span> </p>
 </div>
+
+<script src="<?php echo G5_THEME_URL ?>/_Js/poll2.js"></script>
+
+
+<style>
+	input[type=radio]{
+		transform: scale(1.3);
+	}
+</style>
+<script>
+
+	var allStr = '';
+	get_query();
+
+	console.log(allStr)
+
+
+	$('#prev').on('click',function (){
+		window.location.href="poll01_03.html"+allStr;
+	})
+
+
+
+	$('#next').on('click',function (){
+
+		var chk = true;
+		var list = []
+		var params = [];
+
+
+
+		$.each($('tbody tr'),function (index, item){
+
+			if(chk == false){
+				return false;
+			}
+
+			var _name = $(this).find('input[type=radio]:checked').attr('name')
+			var _score = $(this).find('input[type=radio]:checked').val()
+
+			if(_score == null){
+
+				alert(index+35 + "번 문항 답해주세요.");
+				$(this).find('input[type=radio]').focus();
+
+				chk = false;
+				return  false;
+			}
+
+			var param = {
+				name : _name,
+				value : _score
+			}
+
+			params.push(param);
+		})
+
+
+		if(chk){
+			window.location.href="poll01_05.html"+allStr+makeParam(params,true)
+		}
+
+
+	})
+</script>
 </body>
 </html>

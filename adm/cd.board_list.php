@@ -49,7 +49,7 @@ $result = sql_query($sql);
 $listall = '<a href="'.$_SERVER['SCRIPT_NAME'].'" class="ov_listall">전체목록</a>';
 
 $g5['title'] = '게시판관리';
-include_once('./admin.head.php');
+include_once('./cd.admin.head.php');
 
 $colspan = 15;
 ?>
@@ -111,7 +111,7 @@ $colspan = 15;
     <tbody>
     <?php
     for ($i=0; $row=sql_fetch_array($result); $i++) {
-        $one_update = '<a href="./board_form.php?w=u&amp;bo_table='.$row['bo_table'].'&amp;'.$qstr.'" class="btn btn_03">수정</a>';
+        $one_update = '<a href="./cd.board_form.php?w=u&amp;bo_table='.$row['bo_table'].'&amp;'.$qstr.'" class="btn btn_03">수정</a>';
         $one_copy = '<a href="./board_copy.php?bo_table='.$row['bo_table'].'" class="board_copy btn btn_02" target="win_board_copy">복사</a>';
 
         $bg = 'bg'.($i%2);

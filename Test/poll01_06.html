@@ -9,7 +9,9 @@ include_once('./_common.php');
 <title>Untitled Document</title>
 <link rel="stylesheet" type="text/css" href="<?php echo G5_THEME_URL ?>/_Css/poll.css"/>
 <script src="<?php echo G5_THEME_URL ?>/_Js/poll.js"></script>
-<script type="text/javascript">
+	<script src="<?php echo G5_THEME_URL ?>/_Js/jquery/jquery-1.11.3.min.js"></script>
+
+	<script type="text/javascript">
 //<![CDATA[
 $(document).ready(function(){
 	$("#faq p").hide();
@@ -391,5 +393,239 @@ $(document).ready(function(){
   
   <p class="btn"><span class="btn_confirm2"><a href="#"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_confirm2.png" alt="확인" width="auto" height="46" /></a> </span><span class="btn_next2"><a href="#"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_close.png" alt="나가기" width="138" height="46" /></a> </span> </p>
 </div>
+
+<script>
+	$('.btn_confirm2').on('click',function (){
+
+
+	})
+
+	$('.btn_confirm2').on('click',function (){
+
+
+		var chk = true;
+		var list = []
+
+		console.log($('input[name=check1]:checked').val())
+
+		if($('input[name=check1]:checked').val() == null){
+			$('input[name=check1]').focus();
+			alert("1번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+
+		if($('input[name=check2]:checked').val() == null){
+			$('input[name=check2]').focus();
+			alert("2번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+
+		if($('input[name=check3]:checked').val() == null){
+			$('input[name=check3]').focus();
+			alert("3번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+
+		if($('input[name=check4]:checked').val() == null){
+			$('input[name=check4]').focus();
+			alert("4번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+
+		if($('input[name=check5]:checked').val() == null){
+			$('input[name=check5]').focus();
+			alert("5번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+
+		if($('input[name=check6]:checked').val() == null){
+			$('input[name=check6]').focus();
+			alert("6번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+
+		if($('input[name=q1]:checked').val() == null){
+			$('input[name=q1]').focus();
+			alert("7번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+		if($('input[name=q2]:checked').val() == null){
+			$('input[name=q2]').focus();
+			alert("7번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+		if($('input[name=q3]:checked').val() == null){
+			$('input[name=q3]').focus();
+			alert("7번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+		if($('input[name=q4]:checked').val() == null){
+			$('input[name=q4]').focus();
+			alert("7번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+
+		if($('input[name=q5]:checked').val() == null){
+			$('input[name=q5]').focus();
+			alert("8번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+		if($('input[name=q6]:checked').val() == null){
+			$('input[name=q6]').focus();
+			alert("8번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+		if($('input[name=q7]:checked').val() == null){
+			$('input[name=q7]').focus();
+			alert("8번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+		if($('input[name=q8]:checked').val() == null){
+			$('input[name=q8]').focus();
+			alert("8번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+		if($('input[name=q9]:checked').val() == null){
+			$('input[name=q9]').focus();
+			alert("8번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+		if($('input[name=q10]:checked').val() == null){
+			$('input[name=q10]').focus();
+			alert("8번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+		if($('input[name=q11]:checked').val() == null){
+			$('input[name=q11]').focus();
+			alert("8번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+		if($('input[name=q12]:checked').val() == null){
+			$('input[name=q12]').focus();
+			alert("8번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+		if($('input[name=q13]:checked').val() == null){
+			$('input[name=check8]').focus();
+			alert("8번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+		if($('input[name=q14]:checked').val() == null){
+			$('input[name=q14]').focus();
+			alert("8번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+		if($('input[name=q15]:checked').val() == null){
+			$('input[name=q15]').focus();
+			alert("8번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+		if($('input[name=q16]:checked').val() == null){
+			$('input[name=q16]').focus();
+			alert("8번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+		if($('input[name=q17]:checked').val() == null){
+			$('input[name=q17]').focus();
+			alert("8번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+		if($('input[name=q18]:checked').val() == null){
+			$('input[name=q18]').focus();
+			alert("8번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+		if($('input[name=q19]:checked').val() == null){
+			$('input[name=q19]').focus();
+			alert("8번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+		if($('input[name=q20]:checked').val() == null){
+			$('input[name=q20]').focus();
+			alert("8번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+		if($('input[name=q21]:checked').val() == null){
+			$('input[name=q21]').focus();
+			alert("8번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+
+
+
+
+		// $.each($('tbody tr'),function (index, item){
+		//
+		// 	if(chk == false){
+		// 		return false;
+		// 	}
+		//
+		// 	var _score = $(this).find('input[type=radio]:checked').val()
+		//
+		//
+		// 	if(index == 0 || index == 1 || index == 2 || index == 4){
+		//
+		// 		if(_score == null){
+		// 			switch (index) {
+		// 				case 0 :
+		// 					alert("1번 문항 답해주세요");
+		// 					break;
+		// 				case 1 :
+		// 					alert("2번 문항 답해주세요");
+		// 					break;
+		// 				case 2 :
+		// 					alert("3번 문항 답해주세요");
+		// 					break;
+		// 				case 4 :
+		// 					alert("43번 문항 답해주세요.");
+		// 					break;
+		// 			}
+		//
+		// 			$(this).find('input[type=radio]').focus();
+		// 			chk = false;
+		// 			return  false;
+		// 		}
+		// 	}else{
+		//
+		//
+		// 	}
+		//
+		// 	list.push(_score)
+		// })
+
+		if(chk){
+			alert("응답이 완료되었습니다.");
+			window.close();
+		}
+	})
+
+</script>
 </body>
 </html>

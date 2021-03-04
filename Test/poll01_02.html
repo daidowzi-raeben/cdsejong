@@ -8,7 +8,9 @@ include_once('./_common.php');
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Untitled Document</title>
 <link rel="stylesheet" type="text/css" href="<?php echo G5_THEME_URL ?>/_Css/poll.css"/>
-<script src="<?php echo G5_THEME_URL ?>/_Js/poll.js"></script>
+	<script src="<?php echo G5_THEME_URL ?>/_Js/jquery/jquery-1.11.3.min.js"></script>
+
+	<script src="<?php echo G5_THEME_URL ?>/_Js/poll.js"></script>
 <script type="text/javascript">
 //<![CDATA[
 $(document).ready(function(){
@@ -27,24 +29,23 @@ $(document).ready(function(){
 <body>
 <p><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/title1_2.jpg" width="900" height="178" /></p>
 <div id="contents">
-	<form name="poll" action="poll01_03.html" method="post">
-	<p class="title subtitle_gap2">2. 조직윤리지수</p>
-	<table width="830" class="t_style4" >
+  <p class="title subtitle_gap2">2. 조직윤리지수</p>
+  <table width="830" class="t_style4" >
     <thead>
-		<tr class="head">
-			<th style="width:50px;">구분</th>
-			<th>항목</th>
-			<th style="width:100px;">매우<br />
-			그렇지
-			않다</th>
-			<th style="width:50px;">그렇지<br />
-			않다</th>
-			<th style="width:50px;">보통</th>
-			<th style="width:50px;">그렇다</th>
-			<th style="width:50px;">매우<br />
-			그렇다</th>
-		</tr>
-	</thead>
+      <tr class="head">
+        <th style="width:50px;">구분</th>
+        <th>항목</th>
+        <th style="width:100px;">매우<br />
+        그렇지
+        않다</th>
+        <th style="width:50px;">그렇지<br />
+        않다</th>
+        <th style="width:50px;">보통</th>
+        <th style="width:50px;">그렇다</th>
+        <th style="width:50px;">매우<br />
+        그렇다</th>
+      </tr>
+    </thead>
     <tbody>
       <tr>
         <td>11문</td>
@@ -236,19 +237,67 @@ $(document).ready(function(){
     </tbody>
   </table>
   
-	<p class="btn">
-		<span class="btn_next2">
-			<input type="image" src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_next.gif" alt="다음" width="108" height="46" />
-		</span> 
-	</p>
-	<?php
-	foreach($_POST as $key => $value) {
-		if($key != "x" && $key != "y") {
-			echo "<input type='hidden' name='".$key."' value='".$value."'>";
-		}
-	} 
-	?>
-	</form>
+  <p class="btn"><span class="btn_next2" id="next"><a href="#"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_next.gif" alt="다음" width="108" height="46" /></a> </span><span class="btn_next2" id="prev"><a href="#n"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_prev.gif" alt="이전" width="108" height="46" /></a> </span> </p>
 </div>
+<script src="<?php echo G5_THEME_URL ?>/_Js/poll2.js"></script>
+<style>
+	input[type=radio]{
+		transform: scale(1.3);
+	}
+</style>
+<script>
+
+	var allStr = '';
+	get_query();
+
+
+	$('#prev').on('click',function (){
+		window.location.href="poll01_01.html"+allStr
+	})
+
+
+
+	$('#next').on('click',function (){
+
+		var chk = true;
+		var list = []
+		var params = [];
+
+
+
+		$.each($('tbody tr'),function (index, item){
+
+			if(chk == false){
+				return false;
+			}
+
+			var _name = $(this).find('input[type=radio]:checked').attr('name')
+			var _score = $(this).find('input[type=radio]:checked').val()
+
+			if(_score == null){
+
+				alert(index+11 + "번 문항 답해주세요.");
+				$(this).find('input[type=radio]').focus();
+
+				chk = false;
+				return  false;
+			}
+
+			var param = {
+				name : _name,
+				value : _score
+			}
+
+			params.push(param);
+		})
+
+
+		if(chk){
+			window.location.href="poll01_03.html"+allStr+makeParam(params,true)
+		}
+
+
+	})
+</script>
 </body>
 </html>

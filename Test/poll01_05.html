@@ -9,7 +9,9 @@ include_once('./_common.php');
 <title>Untitled Document</title>
 <link rel="stylesheet" type="text/css" href="<?php echo G5_THEME_URL ?>/_Css/poll.css"/>
 <script src="<?php echo G5_THEME_URL ?>/_Js/poll.js"></script>
-<script type="text/javascript">
+	<script src="<?php echo G5_THEME_URL ?>/_Js/jquery/jquery-1.11.3.min.js"></script>
+
+	<script type="text/javascript">
 //<![CDATA[
 $(document).ready(function(){
 	$("#faq p").hide();
@@ -35,7 +37,7 @@ $(document).ready(function(){
       </tr>
     </thead>
     <tbody>
-      
+
       <tr>
         <td><p class="ssub_title">문40-1.  우리 회사의 청렴도 제고 및 윤리의식 함양을 위한 교육으로 어떤 방법이 가장 효과적이라고 생각하십니까?</span>
 <p>
@@ -57,7 +59,7 @@ $(document).ready(function(){
         <td><p class="ssub_title">문40-2. 윤리경영 교육을 적극적으로 추진해야 할 사업부문은?</span>
 <p>
   <input type="radio" name="q40-2" id="radio" value="1" />
-  ①구매계약부문                   
+  ①구매계약부문
   <input type="radio" name="q40-2" id="radio2" value="2" />
   ②자금관련부문
   <input type="radio" name="q40-2" id="radio3" value="3" />
@@ -72,7 +74,7 @@ $(document).ready(function(){
         <td><p class="ssub_title">문41. 윤리경영과 관련한 전반적인 업무에 대해 건의할 사항이 있으시면 무엇이든 좋으니, 말씀해 주시기 바랍니다.
 </span>
 <p>
-    <input name="textfield" type="text" id="textfield" value="여기에 내용을 적어주세요." size="100" />
+    <input name="textfield" type="text" id="textfield" value="" size="100" placeholder="여기에 내용을 적어주세요." />
 </p></td>
       </tr>
       </tbody>
@@ -99,11 +101,11 @@ $(document).ready(function(){
         <td><p class="ssub_title">문43.  귀하의 총 재직 년수는 어떻게 되십니까?</span>
           <p>
   <input type="radio" name="q43" id="radio" value="1" />
-  ① 5년  이하 
+  ① 5년  이하
   <input type="radio" name="q43" id="radio2" value="2" />
-  ② 6-10년  
+  ② 6-10년
   <input type="radio" name="q43" id="radio3" value="3" />
-③ 11-15년  
+③ 11-15년
 <input type="radio" name="q43" id="radio4" value="4" />
 ④ 16-20년
 <input type="radio" name="q43" id="radio6" value="5" />
@@ -125,7 +127,7 @@ $(document).ready(function(){
         <td><p class="ssub_title">문45.  귀하가 속해 있는 소속은 어디에 해당 되십니까?
           <p>
   <input type="radio" name="q45" id="radio7" value="1" />
-  ①감사실 
+  ①감사실
   <input type="radio" name="q45" id="radio8" value="2" />
   ②고객경영지원실
   <input type="radio" name="q45" id="radio9" value="3" />
@@ -135,16 +137,16 @@ $(document).ready(function(){
 <input type="radio" name="q45" id="radio11" value="5" />
 ⑤금융정리부
 <input type="radio" name="q45" id="radio12" value="6" />
-⑥기금관리부 
+⑥기금관리부
 <input type="radio" name="q45" id="radio13" value="7" />
 <br />
 ⑦기금운용실
 <input type="radio" name="q45" id="radio14" value="8" />
-⑧기획조정부 
+⑧기획조정부
 <input type="radio" name="q45" id="radio15" value="9" />
-⑨리스크총괄부 
+⑨리스크총괄부
 <input type="radio" name="q45" id="radio16" value="10" />
-⑩리스크관리부 
+⑩리스크관리부
 <input type="radio" name="q45" id="radio17" value="11" />
 ⑪저축은행관리부
 <input type="radio" name="q45" id="radio18" value="12" />
@@ -153,22 +155,22 @@ $(document).ready(function(){
 ⑬비서실
 <input type="radio" name="q45" id="radio20" value="14" />
 <br />
-⑭혁신경영실 
+⑭혁신경영실
 <input type="radio" name="q45" id="radio21" value="15" />
-⑮안전관리실 
+⑮안전관리실
 <input type="radio" name="q45" id="radio22" value="16" />
-⑯인사지원부 정보시스템실 
+⑯인사지원부 정보시스템실
 <input type="radio" name="q45" id="radio23" value="18" />
-⑱채권관리부 
+⑱채권관리부
 <input type="radio" name="q45" id="radio24" value="19" />
-⑲회수총괄부 
+⑲회수총괄부
 <input type="radio" name="q45" id="radio25" value="20" />
 ⑳PF자산회수부
 <input type="radio" name="q45" id="radio26" value="21" />
 <br />
 ㉑홍보실
 <input type="radio" name="q45" id="radio27" value="22" />
-㉒보험리스크관리실 
+㉒보험리스크관리실
 <input type="radio" name="q45" id="radio28" value="23" />
 ㉓국제협력실
 <input type="radio" name="q45" id="radio29" value="24" />
@@ -180,8 +182,102 @@ $(document).ready(function(){
       </tr>
     </tbody>
   </table>
-  
-  <p class="btn"><span class="btn_next2"><a href="poll01_05.html"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_end.gif" alt="응답완료" width="auto" height="46" /></a> </span><span class="btn_next2"><a href="poll01_04.html"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_prev.gif" alt="이전" width="108" height="46" /></a> </span> </p>
+
+  <p class="btn"><span class="btn_next2" id="next"><a href="#n"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_end.gif" alt="응답완료" width="auto" height="46" /></a> </span><span class="btn_next2" id="prev"><a href="#n"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_prev.gif" alt="이전" width="108" height="46" /></a> </span> </p>
 </div>
+<script src="<?php echo G5_THEME_URL ?>/_Js/poll2.js"></script>
+
+<style>
+	input[type=radio]{
+		transform: scale(1.3);
+	}
+</style>
+<script>
+
+	var allStr = '';
+	get_query();
+
+	console.log(allStr)
+
+
+	$('#prev').on('click',function (){
+		window.location.href="poll01_04.html"+allStr;
+	})
+
+
+	$('#next').on('click',function (){
+
+
+		var chk = true;
+		var list = []
+
+
+		$.each($('tbody tr'),function (index, item){
+
+			if(chk == false){
+				return false;
+			}
+
+			var _score = $(this).find('input[type=radio]:checked').val()
+
+
+			if(index != 2){
+
+				if(_score == null){
+					switch (index) {
+						case 0 :
+							alert("40-1번 문항 답해주세요.");
+							break;
+						case 1 :
+							alert("40-2번 문항 답해주세요.");
+							break;
+						case 3 :
+							alert("42번 문항 답해주세요.");
+							break;
+						case 4 :
+							alert("43번 문항 답해주세요.");
+							break;
+						case 5 :
+							alert("44번 문항 답해주세요.");
+							break;
+						case 6 :
+							alert("45번 문항 답해주세요.");
+							break;
+					}
+
+					$(this).find('input[type=radio]').focus();
+					chk = false;
+					return  false;
+				}
+			}else{
+
+				console.log("@@")
+				console.log($(this));
+
+				var _input = $(this).find('input[type=text]').val()
+
+				console.log(_input)
+
+
+				if(_input == ""){
+					alert("41번 문항 답해주세요.");
+					$(this).find('input[type=text]').focus();
+					chk = false;
+					return  false;
+				}
+
+
+			}
+
+			list.push(_score)
+		})
+
+		if(chk){
+			alert("응답이 완료되었습니다.");
+			window.close();
+
+		}
+	})
+</script>
 </body>
 </html>
