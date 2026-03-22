@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Common */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+body,input,textarea,select,button,table{font-family:'돋움',Dotum,AppleGothic,sans-serif;font-size:12px}
+img,fieldset{border:0}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{text-decoration:none}
+a:hover,a:active,a:focus{text-decoration:underline}
+
+/* Layout */
+#wrap{width:100%; background:url(images/top_bg.gif)repeat-x top center; }
+#contents{width:700px; height:700px; margin:0 auto}
+.top{height:48px;}
+
+
+/* Guide */
+.title{height:80px; padding-top:30px;}
+.poll p.btn_poll{padding-left:212px; padding-top:13px; padding-bottom:42px;}
+
+
+/* Poll */
+.title2{height:97px; padding-top:13px;}
+.title2 div.text{float:left;}
+.title2 div.per{float:right; width:215px; height:40px; padding-top:7px;}
+.title2 div.per p{font-weight:bold; color:#333; font-size:14px;}
+.title2 div.per span.text{float:left;}
+.title2 div.per span.num{float:right;}
+
+.title2 div.per p.graph{width:211px; height:20px; border:2px solid #5c5d5d; background:#FFF url(images/percent.gif)no-repeat left ; clear:both;}
+
+.poll p.subtitle{padding-bottom:22px;}
+.poll div.p_con{background:url(images/box_bg.gif) repeat-y; padding-left:18px; padding-bottom:25px;}
+.poll div.p_con p{width:665px; padding-left:43px; padding-right:18px; margin-bottom:10px; font-weight:bold; color:#333; font-size:14px; line-height:20px; letter-spacing:-1px;}
+.poll div.p_con p.question1{background:url(images/num_01.gif) no-repeat left top;}
+.poll div.p_con p.question2{background:url(images/num_02.gif) no-repeat left top;}
+.poll div.p_con p.question3{background:url(images/num_03.gif) no-repeat left top;}
+.poll div.p_con p.question4{background:url(images/num_04.gif) no-repeat left top;}
+.poll div.p_con p.question5{background:url(images/num_05.gif) no-repeat left top;}
+.poll div.p_con p.question6{background:url(images/num_06.gif) no-repeat left top;}
+.poll div.p_con p.question7{background:url(images/num_07.gif) no-repeat left top;}
+.poll div.p_con p.question8{background:url(images/num_08.gif) no-repeat left top;}
+.poll div.p_con p.question9{background:url(images/num_09.gif) no-repeat left top;}
+.poll div.p_con p.question10{background:url(images/num_10.gif) no-repeat left top;}
+.poll div.p_con p.question11{background:url(images/num_11.gif) no-repeat left top;}
+.poll div.p_con p.question12{background:url(images/num_12.gif) no-repeat left top;}
+.poll div.p_con p.question13{background:url(images/num_13.gif) no-repeat left top;}
+.poll div.p_con p.question14{background:url(images/num_14.gif) no-repeat left top;}
+.poll div.p_con p.question15{background:url(images/num_15.gif) no-repeat left top;}
+.poll div.p_con p.question16{background:url(images/num_16.gif) no-repeat left top;}
+.poll div.p_con p.question17{background:url(images/num_17.gif) no-repeat left top;}
+.poll div.p_con p.question18{background:url(images/num_18.gif) no-repeat left top;}
+.poll div.p_con p.question19{background:url(images/num_19.gif) no-repeat left top;}
+.poll div.p_con p.question20{background:url(images/num_20.gif) no-repeat left top;}
+
+.poll p.subtitle2{ padding-left:40px; padding-bottom:10px; padding-top:7px; font-weight:bold; color:#333; font-size:16px; line-height:20px; letter-spacing:-1px;}
+.poll div.p_con2{background:url(images/box_bg.gif) repeat-y; padding-left:18px; padding-bottom:25px;}
+.poll div.p_con2 p{width:665px; padding-right:18px; margin-bottom:10px; font-weight:bold; color:#333; font-size:14px; line-height:20px; letter-spacing:-1px;}
+.poll p.question1{background:url(images/num_01.gif) no-repeat left top;}
+.poll p.question2{background:url(images/num_02.gif) no-repeat left top;}
+.poll p.question3{background:url(images/num_03.gif) no-repeat left top;}
+.poll p.question4{background:url(images/num_04.gif) no-repeat left top;}
+.poll p.question5{background:url(images/num_05.gif) no-repeat left top;}
+.poll p.question6{background:url(images/num_06.gif) no-repeat left top;}
+.poll p.question7{background:url(images/num_07.gif) no-repeat left top;}
+.poll p.question8{background:url(images/num_08.gif) no-repeat left top;}
+.poll p.question9{background:url(images/num_09.gif) no-repeat left top;}
+.poll p.question10{background:url(images/num_10.gif) no-repeat left top;}
+.poll p.question11{background:url(images/num_11.gif) no-repeat left top;}
+.poll p.question12{background:url(images/num_12.gif) no-repeat left top;}
+.poll p.question13{background:url(images/num_13.gif) no-repeat left top;}
+.poll p.question14{background:url(images/num_14.gif) no-repeat left top;}
+.poll p.question15{background:url(images/num_15.gif) no-repeat left top;}
+.poll p.question16{background:url(images/num_16.gif) no-repeat left top;}
+.poll p.question17{background:url(images/num_17.gif) no-repeat left top;}
+.poll p.question18{background:url(images/num_18.gif) no-repeat left top;}
+.poll p.question19{background:url(images/num_19.gif) no-repeat left top;}
+.poll p.question20{background:url(images/num_20.gif) no-repeat left top;}
+
+.poll div.p_con2 p span.q_small{font-size:12px; text-decoration:underline;}
+.poll div.p_con2 p span.q_small2{font-size:12px; color:#666;}
+
+.answer,.answer th,.answer td{border:0}
+.answer{width:665px;border-bottom:2px solid #bec0c3;font-family:'돋움',dotum;font-size:12px;text-align:center;border-collapse:collapse}
+.answer caption{display:none}
+.answer th{padding:7px 0 4px;border-top:2px solid #bec0c3;border-right:1px solid #dcdcdc;border-left:1px solid #dcdcdc;background-color:#f5f7f9;color:#555;font-family:'돋움',dotum;font-size:12px;font-weight:bold}
+.answer td{padding:6px 0 4px;border:1px solid #dcdcdc;background-color:#fff; color:#555;}
+
+.answer2,.answer2 th,.answer2 td{border:0}
+.answer2{width:665px;border-bottom:2px solid #bec0c3;font-family:'돋움',dotum;font-size:12px;border-collapse:collapse}
+.answer2 caption{display:none}
+.answer2 th{padding:7px 0 4px;border:1px solid #dcdcdc;background-color:#fff;color:#555;font-family:'돋움',dotum;font-size:12px;text-align:center;}
+.answer2 td{padding:6px 20px 4px;border:1px solid #dcdcdc;background-color:#fff; color:#555;}
+
+.poll p.btn_next{padding-left:292px; padding-top:13px; padding-bottom:42px;}
+.poll p.btn_end{padding-left:265px; padding-top:5px; padding-bottom:42px;}
+
+.poll p.text_end{font-weight:bold; color:#555; font-size:15px; line-height:20px; letter-spacing:-1px; text-align:center;}
+

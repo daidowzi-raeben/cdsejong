@@ -2548,6 +2548,7 @@ class html_process {
     {
         global $config, $g5, $member;
 
+        /*
         // 현재접속자 처리
         $tmp_sql = " select count(*) as cnt from {$g5['login_table']} where lo_ip = '{$_SERVER['REMOTE_ADDR']}' ";
         $tmp_row = sql_fetch($tmp_sql);
@@ -2567,6 +2568,7 @@ class html_process {
             //$row = sql_fetch(" SHOW TABLE STATUS FROM `$mysql_db` LIKE '$g5['login_table']' ");
             //if ($row['Data_free'] > 0) sql_query(" OPTIMIZE TABLE $g5['login_table'] ");
         }
+        */
 
         $buffer = ob_get_contents();
         ob_end_clean();
