@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>고위직 청렴도 부패위험성진단</title>
+<link rel="stylesheet" type="text/css" href="default.css"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="default.js"></script>
+</head>
+
+<body>
+<div id="wrap">
+  <div id="contents">
+    <div class="logo">
+      <img src="images/top2.gif" alt="로고" width="700" height="48" />
+    </div>
+    <div class="title2">
+      <div class="text">
+        <img src="images/title_02.gif" alt="조사참여가이드" width="333" height="62" />
+      </div>
+      <div class="per">
+        <p><span class="text">설문진행률</span><span class="num">40.5%</span></p>
+        <p class="graph"></p>
+      </div>
+    </div>
+    <div class="poll">
+      <p class="subtitle"><img src="images/subtitle_03.gif" width="700" height="96" /></p>
+      <p class="subtitle2 question7">업무관련자로부터 향응‧편의 수수</p>
+      <p><img src="images/box_top.gif" width="700" height="25" /></p>
+      <div class="p_con2">
+      <form name="poll" action="poll_10.html" method="post">
+          <p>
+          <span class="q_small">업무관련자로부터 음주접대, 골프접대, 차량 제공 등 향응이나 편의를 요구하거나 받는 경우가 있는지 여부</span>
+          <br />
+          <span class="q_small2">* 업무관련자의 지원으로 해외연수나 여행을 가는 경우도 향응•편의수수에 해당합니다.<br />
+        * 단, 업무와 무관한 친척•친구 등 지인으로부터 받는 식사나 편의 제공은 제외됩니다.</span></p>
+          <p>
+        <table width="665" border="1" cellspacing="0" class="answer2" >            
+            <tbody>
+            <tr>
+              <td width="551">잘 모르거나 합리적 판단이 곤란한 경우</td>
+              <th width="104">모름&nbsp;<input type="radio" name="sq7" value="11"/></th>
+              </tr>
+            <tr>
+              <td>직무와 관련하여 내부직원이나 업무관련자로부터 음주접대, 골프접대, 차량 제공 등 향응이나 편의를 요구하거나 받는 경우가 없음</td>
+              <th>10&nbsp;<input type="radio" name="sq7" value="10"/><br /> 
+                9&nbsp;<input type="radio" name="sq7" value="9"/><br /> 
+                8&nbsp;<input type="radio" name="sq7" value="8"/></th>
+              </tr>
+             <tr>
+              <td>대부분의 경우에는 그런 경우가 없지만, 경우에 따라 내부직원이나 업무관련자로부터 향응이나 편의를 제공받는 경우가 가끔 있음</td>
+              <th>7&nbsp;<input type="radio" name="sq7" value="7"/><br />
+                6&nbsp;<input type="radio" name="sq7" value="6"/><br /> 
+               5&nbsp;<input type="radio" name="sq7" value="5"/></th>
+              </tr>
+             <tr>
+              <td>내부직원이나 업무관련자로부터 향응이나 편의를 제공받는 경우가 자주 발생함</td>
+              <th>4&nbsp;<input type="radio" name="sq7" value="4"/><br /> 
+                3&nbsp;<input type="radio" name="sq7" value="3"/><br /></th>
+              </tr>
+             <tr>
+              <td>내부직원이나 업무관련자로부터 향응이나 편의를 제공받는 경우가 매우 빈번하게 발생함</td>
+              <th>2&nbsp;<input type="radio" name="sq7" value="2"/><br />
+                1&nbsp;<input type="radio" name="sq7" value="1"/></th>
+              </tr>
+             </tbody>
+            </table>      
+        </p>
+      </div>
+      <p><img src="images/box_bottom.gif" width="700" height="10" /></p>
+      <p class="btn_next"><input type="image" src="images/btn_next.gif" alt="다음" width="112" height="51" /></p>
+<?php
+  foreach($_POST as $key => $value) {
+      if($key != "x" && $key != "y") {
+          echo "<input type='hidden' name='".$key."' value='".$value."'>";
+      }
+  } 
+?>
+    </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

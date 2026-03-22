@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>고위직 청렴도 부패위험성진단</title>
+<link rel="stylesheet" type="text/css" href="default.css"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="default.js"></script>
+</head>
+
+<body>
+<div id="wrap">
+  <div id="contents">
+    <div class="logo">
+      <img src="images/top2.gif" alt="로고" width="700" height="48" />
+    </div>
+    <div class="title2">
+      <div class="text">
+        <img src="images/title_02.gif" alt="조사참여가이드" width="333" height="62" />
+      </div>
+      <div class="per">
+        <p><span class="text">설문진행률</span><span class="num">67.5%</span></p>
+        <p class="graph"></p>
+      </div>
+    </div>
+    <div class="poll">
+      <p class="subtitle"><img src="images/subtitle_03.gif" width="700" height="96" /></p>
+      <p class="subtitle2 question13">과도한 외부강의 또는 부적절한 대가 수령</p>
+      <p><img src="images/box_top.gif" width="700" height="25" /></p>
+      <div class="p_con2">
+      <form name="poll" action="poll_16.html" method="post">
+          <p>
+          <span class="q_small">보고‧결재 등에 지장을 줄 정도로 외부강의(또는 회의)에 참석하거나, 과도한 대가를 수령하는 경우가 있는지 여부</span>
+          <br />
+          <span class="q_small2">* 외부의 강의•회의참석’이란, 대가를 받고 세미나, 공청회, 토론회, 회의 등에서 강연, 발표, 심사, 자문 등 <br />
+          &nbsp;&nbsp;하는 것을 의미합니다.<br />
+          * 기관에 따라서는 내부지침에 외부강의료 상한을 1회에 50만원 혹은 100만원 등으로 제한하고 있는 경우가 있습니다. <br />
+          &nbsp;&nbsp;내부기준이 있는 기관에서는 그 기준을 준수하여야 합니다.<br />* 단, 소속 기관장으로부터 겸직허가를 받고 행하는 학교 등에서의 외부강의는 과도한 외부강의에 해당하지 않습니다.</span></p>
+          <p>
+        <table width="665" border="1" cellspacing="0" class="answer2" >            
+            <tbody>
+            <tr>
+              <td width="551">잘 모르거나 합리적 판단이 곤란한 경우</td>
+              <th width="104">모름&nbsp;<input type="radio" name="sq13" value="11"/></th>
+              </tr>
+            <tr>
+              <td>업무에 방해를 줄 정도로 외부강의나 회의에 자주 참석하는 경우가 없으며, <br />
+              과도한 대가를  받는 경우도 전혀 없음</td>
+              <th>10&nbsp;<input type="radio" name="sq13" value="10"/><br /> 
+                9&nbsp;<input type="radio" name="sq13" value="9"/><br /> 
+                8&nbsp;<input type="radio" name="sq13" value="8"/></th>
+              </tr>
+             <tr>
+              <td>대부분의 경우에는 그런 경우가 없지만, 경우에 따라 외부강의나 회의 참석으로 <br />
+               보고‧결재에 지장을 주거나 과도한 대가를 수령하는  경우가 가끔 있음</td>
+              <th>7&nbsp;<input type="radio" name="sq13" value="7"/><br />
+                6&nbsp;<input type="radio" name="sq13" value="6"/><br /> 
+               5&nbsp;<input type="radio" name="sq13" value="5"/></th>
+              </tr>
+             <tr>
+              <td>외부강의나 회의 참석으로 보고‧결재에 지장을 주거나 과도한 대가를 수령하는 경우가 <br />
+               자주 발생함</td>
+              <th>4&nbsp;<input type="radio" name="sq13" value="4"/><br /> 
+                3&nbsp;<input type="radio" name="sq13" value="3"/><br /></th>
+              </tr>
+             <tr>
+              <td>외부강의나 회의 참석으로 보고‧결재에 지장을 주거나 과도한 대가를 수령하는 경우가 <br />
+               매우 빈번하게 발생함</td>
+              <th>2&nbsp;<input type="radio" name="sq13" value="2"/><br />
+                1&nbsp;<input type="radio" name="sq13" value="1"/></th>
+              </tr>
+             </tbody>
+            </table>      
+        </p>
+      </div>
+      <p><img src="images/box_bottom.gif" width="700" height="10" /></p>
+      <p class="btn_next"><input type="image" src="images/btn_next.gif" alt="다음" width="112" height="51" /></p>
+<?php
+  foreach($_POST as $key => $value) {
+      if($key != "x" && $key != "y") {
+          echo "<input type='hidden' name='".$key."' value='".$value."'>";
+      }
+  } 
+?>
+    </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>
