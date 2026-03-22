@@ -70,60 +70,67 @@ $colspan = 16;
 </div>-->
 
 <div class="tbl_frm02 tbl_wrap" style="text-align:center;">
-    <?php include_once('./admin.fsearch2.php'); ?>
+	<?php include_once('./admin.fsearch2.php'); ?>
 </div>
 
-<form name="fmemberlist" id="fmemberlist" action="./member_list_update.php" onsubmit="return fmemberlist_submit(this);" method="post">
-<input type="hidden" name="sst" value="<?php echo $sst ?>">
-<input type="hidden" name="sod" value="<?php echo $sod ?>">
-<input type="hidden" name="sfl" value="<?php echo $sfl ?>">
-<input type="hidden" name="stx" value="<?php echo $stx ?>">
-<input type="hidden" name="page" value="<?php echo $page ?>">
-<input type="hidden" name="token" value="">
-<script>
-function selectLocation(v) {
-	console.log(v.value)
-		location.href='./pdf_list.php?company='+v.value;
-}
-</script>
-<div class="local_ov02">
-	<div class="l_div">
-				<select class="" name="lssn_company" onChange="selectLocation(this)">
+<form name="fmemberlist" id="fmemberlist" action="./member_list_update.php" onsubmit="return fmemberlist_submit(this);"
+	method="post">
+	<input type="hidden" name="sst" value="<?php echo $sst ?>">
+	<input type="hidden" name="sod" value="<?php echo $sod ?>">
+	<input type="hidden" name="sfl" value="<?php echo $sfl ?>">
+	<input type="hidden" name="stx" value="<?php echo $stx ?>">
+	<input type="hidden" name="page" value="<?php echo $page ?>">
+	<input type="hidden" name="token" value="">
+	<script>
+		function selectLocation(v) {
+			console.log(v.value)
+			location.href = './pdf_list.php?company=' + v.value;
+		}
+	</script>
+	<div class="local_ov02">
+		<div class="l_div">
+			<select class="" name="lssn_company" onChange="selectLocation(this)">
 				<option value="">선택</option>
-						<?php 
+				<?php 
 			$sql_list = "SELECT mb_profile from cd_member WHERE mb_profile != '' GROUP BY mb_profile ORDER BY mb_profile asc";
 			$result_list = sql_query($sql_list);
 			for ($i=0; $row=sql_fetch_array($result_list); $i++) {
 				?>
-				<option value="<?php echo $row['mb_profile']?>" <?php if($company == $row['mb_profile']) { echo ' selected ';} ?>><?php echo $row['mb_profile']?></option>
-			<?php }?>
-				</select>
-	</div>
-	<div class="r_div">
-	
-	<input type='button' value='출력' class='btn btn_02' onclick="javascript:autoDown()"/>
-		<?php if ($is_admin == 'super' || $is_admin == 'manager') { ?>
-		<a href="./pldexcel_down2.php?pld_year=<?php echo $bl_year ?>&amp;pld_semi=<?php echo $bl_cate ?>&amp;sfl=<?php echo $sfl ?>&amp;str=1" target="_blank" id="member_add" class="btn btn_04">EXCEL</a>
-		<?php } ?>
-	</div>
-</div>
+				<option value="<?php echo $row['mb_profile']?>" <?php if($company==$row['mb_profile']) {
+					echo ' selected ' ;} ?>>
+					<?php echo $row['mb_profile']?>
+				</option>
+				<?php }?>
+			</select>
+		</div>
+		<div class="r_div">
 
-<div class="tbl_head01 tbl_wrap">
-    <table>
-    <caption><?php echo $g5['title']; ?> 목록</caption>
-    <thead>
-    <tr>
-        <th scope="col" id="mb_list_no">No</th>
-		<th scope="col" id="mb_list_id">이름</th>
-		<th scope="col" id="mb_list_id">아이디</th>
-		<th scope="col" id="mb_list_id">부서명</th>
-		<th scope="col" id="mb_list_name">서약서 작성날짜</th>
-		<th scope="col" id="mb_list_id">서약서 작성여부</th>
-		<th scope="col" id="mb_list_id">서약서</th>
-    </tr>
-    </thead>
-    <tbody>
-    <?php
+			<input type='button' value='출력' class='btn btn_02' onclick="javascript:autoDown()" />
+			<?php if ($is_admin == 'super' || $is_admin == 'manager') { ?>
+			<a href="./pldexcel_down2.php?pld_year=<?php echo $bl_year ?>&amp;pld_semi=<?php echo $bl_cate ?>&amp;sfl=<?php echo $sfl ?>&amp;str=1"
+				target="_blank" id="member_add" class="btn btn_04">EXCEL</a>
+			<?php } ?>
+		</div>
+	</div>
+
+	<div class="tbl_head01 tbl_wrap">
+		<table>
+			<caption>
+				<?php echo $g5['title']; ?> 목록
+			</caption>
+			<thead>
+				<tr>
+					<th scope="col" id="mb_list_no">No</th>
+					<th scope="col" id="mb_list_id">이름</th>
+					<th scope="col" id="mb_list_id">아이디</th>
+					<th scope="col" id="mb_list_id">부서명</th>
+					<th scope="col" id="mb_list_name">서약서 작성날짜</th>
+					<th scope="col" id="mb_list_id">서약서 작성여부</th>
+					<th scope="col" id="mb_list_id">서약서</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php
 	#년도, 분기값 설정
 	#$bl_year = "2021";
 	#$bl_cate = "A";
@@ -139,55 +146,67 @@ function selectLocation(v) {
 		$strBtn 	= $row2['pld_no'] ? "<input type='button' value='출력' class='btn btn_01 auto_btn' pid='{$row['mb_id']}' p_year='{$bl_year}' p_semi='{$bl_cate}' />" : "";
     ?>
 
-    <tr class="<?php echo $bg; ?>">
-		<td headers="mb_list_"><?php echo $startNum ?></td>
-		<td headers="mb_list_name" class="td_mbname2"><?php echo get_text($row['mb_name']); ?></td>
-		<td headers="mb_list_id" class="td_name2">
-            <?php echo $mb_id ?>
-        </td>  
-		<td headers="mb_list_"><?php echo get_text($row['mb_4']); ?></td>
-		<td headers="mb_list_"><?php echo substr($row2['pld_regdate'], 0, 10) ?></td>
-		<td headers="mb_list_"><?php echo $strWrite?></td>
-		<td headers="mb_list_"><?php echo $strBtn?></td>
-    </tr>
-    <?php
+				<tr class="<?php echo $bg; ?>">
+					<td headers="mb_list_">
+						<?php echo $startNum ?>
+					</td>
+					<td headers="mb_list_name" class="td_mbname2">
+						<?php echo get_text($row['mb_name']); ?>
+					</td>
+					<td headers="mb_list_id" class="td_name2">
+						<?php echo $mb_id ?>
+					</td>
+					<td headers="mb_list_">
+						<?php echo get_text($row['mb_4']); ?>
+					</td>
+					<td headers="mb_list_">
+						<?php echo substr($row2['pld_regdate'], 0, 10) ?>
+					</td>
+					<td headers="mb_list_">
+						<?php echo $strWrite?>
+					</td>
+					<td headers="mb_list_">
+						<?php echo $strBtn?>
+					</td>
+				</tr>
+				<?php
 		$startNum++;
     }
     if ($i == 0)
         echo "<tr><td colspan=\"".$colspan."\" class=\"empty_table\">자료가 없습니다.</td></tr>";
     ?>
-    </tbody>
-    </table>
-</div>
+			</tbody>
+		</table>
+	</div>
 
 </form>
 
 <?php echo get_paging(G5_IS_MOBILE ? $config['cf_mobile_pages'] : $config['cf_write_pages'], $page, $total_page, '?'.$qstr.$NSqstr.'&amp;page='); ?>
 
 <script>
-$(function(){
-  	$(".btn_01").on("click",function(){
-		var pid = $(this).attr("pid");
-		var p_year = $(this).attr("p_year");
-		var p_semi = $(this).attr("p_semi");
+	$(function () {
+		$(".btn_01").on("click", function () {
+			var pid = $(this).attr("pid");
+			var p_year = $(this).attr("p_year");
+			var p_semi = $(this).attr("p_semi");
 		//alert($(this).attr("pid"));
-		<? if($company == '엘에스오토모티브') { ?>
-		window.open('/temp/test.php?pid=' + pid + '&p_year=' + p_year + '&p_semi=' + p_semi , 'pdf print', 'width=680, height=700');
-		<?} else {?>
-			window.open('/temp/test_print.php?pid=' + pid + '&p_year=' + p_year + '&p_semi=' + p_semi , 'pdf print', 'width=680, height=700');
-		<?}?>
+		<? php  php if ($company == '엘에스오토모티브') { ?>
+				window.open('/temp/test.php?pid=' + pid + '&p_year=' + p_year + '&p_semi=' + p_semi, 'pdf print', 'width=680, height=700');
+		<? php } else {?>
+				window.open('/temp/test_print.php?pid=' + pid + '&p_year=' + p_year + '&p_semi=' + p_semi, 'pdf print', 'width=680, height=700');
+		<? php }?>
   	});
 
-	
-});
 
-function autoDown() {
+	});
+
+	function autoDown() {
 		const el = document.querySelectorAll('.auto_btn');
-		for(let i = 0; i<el.length; i++) {
-			
-			setTimeout(function(){
-    console.log(el[i].click());
-}, 1000);
+		for (let i = 0; i < el.length; i++) {
+
+			setTimeout(function () {
+				console.log(el[i].click());
+			}, 1000);
 		}
 	}
 </script>

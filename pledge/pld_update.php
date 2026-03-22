@@ -1,14 +1,14 @@
 <?php
 include_once('./_common.php');
 
-$pld_month  = trim($_POST['month']);
-$pld_day   	= trim($_POST['day']);
-$pld_enb    = trim($_POST['e_number']);
-$pld_enb2    = trim($_POST['e_number2']);
-$mb_name 	= trim($_POST['mb_name']);
+$pld_month = trim($_POST['month']);
+$pld_day = trim($_POST['day']);
+$pld_enb = trim($_POST['e_number']);
+$pld_enb2 = trim($_POST['e_number2']);
+$mb_name = trim($_POST['mb_name']);
 
 if (!$pld_enb || !$mb_name)
-    alert('회원이름이나 사번이 공백이면 안됩니다.');
+	alert('회원이름이나 사번이 공백이면 안됩니다.');
 
 
 $mb_id = $member['mb_id'];
@@ -16,7 +16,7 @@ $mb_id = $member['mb_id'];
 $sql = " select count(pld_no) as cnt from sj_prs_pledge where mb_id = '{$mb_id}' and pld_year = '2025' ";
 $result = sql_fetch($sql);
 
-if($result['cnt'])
+if ($result['cnt'])
 	alert("이미 서약서를 작성했습니다.");
 
 $sql = " insert into sj_prs_pledge
@@ -29,11 +29,11 @@ $sql = " insert into sj_prs_pledge
 					pld_flag = '0',
 					pld_year = '2025',
 					pld_semi = 'A',
-					pld_regdate = '".G5_TIME_YMDHIS."'";
+					pld_regdate = '" . G5_TIME_YMDHIS . "'";
 sql_query($sql);
 #echo $sql;
 ?>
 <script>
 	alert("서약이 완료되었습니다.");
-	location.href='/Edu/class.php?lssn=<?=$lssn?>';
+	location.href = '/Edu/class.php?lssn=<?php echo $lssn?>';
 </script>
