@@ -1,0 +1,420 @@
+﻿body,div,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,blockquote,button{margin:0;padding:0;-webkit-text-size-adjust:none}
+body,input,textarea,select,table,button{color:#000;font-family:'나눔고딕','nanumgothic','맑은 고딕','malgun gothic','dotum','돋움','AppleGothic',sans-serif;font-size:100%;font-weight:normal;}
+table {border-collapse:collapse; border-spacing:0;}
+img,fieldset {border:0;}
+img,input,select,textarea{vertical-align:top;}
+i,address,caption,cite,code,dfn,em,var {font-style:normal; font-weight:normal;}
+ol,ul {list-style:none;}
+caption,th {text-align:left;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;}
+abbr,acronym {border:0;}
+
+article, aside, dialog, footer, header, section, footer, nav, figure, hgroup {display:block;}
+
+a{color:#000;text-decoration:none;}
+a:link,a:hover,a:active{text-decoration:none;}
+
+caption,
+legend,
+.accessibility {position:absolute; width:0; height:0; overflow:hidden; font-size:0; line-height:0; visibility:hidden; z-index:-1;}
+
+hr {margin-bottom:30px; font-size:0; line-height:0; border:1px solid #fff;}
+hr.line {border-bottom:1px solid #ddd;}
+
+.tCenter {text-align:center;}
+.tRight {text-align:right;}
+
+.fArea {*zoom:1;}
+.fArea:after {content:""; display:block; clear:both;}
+.fLeft {float:left;}
+.fRight {float:right;}
+
+.clear {clear:both;}
+
+
+/* note */
+#note-wrap {width:720px; background:url(http://img.hunet.co.kr/study/player/common/bg.gif) repeat;}
+#note-write-wrap {width:695px; background:url(http://img.hunet.co.kr/study/player/common/bg.gif) repeat;}
+#note-header {position:relative; padding:0 0 5px 40px; zoom:1;}
+#note-header:after {content:""; display:block; clear:both;}
+#note-header h1 {float:left;}
+#note-header h2 {float:left; width:350px; padding:30px 0 0 7px; color:#fff; font-size:20px; line-height:20px; font-weight:normal; letter-spacing:-1px;}
+#note-header h2.subject {padding-top:24px; font-size:17px;}
+#note-header .close {position:absolute; top:25px; right:70px; width:22px; height:21px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -500px;}
+#note-header .btn-about-note {position:absolute; top:23px; right:100px; width:88px; height:29px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/h-tools/note/btn.png) no-repeat;}
+#note-header .btn-list {position:absolute; top:23px; right:65px; height:26px; line-height:26px; padding:0 20px; color:#fff; font-size:12px; font-weight:bold; border-bottom:2px solid #777; background:#858585;}
+
+#note-write-content {height:368px; padding:0 71px 0 59px; background:url(http://img.hunet.co.kr/study/h-tools/note/bg_con-write.png) no-repeat;}
+#note-write-content .header {margin-bottom:20px; padding:22px 0 8px 15px; color:#111; border-bottom:2px solid #5a5959;}
+#note-write-content .header em {color:#ea4b24;}
+#note-write-content .write-form {margin-bottom:25px; padding:0 0 15px 25px; border-bottom:1px dashed #c1bfb9; zoom:1;}
+#note-write-content .write-form:after {content:""; display:block; clear:both;}
+#note-write-content .write-form .thumb {float:left; width:217px; margin-right:-230px;}
+#note-write-content .write-form .thumb img {width:215px; height:144px; border:1px solid #c3c3c3;}
+#note-write-content .write-form .content {margin-left:230px;}
+#note-write-content .write-form .content li {margin-bottom:7px;}
+#note-write-content .i-text {width:290px; height:23px; line-height:23px; padding-left:5px; border:1px solid #b3b3b3; border-bottom-color:#e8e8e8; border-right-color:#e8e8e8;}
+#note-write-content textarea {width:285px; height:103px; padding:5px; border:1px solid #b3b3b3; border-bottom-color:#e8e8e8; border-right-color:#e8e8e8;}
+
+
+#note-list-content {height:589px; padding:0 91px 0 59px; background:url(http://img.hunet.co.kr/study/h-tools/note/bg_con1_20160106.png) no-repeat;}
+.note-list-search {height:46px; padding:25px 0 0 0; text-align:center; font-size:12px;}
+.note-list-search * {vertical-align:middle;}
+.note-list-search select {height:26px; line-height:20px; padding:1px; border:1px solid #bdbdbd; border-radius:0;}
+.note-list-search .i-text {width:150px; height:24px; padding-left:5px; border:1px solid #bdbdbd; border-radius:0;}
+.note-list-search .btn-search {height:26px; padding:0 8px; color:#fff; border:0; background:#555; cursor:pointer;}
+.note-list-search .btn-search-all {height:26px; padding:0 8px; color:#fff; border:0; background:#9399a1; cursor:pointer;}
+.note-list-header {height:43px; line-height:18px; border-top:2px solid #5a5959; border-bottom:1px solid #5a5959;}
+.note-list-header .state {float:left; padding:12px 0 0 15px; font-size:14px; color:#6d6d6d; font-weight:bold;}
+.note-list-header .state strong {color:#ea4b24;}
+.note-list-header .sort {float:right; padding:13px 0 0 0; font-size:12px;}
+.note-list-header .sort a {color:#4f4f4f; font-weight:bold;}
+.note-list-header .sort a.current {color:#111;}
+.note-list-header .line {color:#b9b6af; font-weight:normal;}
+.note-list {margin-bottom:15px; padding:0 10px; font-size:13px; line-height:20px; color:#7a7874; border-bottom:2px solid #cdcdcd;}
+.note-list li {position:relative; padding:22px 120px 22px 95px; border-top:1px dashed #c1bfb9; zoom:1;}
+.note-list li:first-child {border-top:0;}
+.note-list li:after {content:""; display:block; clear:both;}
+.note-list i {position:absolute; top:22px; left:10px; width:66px; height:20px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/h-tools/note/icon.png) no-repeat;}
+.note-list i.icon-study {background-position:0 0;}
+.note-list i.icon-review {background-position:0 -30px;}
+.note-list i.icon-study-no {width:74px; background-position:0 -60px;}
+.note-list h3 {width:100%; margin-bottom:2px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-size:17px; color:#3b3b3a;}
+.note-list .date {margin-bottom:5px;}
+.note-list .info {float:left; padding:3px 10px; color:#555350; letter-spacing:-1px; background:#e7e4d9; border-radius:5px;}
+.note-list .info .line {margin:0 3px;}
+.note-list .info .highlight {color:#e96a48;}
+.note-list .info .update {margin-left:5px; font-size:12px;}
+.note-list .info .update-n {margin-left:5px; padding:0 0 0 15px; font-size:12px; background:url(http://img.hunet.co.kr/study/h-tools/note/icon_n.png) no-repeat 0 2px;}
+.note-list .btn-note-view {position:absolute; top:50%; right:0; width:110px; height:34px; margin-top:-17px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/h-tools/note/btn.png) no-repeat 0 -50px;}
+
+.note-header-tab {padding-left:45px; font-size:14px; zoom:1;}
+.note-header-tab:after {content:""; display:block; clear:both;}
+.note-header-tab li {float:left; margin-right:1px;}
+.note-header-tab li a {float:left; height:41px; line-height:41px; padding:0 20px; font-weight:bold; letter-spacing:-1px; color:#fff; background:#7f7f7f;}
+.note-header-tab li:first-child a {border-top-left-radius:5px;}
+.note-header-tab li:last-child a {border-top-right-radius:5px;}
+.note-header-tab .current a {background:#c58171;}
+
+
+#note-list-detail-content {height:589px; padding:0 91px 0 59px; background:url(http://img.hunet.co.kr/study/h-tools/note/bg_con2.png) no-repeat;}
+#note-list-detail-content .header-btn-group {height:40px; padding:14px 0 0 4px; border-bottom:2px solid #5a5959;}
+#note-list-detail-content .btn-all-print {display:inline-block; *float:left; width:99px; height:34px; overflow:hidden; margin-right:10px; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/h-tools/note/btn.png) no-repeat 0 -100px;}
+#note-list-detail-content .btn-all-down {display:inline-block; *float:left; width:125px; height:34px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/h-tools/note/btn.png) no-repeat 0 -150px;}
+
+.aside {position:absolute; width:111px; height:475px; padding:23px 0 0 0;}
+.aside .prev,
+.aside .next {position:absolute; left:17px; width:39px; height:27px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/h-tools/note/btn.png) no-repeat;}
+.aside .prev {top:2px; background-position:0 -230px;}
+.aside .next {bottom:22px; background-position:-50px -230px;}
+.aside .prev:hover {background-position:-100px -230px;}
+.aside .next:hover {background-position:-150px -230px;}
+
+#aside-step {position:relative; width:100%; height:425px; overflow:hidden;}
+#aside-step .slide-obj {position:absolute; width:100%; height:430px; left:0; top:0;}
+.aside-step li a {display:block; height:25px; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/h-tools/note/step-selector.png) no-repeat;}
+.aside-step .current {height:40px; margin:-5px 0 -10px 0; background:url(http://img.hunet.co.kr/study/h-tools/note/step-selector-current.png) no-repeat;}
+.aside-step .current a {position:relative; top:5px;}
+
+#reminder-list-detail-content .aside .aside-step .current {height:40px; margin:-5px 0 -10px 0; background:url(http://img.hunet.co.kr/study/h-tools/reminder/step-selector-current.png) no-repeat;}
+#reminder-list-detail-content .aside .aside-step .current a {position:relative; top:5px;}
+/*#reminder-list-detail-content .aside .aside-step .slide-obj {position:absolute; width:100%; height:380px; left:0; top:0;}*/
+
+.aside-step .all {background-position:15px 0;}
+.aside-step .n1 {background-position:15px -25px;}
+.aside-step .n2 {background-position:15px -50px;}
+.aside-step .n3 {background-position:15px -75px;}
+.aside-step .n4 {background-position:15px -100px;}
+.aside-step .n5 {background-position:15px -125px;}
+.aside-step .n6 {background-position:15px -150px;}
+.aside-step .n7 {background-position:15px -175px;}
+.aside-step .n8 {background-position:15px -200px;}
+.aside-step .n9 {background-position:15px -225px;}
+.aside-step .n10 {background-position:15px -250px;}
+.aside-step .n11 {background-position:15px -275px;}
+.aside-step .n12 {background-position:15px -300px;}
+.aside-step .n13 {background-position:15px -325px;}
+.aside-step .n14 {background-position:15px -350px;}
+.aside-step .n15 {background-position:15px -375px;}
+.aside-step .n16 {background-position:15px -400px;}
+.aside-step .n17 {background-position:15px -425px;}
+.aside-step .n18 {background-position:15px -450px;}
+.aside-step .n19 {background-position:15px -475px;}
+.aside-step .n20 {background-position:15px -500px;}
+.aside-step .n21 {background-position:15px -525px;}
+.aside-step .n22 {background-position:15px -550px;}
+.aside-step .n23 {background-position:15px -575px;}
+.aside-step .n24 {background-position:15px -600px;}
+.aside-step .n25 {background-position:15px -625px;}
+.aside-step .n26 {background-position:15px -650px;}
+.aside-step .n27 {background-position:15px -675px;}
+.aside-step .n28 {background-position:15px -700px;}
+.aside-step .n29 {background-position:15px -725px;}
+.aside-step .n30 {background-position:15px -750px;}
+.aside-step .current .all {background-position:-85px 0;}
+.aside-step .current .n1 {background-position:-85px -25px;}
+.aside-step .current .n2 {background-position:-85px -50px;}
+.aside-step .current .n3 {background-position:-85px -75px;}
+.aside-step .current .n4 {background-position:-85px -100px;}
+.aside-step .current .n5 {background-position:-85px -125px;}
+.aside-step .current .n6 {background-position:-85px -150px;}
+.aside-step .current .n7 {background-position:-85px -175px;}
+.aside-step .current .n8 {background-position:-85px -200px;}
+.aside-step .current .n9 {background-position:-85px -225px;}
+.aside-step .current .n10 {background-position:-85px -250px;}
+.aside-step .current .n11 {background-position:-85px -275px;}
+.aside-step .current .n12 {background-position:-85px -300px;}
+.aside-step .current .n13 {background-position:-85px -325px;}
+.aside-step .current .n14 {background-position:-85px -350px;}
+.aside-step .current .n15 {background-position:-85px -375px;}
+.aside-step .current .n16 {background-position:-85px -400px;}
+.aside-step .current .n17 {background-position:-85px -425px;}
+.aside-step .current .n18 {background-position:-85px -450px;}
+.aside-step .current .n19 {background-position:-85px -475px;}
+.aside-step .current .n20 {background-position:-85px -500px;}
+.aside-step .current .n21 {background-position:-85px -525px;}
+.aside-step .current .n22 {background-position:-85px -550px;}
+.aside-step .current .n23 {background-position:-85px -575px;}
+.aside-step .current .n24 {background-position:-85px -600px;}
+.aside-step .current .n25 {background-position:-85px -625px;}
+.aside-step .current .n26 {background-position:-85px -650px;}
+.aside-step .current .n27 {background-position:-85px -675px;}
+.aside-step .current .n28 {background-position:-85px -700px;}
+.aside-step .current .n29 {background-position:-85px -725px;}
+.aside-step .current .n30 {background-position:-85px -750px;}
+
+
+#note-list-detail-content .content {position:relative; float:right; width:448px; height:466px; padding:10px 10px 0 0; overflow:auto; overflow-x:hidden;}
+.note-list-detail-search {margin-bottom:10px; padding:8px; text-align:center; font-size:12px; background:url(http://img.hunet.co.kr/study/h-tools/note/bg_search-box.gif) repeat; border-radius:6px;}
+.note-list-detail-search * {vertical-align:middle;}
+.note-list-detail-search select {height:26px; padding:1px; border:1px solid #bdbdbd; border-radius:0;}
+.note-list-detail-search .i-text {width:150px; height:24px; padding-left:5px; border:1px solid #bdbdbd; border-radius:0;}
+.note-list-detail-search .btn-search {height:26px; padding:0 8px; color:#fff; border:0; background:#555; cursor:pointer;}
+.note-list-detail-search .btn-search-all {height:26px; padding:0 8px; color:#fff; border:0; background:#9399a1; cursor:pointer;}
+.note-list-detail-header {height:27px; line-height:18px; border-bottom:1px solid #5a5959;}
+.note-list-detail-header .state {float:left; font-size:14px; color:#6d6d6d; font-weight:bold;}
+.note-list-detail-header .state strong {color:#ea4b24;}
+.note-list-detail-header .sort {float:right; padding:1px 0 0 0; font-size:12px;}
+.note-list-detail-header .sort a {color:#4f4f4f; font-weight:bold;}
+.note-list-detail-header .sort a.current {color:#111;}
+.note-list-detail-header .line {color:#b9b6af; font-weight:normal;}
+.note-list-detail {margin-bottom:15px; padding:0 5px; font-size:13px; line-height:20px; color:#7a7874; border-bottom:2px solid #cdcdcd;}
+.note-list-detail li {padding:22px 0; border-top:1px dashed #c1bfb9; zoom:1;}
+.note-list-detail li:first-child {border-top:0;}
+.note-list-detail li:after {content:""; display:block; clear:both;}
+.note-list-detail .thumb {position:relative; float:left; width:197px; margin-right:-214px;}
+.note-list-detail .thumb img {width:195px; height:128px; border:1px solid #c3c3c3;}
+.note-list-detail .btn-zoom {position:absolute; bottom:0; right:0; width:24px; height:24px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/h-tools/note/btn.png) no-repeat 0 -270px;}
+.note-list-detail .list-content {margin-left:214px;}
+.note-list-detail .loc {font-size:14px; color:#ea4b24;}
+.note-list-detail .date {color:#252525;}
+.note-list-detail .subject {font-weight:bold; font-size:14px; color:#252525;}
+.note-list-detail .text {color:#252525;}
+.note-list-detail .footer {padding-top:5px;}
+.note-list-detail .btn-b-go,
+.note-list-detail .btn-modify,
+.note-list-detail .btn-delete {display:inline-block; overflow:hidden; vertical-align:middle; text-indent:-9999em; *text-indent:0; *font-size:0; *line-height:0; background:url(http://img.hunet.co.kr/study/h-tools/note/btn.png) no-repeat;}
+.note-list-detail .btn-b-go {width:61px; height:18px; background-position:0 -200px;}
+.note-list-detail .btn-modify {width:50px; height:18px; background-position:-100px -200px;}
+.note-list-detail .btn-delete {width:50px; height:18px; background-position:-150px -200px;}
+
+.scarp-list-wrap {height:505px; padding:20px 20px 0 20px; overflow:auto; overflow-x:hidden;}
+.scrap-list {width:100%; margin-bottom:15px; padding:0 5px; font-size:13px; line-height:20px; color:#7a7874; border-bottom:2px solid #cdcdcd;}
+.scrap-list td {padding:9px 0; text-align:left; border-bottom:1px dashed #c1bfb9;}
+.scrap-list a:hover {text-decoration:underline;}
+.scrap-list .category {width:90px; font-weight:bold; background:url(http://img.hunet.co.kr/study/h-tools/note/bg_note-line-y.gif) repeat-y right top;}
+.scrap-list .book {color:#ea4b24;}
+.scrap-list .plus-ex {color:#336eb7;}
+.scrap-list .keyword-dic {color:#f67d13;}
+.scrap-list .subject {padding:9px 10px; font-size:14px;}
+.scrap-list .subject a {color:#252525;}
+.scrap-list .date {width:90px; text-align:center; font-size:12px; color:#7a7874;}
+.scrap-list .btn-group {width:60px; text-align:center;}
+.scrap-list .btn-delete {display:block; width:50px; height:18px; margin:0 auto; overflow:hidden; vertical-align:middle; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/h-tools/note/btn.png) no-repeat -150px -200px;}
+
+.pop-about-h-note {display:none; position:absolute; top:60px; left:140px; z-index:100;}
+
+
+/* reminder */
+#reminder-wrap {width:884px; background:url(http://img.hunet.co.kr/study/player/common/bg.gif) repeat;}
+#reminder-header {position:relative; padding:0 0 5px 40px; zoom:1;}
+#reminder-header:after {content:""; display:block; clear:both;}
+#reminder-header h1 {float:left;}
+#reminder-header h2 {float:left; width:350px; padding:30px 0 0 7px; color:#fff; font-size:20px; line-height:20px; font-weight:normal; letter-spacing:-1px;}
+#reminder-header h2.subject {padding-top:24px; font-size:17px;}
+#reminder-header .close {position:absolute; top:25px; right:70px; width:22px; height:21px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -500px;}
+#reminder-header .btn-about-reminder {position:absolute; top:23px; right:100px; width:109px; height:29px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/h-tools/reminder/btn.png) no-repeat;}
+#reminder-header .btn-list {position:absolute; top:23px; right:65px; height:26px; line-height:26px; padding:0 20px; color:#fff; font-size:12px; font-weight:bold; border-bottom:2px solid #777; background:#858585;}
+#reminder-list-content {height:589px; padding:0 91px 0 59px; background:url(http://img.hunet.co.kr/study/h-tools/note/bg_list_20160106.png) no-repeat;}
+.reminder-list-search {height:46px; padding:25px 0 0 0; text-align:center; font-size:12px;}
+.reminder-list-search * {vertical-align:middle;}
+.reminder-list-search select {height:26px; line-height:20px; padding:1px; border:1px solid #bdbdbd; border-radius:0;}
+.reminder-list-search .i-text {width:150px; height:24px; padding-left:5px; border:1px solid #bdbdbd; border-radius:0;}
+.reminder-list-search .btn-search {height:26px; padding:0 8px; color:#fff; border:0; background:#555; cursor:pointer;}
+.reminder-list-search .btn-search-all {height:26px; padding:0 8px; color:#fff; border:0; background:#9399a1; cursor:pointer;}
+.reminder-list-header {height:43px; line-height:18px; border-bottom:1px solid #5a5959;}
+.reminder-list-header .state {float:left; padding:12px 0 0 15px; font-size:14px; color:#6d6d6d; font-weight:bold;}
+.reminder-list-header .state strong {color:#ea4b24;}
+.reminder-list-header .sort {float:right; padding:13px 0 0 0; font-size:12px;}
+.reminder-list-header .sort a {color:#4f4f4f; font-weight:bold;}
+.reminder-list-header .sort a.current {color:#111;}
+.reminder-list {margin-bottom:15px; padding:0 10px; font-size:13px; line-height:20px; color:#7a7874; border-bottom:2px solid #cdcdcd;}
+.reminder-list li {position:relative; padding:25px 160px 25px 110px; border-top:1px dashed #c1bfb9; zoom:1;}
+.reminder-list li:first-child {border-top:0;}
+.reminder-list li:after {content:""; display:block; clear:both;}
+.reminder-list i {position:absolute; top:10px; left:0; width:107px; height:71px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/h-tools/reminder/icon.png) no-repeat;}
+.reminder-list i.icon-step {width:30px; padding-right:77px; text-align:right; line-height:71px; letter-spacing:-2px; font-size:28px; color:#5e66c3; font-weight:bold; text-indent:0; background-position:0 0;}
+.reminder-list i.icon-end {background-position:0 -100px;}
+.reminder-list h3 {width:100%; margin-bottom:2px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-size:17px; color:#3b3b3a;}
+.reminder-list .date {color:#c58171;}
+.reminder-list .btn-reminder-view {position:absolute; top:50%; right:0; width:149px; height:34px; margin-top:-17px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/h-tools/reminder/btn.png) no-repeat 0 -50px;}
+.reminder-header-tab {padding-left:45px; font-size:14px; zoom:1;}
+.reminder-header-tab:after {content:""; display:block; clear:both;}
+.reminder-header-tab li {float:left; margin-right:1px;}
+.reminder-header-tab li a {float:left; height:41px; line-height:41px; padding:0 20px; font-weight:bold; letter-spacing:-1px; color:#fff; background:#7f7f7f;}
+.reminder-header-tab li:first-child a {border-top-left-radius:5px;}
+.reminder-header-tab li:last-child a {border-top-right-radius:5px;}
+.reminder-header-tab .current a {background:#c58171;}
+
+#reminder-list-detail-content {height:765px; padding:0 91px 0 59px; background:url(http://img.hunet.co.kr/study/h-tools/note/bg_con2_20160106.png) no-repeat;}
+#reminder-list-detail-content.none_reminder { background-image:url(http://img.hunet.co.kr/study/h-tools/note/bg_con1_20160106.png); }
+#reminder-list-detail-content.none_reminder .none_img { position:absolute; left:160px; top:160px; }
+#reminder-list-detail-content h3 {height:34px; padding:20px 0 0 14px; border-bottom:2px solid #5a5959;}
+#reminder-list-detail-content .header-btn-group {height:40px; padding:14px 0 0 4px; border-bottom:2px solid #5a5959;}
+#reminder-list-detail-content .btn-all-print {display:inline-block; *float:left; width:99px; height:34px; overflow:hidden; margin-right:10px; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/h-tools/note/btn.png) no-repeat 0 -100px;}
+#reminder-list-detail-content .btn-all-down {display:inline-block; *float:left; width:125px; height:34px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/h-tools/note/btn.png) no-repeat 0 -150px;}
+#reminder-list-detail-content .content {position:relative; float:right; width:600px; height:466px; padding:10px 10px 0 0; overflow:auto; overflow-x:hidden;}
+#reminder-list-detail-content .content .image {margin:17px; text-align:center;}
+#reminder-list-detail-content .content .image img {max-width:100%;}
+#reminder-list-detail-content .content img {max-width:100%;}
+#reminder-list-detail-content h4 {margin-bottom:10px; color:#c58171; font-size:20px;}
+#reminder-list-detail-content h5 {margin-bottom:7px; padding-left:5px; color:#1d1d1d; font-size:18px;}
+
+.quiz-type-ox {padding:15px 0 0 0; border-top:1px dashed #c1bfb9;}
+.quiz-type-ox dt {padding:6px 0 8px 42px; color:#1d1d1d; font-size:16px; letter-spacing:-1px; line-height:22px; background:url(http://img.hunet.co.kr/study/h-tools/reminder/icon_q.png) no-repeat 0 0;}
+.quiz-type-ox dd.answer {text-align:center;}
+.quiz-type-ox dd.answer * {vertical-align:top;}
+.quiz-type-ox dd.answer a {position:relative; display:inline-block; margin:0 20px; font-size:110px; line-height:110px; color:#acaaa3; font-weight:bold; letter-spacing:-1px; cursor:pointer;}
+.quiz-type-ox dd.answer a span {display:block; *display:inline-block; width:70px; height:30px; margin:0 auto; *margin-top:5px; text-align:center; line-height:32px; font-size:16px; letter-spacing:-1px; color:#3a3a3a; background:#8793a0; border-radius:30px;}
+.quiz-type-ox dd.answer a .icon-hover {display:none; position:absolute; top:40px; right:-40px; width:85px; height:78px; overflow:hidden; background:url(http://img.hunet.co.kr/study/h-tools/reminder/icon_quiz.png) no-repeat; border-radius:0;}
+.quiz-type-ox dd.answer a.selected,
+.quiz-type-ox dd.answer a:hover {color:#2f2f2f;}
+.quiz-type-ox dd.answer a.selected .icon-hover,
+.quiz-type-ox dd.answer a:hover .icon-hover {display:block;}
+
+.quiz-type-multiple {padding:15px 0 0 0; border-top:1px dashed #c1bfb9;}
+.quiz-type-multiple dt {padding:6px 0 8px 42px; color:#1d1d1d; font-size:16px; letter-spacing:-1px; line-height:22px; background:url(http://img.hunet.co.kr/study/h-tools/reminder/icon_q.png) no-repeat 0 0;}
+.quiz-type-multiple dd.answer {padding:5px 0 0 42px;}
+.quiz-type-multiple dd.answer li {position:relative; padding:4px 25px 4px 0;}
+.quiz-type-multiple dd.answer a {display:block; padding:6px 15px; font-size:16px; background:#cbcfcf; border-radius:20px;}
+.quiz-type-multiple dd.answer a .icon-hover {display:none; position:absolute; top:-12px; right:0; width:61px; height:58px; overflow:hidden; background:url(http://img.hunet.co.kr/study/h-tools/reminder/icon_quiz.png) no-repeat 0 -100px; border-radius:0;}
+.quiz-type-multiple dd.answer a.selected,
+.quiz-type-multiple dd.answer a:hover {color:#fff; background:#585755;}
+.quiz-type-multiple dd.answer a.selected .icon-hover,
+.quiz-type-multiple dd.answer a:hover .icon-hover {display:block;}
+
+
+.quiz-answer {margin-bottom:20px; padding:15px 0; line-height:80px; text-align:center; font-weight:bold; color:#000; font-size:32px; background:#ebe4da; border-radius:5px;}
+.quiz-answer * {vertical-align:middle;}
+.quiz-answer span {color:#ff8364; font-size:80px; text-shadow:3px 3px 0 rgba(0,0,0,0.2);}
+.quiz-answer-text {margin:5px 0 20px 0; font-size:14px; color:#1d1d1d; line-height:24px;}
+
+.btn-quiz-re {display:inline-block; width:122px; height:33px; overflow:hidden; text-indent:-9999em; *text-indent:0; *font-size:0; *line-height:0; background:url(http://img.hunet.co.kr/study/h-tools/reminder/btn.png) no-repeat 0 -100px;}
+.btn-quiz-re:hover {background-position:-150px -100px;}
+.btn-quiz-next {display:inline-block; width:122px; height:33px; overflow:hidden; text-indent:-9999em; *text-indent:0; *font-size:0; *line-height:0; background:url(http://img.hunet.co.kr/study/h-tools/reminder/btn.png) no-repeat 0 -150px;}
+.btn-quiz-next:hover {background-position:-151px -150px;}
+
+.reminder-summary-content {padding:0 0 0 10px;}
+.reminder-summary-content li {padding:5px 0; color:#1d1d1d; font-size:15px; line-height:22px; border-top:1px dashed #c1bfb9;}
+.reminder-summary-content li:first-child {border-top:0;}
+
+.reminder-plusex-content {padding:10px 0 0 0; color:#1d1d1d; font-size:15px; line-height:22px; border-top:1px dashed #c1bfb9;}
+
+.pop-about-h-reminder {display:none; position:absolute; top:60px; left:110px; z-index:100;}
+
+/* common */
+.paginate {text-align:center; line-height:16px; font-size:12px;}
+.paginate a,
+.paginate strong {display:inline-block; height:16px; padding:0 4px; color:#7d7d7d;}
+.paginate strong {color:#222;}
+.paginate a:hover {text-decoration:underline;}
+.paginate .prev,
+.paginate .next {width:16px; padding:0; text-align:center; font-size:10px; border:1px solid #dedede; background:#fff;}
+
+
+.pop-bg {display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#000; z-index:99; opacity:.6; filter:alpha(opacity=60);}
+
+
+
+
+
+
+.keyword-dic-header {margin-bottom:15px; margin-left:14px; padding:20px 0 0 0; border-bottom:2px solid #5a5959; zoom:1;}
+.keyword-dic-header h3 {height:34px; padding:0; border-bottom:0;}
+.keyword-dic-content {position:relative; height:420px; overflow:auto; overflow-x:hidden; padding:0 20px; zoom:1;}
+.keyword-dic-index {position:relative; width:548px; height:47px; margin-bottom:-15px; z-index:2; overflow:hidden;}
+.keyword-dic-index li {float:left; margin-left:1px;}
+.keyword-dic-index a {float:left; height:47px; width:31px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/player/common/keyword-dic-index.png) no-repeat;}
+.keyword-dic-index .all {width:58px; background-position:0 0;}
+.keyword-dic-index .i1 {background-position:-59px 0;}
+.keyword-dic-index .i2 {background-position:-91px 0;}
+.keyword-dic-index .i3 {background-position:-123px 0;}
+.keyword-dic-index .i4 {background-position:-155px 0;}
+.keyword-dic-index .i5 {background-position:-187px 0;}
+.keyword-dic-index .i6 {background-position:-219px 0;}
+.keyword-dic-index .i7 {background-position:-251px 0;}
+.keyword-dic-index .i8 {background-position:-283px 0;}
+.keyword-dic-index .i9 {background-position:-315px 0;}
+.keyword-dic-index .i10 {background-position:-347px 0;}
+.keyword-dic-index .i11 {background-position:-379px 0;}
+.keyword-dic-index .i12 {background-position:-411px 0;}
+.keyword-dic-index .i13 {background-position:-443px 0;}
+.keyword-dic-index .i14 {background-position:-475px 0;}
+.keyword-dic-index .az {width:40px; background-position:-507px 0;}
+.keyword-dic-index .disabled a {cursor:default;}
+.keyword-dic-index .disabled .all {background-position:0 -50px;}
+.keyword-dic-index .disabled .i1 {background-position:-59px -50px;}
+.keyword-dic-index .disabled .i2 {background-position:-91px -50px;}
+.keyword-dic-index .disabled .i3 {background-position:-123px -50px;}
+.keyword-dic-index .disabled .i4 {background-position:-155px -50px;}
+.keyword-dic-index .disabled .i5 {background-position:-187px -50px;}
+.keyword-dic-index .disabled .i6 {background-position:-219px -50px;}
+.keyword-dic-index .disabled .i7 {background-position:-251px -50px;}
+.keyword-dic-index .disabled .i8 {background-position:-283px -50px;}
+.keyword-dic-index .disabled .i9 {background-position:-315px -50px;}
+.keyword-dic-index .disabled .i10 {background-position:-347px -50px;}
+.keyword-dic-index .disabled .i11 {background-position:-379px -50px;}
+.keyword-dic-index .disabled .i12 {background-position:-411px -50px;}
+.keyword-dic-index .disabled .i13 {background-position:-443px -50px;}
+.keyword-dic-index .disabled .i14 {background-position:-475px -50px;}
+.keyword-dic-index .disabled .az {background-position:-507px -50px;}
+.keyword-dic-index .current .all {background-position:0 -100px;}
+.keyword-dic-index .current .i1 {background-position:-59px -100px;}
+.keyword-dic-index .current .i2 {background-position:-91px -100px;}
+.keyword-dic-index .current .i3 {background-position:-123px -100px;}
+.keyword-dic-index .current .i4 {background-position:-155px -100px;}
+.keyword-dic-index .current .i5 {background-position:-187px -100px;}
+.keyword-dic-index .current .i6 {background-position:-219px -100px;}
+.keyword-dic-index .current .i7 {background-position:-251px -100px;}
+.keyword-dic-index .current .i8 {background-position:-283px -100px;}
+.keyword-dic-index .current .i9 {background-position:-315px -100px;}
+.keyword-dic-index .current .i10 {background-position:-347px -100px;}
+.keyword-dic-index .current .i11 {background-position:-379px -100px;}
+.keyword-dic-index .current .i12 {background-position:-411px -100px;}
+.keyword-dic-index .current .i13 {background-position:-443px -100px;}
+.keyword-dic-index .current .i14 {background-position:-475px -100px;}
+.keyword-dic-index .current .az {background-position:-507px -100px;}
+
+.keyword-dic-search-box {margin:5px 0 15px 0; padding:8px; text-align:center; font-size:12px; background:url(http://img.hunet.co.kr/study/player/common/bg_search-box.gif) repeat; border-radius:6px;}
+.keyword-dic-search-box .i-text {width:150px; height:24px; line-height:24px; padding-left:5px; border:1px solid #bdbdbd; border-radius:0; vertical-align:middle;}
+.keyword-dic-search-box .btn-search {height:26px; padding:0 8px; color:#fff; border:0; background:#555; cursor:pointer; vertical-align:middle;}
+.keyword-dic-search-box .help {margin-left:10px; vertical-align:middle; font-weight:bold; color:#5a5959;}
+.keyword-dic-search-box .help a {color:#cc3537; text-decoration:underline;}
+.keyword-dic-search-box select {height:26px; line-height:20px; padding:1px; border:1px solid #bdbdbd; border-radius:0;}
+
+.keyword-dic-list {margin-bottom:10px; line-height:18px; border-bottom:2px solid #cdcdcd;}
+.keyword-dic-list dt {position:relative; padding:0 0 7px 0; font-weight:bold; font-size:16px; color:#6490c2; border-bottom:1px dashed #adacac; zoom:1;}
+.keyword-dic-list .btn-h-note-scrap {position:absolute; top:0; right:0; height:22px; line-height:22px; padding:0 7px 0 30px; color:#fff; font-size:12px; font-weight:bold; border-bottom:2px solid #dd8408; background:#f69309 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 5px -946px; vertical-align:middle; border-radius:3px;}
+.keyword-dic-list dd {margin-bottom:10px; padding:10px 0; color:#6f6d6d; font-size:12px;}
+.keyword-dic-list .tag {margin-bottom:10px; color:#6490c2; font-weight:bold;}
+.keyword-dic-list .tag i {padding:1px 5px; font-style:normal; color:#fff; background:#5b87c1; border-radius:3px;}

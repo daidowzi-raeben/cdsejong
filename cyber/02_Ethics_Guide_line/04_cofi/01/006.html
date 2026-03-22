@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+<meta name="viewport" content="width=1000">
+<link type="text/css" href="../css/reset.css" rel="stylesheet" />
+<link type="text/css" href="../css/jplayer.css" rel="stylesheet" />
+<link type="text/css" href="../css/content.css" rel="stylesheet" />
+<link type="text/css" href="../css/animate.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jplayer.js"></script>
+<script type="text/javascript" src="../js/transit.js"></script>
+<script type="text/javascript" src="../js/jquery.textillate.js"></script>
+<script type="text/javascript" src="../js/jquery.fittext.js"></script>
+<script type="text/javascript" src="../js/jquery.lettering.js"></script>
+<script type="text/javascript" src="../js/siteSecurity_1.1.js"></script>
+<script type="text/javascript" src="../js/jquery.easing.js"></script>
+<script type="text/javascript" src="pageinfo.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+<div id="allWrap">
+<div id="wrap">
+
+
+	<!-- bg background -->
+	<div class="main_area"></div>
+	<!-- //bg background -->
+		<div id="headTit"><img src="img/title.png" /></div>
+	<!--div id="slogo"><img src="../images/img/s_logo.png"/></div-->
+
+    <div id="jp_container_1" class="jp-video jp-video-360p subVideo" role="application" aria-label="media player">
+		
+
+
+		<!-- 영상 플레이어 -->
+        <div class="jp-type-single">
+            <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+			<div class="jpback"></div>
+			<div class="jp-gui">
+				<div class="jp-video-play"></div>
+				<div class="jp-interface">
+					<div class="jp-inbox">
+						<div class="jp-util">
+							<ul>
+								<li><a href="javascript:;" class="u_index"><span></span></a></li>
+							</ul>
+						</div>
+						<div class="jp-progress">
+							<div class="jp-seek-bar">
+								<div class="jp-play-bar"></div>
+							</div>
+						</div>
+						<div class="jp-controls-holder">
+							<div class="jp-controls">
+							<button class="jp-script" role="button" tabindex="0">script</button>	
+								<button class="jp-play" role="button" tabindex="0">play</button>								
+								<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+								
+								<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+							</div>
+						</div>
+						<div class="jp-volume-controls">
+							<button class="jp-mute" role="button" tabindex="0">mute</button>
+							<div class="jp-volume-bar">
+								<div class="jp-volume-bar-value"></div>
+							</div>
+						</div>
+						<div class="jp-toggles">
+							<div class="jp-speed">
+								<div class="jp-toggles-text">SPEED</div>
+								<button class="speed sp2" data-speed="0">0.5</button>
+								<button class="speed sp3" data-speed="2">1.0</button>
+								<button class="speed sp4" data-speed="4">1.5</button>
+								<button class="speed sp5" data-speed="6">2.0</button>  
+							</div>
+						</div>
+					</div>
+					<div id="paging">
+						<a href="javascript:prev(6);" class="pagePrev"></a>
+						<span><strong>06</strong> / 09</span>
+						<a href="javascript:;" class="nextFunc pageNext" data-page="6"></a>
+						<div class="click"><a href="javascript:next(6);"><img src="../images/img/btn_click.png" alt="" /></a></div>
+					</div>
+					<div class="jp-limit"></div> <!-- 컨트롤차단 -->
+				</div>
+				<!-- 스크립트 -->
+				<div id="scriptBox">
+					<div class="scHead">
+						<div class="scTit"></div>
+						<a href="javascript:;" class="scClose"><img src="../images/img/img_script_close.gif" alt="CLOSE" /></a>
+					</div>
+					<div class="scConfBox">
+						<div class="scConf">
+							<p>이해충돌 관리 요령을 먼저 살펴보겠습니다. 우선,  모든 공직자는 자신에게 부여된 권한 · 임무 · 기능을 수행할 때 이해충돌 상황이 발생할 수 있는지를 스스로 확인해야 하고,  공직자는 자신이 직무를 수행할 경우 이해충돌이 발생할 것으로 판단되면, 직무 수행의 공정성을 확보하기 위해 이해충돌을 관리하기 위한 공식적인 절차에 따라야 합니다.  그리고 이해충돌 관리의 주체에는 공직자뿐만 아니라 공공기관에서 급여를 받지 않더라도 공공프로그램을 운영하거나 평가, 심의 등 공공서비스를 제공하는 각종 위원회의 민간위원 및 비상임위원 등도 포함되어야 합니다. 또한  이해충돌은 뚜렷한 피해자가 즉각적으로 나타나는 것이 아니므로 공직자가 항상 적극적으로 이를 관리함으로써 공공 신뢰를 확보하기 위해 노력해야 합니다. 그리고 모든 공공기관은 이해충돌 상황을 해결하기 위한 정책과 절차를 갖추어야 합니다.  마지막으로 공공기관의 장 및 행동강령책임관은 공직자가 직무를 수행하는 과정에서 이해충돌이 발생하는지를 예의주시하고 이를 적절히 관리해야 합니다.  이를 위해 이해충돌 상황에 대한 상담 및 기록을 관리하고, 상담 결과에 따른 조치를 시행하며, 규정 위반자에 대해서는 징계 등의 제재조치를 취해야 합니다. 본격적으로 이해충돌방지의 위반 사례를 살펴보겠습니다.  첫 번째로 모 시청 건설과 계장이 시가 발주하는 전원마을 조성사업 공사의 낙찰업체로 선정된 P업체에게 토목공사면허가 없지만 시장 조카사위가 운영하는 업체라는 이유만으로 하도급을 주도록 한 사실이 밝혀진 사례가 있습니다.  두 번째로는 모 군수가 자신의 가족묘 인근에 차량 진입이 가능하도록 진입로를 개설하기 위해 실제 경작자 한 두명만이 농로를 이용함에도 다수의 주민숙원사업인 것처럼 소하천 사업예산 1억원을 편법으로 지출한 사실이 드러난 사례입니다.  세 번째는 모 시청 산하 시설관리공단이 2009년 개청시 인사의 공정성을 확보하기 위해 인력채용 전문회사에 의뢰하여 직원을 채용하였으나 이사장 본인의 사위 등을 직원으로 채용한 사례입니다. 네 번째로는 구청 직원이 파견되어 근무하던 중 배우자를 특채한 사례입니다. A구 경영지원팀장은 2008년 A구 산하기관인 시설관리공단에 파견되어 근무하던 중 배우자를 공식적인 채용절차를 거치지 않고 특채한 사실이 드러났습니다.  다섯 번째는 모 시청은 2010년 수산물도매시장운영법인 선정을 위해 시 공직자, 시 산하 공직유관단체 상임이사, 지역인사들로 선정위원회를 구성하여 심의한 결과, A 업체를 선정하였으나 A업체는 심의가 임박한 시기에 심의위원 소속의 금융기관에 거액을 예치한 사실이 있어 법인선정의 특혜의혹이 제기된 사례입니다.  여섯 번째는 군 경리계장이 군청 비품을 배우자 업체에서 수의계약을 하여 구매한 사실이 드러난 사례입니다. 일곱 번째는 모 시청 건축심의위원회 위원을 맡고 있는 A국장은 이종사촌 동생 소유의 땅에 건축물 신축허가 건을 심의하면서 타 건축심의위원들에게 잘 봐 달라며 연락을 취한 뒤 위원회에서 동생이 신청한 건축물의 신축허가를 주장하여 다른 위원들의 반대 없이 처리한 사례입니다.  여덟 번째는 공무원 W는 2008.6월부터 2010.10월까지 무인단속장비 교체 공사 42건을 학교 동창이 운영하는 C산업에 시공토록 하였으며, 이 과정에서 공사비를 높게 책정하도록 특혜를 부여한 사실이 확인뙨 사례입니다.  아홉 번째로는 4년간 고3 수험생을 둔 학부모가 수능 시험 출제 및 검토위원으로 참여하거나 고입선발고사 출제 검토위원으로 참여한 사례입니다. 이 모든 것은 이해충돌방지 위반 사항이니 참고하여 일상에서 법을 준수하시기 바랍니다. 이번에는 이해충돌방지 관련 질문을 살펴보겠습니다.  첫 번째로 무조건 외부에서 이익을 얻는 것은 나쁠까요?  정답은, 직무 밖에서 이익을 얻는 것이 불가능한 것은 아닙니다. 그러나 만일 여러분의 직무가 외부에서 얻는 이익과 관련된다면 이러한 상황은 관리되어야 합니다.  두 번째, 이해충돌 상황에 침묵하는 것이 좋지 않을까요? 정답은, 아닙니다. 투명성을 가지려면 이해충돌 상황을 더 잘 다루어야 합니다. 닫혀진 문 뒤에서 일하는 것은 부정의 가능성에 대한 의심을 더 사게 됩니다. 세 번째, 왜 그렇게 이해충돌을 중시해야 합니까? 정답은, 공적 권한은 국민으로부터 신탁받은 것입니다. 모든 국민은 신탁받은 권한이 공정하게 행사되고, 공공자원이 편견 없이 배분되기를 기대하고 있습니다. 공공기관의 성과는 국민의 신뢰에 의존합니다. 귀하의 행동이 의심을 받는다면 귀하의 명예나 기관의 신뢰는 떨어지게 됩니다. 네 번째, 이해충돌 관리는 선출직 공직자에게도 적용될까요? 정답은, 맞습니다. 대부분의 국가에서 선출직 공직자나 고위 공직자에게 더 무거운 책임을 요청하고 있습니다. 따라서 선출직 공직자나 고위 공직자들은 반드시 이해충돌 관리 정책을 따라야 합니다. 다섯 번째, 이해충돌은 누가 확인하는 것인가요? 정답은 공직자 여러분이 하는 것입니다. 만일 여러분의 직무가 본인의 이익에 의해 영향을 받을 수 있는 이해충돌 상황이라는 의심이 들면 즉각 행동강령책임관 등과 상의하는 것이 좋습니다.  여섯 번째, 이해충돌에 대해서는 어떻게 상담하나요? 정답은 이해충돌을 확인하기 위한 체크리스트를 작성한 후 서면으로 행동강령책임관 등에게 상담을 신청하거나 직무 회피를 신청해야 합니다. 다만, 불가피한 경우에는 구두로 신청할 수도 있습니다. 일곱 번째, 이해충돌은 재정적 이익에만 국한되어야 할까요? 정답은 아닙니다. 이해충돌의 영역은 재정적인 것보다 훨씬 넓습니다. 따라서 지연, 학연, 혈연 등 개인적 관련성도 고려되어야 하며, 비재정적 이익의 발생 가능성도 확인하여야 합니다. 여덟 번째, 상담 후에는 어떠한 조치가 이루어지나요? 정답은 소속기관의 장은 상담 내용을 기록하고 관리할 것이며, 이해충돌의 심각성 정도에 따라 적절한 관리 전략을 채택할 것입니다. 이러한 과정은 소속기관의 장, 행동강령책임관 등의 책임하에 이루어지지만, 이해충돌 상황의 적절한 관리는 공직자 개인의 책임입니다.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- //스크립트 -->				<!-- 인덱스 메뉴 -->
+				<div id="indexNavi"></div>
+				<!-- //인덱스 메뉴 -->
+
+			</div>
+        </div>
+		<!-- //영상 플레이어 -->
+		
+
+        <a href="javascript:;" class="play"><img src="../images/img/btn_play.png" alt="play" /></a>
+    </div>
+
+
+
+</div>
+</div>
+
+
+<div class="effectspeak01"><audio controls muted preload="auto"><source type="audio/mp3" src="../mp3/next.mp3" /></audio></div>
+
+
+<link type="text/css" href="../css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var effectAudio01 = function(){  $('.effectspeak01').find('audio')[0].play(); $('.effectspeak01').find('audio')[0].muted = false;};
+	
+
+    // win height
+    var winHChk = function(){
+        var winH = $(window).height();
+        $('#allWrap').css('height',winH);
+    }
+    winHChk();
+    pageInit();
+    $(window).resize(function(){winHChk();});
+	
+	// next 넘기기, 클릭유도
+	var nextEnd = false;
+    var endClick = function(){
+		$('.click').fadeIn(600,function(){
+			$(this).fadeOut(600,function(){
+				$(this).fadeIn(600,function(){
+					$(this).fadeOut(600,function(){
+						$(this).fadeIn(600);
+					});
+				});
+			})
+		}); 
+		effectAudio01();
+		nextEnd = true;
+		playbar = true;
+		playControl();
+	}
+	
+	$('.nextFunc').bind('click',function(){
+		var mypage = parseInt($(this).attr('data-page'));
+		if (nextEnd == true){
+			next(mypage);
+		} else {
+			next(mypage);
+			return false;
+		}
+	});
+	
+
+	// player bar
+	var playbar = true;
+	var playControl = function(){
+		if (playbar == false){
+			$('.jp-seek-bar').css('display','none');
+		} else {
+			$('.jp-seek-bar').css('display','block');
+			$('.jp-progress').unbind('click');
+		}
+	}
+	$('.jp-progress').bind('click',function(){		
+		next(mypage);
+		return false;
+	});
+	playControl();
+
+
+    // movie
+    var movieUrl = [mp4_Name]; // 1300k, 500k
+        function jplayerControll(a){
+		var mUrl = movieUrl[a];
+		$('#jquery_jplayer_1').jPlayer({			
+			ready: function (event) {
+				$(this).jPlayer('setMedia', {
+					m4v: mUrl,
+					poster: '../images/img/cover.jpg'
+				});
+
+				if(!navigator.userAgent.match(/Android|Mobile|iP(hone|od|ad)|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/)){
+					$(this).jPlayer('play');
+				}
+			
+			},
+			swfPath:'js',
+			supplied:'m4v',
+			size: {
+				width:'1280px',
+				height:'720px',
+				cssClass:'jp-video-360p'
+			},
+			useStateClassSkin: true,
+			autoBlur: false,
+			smoothPlayBar: true,
+			keyEnabled: true,
+			remainingDuration: false,
+			toggleDuration: false,
+		//	autohide: {restored: true, fadeIn:200},
+			volume: 0.5,
+			ended : function(){
+                endClick();
+			}
+		});
+	}
+
+	var nowspeed = function(){
+		var nows = $('.jp-speed').children('.on').index()-1;		
+		setTimeout( function() { $('.speed').eq(nows).click(); },200);
+	}
+
+	$('.play').bind('click',function(){
+		$('#jquery_jplayer_1').jPlayer('play');
+		$(this).fadeOut();
+		nowspeed();
+	});
+
+	$('.jp-stop').bind('click',function(){
+		$('.play').fadeIn();
+		nowspeed();
+	});
+
+	$('.jp-play').bind('click',function(){
+		if ($('#jp_container_1').is('.jp-state-playing')){
+			$('.play').fadeIn();
+		} else {
+			$('.play').fadeOut();
+		}
+		nowspeed();
+	});
+
+	if(!navigator.userAgent.match(/Android|Mobile|iP(hone|od|ad)|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/)){
+		$('.play').fadeOut();
+	} else {
+		$('.play').fadeIn();
+	}
+
+	// 스피드 변경
+	$('.speed').each(function(){
+		$(this).bind('click',function(){
+			if (!$(this).hasClass('on')){
+				var dataNum = $(this).attr('data-speed');
+				var speed = [0.5, 0.8, 1, 1.2, 1.5, 1.8, 2];
+				$('.speed').removeClass('on');
+				$(this).addClass('on');				
+				$('#jquery_jplayer_1').jPlayer('option','playbackRate',speed[dataNum]);
+			}
+		});
+	});
+	$('.speed').eq(1).click();
+
+	// 해상도 변경
+	$('.resolution').each(function(){
+		$(this).bind('click',function(index){
+			if (!$(this).hasClass('active')){
+				var dataType = $(this).attr('data-type');
+				$('.resolution').removeClass('active');
+				$(this).addClass('active');
+	
+				$('#jquery_jplayer_1').jPlayer('destroy');
+				if (dataType == 'high'){ jplayerControll(0);
+				} else { jplayerControll(1); }
+	//			setTimeout(function() { $('#jquery_jplayer_1').jPlayer('play'); },1200);
+			}
+		});
+	});
+
+
+
+	// replay
+	$('.jp-replay').bind('click',function(){
+		$('#jquery_jplayer_1').jPlayer('stop');
+		$('#jquery_jplayer_1').jPlayer('play');
+		nowspeed();
+	});
+
+	jplayerControll(0);
+
+    $(window).load(function(){
+        $('.jp-gui').css('opacity','1');
+    });
+
+
+
+
+	// 교안 다운로드
+	$('#tgDown').load('teacher_guide.html');
+
+	// 놀이영상
+	$('#tgMovie').load('movie_list.html');
+	
+	// 인덱스 네비
+	var depth1 = 2; // 1차뎁스
+	var depth2 = 3; // 2차뎁스
+	$('#indexNavi').load('index_navi.html',function(){
+		var de1 = depth1 - 1;
+		var de2 = depth2 - 1;
+		$('#navigation > ul > li:eq('+de1+') > a').addClass('on');
+		$('#navigation > ul > li:eq('+de1+') ul li:eq('+de2+') a').addClass('on');
+	});
+	
+	// 스크립트 스크롤바
+	$(".scConf").mCustomScrollbar({theme:'dark',mouseWheelPixels:150});
+
+
+	// 보안
+	$('body').siteSecurity({
+	//	f12:'y',         //f12키 막기
+		rightclick: 'y' //우클릭 막기
+	});
+
+});
+</script>
+
+
+
+
+</body>
+</html>

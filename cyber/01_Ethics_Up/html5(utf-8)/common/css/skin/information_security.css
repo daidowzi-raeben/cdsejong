@@ -1,0 +1,78 @@
+﻿#content {background-image:url(http://img.hunet.co.kr/study/player/skin/information_security/bg_content.jpg);}
+#content .header-subject {top:24px; padding:6px 0 6px 33px; color:#bec0bf; background-image:url(http://img.hunet.co.kr/study/player/skin/information_security/icon_header-subject.png);}
+#content .header-module {color:#bec0bf;}
+#content .header-module i {background:#9d842e; color:#fff;}
+
+
+#content h1 {color:#bec0bf;}
+#content .help-text {color:#73c6ed;}
+#content .help-text strong {color:#73c6ed;}
+
+
+
+
+
+.survey .comment {background-color:#6a5f56;}
+.survey .comment dd textarea {color:#363636; background-color:#e5e5e5;}
+
+.step-end h2 {color:#73c6ed;}
+.step-end h2 strong {color:#ccae46;}
+
+.next-step-info .next-step-text {color:#73c6ed;}
+.next-step-info .next-step-subject {color:#73c6ed;}
+.step-end .btn-review,
+.step-end .btn-next-step-go {color:#111; border-color:#a88d35; background-color:#bb9d3b;}
+
+.lecture-list-box {background-color:#142e3c;}
+.lecture-list-box h3 {color:#bec0bf;}
+.lecture-list-box .thumb .icon-next {background: #eb872f;}
+.lecture-list-box .thumb .icon-next:after {border-left-color:#eb872f;}
+.lecture-list-box .prev,
+.lecture-list-box .next {opacity:.5; filter:alpha(opacity=50);}
+.lecture-list-box .subject {color:#bec0bf;}
+
+.video {border-color:#406d79;}
+
+.quiz h2 {color:#a6c2d0;}
+.quiz .content {border-color:#142e3c; background-color:#f8f8f8;}
+
+.layer-star-rate .btn-group .btn {color:#fff; border-bottom-color:#28557b; background:#2c5f89;}
+
+.quiz .type-ox-ic {position:relative; height:240px; padding:25px 20px 0 240px; font-size:15px; line-height:22px;}
+.quiz .type-ox-ic .thumb {position:absolute; top:20px; left:0; width:171px; height:205px; padding:20px 40px 0 0; text-align:center; border-right:1px dashed #c6c6c6; background:url(http://img.hunet.co.kr/study/player/skin/information_security/quiz-img.png) no-repeat 20px 20px;}
+.quiz .type-ox-ic .answer {padding-top:10px; text-align:center;}
+.quiz .type-ox-ic .answer * {vertical-align:top;}
+.quiz .type-ox-ic .answer a {position:relative; display:inline-block; margin:0 10px; font-size:80px; line-height:80px; color:#8793a0; font-weight:bold; letter-spacing:-1px; cursor:pointer;}
+.quiz .type-ox-ic .answer a span {display:block; *display:inline-block; width:52px; height:22px; margin:0 auto; text-align:center; line-height:22px; font-size:14px; letter-spacing:0; color:#3a3a3a; background:#8793a0; border-radius:10px;}
+.quiz .type-ox-ic .answer a .icon-hover {display:none; position:absolute; top:30px; right:-27px; width:63px; height:57px; overflow:hidden; background:url(http://img.hunet.co.kr/study/player/common/icon_quiz.png) no-repeat;}
+.quiz .type-ox-ic .answer a.selected,
+.quiz .type-ox-ic .answer a:hover {color:#2f2f2f;}
+.quiz .type-ox-ic .answer a.selected .icon-hover,
+.quiz .type-ox-ic .answer a:hover .icon-hover {display:block;}
+.quiz .footer a {color:#111; border-bottom-color:#a88d35; background-color:#bb9d3b;}
+
+
+.pop-content .quiz .content {border:0; background:none;}
+.pop-content .quiz .type-ox-ic {height:auto; padding:0 20px 0 210px;}
+.pop-content .quiz .type-ox-ic .thumb {border-right:0;}
+.pop-content .quiz .type-ox-ic .quiz-content-box {position:relative; padding:30px 20px 20px 20px; font-size:13px; line-height:21px; background:#e5e5e5; border-radius:5px;}
+.pop-content .quiz .footer a {color:#fff;}
+
+.pop-content .help-text-plus-info-top {margin-bottom:10px; line-height:18px; font-size:16px; color:#5a5959; font-weight:bold;}
+.pop-content .info-doc-down {margin-bottom:20px; padding:20px 0; text-align:center; background:#ededed; border-radius:5px;}
+.pop-content .info-doc-down p {margin-bottom:10px; font-weight:bold; font-size:17px; color:#222;}
+.pop-content .info-doc-down .btn-download {display:inline-block; height:28px; line-height:28px; padding:0 20px 0 40px; font-size:14px; color:#fff; background:#5b87c1 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 18px -644px;}
+
+.info-notice-link-list {width:100%; margin-bottom:15px;}
+.info-notice-link-list th,
+.info-notice-link-list td {font-size:12px; text-align:center; line-height:18px;}
+.info-notice-link-list thead th {padding:5px 0 7px 0; color:#fff; border:1px solid #858585; background:#858585;}
+.info-notice-link-list td {font-weight:bold; color:#444; border:1px solid #bababa;}
+.info-notice-link-list .category {width:25%; background:#d6d6d6;}
+.info-notice-link-list .site {text-align:left;}
+.info-notice-link-list .site a {display:block; padding:8px 40px 8px 10px; color:#444; background:url(http://img.hunet.co.kr/study/player/skin/information_security/icon_data-list.png) no-repeat right 10px;}
+.info-notice-link-list .site a:hover {color:#375f92; text-decoration:underline; background-position:right -173px;}
+
+.pop-content .info-data-help-text {font-size:11px; color:#646464;}
+.pop-content .info-data-help-text a {color:#375f92; text-decoration:underline;}
+

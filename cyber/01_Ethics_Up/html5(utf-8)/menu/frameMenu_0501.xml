@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><Menu>
+<item menu_no="1" parent_menu_no="1" frame_nm="들어가기" frame_no="1" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="2" parent_menu_no="0" frame_nm="Intro" frame_no="1" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="3" parent_menu_no="0" frame_nm="이슈 체크" frame_no="2" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="4" parent_menu_no="0" frame_nm="학습목표" frame_no="3" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="5" parent_menu_no="1" frame_nm="학습하기" frame_no="4" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="6" parent_menu_no="0" frame_nm="1.헌법적 가치의 실현" frame_no="4" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="7" parent_menu_no="0" frame_nm="2.공직사회에 대한 국민의 신뢰 제고" frame_no="5" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="8" parent_menu_no="0" frame_nm="3.국제사회의 반부패 평가 향상 및 국가경쟁력 제고" frame_no="6" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="9" parent_menu_no="0" frame_nm="4.비윤리적인 부패영역의 축소" frame_no="7" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="10" parent_menu_no="0" frame_nm="5.기존 부패행위 통제의 사각지대 보완" frame_no="8" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="11" parent_menu_no="0" frame_nm="6.우리사회의 ‘부패 유발적 사회 문화’ 요인 개선" frame_no="9" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="12" parent_menu_no="0" frame_nm="7.선의의 공직자 보호" frame_no="10" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="13" parent_menu_no="1" frame_nm="적용하기" frame_no="11" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="14" parent_menu_no="0" frame_nm="Summary" frame_no="11" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="15" parent_menu_no="0" frame_nm="Next" frame_no="12" type_cd="" child_frame_no="0" child_type_cd="" />
+</Menu>

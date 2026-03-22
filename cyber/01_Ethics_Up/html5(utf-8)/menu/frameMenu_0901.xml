@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><Menu>
+<item menu_no="1" parent_menu_no="1" frame_nm="들어가기" frame_no="1" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="2" parent_menu_no="0" frame_nm="Intro" frame_no="1" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="3" parent_menu_no="0" frame_nm="학습목표" frame_no="2" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="4" parent_menu_no="1" frame_nm="학습하기" frame_no="3" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="5" parent_menu_no="0" frame_nm="1.원칙 및 금품 등의 정의" frame_no="3" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="6" parent_menu_no="0" frame_nm="2.수수금지 규정" frame_no="4" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="7" parent_menu_no="0" frame_nm="3.제재기준" frame_no="5" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="8" parent_menu_no="0" frame_nm="4.예외적으로 허용되는 금품 등" frame_no="6" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="9" parent_menu_no="0" frame_nm="5.수수금지 금품 등 제공에 대한 처리" frame_no="8" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="10" parent_menu_no="0" frame_nm="6.참여업체 주의사항 ’ 요인 개선" frame_no="9" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="11" parent_menu_no="0" frame_nm="7.실제 사례와 판례" frame_no="10" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="12" parent_menu_no="1" frame_nm="적용하기" frame_no="11" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="13" parent_menu_no="0" frame_nm="Summary" frame_no="11" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="14" parent_menu_no="0" frame_nm="Next" frame_no="12" type_cd="" child_frame_no="0" child_type_cd="" />
+</Menu>

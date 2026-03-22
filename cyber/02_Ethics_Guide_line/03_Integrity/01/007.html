@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+<meta name="viewport" content="width=1000">
+<link type="text/css" href="../css/reset.css" rel="stylesheet" />
+<link type="text/css" href="../css/jplayer.css" rel="stylesheet" />
+<link type="text/css" href="../css/content.css" rel="stylesheet" />
+<link type="text/css" href="../css/animate.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jplayer.js"></script>
+<script type="text/javascript" src="../js/transit.js"></script>
+<script type="text/javascript" src="../js/jquery.textillate.js"></script>
+<script type="text/javascript" src="../js/jquery.fittext.js"></script>
+<script type="text/javascript" src="../js/jquery.lettering.js"></script>
+<script type="text/javascript" src="../js/siteSecurity_1.1.js"></script>
+<script type="text/javascript" src="../js/jquery.easing.js"></script>
+<script type="text/javascript" src="pageinfo.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+<div id="allWrap">
+<div id="wrap">
+
+
+	<!-- bg background -->
+	<div class="main_area"></div>
+	<!-- //bg background -->
+		<div id="headTit"><img src="img/title.png" /></div>
+	<!--div id="slogo"><img src="../images/img/s_logo.png"/></div-->
+	
+	
+
+    <div id="jp_container_1" class="jp-video jp-video-360p subVideo" role="application" aria-label="media player">
+		
+
+		<!-- 영상 플레이어 -->
+        <div class="jp-type-single">
+            <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+			<div class="jpback"></div>
+			<div class="jp-gui">
+				<div class="jp-video-play"></div>
+				<div class="jp-interface">
+					<div class="jp-inbox">
+						<div class="jp-util">
+							<ul>
+								<li><a href="javascript:;" class="u_index"><span></span></a></li>
+							</ul>
+						</div>
+						<div class="jp-progress">
+							<div class="jp-seek-bar">
+								<div class="jp-play-bar"></div>
+							</div>
+						</div>
+						<div class="jp-controls-holder">
+							<div class="jp-controls">
+								<button class="jp-script" role="button" tabindex="0">script</button>	
+								<button class="jp-play" role="button" tabindex="0">play</button>								
+								<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+								
+								<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+							</div>
+						</div>
+						<div class="jp-volume-controls">
+							<button class="jp-mute" role="button" tabindex="0">mute</button>
+							<div class="jp-volume-bar">
+								<div class="jp-volume-bar-value"></div>
+							</div>
+						</div>
+						<div class="jp-toggles">
+							<div class="jp-speed">
+								<div class="jp-toggles-text">SPEED</div>
+								<button class="speed sp2" data-speed="0">0.5</button>
+								<button class="speed sp3" data-speed="2">1.0</button>
+								<button class="speed sp4" data-speed="4">1.5</button>
+								<button class="speed sp5" data-speed="6">2.0</button>  
+							</div>
+						</div>
+					</div>
+					<div id="paging">
+						<a href="javascript:prev(7);" class="pagePrev"></a>
+						<span><strong>07</strong> / 09</span>
+						<a href="javascript:;" class="nextFunc pageNext" data-page="7"></a>
+						<div class="click"><a href="javascript:next(7);"><img src="../images/img/btn_click.png" alt="" /></a></div>
+					</div>
+
+					<div class="jp-limit"></div> <!-- 컨트롤차단 -->
+				</div>
+				<!-- 스크립트 -->
+				<div id="scriptBox">
+					<div class="scHead">
+						<div class="scTit"></div>
+						<a href="javascript:;" class="scClose"><img src="../images/img/img_script_close.gif" alt="CLOSE" /></a>
+					</div>
+					<div class="scConfBox">
+						<div class="scConf">
+							<p>오늘 학습 잘 이해되셨나요? 이번 시간에 살펴본 내용을 퀴즈를 통해 확인하고 정리해보는 시간을 가져보도록 하겠습니다.
+
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- //스크립트 -->
+
+
+				<!-- 인덱스 메뉴 -->
+				<div id="indexNavi"></div>
+				<!-- //인덱스 메뉴 -->
+
+			</div>
+        </div>
+		<!-- //영상 플레이어 -->
+		
+        <a href="javascript:;" class="play"><img src="../images/img/btn_play.png" alt="play" /></a>
+    </div>
+
+	<!-- quizWrap -->
+	<div class="quizWrap">	
+		<div class="quiz" data-result="">
+			<div class="num"><u>Q</u>1<span></span></div>			
+				<div class="tit">다음 중, 청탁금지법의 필요성과 중요성에 대한 설명으로 적절치 <span>않은</span> 것은 무엇인가?</div>
+				<div class="mChoice" data-fail="0">
+					<ul>
+						<li><a href="javascript:;" data-anwser="x"><span>①</span> 청탁으로 인한 의사결정의 왜곡을 방지하며, 직무수행의 공정성을 강화할 수 있다.</a></li>
+						<li><a href="javascript:;" data-anwser="x"><span>②</span> 금품 등의 이익으로 매수되는 것을 방지하며, 공적 업무를 수행하는 공직자에 대한 신뢰회복을 할 수 있다.</a></li>
+						<li><a href="javascript:;" data-anwser="o"><span>③</span> 다른 사람의 경조사에 함께 참여하여 기쁨과 슬픔을 서로 나누는 미풍양속에 비추어 볼 때 청탁금지법은</br>&nbsp&nbsp&nbsp&nbsp&nbsp개개인의 사생활을 지나치게 억압하는 측면이 있다. </a></li>
+						<li><a href="javascript:;" data-anwser="x"><span>④</span> 인맥이 아닌 신뢰와 시스템으로 움직이는 사회를 구현하기 위해 부정청탁 및 금품 등의 수수를 금지하는</br>&nbsp&nbsp&nbsp&nbsp&nbsp청탁금지법이 필요하다.</a></li>
+					</ul>
+				</div>
+				
+				<div class="nextQuizBtn"><a href="javascript:;"><img src="../images/img/btn_nextbtn.png" alt="다음문제" /></a></div>
+				
+
+				<div class="feedback">
+					<div class="fbox">
+						<div class="anwtit">정답 : 3</div>
+						<div class="anwtxt">		
+						<div class="scConf">	
+							<p>공권력이 개개인의 사생활에 다소 지나치게 관여하도록 하는 측면이 있음에도 불구하고 부정청탁 및 금품등의 수수로 인해 야기되었던 문제들을 해결하고 우리 사회의 청렴도를 제고하기 위해 청탁금지법이 제정되었습니다.</p>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		
+			
+		
+		<div class="quiz" data-result="">
+				<div class="num"><u>Q</u>2<span></span></div>
+				<div class="tit">다음 중, 청탁금지법 적용대상자에 대한 설명으로 적절치 <span>않은</span> 것은 무엇인가?</div>
+				<div class="mChoice" data-fail="0">
+					<ul>
+						<li><a href="javascript:;" data-anwser="o"><span>①</span> 일반 국민은 청탁금지법 적용 대상이 아니다.</a></li>
+						<li><a href="javascript:;" data-anwser="x"><span>②</span> 국가 · 지방공무원, 공직유관단체 및 공공기관의 장과 임직원은 청탁금지법의 적용 대상이다.</a></li>
+						<li><a href="javascript:;" data-anwser="x"><span>③</span> 각급 학교의 장과 교직원, 학교법인의 임직원은 청탁금지법의 적용 대상이다.</a></li>
+						<li><a href="javascript:;" data-anwser="x"><span>④</span> 언론사 대표와 임직원, 공직자 등의 배우자 및 공무수행사인은 청탁금지법의 적용 대상이다.</a></li>
+					</ul>
+				</div>
+
+				
+			<div class="nextQuizBtn"><a href="javascript:;"><img src="../images/img/btn_nextbtn.png" alt="다음문제" /></a></div>
+
+			<div class="feedback">
+				<div class="fbox">
+					<div class="anwtit">정답 : 1</div>
+					<div class="anwtxt">							
+						<p>공직자등에게 부정청탁을 하거나 수수 금지 금품 등을 제공한 일반 국민은 청탁금지법의 적용 대상입니다.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="quiz" data-result="">
+				<div class="num"><u>Q</u>3<span></span></div>
+				<div class="tit">다음 중, 청탁금지법 상 예외적으로 허용되는 금품등에 대한 설명으로 적절치 <span>않은</span> 것은 무엇인가?</div>
+				<div class="mChoice" data-fail="0">
+					<ul>
+						<li><a href="javascript:;" data-anwser="x"><span>①</span> 공공기관 또는 상급 공직자 등이 위로·격려·포상 등의 목적으로 공직자 등에게 제공하는 금품 등</a></li>
+						<li><a href="javascript:;" data-anwser="x"><span>②</span> 원활한 직무수행·사교·의례·부조의 목적으로 제공되는 음식물·경조사비 등으로서 대통령령으로 정하는</br>&nbsp&nbsp&nbsp&nbsp&nbsp가액 범위 안의 금품 등</a></li>
+						<li><a href="javascript:;" data-anwser="x"><span>③</span> 채무의 이행 등 정당한 권원에 의하여 제공되는 금품 등 </a></li>
+						<li><a href="javascript:;" data-anwser="o"><span>④</span> 직무 관련성이 없는 100만원 이하의 금품 등</a></li>
+					</ul>
+				</div>
+
+			<div class="resultQuizBtn"><a href="javascript:;"><img src="../images/img/btn_resultbtn.png" alt="결과보기" /></a></div>
+
+			<div class="feedback">
+				<div class="fbox">
+				<div class="anwtit">정답 : 4</div>
+				<div class="anwtxt">
+					<p>청탁금지법은 직무 관련 여부와 관계없이 금품을 수수하는 것을 금지하고 있습니다. 직무 관련성이 없는 100만원 이하의 금품 등을 수수할 경우 수수 금액의 2~5배의 과태료 부과 처분을 받게 됩니다.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+		<!-- result -->
+		<div class="resultWrap">
+			<div class="thxBox">
+				<div class="tit">수고하셨습니다.</div>
+				<div class="totalTxt">
+					총 3문제 중 <u>1</u>문제를 맞히셨습니다.
+				</div>
+				<div class="resultTable">
+					<ul>
+						<li>
+							<div class="q">Q1</div>
+							<div class="a"></div>
+						</li>
+						<li>
+							<div class="q">Q2</div>
+							<div class="a"></div>
+						</li>
+
+						<li>
+							<div class="q">Q3</div>
+							<div class="a"></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<a href="javascript:;" class="requiz"><img src="../images/img/btn_requiz.png" alt="" /></a>
+		</div>
+		<!-- //result -->
+
+
+	</div>
+	<!-- //quiz wrap -->
+
+</div>
+</div>
+
+
+<div class="effectspeak01"><audio controls muted preload="auto"><source type="audio/mp3" src="../mp3/event_O.mp3" /></audio></div>
+<div class="effectspeak02"><audio controls muted preload="auto"><source type="audio/mp3" src="../mp3/event_X.mp3" /></audio></div>
+<div class="effectspeak03"><audio controls muted preload="auto"><source type="audio/mp3" src="../mp3/next.mp3" /></audio></div>
+<div class="effectspeak04"><audio controls muted preload="auto"><source type="audio/mp3" src="../mp3/quiz_na.mp3" /></audio></div>
+<link type="text/css" href="../css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+<script type="text/javascript">
+$(function(){
+	var effectAudio01 = function(){  $('.effectspeak01').find('audio')[0].play(); $('.effectspeak01').find('audio')[0].muted = false;};
+	var effectAudio02 = function(){  $('.effectspeak02').find('audio')[0].play(); $('.effectspeak02').find('audio')[0].muted = false;};
+	var effectAudio03 = function(){  $('.effectspeak03').find('audio')[0].play(); $('.effectspeak03').find('audio')[0].muted = false;};
+	var effectAudio04 = function(){  $('.effectspeak04').find('audio')[0].play(); $('.effectspeak04').find('audio')[0].muted = false;};
+
+	var tipOpen = function(){
+		$('.quizWrap').fadeIn(300);
+	}
+	
+	// audio reset
+	var allSoundStop = function(){
+		$('html').find('audio').each(function(index, elem){ 
+		elem.pause();
+		elem.addEventListener('loadedmetadata', function() {
+			  elem.currentTime = 0;
+			}, false);
+		});
+	};
+
+	// 초기페이지
+	var pageNum = 0;
+	$('.quiz:eq(0)').fadeIn();
+	$('.quizTabs ul li:eq(0)').addClass('on');
+
+	// 다음보기
+	$('.nextQuizBtn').bind('click',function(){
+		pageNum = pageNum+1;
+		$('.quiz').css('display','none');
+		$('.quiz').eq(pageNum).fadeIn(300);
+		$('.quiz').feedback. css('display','hidden');
+		$('.quizTabs ul li').removeClass('on');
+		$('.quizTabs ul li').eq(pageNum).addClass('on');
+	});
+
+	
+	// next 넘기기, 클릭유도
+	var nextEnd = false;
+    var endClick = function(){
+		$('.click').fadeIn(600,function(){
+			$(this).fadeOut(600,function(){
+				$(this).fadeIn(600,function(){
+					$(this).fadeOut(600,function(){
+						$(this).fadeIn(600);
+					});
+				});
+			})
+		}); 
+		effectAudio03();
+		nextEnd = true;
+		
+
+			
+	}
+	
+	$('.nextFunc').bind('click',function(){
+		var mypage = parseInt($(this).attr('data-page'));
+		if (nextEnd == true){
+			next(mypage);
+		} else {
+			next(mypage);
+			return false;
+		}
+	});
+
+	// 결과보기
+	var flag = 0;
+	$('.resultQuizBtn').bind('click',function(){
+		var rightChk = 0;
+		$('.quizWrap').css('display','none');
+		$('.resultWrap').css('display','block');
+		
+		for (i=0;$('.quiz').size()>i;i++){
+			var finalChk = $('.quiz').eq(i).attr('data-result');			
+			if (finalChk == 'o'){ rightChk = rightChk + 1; }
+			if (finalChk == 'o'){
+				$('.resultTable ul li:eq('+i+')').children('.a').addClass('o');
+			} else {
+				$('.resultTable ul li:eq('+i+')').children('.a').addClass('x');
+			}
+			$('.totalTxt u').text(rightChk);
+		}
+		
+		if (flag == '0'){endClick(); flag = 1;}				
+	});	
+	
+
+	// 다시 풀기
+	$('.requiz').bind('click',function(){
+		pageNum = 0;
+		$('.quizWrap').css('display','block');
+		$('.resultWrap').css('display','none');		
+		for (i=0;$('.quiz').size()>i;i++){
+			$('.quiz').eq(i).css('display','none');
+			$('.quiz').eq(i).removeClass('fin').attr('data-result','');
+			$('.quiz').eq(i).find('.ox').attr('data-fail','0').find('a').removeClass('r w');
+			$('.quiz').eq(i).find('.num').find('span').removeClass('o x');
+			$('.quiz').eq(i).find('.mChoice').find('a').removeClass('r s');
+			$('.resultWrap ul li:eq('+i+')').find('.a').removeClass('o x');
+		}
+		$('.nextQuizBtn, .resultQuizBtn').css('display','none');
+		$('.feedback').css('display','none');	
+		$('.feedback').removeClass('on');
+		$('.quiz').eq(0).fadeIn(300);
+	});
+	
+	
+
+	// 정답일시
+	var rightAnw = function(){
+		var noti = '<div class="notiPop">'+
+			'<img src="../images/img/img_right_pop.png" alt="" class="r"/>'+
+			'</div>'
+
+			$('.quizWrap').append(noti).promise().done(function(){ 
+				$('.notiPop').css('height',$('.quizWrap').innerHeight( true ));
+				setTimeout( function(){ $('.notiPop').remove(); explanOpen(); }, 1400);
+			});
+	};
+	
+	// 해설오픈
+	var explanOpen = function(){
+		$('.quiz').eq(pageNum).find('.nextQuizBtn, .resultQuizBtn').fadeIn(300);
+		$('.quiz').eq(pageNum).find('.feedback').fadeIn(300);
+		$('.quiz').eq(pageNum).find('.feedback').addClass('on');
+	}
+	
+	// 틀렸을시
+	var wrongAnw = function(){
+		var noti = '<div class="notiPop">'+
+			'<img src="../images/img/img_wrong_pop.png" alt="" class="w"/>'+
+			'</div>'
+
+			$('.quizWrap').append(noti).promise().done(function(){ 
+				$('.notiPop').css('height',$('.quizWrap').innerHeight( true ));
+				setTimeout( function(){ $('.notiPop').remove(); explanOpen(); }, 1400);				
+			});
+	}
+
+	// 틀렸을시 다시시도 
+	var wrongAnwRe = function(){
+		var noti = '<div class="notiPop">'+
+			'<img src="../images/img/img_wrong_re_pop.png" alt="" class="w"/>'+
+			'</div>'
+
+			$('.quizWrap').append(noti).promise().done(function(){ 
+				$('.notiPop').css('height',$('.quizWrap').innerHeight( true ));
+				setTimeout( function(){ $('.notiPop').remove(); },1400);				
+			});
+	}
+
+	// OX 퀴즈
+	$('.ox ul li a').each(function(){
+		$(this).bind('click',function(){
+			
+			if (!$(this).parent().parent().parent().parent().is('.fin')){
+				
+				$(this).addClass('r');
+				$(this).parent().siblings('li').children('a').removeClass('r').addClass('w');
+
+				var myA = $(this).attr('data-anwser');
+				if (myA == 'o'){
+					effectAudio01();
+					rightAnw();					
+					$(this).parent().parent().parent().parent().addClass('fin').attr('data-result',myA);
+					$(this).parent().parent().parent().siblings('.num').children('span').addClass(myA);
+				} else {
+					effectAudio02();
+					var myfail = $(this).parent().parent().parent();
+					var chkQ = parseInt(myfail.attr('data-fail'));
+					chkQ = chkQ+1;
+					myfail.attr('data-fail',chkQ);					
+					
+					if (chkQ == 1){
+						wrongAnw();						
+						$(this).parent().parent().parent().parent().addClass('fin').attr('data-result',myA);
+						$(this).parent().parent().parent().siblings('.num').children('span').addClass(myA);
+					} else {
+						$(this).removeClass('r');
+						$(this).parent().siblings('li').children('a').removeClass('w');
+						wrongAnw();
+					}
+				}
+			}
+		});
+	});
+	
+	
+	// 4지선다
+	$('.mChoice ul li a').each(function(){
+		$(this).bind('click',function(){
+			if (!$(this).parent().parent().parent().parent().is('.fin')){
+				
+				$(this).parent().siblings('li').children('a').removeClass('s');
+				$(this).addClass('s');
+				var myA = $(this).attr('data-anwser');
+				if (myA == 'o'){
+					rightAnw();
+					effectAudio01();
+					$(this).removeClass('s').addClass('r');
+					$(this).parent().parent().parent().parent().addClass('fin').attr('data-result',myA);
+					$(this).parent().parent().parent().siblings('.num').children('span').addClass(myA);
+				} else {
+					effectAudio02();
+					var myfail = $(this).parent().parent().parent();
+					var chkQ = parseInt(myfail.attr('data-fail'));
+					chkQ = chkQ+1;
+					myfail.attr('data-fail',chkQ);
+					
+					if (chkQ == 2){
+						wrongAnw();
+						$(this).parent().parent().parent().parent().addClass('fin').attr('data-result',myA);
+						$(this).parent().parent().parent().siblings('.num').children('span').addClass(myA);
+						
+						var mypos = $('.mChoice').eq(pageNum).find('li').size();
+						for (i=0;mypos>i;i++){
+							var anwChk = $('.mChoice:eq('+pageNum+') ul li').eq(i).children('a').attr('data-anwser');
+							if (anwChk == 'o'){
+								$('.mChoice:eq('+pageNum+') ul li').eq(i).children('a').addClass('r');
+							}
+						}
+					} else {
+						wrongAnwRe();
+					}
+				}
+			}
+		});
+	});
+
+	
+
+	// player bar
+	var playbar = false;
+	var playControl = function(){
+		if (playbar == false){
+			$('.jp-seek-bar').css('display','none');
+		} else {
+			$('.jp-seek-bar').css('display','block');
+			$('.jp-progress').unbind('click');
+		}
+	}
+	$('.jp-progress').bind('click',function(){		
+		next(mypage);
+		return false;
+	});
+	playControl();
+
+
+    // movie
+    var movieUrl = [mURL+'/quiz.mp4']; // 1300k, 500k
+       function jplayerControll(a){
+		var mUrl = movieUrl[a];
+		$('#jquery_jplayer_1').jPlayer({			
+			ready: function (event) {
+				$(this).jPlayer('setMedia', {
+					m4v: mUrl,
+					poster: '../images/img/cover.jpg'
+				});
+
+				if(!navigator.userAgent.match(/Android|Mobile|iP(hone|od|ad)|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/)){
+					$(this).jPlayer('play');
+				}
+			
+			},
+			swfPath:'js',
+			supplied:'m4v',
+			size: {
+				width:'1280px',
+				height:'720px',
+				cssClass:'jp-video-360p'
+			},
+			useStateClassSkin: true,
+			autoBlur: false,
+			smoothPlayBar: true,
+			keyEnabled: true,
+			remainingDuration: false,
+			toggleDuration: false,
+		//	autohide: {restored: true, fadeIn:200},
+			volume: 0.5,
+			ended : function(){
+               tipOpen();
+			}
+		});
+	}
+
+
+	jplayerControll(0);
+
+    $(window).load(function(){
+        $('.jp-gui').css('opacity','1');
+	//	effectAudio04();
+    });
+
+
+	// win height
+    var winHChk = function(){
+        var winH = $(window).height();
+        $('#allWrap').css('height',winH);
+    }
+    winHChk();
+    pageInit();
+    $(window).resize(function(){winHChk();});
+
+// 스피드 변경
+	$('.speed').each(function(){
+		$(this).bind('click',function(){
+			if (!$(this).hasClass('on')){
+				var dataNum = $(this).attr('data-speed');
+				var speed = [0.5, 0.8, 1, 1.2, 1.5, 1.8, 2];
+				$('.speed').removeClass('on');
+				$(this).addClass('on');				
+				$('#jquery_jplayer_1').jPlayer('option','playbackRate',speed[dataNum]);
+			}
+		});
+	});
+	$('.speed').eq(1).click();
+
+	// 해상도 변경
+	$('.resolution').each(function(){
+		$(this).bind('click',function(index){
+			if (!$(this).hasClass('active')){
+				var dataType = $(this).attr('data-type');
+				$('.resolution').removeClass('active');
+				$(this).addClass('active');
+	
+				$('#jquery_jplayer_1').jPlayer('destroy');
+				if (dataType == 'high'){ jplayerControll(0);
+				} else { jplayerControll(1); }
+	//			setTimeout(function() { $('#jquery_jplayer_1').jPlayer('play'); },1200);
+			}
+		});
+	});
+
+	// 인덱스 네비
+	var depth1 = 3; // 1차뎁스
+	var depth2 = 1; // 2차뎁스
+	$('#indexNavi').load('index_navi.html',function(){
+		var de1 = depth1 - 1;
+		var de2 = depth2 - 1;
+		$('#navigation > ul > li:eq('+de1+') > a').addClass('on');
+		$('#navigation > ul > li:eq('+de1+') ul li:eq('+de2+') a').addClass('on');
+	});
+	
+	// 스크립트 스크롤바
+	//$(".scConf").mCustomScrollbar({theme:'dark',mouseWheelPixels:150});
+
+// first action
+	var firstAct = function(){
+		$('.headBar').delay(0).animate({'top':'0'},600,function(){
+			effectAudio04();
+			for (i=0;i<$('.headBar ul li').size();i++){
+				$('.headBar ul li').eq(i).delay(i*400).animate({'opacity':'1'},300);
+			}
+			setTimeout( function(){
+				$('.txtNoti01').fadeIn(1000,function(){
+					$('.txtNoti02').fadeIn(1000,function(){
+						$('.start').css('display','block');
+						$('.start').transition({opacity:1,scale:1,complete:function(){ 
+						}},350,'easeInOutCubic');
+					});
+				});
+			},1000);
+		});
+	}
+	
+	// start
+	$('.start a').bind('click',function(){
+		allSoundStop();
+		$('.quizFirst').fadeOut();
+		$('.quizWrap').fadeIn();
+		$('.quiz:eq(0)').fadeIn();
+	});
+
+    $(window).load(function(){
+        firstAct();
+    });
+
+	// 보안
+	$('body').siteSecurity({
+	//	f12:'y',         //f12키 막기
+		rightclick: 'y' //우클릭 막기
+	});
+
+});
+</script>
+
+
+
+
+</body>
+</html>
