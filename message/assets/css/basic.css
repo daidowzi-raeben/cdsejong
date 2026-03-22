@@ -1,0 +1,65 @@
+﻿btn-pager/* 주요 버튼색 전체 변경시 주석을 풀어주세요.
+.btn-primary {color:#fff !important; background-color:#c2135d !important; border-color:#c2135d !important;}
+*/
+
+.btn-pager-prev,
+.btn-pager-next {background-color:#000;} /* 페이지 좌/우 버튼 글자색, 배경색 */
+
+.body-intro {background-image:url(../../img/bg.jpg);} /* 인트로 배경 */
+.body-movie {background-image:url(../../img/bg.jpg);} /* 동영상 배경 */
+.body-quiz {background-image:url(../../img/bg.jpg);} /* 퀴즈 배경 */
+.body-summary {background-image:url(../../img/bg.jpg);} /* 서머리 배경 */
+.body-image {background-image:url(../../img/bg.jpg);} /* 이미지 배경 */
+.body-next {background-image:url(../../img/bg.jpg);} /* 다음차시 배경 */
+
+#tool .nav {background-color:#ffcc00;} /* 러닝TOOL 배경색 */
+#tool .nav li a {color:#000;} /* 러닝TOOL 메뉴 글자색 */
+#tool .btn-tool {color:#333; background-color:#ff6600;} /* 러닝TOOL 버튼 글자색, 배경색 */
+#tool .btn-tool .caret {border-top-color:#333;} /* 러닝TOOL 버튼 화살표색 */
+#tool .btn-tool.opened .caret {border-bottom-color:#ffcc00;} /* 러닝TOOL 펼쳐졌을 때 버튼 화살표색 */
+
+#index .btn-index {color:#000; background:#ff9900;} /* INDEX 버튼 글자색, 배경색 */
+#index .btn-index .caret {border-left-color:#ff0000;} /* INDEX 버튼 화살표색 */
+#index .btn-index.opened .caret {border-right-color:#ff7777;} /* INDEX 펼쳐졌을 때 버튼 화살표색 */
+#index ol {background:#ff0066;font-size:16px;} /* INDEX 배경색, 글자크기 */
+#index ol li a {color:#ffcc00;} /* INDEX 메뉴 글자색 */
+#index ol li a:hover {color:#ffcc00;} /* INDEX 메뉴 오버시 글자색 */
+#index ol li.active a {color:#ff6600;} /* INDEX 메뉴 활성화시 글자색 */
+
+.btn-hnote {color:#fff; background:#aa77ff;} /* H노트 글자색, 배경색*/
+
+#footer .pull-left a {color:#ff6600;} /* 하단 좌측 아이콘메뉴 글자색 */
+#footer .pull-left i {background-color:#999;} /* 하단 좌측 아이콘 배경색 */
+#footer .page {color:#ff9900;} /* 하단 우측 페이지 번호 글자색 */
+.btn-pager {color:#000; background-color:#ff9900;} /* 하단 우측 이전,다음버튼 글자색, 배경색 */
+
+#header .hgroup h1 {color:#55ee00;} /* 차시명 글자색 */
+#header .hgroup p {color:#33aa99; background:url(../../img/icon-subject.png) no-repeat left center;} /* 과정명 글자색 및 아이콘 */
+#header .check-text {color:#dd5500;} /* 도움말 글자색 */
+.h1-intro {color:#ffcc00;} /* 인트로 페이지 제목 글자색 */
+
+
+.quiz-box > .container {background:#ffcc00;} /* 퀴즈 내용 부분 배경 */
+.quiz-box-footer .btn-primary {color:#000; border-color:#ff4400; background-color:#ff6600;} /* 퀴즈 하단 버튼 글자색, 선색, 배경색 */
+.quiz-box-muti-footer .btn-primary {color:#000; border-color:#ff4400; background-color:#ff6600;} /* 객관식 퀴즈 하단 버튼 글자색, 선색, 배경색 */
+.layer-quiz-mix-result .footer .btn-primary {color:#fff; border-color:#000; background-color:#000;} /* 퀴즈 결과창 하단 버튼 글자색, 선색, 배경색 */
+
+.summary-box .footer .btn-primary {color:#000; border-color:#ff4400; background-color:#ff6600;} /* 서머리 하단 버튼 글자색, 선색, 배경색 */
+
+.image-box .pager a {color:#666; border-color:#b5b5b5; background:#fff;} /* image형 pager 기본 글자, 외곽선, 배경 색 */
+.image-box .pager .current {color:#fff; border-color:#005f96; background-color:#005f96;} /* image형 pager 활성화 시 글자, 외곽선, 배경 색 */
+
+
+.nextinfo-box-header {color:#212121;} /* 현재 학습한 차시 글자색 */
+.nextinfo-box-body .body .text-sm {color:#212121;} /* 다음 시간에는 글자색 */
+.nextinfo-box-body .body .text-lg {color:#212121;} /* 다음 차시 글자색 */
+.nextinfo-box-header .btn-primary {color:#000; border-color:#ff4400; background-color:#ff6600;} /* 다시보기 버튼 글자색, 선색, 배경색 */
+.nextinfo-box-body .btn-primary {color:#000; border-color:#ff4400; background-color:#ff6600;} /* 다음차시바로가기 버튼 글자색, 선색, 배경색 */
+
+.lecture-list {background:#999;} /* Lecture List 박스 배경색 */
+.lecture-list h3 {color:#000;} /* Lecture List 제목 글자색 */
+.lecture-list .thumb .icon-next {color:#ff6600; background: #000;} /* Lecture List Next아이콘 글자, 배경색 */
+.lecture-list .thumb .icon-next:after {border-left-color:#000;} /* Lecture List Next아이콘 배경색 */
+.lecture-list .subject {color:#fff;} /* Lecture List 목록 제목 글자색 */
+.lecture-list .swiper-container a:hover {color:#fff;} /* Lecture List 목록 제목 마우스 오버시 글자색 */
+

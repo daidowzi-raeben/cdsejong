@@ -1,0 +1,489 @@
+﻿/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+html {font-family:'나눔고딕','nanumgothic','맑은 고딕','malgun gothic',sans-serif; -ms-text-size-adjust:100%; -webkit-text-size-adjust:100%;}
+body {margin:0;}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {display:block;}
+audio, canvas, progress, video {display:inline-block; vertical-align:baseline;}
+audio:not([controls]) {display:none; height:0;}
+[hidden], template {display:none;}
+a {text-decoration:none; background:transparent;}
+a:active, a:hover {outline:0;}
+a:hover, a:focus {text-decoration:underline;}
+a:focus {outline:thin dotted; outline:5px auto -webkit-focus-ring-color; outline-offset:-2px;}
+abbr[title] {border-bottom:1px dotted;}
+b, strong {font-weight:bold;}
+dfn {font-style:italic;}
+h1 {font-size:2em; margin:0.67em 0;}
+mark {background:#ff0; color:#000;}
+small {font-size:80%;}
+sub, sup {font-size:75%; line-height:0; position:relative; vertical-align:baseline;}
+sup {top:-0.5em;}
+sub {bottom:-0.25em;}
+img {border:0;}
+svg:not(:root) {overflow:hidden;}
+figure {margin:1em 40px;}
+hr {-moz-box-sizing:content-box; box-sizing:content-box; height:0;}
+pre {overflow:auto;}
+code, kbd, pre, samp {font-family:monospace, monospace; font-size:1em;}
+button, input, optgroup, select, textarea {color:inherit; font:inherit; margin:0;}
+button {overflow:visible;}
+button, select {text-transform:none;}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {-webkit-appearance:button; cursor:pointer;}
+button[disabled], html input[disabled] {cursor:default;}
+button::-moz-focus-inner, input::-moz-focus-inner {border:0; padding:0;}
+input {line-height:normal;}
+input[type="checkbox"], input[type="radio"] {box-sizing:border-box; padding:0;}
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {height:auto;}
+input[type="search"] {-webkit-appearance:textfield; -moz-box-sizing:content-box; -webkit-box-sizing:content-box; box-sizing:content-box;}
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {-webkit-appearance:none;}
+fieldset {border:1px solid #c0c0c0; margin:0 2px; padding:0.35em 0.625em 0.75em;}
+legend {border:0; padding:0;}
+textarea {overflow:auto;}
+optgroup {font-weight:bold;}
+table {border-collapse:collapse; border-spacing:0;}
+td, th {padding:0;}
+ul,ol {list-style:none; margin:0; padding:0;}
+
+h1,h2,h3,h4,h5,h6,p {margin:0;}
+
+.offset-left {position:absolute; top:0; left:0;}
+.offset-right {position:absolute; top:0; right:0;}
+
+.pull-left {float:left;}
+.pull-right {float:right;}
+
+.text-left {text-align:left !important;}
+.text-center {text-align:center !important;}
+.text-right {text-align:right !important;}
+
+.text-sm {font-size:12px;}
+
+.text-muted {color:#aaa !important;}
+.text-primary {color:#5077ba !important;}
+.text-danger {color:#d92e2e !important;}
+
+.row {margin:15px 0; padding:0 10px;}
+
+.btn {display:inline-block; padding:6px 12px; margin-bottom:0; font-size:14px; font-weight:normal; line-height:1.42857143; text-align:center; white-space:nowrap; vertical-align:middle; cursor:pointer; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; background-image:none; border:1px solid transparent; border-radius:4px;}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus {outline:thin dotted; outline:5px auto -webkit-focus-ring-color; outline-offset:-2px;}
+.btn:hover,
+.btn:focus {color:#333; text-decoration:none;}
+.btn:active,
+.btn.active {background-image:none; outline:0; -webkit-box-shadow:inset 0 3px 5px rgba(0, 0, 0, .125); box-shadow:inset 0 3px 5px rgba(0, 0, 0, .125);}
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {pointer-events:none; cursor:not-allowed; filter:alpha(opacity=65); -webkit-box-shadow:none; box-shadow:none; opacity:.65;}
+.btn-default {color:#484747; background-color:#fff; border-color:#cacaca;}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active {color:#333; background-color:#e5e5e5; border-color:#aaa;}
+.btn-default:active,
+.btn-default.active {background-image:none;}
+.btn-primary {color:#fff; background-color:#305e8d; border-color:#305e8d;}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {color:#fff; background-color:#305e8d; border-color:#305e8d;}
+.btn-primary:active,
+.btn-primary.active {background-image:none;}
+.btn-info {color:#fff; background-color:#484747; border-color:#484747;}
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active {color:#fff; background-color:#484747; border-color:#484747;}
+.btn-info:active,
+.btn-info.active {background-image:none;}
+.btn-danger {color:#fff; background-color:#f95959; border-color:#f95959;}
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active {color:#fff; background-color:#f95959; border-color:#f95959;}
+.btn-danger:active,
+.btn-danger.active {background-image:none;}
+.btn-inverse {color:#fff; background:transparent; border-color:#e4bdc7;}
+.btn-inverse:hover,
+.btn-inverse:focus,
+.btn-inverse:active,
+.btn-inverse.active {color:#fff; background:transparent; border-color:#e4bdc7;}
+.btn-inverse:active,
+.btn-inverse.active {background-image:none;}
+
+
+.btn-lg {padding:10px 16px; font-size:18px; line-height:1.33; border-radius:6px;}
+.btn-sm {padding:5px 6px; font-size:12px; line-height:1.5; border-radius:3px;}
+.btn-xs {padding:1px 4px; font-size:12px; line-height:1.5; border-radius:3px;}
+.btn-block {display:block; width:100%; padding-right:0; padding-left:0; box-sizing:border-box;}
+
+.paginate {margin-bottom:10px; text-align:center; font-size:12px;}
+.paginate a,
+.paginate strong {display:inline-block; min-width:22px; height:30px; line-height:30px; padding:0 4px; color:#656565; border:1px solid #dedede;}
+.paginate strong {color:#d92e2e;}
+.paginate a:hover {background-color:#f0f0f0; text-decoration:none;}
+.paginate .prev,
+.paginate .next {color:#4c4c4c;}
+
+
+
+.pop {overflow-x:hidden; position:relative; padding:0 0 10px 0; background:url(http://img.hunet.co.kr/study/player/common/bg.gif) repeat;}
+.pop.layer {position:absolute !important; z-index:101;}
+.pop-header {position:static; top:0; left:0; right:0; min-height:42px; padding:10px 0 0 10px; z-index:102; background:url(http://img.hunet.co.kr/study/player/common/bg.gif) repeat;}
+@media (max-width:767px) {
+	.pop {padding-top:52px;}
+	.pop-header {position:fixed;}
+}
+.pop-header .btn-group {position:absolute; top:15px; right:13px;}
+.pop-header .close {display:inline-block; width:22px; height:21px; overflow:hidden; text-indent:-9999em; *text-indent:0; *font-size:0; *line-height:0; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -500px; vertical-align:middle;}
+.pop-header .btn-list {display:inline-block;  height:24px; line-height:24px; padding:0 10px; color:#fff; font-size:12px; font-weight:bold; border-bottom:2px solid #777; background:#858585; vertical-align:middle;}
+.pop-header .btn-h-note-scrap {display:inline-block; height:24px; line-height:24px; padding:0 10px 0 35px; color:#fff; font-size:12px; font-weight:bold; border-bottom:2px solid #dd8408; background:#f69309 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 10px -947px; vertical-align:middle;}
+.pop-header h1 {height:36px; line-height:36px; color:#fff; font-size:20px;}
+.pop-header h1.icon-survey {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px 0;}
+.pop-header h1.icon-plus-ex {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px -50px;}
+.pop-header h1.icon-plus-tips {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px -50px;}
+.pop-header h1.icon-download {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px -100px;}
+.pop-header h1.icon-rec-lecture {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px -50px;}
+.pop-header h1.icon-teacher {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px -150px;}
+.pop-header h1.icon-pro {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px -500px;}
+.pop-header h1.icon-keyword-dic {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px -200px;}
+.pop-header h1.icon-book {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px -250px;}
+.pop-header h1.icon-magic {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px -300px;}
+.pop-header h1.icon-summary {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px -400px;}
+.pop-header h1.icon-movie-index {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px -450px;}
+.pop-header h1.icon-lib {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px -550px;}
+
+.pop-tabs {margin:0 10px; zoom:1;}
+.pop-tabs:after {content:""; display:block; clear:both;}
+.pop-tabs li {float:left; width:134px; margin-left:1px;}
+.pop-tabs li:first-child {margin-left:0;}
+.pop-tabs a {display:block; height:39px; line-height:39px; text-align:center; font-size:14px; color:#403f3f; background:#b5b4b4; border-top-left-radius:3px; border-top-right-radius:3px;}
+.pop-tabs .active a {font-size:16px; font-weight:600; background:#94c1ee;}
+
+.pop-content {position:relative; margin:0 10px; padding:15px; background:#fff; border-radius:4px; overflow:auto; overflow-x:hidden;}
+.pop-content .help-text-survey-list {margin-bottom:10px; padding:2px 0 2px 25px; line-height:18px; font-size:14px; color:#5a5959; font-weight:bold; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -550px;}
+.pop-content .help-text-plus-ex-list {margin-bottom:10px; padding:2px 0 2px 25px; line-height:18px; font-size:14px; color:#5a5959; font-weight:bold; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -550px;}
+.pop-content .help-text-plus-tip-list {margin-bottom:10px; padding:2px 0 2px 25px; line-height:18px; font-size:14px; color:#5a5959; font-weight:bold; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -550px;}
+.pop-content .help-text-download {margin-bottom:20px; line-height:20px; font-size:14px; color:#3a3a3a;}
+.pop-content .help-text-rec-lecture {width:384px; height:25px; margin-bottom:20px; padding:12px 0 0 20px; line-height:20px; font-size:14px; color:#fff; background:url(http://img.hunet.co.kr/study/player/common/bg_help-text-rec-lecture.png) no-repeat;}
+.pop-content .help-text-rec-book {width:425px; height:25px; margin-bottom:20px; padding:12px 0 0 30px; line-height:20px; font-size:14px; color:#fff; background:url(http://img.hunet.co.kr/study/player/common/bg_help-text-rec-book.png) no-repeat;}
+.pop-content .help-text-plus-ex {margin-bottom:10px; padding:2px 0 2px 25px; line-height:18px; font-size:14px; color:#5a5959; font-weight:bold; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -550px;}
+.pop-content .survey-list {width:100%; *width:98%; margin-bottom:15px;}
+.pop-content .survey-list th,
+.pop-content .survey-list td {font-size:12px; text-align:center; line-height:18px;}
+.pop-content .survey-list thead th {padding:5px 0 7px 0; color:#fff; border:1px solid #858585; background:#858585;}
+.pop-content .survey-list td {padding:8px 0; font-weight:bold; color:#444; border:1px solid #bababa;}
+.pop-content .survey-list .no {width:13%; background:#d6d6d6;}
+.pop-content .survey-list .subject {padding:8px 10px; text-align:left;}
+.pop-content .survey-list .subject a {color:#444;}
+.pop-content .survey-list .subject a:hover {color:#375f92; text-decoration:underline;}
+.pop-content .survey-list .answer {width:19%; font-size:14px; color:#999;}
+.pop-content .survey-list .answer .answer-yes {color:#e95151;}
+.pop-content .survey-list .answer .answer-no {color:#375f92;}
+.pop-content .survey-list .highlight td {background:#eee;}
+.pop-content .survey-list .highlight .no {background:#ff8365;}
+.pop-content .file-download {padding:20px 0 10px 0;}
+.pop-content .file-download .help-text {margin-bottom:20px; line-height:20px; text-align:center; font-size:20px; color:#3a3a3a;}
+.pop-content .file-download .help-text strong {color:#5b87c1;}
+.pop-content .file-download .btn-group {margin-bottom:20px; text-align:center;}
+.pop-content .file-download .btn-download {display:inline-block; height:28px; line-height:28px; margin-top:-14px; padding:0 20px 0 40px; font-size:14px; color:#fff; background:#5b87c1 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 18px -644px;}
+.pop-content .file-download .caution {padding:15px; line-height:18px; color:#222; font-size:14px; background:#ededed; border-radius:6px;}
+.pop-content .file-download .caution strong {color:#5b87c1;}
+.pop-content.pop-pro-view {color:#6f6d6d; font-size:14px; line-height:33px; background-image:url(http://img.hunet.co.kr/study/player/common/bg-pop-pro-view.png); background-repeat:no-repeat; background-position:97% bottom;}
+
+.list-search-box {margin-bottom:15px; padding:8px; text-align:center; font-size:12px; background:url(http://img.hunet.co.kr/study/player/common/bg_search-box.gif) repeat; border-radius:6px;}
+.list-search-box * {vertical-align:middle;}
+.list-search-box select {line-height:20px; height:26px; padding:1px; border:1px solid #bdbdbd; border-radius:0;}
+.list-search-box .i-text {width:150px; height:24px; padding-left:5px; line-height:24px; border:1px solid #bdbdbd; border-radius:0;}
+.list-search-box .btn-search {height:26px; padding:0 8px; color:#fff; border:0; background:#555; cursor:pointer;}
+.list-search-box .btn-primary {height:26px; padding:0 8px; color:#fff; border:0; background:#305e8d; cursor:pointer;}
+
+.list-count {font-size:13px; margin-bottom:10px; color:#474646;}
+
+.magic-saying {width:100%; *width:98%; margin-bottom:15px;}
+.magic-saying th,
+.magic-saying td {font-size:13px; text-align:center; line-height:18px;}
+.magic-saying thead th {padding:5px 0 7px 0; color:#fff; border:1px solid #858585; background:#858585;}
+.magic-saying td {padding:8px 0; color:#444; border:1px solid #bababa;}
+.magic-saying .no {width:13%; background:#d6d6d6;}
+.magic-saying .subject {padding:8px 10px; text-align:left; background:#f8f2e7}
+.magic-saying .subject strong {color:#444}
+.magic-saying .subject a {color:#8c8a85;}
+.magic-saying .subject a:hover strong {text-decoration:underline; color:#375f92}
+.magic-saying .subject a:hover span {color:#718bab}
+.magic-saying .subject a span {display:block; font-size:12px;}
+
+.magic-saying-content {margin:0;}
+.magic-saying-content dt {height:119px; margin:0; background:url(http://img.hunet.co.kr/study/player/common/bg_magic-saying-head.gif) no-repeat right 0; color:#fff; position:relative;}
+.magic-saying-content dt h1 {font-weight:normal; font-size:17.5px; text-align:center; padding:25px 5px 0;background:url(http://img.hunet.co.kr/study/player/common/img_magic-saying-head.gif) no-repeat left 0; height:94px}
+.magic-saying-content dd {margin:0; background:url(http://img.hunet.co.kr/study/player/common/bg_magic-saying-content.gif) repeat-y 0 0; border-bottom-left-radius:4px; border-bottom-right-radius:4px; border-bottom:1px solid #d7d6b0; font-size:14px; line-height:33px; color:#6f6d6d; padding-left:42px; border-right:1px solid #d7d6b0}
+.magic-saying-content dd .magic-saying-img {text-align:right; margin:0 20px 30px 0}
+
+.content-view-pager {position:relative; margin-bottom:15px; padding:0 30px; zoom:1;}
+.content-view-pager:after {content:""; display:block; clear:both;}
+.content-view-pager li {float:left; width:74px;}
+.content-view-pager li a {display:block; width:69px; height:36px; line-height:36px; font-size:16px; color:#6f6d6d; text-align:center; background-color:#dddedf; border-radius:5px; text-decoration:none; outline:none;}
+.content-view-pager li a:hover {background-color:#c2c2c2;}
+.content-view-pager .active a {color:#fff; background-color:#305e8d;}
+.content-view-pager .bx-prev,
+.content-view-pager .bx-next {position:absolute; top:0; width:20px; height:36px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/player/common/controls.png) no-repeat;}
+.content-view-pager .bx-prev {left:0; background-position:0 0;}
+.content-view-pager .bx-next {right:0; background-position:-50px 0;}
+.content-view-pager .bx-prev:hover {background-position:0 -50px;}
+.content-view-pager .bx-next:hover {background-position:-50px -50px;}
+
+.plus-ex-list {margin-bottom:10px; border-bottom:2px solid #cdcdcd;}
+.plus-ex-list li {padding:0 0 25px 5px; zoom:1;}
+.plus-ex-list li:after {content:""; display:block; clear:both;}
+.plus-ex-list li a {cursor:pointer; text-decoration:none;}
+.plus-ex-list .thumb {position:relative; float:left; width:173px; height:106px; margin-right:-195px; border:1px solid #ccc;}
+.plus-ex-list .thumb img {width:173px; height:106px;}
+.plus-ex-list .thumb i {position:absolute; left:-5px; top:-7px; width:116px; height:28px; padding-left:10px; line-height:24px; font-style:normal; font-weight:bold; color:#fff; font-size:14px; letter-spacing:-1px; background:url(http://img.hunet.co.kr/study/player/common/icon_tag.png) no-repeat;}
+.plus-ex-list .content {position:relative; display:block; margin-left:195px;}
+.plus-ex-list .content a:hover * {text-decoration:underline;}
+.plus-ex-list .subject {display:block; padding:9px 13px 9px 13px; line-height:20px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-weight:bold; font-size:16px; color:#5b87c1; background:#ededed; border-radius:6px;}
+.plus-ex-list .text {display:block; height:37px; overflow:hidden; padding:5px 5px 0 5px; font-size:12px; line-height:16px; color:#6f6d6d; border-bottom:1px dashed #adacac;}
+.plus-ex-list .tag {position:absolute; left:0; top:87px; padding-left:40px; font-size:12px; line-height:16px; color:#6f6d6d;}
+.plus-ex-list .tag a {color:#6f6d6d;}
+.plus-ex-list .tag i {position:absolute; left:0; top:0; width:32px; line-height:18px; text-align:center; color:#fff; font-style:normal; font-weight:bold; letter-spacing:-1px; background:#858585; border-radius:3px;}
+
+.plus-ex-view-header {margin-bottom:15px; padding:15px; line-height:21px; font-size:16px; color:#fff; background:#305e8d; border-radius:6px;}
+.plus-ex-view-header .step {position:relative; float:left; height:22px; padding:0 8px; font-size:15px; letter-spacing:-1px; color:#6490c2; background:#fff;}
+.plus-ex-view-header .step i {position:absolute; top:0; right:-10px; width:0; height:0; border-left:10px solid #fff; border-top:11px solid transparent; border-bottom:11px solid transparent;}
+.plus-ex-view-header h3 {float:left; height:22px; margin-left:10px; font-weight:600; padding:0 8px; font-size:16px; letter-spacing:-1px; color:#fff;}
+.plus-ex-view-header p {clear:both; padding-top:10px; font-weight:600; font-size:17px;}
+.plus-ex-view-content {padding:0 10px 20px 10px; line-height:20px; font-size:13px; color:#6f6d6d; border-bottom:1px dashed #adacac;}
+.plus-ex-view-content .image {margin:0 0 10px 0; text-align:center;}
+.plus-ex-view-content .image img {max-width:100%;}
+.plus-ex-view-content-tag {position:relative; padding:13px 0 13px 40px; font-size:12px; line-height:18px; color:#6f6d6d;}
+.plus-ex-view-content-tag a {color:#6f6d6d;}
+.plus-ex-view-content-tag i {position:absolute; left:0; top:13px; width:32px; text-align:center; color:#fff; font-style:normal; font-weight:bold; letter-spacing:-1px; background:#858585; border-radius:3px;}
+
+.rec-book-list {margin-bottom:10px; border-bottom:2px solid #cdcdcd;}
+.rec-book-list li {min-height:130px; padding:0 0 25px 5px; zoom:1;}
+.rec-book-list li:after {content:""; display:block; clear:both;}
+.rec-book-list .thumb {position:relative; float:left; width:103px; height:146px; margin-right:-115px; background:url(http://img.hunet.co.kr/study/player/common/bg_rec-book-thumb.png) no-repeat;}
+.rec-book-list .thumb img {width:96px; height:142px;}
+.rec-book-list .content {position:relative; display:block; margin-left:115px;}
+.rec-book-list .content a:hover * {text-decoration:underline;}
+.rec-book-list .subject {display:block; padding:9px 13px 9px 13px; line-height:20px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-weight:600; font-size:16px; color:#5b87c1; background:#ededed; border-radius:6px;}
+.rec-book-list .author {display:block; overflow:hidden; margin-bottom:10px; padding:7px 5px 7px 5px; font-size:13px; line-height:16px; color:#6f6d6d; border-bottom:1px dashed #adacac; font-weight:600;}
+.rec-book-list .summary {display:block; position:relative; padding-left:50px; font-size:12px; line-height:16px; color:#6f6d6d;}
+.rec-book-list .summary i {position:absolute; left:0; top:0; width:44px; line-height:18px; text-align:center; color:#fff; font-style:normal; font-weight:bold; letter-spacing:-1px; background:#858585; border-radius:3px;}
+.rec-book-list .share {display:block; margin-top:10px; text-align:right; font-size:12px;}
+.rec-book-list .good {display:inline-block; height:22px; line-height:22px; padding-left:26px; color:#5a5959; background:url(http://img.hunet.co.kr/study/player/common/icon-good.png) no-repeat left center;}
+.rec-book-list .good.active {background-image:url(http://img.hunet.co.kr/study/player/common/icon-good-active.png);}
+.rec-book-list .facebook {display:inline-block; height:22px; line-height:22px; margin-left:15px; padding-left:26px; color:#5a5959; background:url(http://img.hunet.co.kr/study/player/common/icon-f-sm.png) no-repeat left center;}
+
+.rec-book-view-header {zoom:1;}
+.rec-book-view-header:after {content:""; display:block; clear:both;}
+.rec-book-view-header .help-text-rec-book {float:left;}
+.rec-book-view-header .btn-list {float:right; margin-top:8px; padding:3px 8px 3px 30px; border-radius:0; background-image:url(http://img.hunet.co.kr/study/player/common/icon.png); background-repeat:no-repeat; background-position:9px -897px;}
+.rec-book-view {zoom:1;}
+.rec-book-view:after {content:""; display:block; clear:both;}
+.rec-book-view .thumb {position:relative; float:left; width:103px; height:146px; margin-right:-115px; background:url(http://img.hunet.co.kr/study/player/common/bg_rec-book-thumb.png) no-repeat;}
+.rec-book-view .thumb img {width:96px; height:142px;}
+.rec-book-view .content {position:relative; display:block; margin-left:115px;}
+.rec-book-view .content a:hover * {text-decoration:underline;}
+.rec-book-view .subject {display:block; padding:9px 13px 9px 13px; line-height:20px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-weight:600; font-size:16px; color:#5b87c1; background:#ededed; border-radius:6px;}
+.rec-book-view .author {display:block; overflow:hidden; margin-bottom:10px; padding:7px 5px 7px 5px; font-size:13px; line-height:16px; color:#6f6d6d; border-bottom:1px dashed #adacac;}
+.rec-book-view .summary {display:block; padding:0 5px; font-size:13px; line-height:22px; color:#413b3b;}
+.rec-book-view .share {display:block; margin-top:10px; text-align:right; font-size:12px;}
+.rec-book-view .good {display:inline-block; height:22px; line-height:22px; padding-left:26px; color:#5a5959; background:url(http://img.hunet.co.kr/study/player/common/icon-good.png) no-repeat left center;}
+.rec-book-view .good.active {background-image:url(http://img.hunet.co.kr/study/player/common/icon-good-active.png);}
+.rec-book-view .facebook {display:inline-block; height:22px; line-height:22px; margin-left:15px; padding-left:26px; color:#5a5959; background:url(http://img.hunet.co.kr/study/player/common/icon-f-sm.png) no-repeat left center;}
+
+.data-view-header {margin-bottom:5px;}
+.data-view-header {zoom:1;}
+.data-view-header:after {content:""; display:block; clear:both;}
+.data-view-header h3 {float:left; font-size:22px; font-weight:600; color:#474646; letter-spacing:-1px;}
+.data-view-header .btn-list {float:right; padding:3px 8px 3px 30px; border-radius:0; background-image:url(http://img.hunet.co.kr/study/player/common/icon.png); background-repeat:no-repeat; background-position:9px -897px;}
+.data-view-infobar {position:relative; margin-bottom:20px; padding:14px 110px 14px 20px; font-size:12px; color:#474646; background:#cccaca; zoom:1;}
+.data-view-infobar .hit {position:absolute; top:50%; right:20px; margin-top:-7px;}
+.data-view-infobar .btn-down {padding:3px 8px 3px 26px; border-radius:0; background-image:url(http://img.hunet.co.kr/study/player/common/icon.png); background-repeat:no-repeat; background-position:9px -644px;}
+.data-view {margin-bottom:6px; padding:0 20px 30px 20px; border-bottom:2px solid #e9e9e9;}
+.data-view .category-group {margin-bottom:20px; list-style-type:disc; padding-left:14px; color:#1a459c; font-size:13px;}
+.data-view .category-group li {margin-top:5px;}
+.data-view .category-group li:first-child {margin-top:0;}
+.data-view h4 {margin-bottom:10px; font-size:14px; color:#474646; font-weight:600;}
+.data-view .text {font-size:14px; color:#6f6d6d; line-height:26px;}
+
+.data-list {margin-bottom:10px; border-bottom:2px solid #e9e9e9;}
+.data-list li {position:relative; padding:15px 90px 17px 15px; border-top:1px solid #e9e9e9; zoom:1;}
+.data-list li:after {content:""; display:block; clear:both;}
+.data-list h4 {line-height:22px; font-weight:600; font-size:16px; color:#474646;}
+.data-list h4 a {color:#474646;}
+.data-list .info {margin-top:5px; font-size:12px;}
+.data-list .btns {position:absolute; top:6px; right:0; width:80px;}
+.data-list .btns .btn {margin-bottom:2px;}
+
+.self-talk-header {width:100%; margin-bottom:10px;}
+.self-talk-header td {height:50px; padding:15px; color:#fff; font-size:14px; text-align:left; line-height:20px; font-weight:600; background-color:#305e8d; border-radius:5px;}
+.self-talk-body {margin-bottom:5px; zoom:1;}
+.self-talk-body:after {content:""; display:block; clear:both;}
+.self-talk-body .thumb {float:left; width:358px; margin-right:-368px;}
+.self-talk-body .thumb img {width:358px; height:224px;}
+.self-talk-body .form {margin-left:368px;}
+.self-talk-body h4 {height:33px; line-height:33px; padding:0 0 0 40px; margin:0; color:#fff; font-size:14px; font-weight:600; background:#5a5959 url(http://img.hunet.co.kr/study/player/common/self-talk-body-header.png) no-repeat 15px center;}
+.self-talk-body textarea {width:320px; height:170px; padding:10px; border:1px solid #bdbdbd; border-top:0; resize:none;}
+.self-talk-body .form-wide {padding-right:22px;}
+.self-talk-body .form-wide h4 {margin-right:-22px;}
+.self-talk-body .form-wide textarea {width:100%; height:100px;}
+
+.self-talk-btns {margin-bottom:20px; zoom:1;}
+.self-talk-btns:after {content:""; display:block; clear:both;}
+.self-talk-btns i {display:inline-block; vertical-align:middle;}
+.self-talk-btns .icon-f {width:30px; height:30px; background:url(http://img.hunet.co.kr/study/player/common/icon-f.png) no-repeat center center; background-color:#2d529b !important; border-radius:50%;}
+.self-talk-btns .icon-list {width:17px; height:20px; margin:-4px 0 -2px 0; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -900px;}
+.self-talk-btns .icon-write {width:15px; height:16px; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -1105px;}
+.self-talk-btns .btn {width:110px; font-size:14px; padding-top:3px; padding-bottom:3px;}
+.self-talk-btns .btn-share {margin-right:15px; white-space:nowrap; font-size:14px; color:#5a5959;}
+
+.self-talk-list h4 {height:30px; line-height:30px; margin:0; text-align:center; font-weight:600; color:#fff; background:url(http://img.hunet.co.kr/study/player/common/self-talk-list-header.png) repeat-x; border-radius:5px;}
+.self-talk-list ul {margin-bottom:10px; font-size:13px; line-height:20px; border-bottom:1px solid #cdcdcd;}
+.self-talk-list li {padding:12px 10px; border-bottom:1px solid #d9d9d9;}
+.self-talk-list .header {font-weight:600; color:#7d7d7d;}
+.self-talk-list .text {font-weight:600; color:#5a5959;}
+
+.self-talk-thumb {text-align:center; margin-bottom:5px;}
+.self-talk-opinion-list {margin-top:-5px; margin-bottom:10px}
+.self-talk-opinion-list ul {background:#f2f7f0;}
+.self-talk-opinion-list li {padding:9px 13px; border-bottom:1px dotted #a8a9a6; color:#646464; font-size:13px}
+.self-talk-opinion-list li:last-child {border-bottom:0}
+
+.plus-tip-view-header {margin-bottom:15px; padding:15px; line-height:26px; text-align:center; font-size:18px; color:#fff; background:#858585; border-radius:6px;}
+.plus-tip-view-header h2 {font-size:18px; font-weight:600;}
+.plus-tip-view-content {*padding-right:17px;}
+.plus-tip-view-content .image {margin:0 0 10px 0; text-align:center;}
+.plus-tip-view-content .image img {width:100%;}
+.plus-tip-view-content .btn-group {margin-top:15px; text-align:center;}
+.plus-tip-view-content .btn-download {display:inline-block; height:28px; line-height:28px; margin-top:-14px; padding:0 20px 0 40px; font-size:14px; color:#fff; background:#5b87c1 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 18px -644px;}
+.plus-tip-view-content .btn-list {display:inline-block; height:28px; line-height:28px; margin-top:-14px; padding:0 20px 0 40px; font-size:14px; color:#fff; background:#484747 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 18px -896px;}
+
+.summary-list {width:100%; *width:98%; margin-bottom:15px;}
+.summary-list th,
+.summary-list td {font-size:12px; text-align:center; line-height:18px;}
+.summary-list thead th {padding:5px 0 7px 0; color:#fff; border:1px solid #858585; background:#858585;}
+.summary-list td {padding:8px 0; font-weight:bold; color:#444; border:1px solid #bababa;}
+.summary-list .no {width:13%; background:#d6d6d6;}
+.summary-list .step-subject {padding:8px 10px; text-align:left; background:#e7edf8;}
+.summary-list .subject {margin-bottom:5px;}
+.summary-list .subject a {color:#444;}
+.summary-list .subject a:hover {color:#375f92; text-decoration:underline;}
+.summary-list .tag {display:block; position:relative; padding:0 0 0 40px; font-size:12px; line-height:18px; color:#6f6d6d;}
+.summary-list .tag a {color:#6f6d6d;}
+.summary-list .tag a:hover {color:#375f92;}
+.summary-list .tag i {position:absolute; left:0; top:0; width:32px; text-align:center; color:#fff; font-style:normal; font-weight:bold; letter-spacing:-1px; background:#858585; border-radius:3px;}
+
+.summary-view-header {margin-bottom:15px; padding:15px; line-height:26px; text-align:center; font-size:18px; color:#fff; background:#6490c2; border-radius:6px;}
+.summary-view-content {*padding-right:17px; font-size:13px; color:#6f6d6d; line-height:21px;}
+.summary-view-content h3 {margin-bottom:2px; font-size:18px;}
+.summary-view-content .image {margin:10px 0 10px 0; text-align:center;}
+.summary-view-content .image img {max-width:100%;}
+.summary-view-content .btn-group {margin-top:15px; text-align:center;}
+.summary-view-content .btn-download {display:inline-block; height:28px; line-height:28px; margin-top:-14px; padding:0 20px 0 40px; font-size:14px; color:#fff; background:#5b87c1 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 18px -644px;}
+.summary-view-content .btn-list {display:inline-block; height:28px; line-height:28px; margin-top:-14px; padding:0 20px 0 40px; font-size:14px; color:#fff; background:#484747 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 18px -896px;}
+.summary-view-content-tag {position:relative; margin-top:20px; padding:13px 0 13px 40px; font-size:12px; line-height:18px; color:#6f6d6d; border-top:1px dashed #adacac;}
+.summary-view-content-tag a {color:#6f6d6d;}
+.summary-view-content-tag i {position:absolute; left:0; top:13px; width:32px; text-align:center; color:#fff; font-style:normal; font-weight:bold; letter-spacing:-1px; background:#858585; border-radius:3px;}
+
+.survey-answer-select {margin-bottom:20px; zoom:1;}
+.survey-answer-select:after {content:""; display:block; clear:both;}
+.survey-answer-select dt {float:left; width:109px; margin-right:-109px;}
+.survey-answer-select dd {margin-left:109px;}
+.survey-answer-select h2 {padding-top:10px; color:#474646; font-size:16px; line-height:22px;}
+.survey-answer-select .answer {width:315px; margin:0 auto; padding:10px 0 0 0;}
+.survey-answer-select .answer * {vertical-align:top;}
+.survey-answer-select .answer a {position:relative; display:inline-block; margin-right:40px; font-size:70px; line-height:70px; color:#acacac; font-weight:bold; text-align:center; letter-spacing:-1px; cursor:pointer;}
+.survey-answer-select .answer a span {display:block; *display:inline-block; width:52px; height:22px; margin:0 auto; *margin-top:5px; text-align:center; line-height:22px; font-size:14px; letter-spacing:0; color:#3a3a3a; background:#acacac; border-radius:10px;}
+.survey-answer-select .answer a .icon-hover {display:none; position:absolute; top:30px; right:-27px; width:63px; height:57px; overflow:hidden; background:url(http://img.hunet.co.kr/study/player/common/icon_quiz.png) no-repeat;}
+.survey-answer-select .answer a.selected,
+.survey-answer-select .answer a:hover {color:#2f2f2f; text-decoration:none;}
+.survey-answer-select .answer a.selected .icon-hover,
+.survey-answer-select .answer a:hover .icon-hover {display:block;}
+.survey-answer-comment {margin-bottom:10px; zoom:1;}
+.survey-answer-comment dt {padding:7px 0 7px 34px; color:#333; font-size:14px; line-height:20px; font-weight:bold; background:#e3e3e3 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 10px -545px;}
+.survey-answer-comment dd {margin:0;}
+.survey-answer-comment .textarea {padding:10px; border:1px solid #bdbdbd; border-top:0;}
+.survey-answer-comment .textarea textarea {width:100%; height:70px; overflow:auto; color:#363636; font-size:14px; border:0;}
+.survey-answer-comment .text-count {padding:5px 0 0 0; text-align:right; font-size:11px; color:#5a5959;}
+.btn-survey-submit {display:inline-block; width:170px; height:34px; line-height:34px; padding-right:25px; font-weight:bold; text-align:center; font-size:16px; color:#22110d; border:0; border-bottom:3px solid #e5765a; cursor:pointer; background:#ff8364 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 140px -389px;}
+.survey-result-chart {margin-bottom:10px; text-align:center;}
+.survey-result-shart-btn {margin-bottom:30px; text-align:center;}
+.survey-result-shart-btn .btn-facebook-share {display:inline-block; height:30px; line-height:30px; padding:0 20px 0 50px; font-size:14px; color:#fff; background:#5b87c1 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 13px -694px;}
+
+.survey-result-comment-list {padding-top:15px; font-size:12px; border-top:1px dashed #adacac;}
+.survey-result-comment-list .header {margin-bottom:10px; zoom:1;}
+.survey-result-comment-list .header:after {content:""; display:block; clear:both;}
+.survey-result-comment-list h3 {float:left;}
+.survey-result-comment-list .sort {float:right; padding-top:14px;}
+.survey-result-comment-list .sort select {padding:1px; border:1px solid #bdbdbd; border-radius:0;}
+.survey-result-comment-list h4 {padding:7px 15px; line-height:18px; font-size:14px; background:url(http://img.hunet.co.kr/study/player/common/bg_search-box.gif) repeat; border-radius:6px;}
+.survey-result-comment-list .list {margin-bottom:10px; font-weight:bold; border-bottom:2px solid #cdcdcd;}
+.survey-result-comment-list .list li {padding:10px 0; line-height:18px; border-bottom:1px solid #e6e6e6;}
+.survey-result-comment-list .list .info {color:#7d7d7d;}
+.survey-result-comment-list .list .text {color:#5a5959;}
+.survey-result-comment-list .list .yes {color:#e95151;}
+.survey-result-comment-list .list .no {color:#5b87c1;}
+.survey-result-comment-list .list i {font-style:normal;}
+.survey-result-comment-list .list .secret {display:inline-block; padding:0 4px; color:#fff; background:#858585; border-radius:3px;}
+.survey-result-comment-list .list .open {display:inline-block; padding:0 4px; color:#fff; background:#c48070; border-radius:3px;}
+.survey-result-comment-list .list .btn-x {display:inline-block; width:15px; height:15px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -750px;}
+
+.pop-header h1.icon-plus-quizbox {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px -350px;}
+.pop-header.quizbox {height:84px;}
+.pop-header.quizbox .select-lecture-no {position:relative; padding:0 33px; overflow:hidden; margin-top:10px}
+.pop-header.quizbox .select-lecture-no ul {width:100%; background-color:#6f6d6d; height:31px; border:solid #373636; border-width:1px 0;}
+.pop-header.quizbox .select-lecture-no li {position:absolute;}
+.pop-header.quizbox .select-lecture-no li a {color:#bcbcbc; font-size:14px; font-weight:bold; display:block; height:31px; line-height:31px; width:54px; text-align:center;}
+.pop-header.quizbox .select-lecture-no li a:hover,
+.pop-header.quizbox .select-lecture-no li.current a {background-color:#ff8364; color:#fff;}
+.pop-header.quizbox .select-lecture-no .prev a,
+.pop-header.quizbox .select-lecture-no .next a {position:absolute; top:0; background:#373636; color:#9a9a9a; width:33px; height:33px; line-height:33px; text-align:center;}
+.pop-header.quizbox .select-lecture-no .prev a {border-top-left-radius:5px; border-bottom-left-radius:5px; left:0}
+.pop-header.quizbox .select-lecture-no .next a {border-top-right-radius:5px; border-bottom-right-radius:5px; right:0}
+.pop-content .quiz h2 {background:none; color:#363233; font-size:18px; position:static; top:auto; left:auto; padding:0; height:auto; margin:10px 0 20px}
+.pop-content .quiz h2 strong {color:#ea4b24}
+.pop-content .quiz .content {border:0; background:#e5e5e5; box-shadow:none; position:relative;}
+.pop-content .quiz .content .title-quiz {position:absolute; top:-4px; left:-4px; color:#fff; font-size:15px; letter-spacing:-1px; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -1272px; height:28px; width:55px; padding-left:18px; line-height:20px;}
+.pop-content .quiz .type-ox {padding-left:95px;}
+.pop-content .quiz .type-ox dt {font-size:41px; left:30px;}
+.pop-content .quiz .type-ox dd.question {font-size:16px; width:355px; line-height:21px}
+.pop-content .quiz .type-ox dd.answer a {color:#a0a0a0}
+.pop-content .quiz .type-ox dd.answer a.selected, 
+.pop-content .quiz .type-ox dd.answer a:hover {color:#2f2f2f}
+.pop-content .quiz .footer {padding-top:20px; text-align:center;}
+.pop-content .quiz .footer a {background:#375f92 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 44px -1219px; border-top:3px solid #5f7fa8; border-bottom:5px solid #315583; padding-left:10px}
+.pop-content .quiz .footer a.btn-ok-re {background-position:30px -1219px;}
+.pop-content .quiz .type-ox-result dd.question {width:350px; font-size:16px; color:#2f2f2f; line-height:21px}
+.pop-content .quiz .type-ox-result dd.question span {color:#fff; background-color:#375f92}
+.pop-content .quiz .type-ox-result dt {font-size:41px; top:auto; left:30px}
+.pop-content .quiz .type-ox-result dt .correct {background-position:0 -374px;}
+.pop-content .quiz .type-ox-result dt .incorrect {background-position:0 -488px; top:-5px}
+.pop-content .quiz .type-ox-result {padding-left:95px; font-weight:bold;}
+.pop-content .quiz .type-ox-result .explain {color:#375f92}
+.pop-content .quiz .type-ox-result .explain .icon {font-size:12px; width:32px; height:17px; line-height:17px}
+
+
+
+
+
+
+
+.quiz-box-body {padding:0 20px 20px 20px;}
+.quiz-box-footer {text-align:center;}
+.quiz-box-body .question {position:relative; margin-top:20px; margin-bottom:10px; padding:20px 0 20px 50px; font-size:16px; color:#3b3c3b; line-height:20px; font-weight:600;}
+.quiz-box-body .question i {position:absolute; top:50%; left:0; margin-top:-20px; line-height:100%; font-size:36px; color:#2f2f2f; font-weight:600; letter-spacing:-3px; font-style:normal;}
+.quiz-box-body .question .correct {top:-8px; left:-15px; width:95px; height:80px; position:absolute; overflow:hidden; background:url(http://img.hunet.co.kr/study/player/common/icon_quiz.png) no-repeat; background-position:0 -150px;}
+.quiz-box-body .question .incorrect {top:-5px; left:0; width:77px; height:84px; position:absolute; overflow:hidden; background:url(http://img.hunet.co.kr/study/player/common/icon_quiz.png) no-repeat; background-position:0 -250px;}
+.quiz-box-body .question .explain {position:relative; padding:5px 0 5px 50px; font-size:12px; line-height:18px; font-weight:bold;}
+.quiz-box-body .question .explain .icon {position:absolute; top:5px; left:0; width:41px; height:22px; overflow:hidden; line-height:22px; text-align:center; font-size:14px; color:#fff; background:#2d2d2d; border-radius:4px;}
+.quiz-box-body .ox {width:200px; margin:0 auto; text-align:center; font-size:18px; color:#2f2f2f; line-height:24px; zoom:1;}
+.quiz-box-body .ox:after {content:""; display:block; clear:both;}
+.quiz-box-body .ox li {float:left; width:100px;}
+.quiz-box-body .ox a {display:block; margin:0 20px; font-size:80px; line-height:80px; color:#8793a0; font-weight:bold; letter-spacing:-1px; text-decoration:none; cursor:pointer; text-shadow:3px 3px 3px rgba(0,0,0,0.3);}
+.quiz-box-body .ox a:hover,
+.quiz-box-body .ox a.active {color:#2f2f2f;}
+.quiz-box-body .ox .icon-check {display:none; position:absolute; width:63px; height:57px; margin:20px 0 0 -28px; background:url(http://img.hunet.co.kr/study/player/common/icon_quiz.png) no-repeat;}
+.quiz-box-body .ox a.active .icon-check {display:inline;}
+.quiz-box-body .ox .icon-correct {display:block; width:52px; height:22px; overflow:hidden; margin:0 auto; text-align:center; line-height:22px; font-size:14px; letter-spacing:0; color:#3a3a3a; background:#8793a0; border-radius:10px; vertical-align:middle;}
+

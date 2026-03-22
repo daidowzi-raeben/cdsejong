@@ -1,0 +1,853 @@
+﻿body,div,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,blockquote,button{margin:0;padding:0;-webkit-text-size-adjust:none}
+body,input,textarea,select,table,button{color:#000;font-family:'나눔고딕','nanumgothic','맑은 고딕','malgun gothic','dotum','돋움','AppleGothic',sans-serif;font-size:100%;font-weight:normal;}
+table {border-collapse:collapse; border-spacing:0;}
+img,fieldset {border:0;}
+img,input,select,textarea{vertical-align:top;}
+address,caption,cite,code,dfn,em,var,i {font-style:normal; font-weight:normal;}
+ol,ul {list-style:none;}
+caption,th {text-align:left;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;}
+abbr,acronym {border:0;}
+
+article, aside, dialog, footer, header, section, footer, nav, figure, hgroup {display:block;}
+
+a{color:#000;text-decoration:none;}
+a:link,a:hover,a:active{text-decoration:none;}
+
+caption,
+legend,
+.accessibility {position:absolute; width:0; height:0; overflow:hidden; font-size:0; line-height:0; visibility:hidden; z-index:-1;}
+
+hr {margin-bottom:30px; font-size:0; line-height:0; border:1px solid #fff;}
+hr.line {border-bottom:1px solid #ddd;}
+
+.tCenter {text-align:center;}
+.tRight {text-align:right;}
+
+.fArea {*zoom:1;}
+.fArea:after {content:""; display:block; clear:both;}
+.fLeft {float:left;}
+.fRight {float:right;}
+
+.clear {clear:both;}
+
+
+body {background:url(http://img.hunet.co.kr/study/player/common/bg.gif) repeat;}
+#wrap {position:relative; min-width:950px; height:690px; background:url(http://img.hunet.co.kr/study/player/common/bg.gif) repeat;}
+#wrap.porting {padding-top:12px; height:635px;}
+#wrap.porting #header {display:none;}
+
+#header {width:931px; margin:0 auto; height:56px; padding:0 10px 0 9px;}
+#header .logo {float:left; width:135px; padding:17px 0 0 0; text-align:center;}
+#nav {float:right; width:795px; background:url(http://img.hunet.co.kr/study/player/common/bg_nav-line.gif) no-repeat right 20px;}
+#nav li {position:relative; float:left; *margin-right:-1px; padding:18px 0 0 0; text-align:center; background:url(http://img.hunet.co.kr/study/player/common/bg_nav-line.gif) no-repeat 0 20px;}
+#nav a {position:relative; display:block; height:24px; line-height:24px; margin:0 5px; font-size:13px; color:#fff; border-radius:10px; zoom:1;}
+#nav a span {display:none; position:absolute; right:-5px; top:-5px; width:41px; height:45px; overflow:hidden; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -800px;}
+#nav a:hover,
+#nav .current a {color:#fff; background:#878686;}
+#nav a:hover span,
+#nav .current a span {display:block;}
+
+#study-index {position:absolute; top:156px; left:0; width:130px; z-index:3;}
+#study-index .btn {position:absolute; top:0; right:-31px; width:32px; height:101px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/player/common/btn_study-index.png) no-repeat;}
+#study-index .btn.opened {background-position:-32px 0;}
+#study-index ol {padding:15px 10px; line-height:18px; font-size:16px; background:#000; opacity:.8; filter:alpha(opacity=80);}
+#study-index ol li {color:#fff;}
+#study-index ol li.current {font-weight:bold; color:#c58171;}
+#study-index ol li a {display:block; padding:5px 0; color:#fff;}
+#study-index ol li a:hover {color:#c58171;}
+#study-index ol li.current a {font-weight:bold; color:#c58171;}
+#study-index ol li li a {padding:3px 0 3px 15px; font-size:14px; background:url(http://img.hunet.co.kr/study/player/common/icon_index-bar.png) no-repeat 7px 11px;}
+
+.btn-learning-guide {position:absolute; top:54px; left:0; width:32px; height:101px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/player/common/btn_learning-guide.png) no-repeat; z-index:2;}
+.btn-h-note-add {position:absolute; top:256px; left:0; width:32px; height:131px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/player/common/btn_h-note-add.png) no-repeat; z-index:2;}
+
+.btn-screen-prev,
+.btn-screen-next {position:absolute; top:266px; width:46px; height:74px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/player/common/icon_controler.png) no-repeat;}
+.btn-screen-prev {left:14px;}
+.btn-screen-next {right:10px; background-position:-46px 0;}
+
+.footer-bar {position:absolute; left:9px; bottom:0; width:931px; height:40px;}
+.footer-bar .lecture-btn-group {position:absolute; top:14px; left:60px;}
+.footer-bar .lecture-btn-group a {margin-right:20px;}
+.footer-bar .bgm-controler {position:absolute; top:12px; left:20px;}
+.footer-bar .pager {position:absolute; top:4px; right:20px; width:220px; height:40px; line-height:40px; text-align:center; font-size:26px; font-weight:bold; color:#b2b2b2;}
+.footer-bar .pager strong {color:#c58171;}
+.footer-bar .pager a {color:#b2b2b2;}
+.footer-bar .pager .prev,
+.footer-bar .pager .next {position:absolute; top:0; height:40px; color:#e4e4e4; font-size:16px; background:url(http://img.hunet.co.kr/study/player/common/btn_footer-pager.png) no-repeat;}
+.footer-bar .pager .prev {left:0; background-position:0 8px; padding-left:18px;}
+.footer-bar .pager .next {right:0; background-position:right -65px; padding-right:18px;}
+.footer-bar .pager .intro-next {top:-5px; font-size:22px;}
+
+.btn-teacher-history {display:inline-block; padding:3px 0 3px 20px; font-size:14px; color:#e4e4e4; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 0;}
+.btn-book-down {display:inline-block; padding:3px 0 3px 40px; font-size:14px; color:#e4e4e4; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -47px;}
+.btn-data-down {display:inline-block; padding:3px 0 3px 25px; font-size:14px; color:#e4e4e4; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -1400px;}
+.btn-benchmarking-ex {display:inline-block; padding:3px 0 3px 20px; font-size:14px; color:#e4e4e4; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -1447px;}
+.btn-keyword-dic {display:inline-block; padding:3px 0 3px 35px; font-size:14px; color:#e4e4e4; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -1498px;}
+.btn-movie-index {display:inline-block; padding:3px 0 3px 32px; font-size:14px; color:#e4e4e4; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -1548px;}
+.btn-inmun-note {display:inline-block; padding:3px 0 3px 38px; font-size:14px; color:#e4e4e4; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -1600px;}
+
+
+
+#content {position:relative; width:931px; height:624px; margin:0 auto; padding:0 9px; background-repeat:no-repeat; background-position:9px 0; z-index:1;}
+#content h1 {position:absolute; top:25px; left:56px; font-size:24px; letter-spacing:-1px; color:#2f2f2f;}
+#content .header-subject {position:absolute; top:25px; right:30px; padding:6px 0 7px 32px; font-size:12px; color:#303030; font-weight:bold; background-repeat:no-repeat; background-position:0 0;}
+#content .header-module {position:absolute; top:55px; right:30px; line-height:14px; font-size:12px; color:#bec0bf; font-weight:bold;}
+#content .header-module i {display:inline-block; padding:1px 4px; background:#9d842e; color:#fff; border-radius:4px;}
+#content .help-text {position:absolute; top:73px; left:0; width:100%; padding:0 0 18px 0; text-align:center; color:#ccd9e9; font-size:14px; line-height:20px; background:url(http://img.hunet.co.kr/study/player/common/bg_help-text.png) no-repeat center bottom;}
+#content .help-text strong {font-size:16px;}
+.intro-content {background:none !important;}
+.intro-content .footer-bar {background:none;}
+.intro-content .footer-bar .pager {top:-7px;}
+.intro-content .footer-bar .pager .next {color:#fff;}
+
+.intro {width:931px; height:574px; padding-top:40px;}
+.intro .btn-start {position:absolute; top:250px; right:20px;}
+.video {position:absolute; top:102px; left:59px; width:824px; height:464px; border:4px solid #fff; background:#000; box-shadow:5px 5px 5px rgba(50, 50, 50, 0.5);}
+.video .pager {position:absolute; left:0; bottom:15px; width:100%; text-align:center; font-size:12px;}
+.video .pager a {display:inline-block; height:22px; line-height:22px; padding:0 10px; color:#666; border:1px solid #b5b5b5; background:#fff; border-radius:4px; box-shadow:2px 2px 3px rgba(0,0,0,0.2); cursor:pointer;}
+.video .pager a:hover {opacity:.6; filter:alpha(opacity=60);}
+.video .pager .current {color:#fff; background-color:#93ad7b;}
+.video .pager .prev,
+.video .pager .next {padding:0 8px; font-size:11px;}
+.video .share {position:absolute; bottom:10px; right:10px; padding:6px 20px; font-size:14px; color:#484848; font-weight:bold; background:#d1d1d1; border-radius:45px;}
+.video .share a {display:inline-block; width:30px; height:30px; margin-left:2px; overflow:hidden; text-indent:-9999em; *text-indent:0; *font-size:0; *line-height:0; vertical-align:middle;}
+.video .share a.btn-facebook {background:url(http://img.hunet.co.kr/study/player/common/icon_facebook.png) no-repeat;}
+.video .share a.btn-kakaostory {background:url(http://img.hunet.co.kr/study/player/common/icon_kakaostory.png) no-repeat;}
+
+.summary {position:absolute; top:102px; left:59px; width:824px; height:464px; overflow:auto; overflow-x:hidden; border:4px solid #fff; background:#fff; box-shadow:5px 5px 5px rgba(50, 50, 50, 0.5);}
+.summary .summary-view-content {padding:10px;}
+.summary h3 {margin-bottom:2px; font-size:18px;}
+.summary .image {margin:10px 0 10px 0; text-align:center;}
+.summary .image img {max-width:100%;}
+
+.quiz-mix {position:absolute; top:102px; left:59px; width:832px;}
+.quiz-mix .content {position:relative; width:764px; height:344px;overflow:auto; margin-bottom:20px; padding:30px 30px 0 30px; border:4px solid #fff; background:#fff; box-shadow:5px 5px 5px rgba(50, 50, 50, 0.5); border-radius:6px;zoom:1;}
+.quiz-mix .question {position:relative; margin-bottom:10px; padding:20px 0 20px 90px; font-size:20px; color:#8a6437; line-height:30px; font-weight:bold;}
+.quiz-mix .question i {position:absolute; top:50%; left:0; margin-top:-28px; line-height:100%; font-size:52px; color:#2f2f2f; font-weight:bold; letter-spacing:-3px;}
+.quiz-mix .mulitiple {padding:0 0 0 90px; font-size:18px; color:#2f2f2f; line-height:24px;}
+.quiz-mix .mulitiple li {position:relative; padding:8px 0;}
+.quiz-mix .mulitiple a {display:inline-block; padding:0 0 0 30px; color:#2f2f2f;}
+.quiz-mix .mulitiple a.selected,
+.quiz-mix .mulitiple a:hover {font-weight:bold; color:#dd1816;}
+.quiz-mix .mulitiple a.selected .icon-check,
+.quiz-mix .mulitiple a:hover .icon-check {display:block;}
+.quiz-mix .mulitiple .icon-no {position:absolute; top:8px; left:0; width:22px; height:22px; line-height:22px; color:#fff; font-weight:bold; font-size:14px; text-align:center; background:#464646; border-radius:22px; z-index:1;}
+.quiz-mix .mulitiple .icon-check {display:none; position:absolute; top:-5px; left:-5px; width:41px; height:28px; overflow:hidden; background:url(http://img.hunet.co.kr/study/player/common/icon_quiz.png) no-repeat 0 -600px; z-index:2;}
+
+.quiz-mix .ox {padding-top:20px; text-align:center;}
+.quiz-mix .ox * {vertical-align:top;}
+.quiz-mix .ox a {position:relative; display:inline-block; margin:0 15px; font-size:80px; line-height:80px; color:#8793a0; font-weight:bold; letter-spacing:-1px; cursor:pointer;}
+.quiz-mix .ox a span {display:block; *display:inline-block; width:52px; height:22px; margin:0 auto; text-align:center; line-height:22px; font-size:14px; letter-spacing:0; color:#3a3a3a; background:#8793a0; border-radius:10px;}
+.quiz-mix .ox .icon-hover {display:none; position:absolute; top:30px; right:-27px; width:63px; height:57px; overflow:hidden; background:url(http://img.hunet.co.kr/study/player/common/icon_quiz.png) no-repeat;}
+.quiz-mix .ox a.selected,
+.quiz-mix .ox a:hover {color:#2f2f2f;}
+.quiz-mix .ox a.selected .icon-hover,
+.quiz-mix .ox a:hover .icon-hover {display:block;}
+
+.quiz-mix .footer {text-align:center;}
+.quiz-mix .footer a {display:inline-block; width:150px; height:34px; line-height:34px; text-align:center; font-size:16px; color:#22110d; border:0; border-bottom:3px solid #e5765a; background:#ff8364; background-repeat:no-repeat; cursor:pointer;}
+.quiz-mix .footer a.btn-re {padding-left:20px; background-image:url(http://img.hunet.co.kr/study/player/common/icon.png); background-position:44px -191px;}
+
+.quiz {position:absolute; top:102px; left:59px; width:812px; height:372px; padding:100px 10px 0 10px;}
+.quiz h2 {position:absolute; top:15px; left:50px; height:109px; padding:20px 0 0 160px; color:#fff; font-size:28px; line-height:34px; letter-spacing:-1px; background:url(http://img.hunet.co.kr/study/player/common/bg_quiz.png) no-repeat 0 0;}
+.quiz h2 strong {color:#f3e5cb;}
+.quiz .content {position:relative; margin-bottom:20px; padding:10px 0; height:270px; overflow:auto; border:5px solid #3e4f60; background:#bdd1e5; border-radius:6px; box-shadow:5px 5px 5px rgba(50, 50, 50, 0.5);}
+.quiz .footer {text-align:center;}
+.quiz .footer a {display:inline-block; width:150px; height:34px; line-height:34px; text-align:center; font-size:16px; color:#22110d; border:0; border-bottom:3px solid #e5765a; background:#ff8364; background-repeat:no-repeat; cursor:pointer;}
+.quiz .footer a.btn-re {padding-left:20px; background-image:url(http://img.hunet.co.kr/study/player/common/icon.png); background-position:44px -191px;}
+
+.quiz .type-ox {position:relative; padding:30px 0 30px 35px; zoom:1;}
+.quiz .type-ox:after {content:""; display:block; clear:both;}
+.quiz .type-ox dt {position:absolute; top:50%; left:20px; width:80px; height:60px; margin-top:-30px; font-weight:bold; letter-spacing:-2px; font-size:52px; color:#2f2f2f;}
+.quiz .type-ox dd.question {float:left; width:500px; font-size:20px; line-height:28px; color:#2f2f2f;}
+.quiz .type-ox dd.answer {position:absolute; right:20px; top:60%; height:110px; margin-top:-35px; *margin-top:-65px;}
+.quiz .type-ox dd.answer * {vertical-align:top;}
+.quiz .type-ox dd.answer a {position:relative; display:inline-block; margin:10px 10px 0 10px; font-size:80px; line-height:80px; *padding-bottom:40px; color:#8793a0; font-weight:bold; letter-spacing:-1px; cursor:pointer;}
+.quiz .type-ox dd.answer a span {display:block; *display:inline-block; width:52px; height:22px; margin:0 auto; text-align:center; line-height:22px; font-size:14px; letter-spacing:0; color:#3a3a3a; background:#8793a0; border-radius:10px;}
+.quiz .type-ox dd.answer a .icon-hover {display:none; position:absolute; top:30px; right:-27px; width:63px; height:57px; overflow:hidden; background:url(http://img.hunet.co.kr/study/player/common/icon_quiz.png) no-repeat;}
+.quiz .type-ox dd.answer a.selected,
+.quiz .type-ox dd.answer a:hover {color:#2f2f2f;}
+.quiz .type-ox dd.answer a.selected .icon-hover,
+.quiz .type-ox dd.answer a:hover .icon-hover {display:block;}
+
+.quiz .type-ox-result {position:relative; min-height:50px; padding:10px 0 10px 35px; }
+.quiz .type-ox-result:after {content:""; display:block; clear:both;}
+.quiz .type-ox-result.quiz-currect {font-weight:bold;}
+.quiz .type-ox-result dt {position:absolute; top:10px; left:20px; width:90px; height:15px; font-weight:bold; letter-spacing:-2px; font-size:52px; color:#2f2f2f;}
+.quiz .type-ox-result dt span {position:absolute; overflow:hidden; background:url(http://img.hunet.co.kr/study/player/common/icon_quiz.png) no-repeat;}
+.quiz .type-ox-result dt .correct {top:-8px; left:-15px; width:95px; height:80px; background-position:0 -150px;}
+.quiz .type-ox-result dt .incorrect {top:-5px; left:0; width:77px; height:84px; background-position:0 -250px;}
+.quiz .type-ox-result dd.question {float:left; width:500px; font-size:20px; line-height:25px; color:#2f2f2f;}
+.quiz .type-ox-result dd.answer {position:absolute; right:20px; top:0; height:35px; }
+.quiz .type-ox-result dd.answer * {vertical-align:top;}
+.quiz .type-ox-result dd.answer a {position:relative; display:inline-block; margin:0 10px; font-size:80px; line-height:80px; *padding-bottom:40px;  color:#8793a0; font-weight:bold; letter-spacing:-1px; cursor:default;}
+.quiz .type-ox-result dd.answer a span {display:block; *display:inline-block; width:52px; height:20px; overflow:hidden; margin:0 auto; text-align:center; line-height:20px; font-size:14px; letter-spacing:0; color:#3a3a3a; background:#8793a0; border-radius:10px;}
+.quiz .type-ox-result dd.answer a .icon-hover {display:none; position:absolute; top:30px; right:-27px; width:63px; height:57px; overflow:hidden; background:url(http://img.hunet.co.kr/study/player/common/icon_quiz.png) no-repeat;}
+.quiz .type-ox-result dd.answer a.correct {color:#2f2f2f;}
+.quiz .type-ox-result dd.answer a.selected .icon-hover {display:block;}
+.quiz .type-ox-result .explain {position:relative; padding:5px 0 5px 50px; font-size:12px; line-height:18px; font-weight:bold; zoom:1;}
+.quiz .type-ox-result .explain .icon {position:absolute; top:5px; left:0; width:35px; height:22px; overflow:hidden; line-height:22px; text-align:center; font-size:14px; color:#fff; background:#2d2d2d; border-radius:4px;}
+
+.quiz .type-text-select {position:relative; padding:10px 0 10px 110px; zoom:1;}
+.quiz .type-text-select:after {content:""; display:block; clear:both;}
+.quiz .type-text-select dt {position:absolute; top:15px; left:20px; width:90px; height:60px; font-weight:bold; letter-spacing:-2px; font-size:52px; color:#2f2f2f;}
+.quiz .type-text-select dd.question {margin-bottom:10px; font-size:20px; line-height:28px; color:#2f2f2f;}
+.quiz .type-text-select dd.answer * {vertical-align:top;}
+.quiz .type-text-select dd.answer a {position:relative; display:inline-block; margin:0 10px; padding:14px 30px; font-size:16px; line-height:16px; color:#000; font-weight:bold; letter-spacing:-1px; cursor:pointer; background:#bcbcbc; border-radius:10px;}
+.quiz .type-text-select dd.answer a .icon-hover {display:none; position:absolute; top:0; right:-22px; width:63px; height:57px; overflow:hidden; background:url(http://img.hunet.co.kr/study/player/common/icon_quiz.png) no-repeat;}
+.quiz .type-text-select dd.answer a.selected,
+.quiz .type-text-select dd.answer a:hover {color:#fff; background-color:#333332;}
+.quiz .type-text-select dd.answer a.selected .icon-hover,
+.quiz .type-text-select dd.answer a:hover .icon-hover {display:block;}
+.quiz .type-text-select-result {position:relative; min-height:100px; padding:10px 0 10px 110px; zoom:1;}
+.quiz .type-text-select-result:after {content:""; display:block; clear:both;}
+.quiz .type-text-select-result dt {position:absolute; top:10px; left:20px; width:90px; height:60px; font-weight:bold; letter-spacing:-2px; font-size:52px; color:#2f2f2f;}
+.quiz .type-text-select-result dt span {position:absolute; overflow:hidden; background:url(http://img.hunet.co.kr/study/player/common/icon_quiz.png) no-repeat;}
+.quiz .type-text-select-result dt .correct {top:-8px; left:-15px; width:95px; height:80px; background-position:0 -150px;}
+.quiz .type-text-select-result dt .incorrect {top:-5px; left:0; width:77px; height:84px; background-position:0 -250px;}
+.quiz .type-text-select-result dd.question {margin-bottom:10px; font-size:20px; line-height:28px; color:#2f2f2f;}
+.quiz .type-text-select-result dd.answer * {vertical-align:top;}
+.quiz .type-text-select-result dd.answer a {position:relative; display:inline-block; margin:0 10px; padding:14px 30px; font-size:16px; line-height:16px; color:#000; font-weight:bold; letter-spacing:-1px; cursor:default; background:#bcbcbc; border-radius:10px;}
+.quiz .type-text-select-result dd.answer a .icon-hover {display:none; position:absolute; left:auto; top:0; right:-22px; width:63px; height:57px; overflow:hidden; margin:0; background:url(http://img.hunet.co.kr/study/player/common/icon_quiz.png) no-repeat;}
+.quiz .type-text-select-result dd.answer a span {position:absolute; bottom:-25px; left:50%; width:52px; height:22px; overflow:hidden; margin-left:-26px; text-align:center; line-height:22px; font-size:14px; letter-spacing:0; color:#3a3a3a; background:#ebaf78; border-radius:10px;}
+.quiz .type-text-select-result dd.answer a.correct {color:#fff; background-color:#333332;}
+.quiz .type-text-select-result dd.answer a.selected .icon-hover {display:block;}
+
+.quiz .question {position:relative; margin-bottom:10px; padding:4px 0 4px 90px; font-size:20px; color:#8a6437; line-height:30px; font-weight:bold;}
+.quiz .question i {position:absolute; top:50%; left:0; margin-top:-28px; line-height:100%; font-size:52px; color:#2f2f2f; font-weight:bold; letter-spacing:-3px;}
+.quiz .mulitiple {padding:0 0 0 90px; font-size:18px; color:#2f2f2f; line-height:24px;}
+.quiz .mulitiple li {position:relative; padding:8px 0;}
+.quiz .mulitiple a {display:inline-block; padding:0 0 0 30px; color:#2f2f2f;}
+.quiz .mulitiple a.selected,
+.quiz .mulitiple a:hover {font-weight:bold; color:#dd1816;}
+.quiz .mulitiple a.selected .icon-check,
+.quiz .mulitiple a:hover .icon-check {display:block;}
+.quiz .mulitiple .icon-no {position:absolute; top:8px; left:0; width:22px; height:22px; line-height:22px; color:#fff; font-weight:bold; font-size:14px; text-align:center; background:#464646; border-radius:22px; z-index:1;}
+.quiz .mulitiple .icon-check {display:none; position:absolute; top:-5px; left:-5px; width:41px; height:28px; overflow:hidden; background:url(http://img.hunet.co.kr/study/player/common/icon_quiz.png) no-repeat 0 -600px; z-index:2;}
+
+.quiz .type-ox-ic {position:relative; height:240px; padding:25px 20px 0 260px; font-size:15px; line-height:22px;}
+.quiz .type-ox-ic .thumb {position:absolute; top:20px; left:20px; width:171px; height:205px; padding:20px 40px 0 0; text-align:center; border-right:1px dashed #c6c6c6; background:url(http://img.hunet.co.kr/study/player/skin/information_security/quiz-img.png) no-repeat 20px 20px;}
+.quiz .type-ox-ic .answer {padding-top:10px; text-align:center;}
+.quiz .type-ox-ic .answer * {vertical-align:top;}
+.quiz .type-ox-ic .answer a {position:relative; display:inline-block; margin:0 10px; font-size:80px; line-height:80px; color:#8793a0; font-weight:bold; letter-spacing:-1px; cursor:pointer;}
+.quiz .type-ox-ic .answer a span {display:block; *display:inline-block; width:52px; height:22px; margin:0 auto; text-align:center; line-height:22px; font-size:14px; letter-spacing:0; color:#3a3a3a; background:#8793a0; border-radius:10px;}
+.quiz .type-ox-ic .answer a .icon-hover {display:none; position:absolute; top:30px; right:-27px; width:63px; height:57px; overflow:hidden; background:url(http://img.hunet.co.kr/study/player/common/icon_quiz.png) no-repeat;}
+.quiz .type-ox-ic .answer a.selected,
+.quiz .type-ox-ic .answer a:hover {color:#2f2f2f;}
+.quiz .type-ox-ic .answer a.selected .icon-hover,
+.quiz .type-ox-ic .answer a:hover .icon-hover {display:block;}
+
+.quiz-box-body {padding:0 20px 20px 20px;}
+.quiz-box-footer {text-align:center;}
+.quiz-box-body .question {position:relative; margin-top:20px; margin-bottom:10px; padding:20px 0 20px 50px; font-size:16px; color:#3b3c3b; line-height:20px; font-weight:600;}
+.quiz-box-body .question i {position:absolute; top:50%; left:0; margin-top:-20px; line-height:100%; font-size:36px; color:#2f2f2f; font-weight:600; letter-spacing:-3px; font-style:normal;}
+.quiz-box-body .question .correct {top:-8px; left:-15px; width:95px; height:80px; position:absolute; overflow:hidden; background:url(http://img.hunet.co.kr/study/player/common/icon_quiz.png) no-repeat; background-position:0 -150px;}
+.quiz-box-body .question .incorrect {top:-5px; left:0; width:77px; height:84px; position:absolute; overflow:hidden; background:url(http://img.hunet.co.kr/study/player/common/icon_quiz.png) no-repeat; background-position:0 -250px;}
+.quiz-box-body .question .explain {position:relative; padding:5px 0 5px 50px; font-size:12px; line-height:18px; font-weight:bold;}
+.quiz-box-body .question .explain .icon {position:absolute; top:5px; left:0; width:41px; height:22px; overflow:hidden; line-height:22px; text-align:center; font-size:14px; color:#fff; background:#2d2d2d; border-radius:4px;}
+.quiz-box-body .ox {width:200px; margin:0 auto; text-align:center; font-size:18px; color:#2f2f2f; line-height:24px; zoom:1;}
+.quiz-box-body .ox:after {content:""; display:block; clear:both;}
+.quiz-box-body .ox li {float:left; width:100px;}
+.quiz-box-body .ox a {display:block; margin:0 20px; font-size:80px; line-height:80px; color:#8793a0; font-weight:bold; letter-spacing:-1px; text-decoration:none; cursor:pointer; text-shadow:3px 3px 3px rgba(0,0,0,0.3);}
+.quiz-box-body .ox a:hover,
+.quiz-box-body .ox a.active {color:#2f2f2f;}
+.quiz-box-body .ox .icon-check {display:none; position:absolute; width:63px; height:57px; margin:20px 0 0 -28px; background:url(http://img.hunet.co.kr/study/player/common/icon_quiz.png) no-repeat;}
+.quiz-box-body .ox a.active .icon-check {display:inline;}
+.quiz-box-body .ox .icon-correct {display:block; width:52px; height:22px; overflow:hidden; margin:0 auto; text-align:center; line-height:22px; font-size:14px; letter-spacing:0; color:#3a3a3a; background:#8793a0; border-radius:10px; vertical-align:middle;}
+
+
+.step-end {position:absolute; top:102px; left:59px; width:792px; height:472px; padding:0 20px;}
+.step-end h2 {margin-bottom:20px; font-size:20px /*22px*/; color:#fff; font-weight:normal; letter-spacing:-1px;}
+.step-end h2 strong {font-weight:normal;}
+.step-end .btn-review {display:inline-block; vertical-align:middle; width:75px; height:23px; line-height:23px; padding-left:15px; text-align:center; font-size:12px; font-weight:bold; color:#22110d; border:0; border-bottom:2px solid #e5765a; cursor:pointer; background:#ff8364 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 12px -344px;}
+.step-end .btn-next-step-go {display:inline-block; width:180px; height:34px; line-height:34px; padding-right:25px; font-weight:bold; text-align:center; font-size:16px; color:#22110d; border:0; border-bottom:3px solid #e5765a; cursor:pointer; background:#ff8364 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 170px -389px;}
+.next-step-info {padding:0 0 40px 105px; margin-bottom:20px; background:url(http://img.hunet.co.kr/study/player/common/bg_help-text.png) no-repeat center bottom; zoom:1;}
+.next-step-info:after {content:""; display:block; clear:both;}
+.next-step-info .thumb {position:relative; float:left; width:183px; height:114px; margin-right:-214px;}
+.next-step-info .thumb a {cursor:pointer;}
+.next-step-info .thumb img {width:183px; height:114px;}
+.next-step-info .thumb .icon-play {position:absolute; top:50%; left:50%; width:53px; height:53px; margin:-26px 0 0 -26px; overflow:hidden; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -250px;}
+.next-step-info .content {margin-left:214px;}
+.next-step-info .next-step-text {margin-bottom:7px; color:#fff; font-size:18px;}
+.next-step-info .next-step-subject {margin-bottom:20px; color:#f3e5cb; font-size:22px; font-weight:bold; letter-spacing:-1px;}
+.next-step-end-info {padding:0 0 5px 115px; margin-bottom:20px; background:url(http://img.hunet.co.kr/study/player/common/bg_help-text.png) no-repeat center bottom; zoom:1;}
+.next-step-end-info:after {content:""; display:block; clear:both;}
+.next-step-end-info .thumb {position:relative; float:left; width:174px; height:164px; padding:6px 0 0 37px; margin-right:-214px; background:url(http://img.hunet.co.kr/study/player/common/bg_next-step-thumb-end.png) no-repeat;}
+.next-step-end-info .thumb img {width:131px; height:72px; border-radius:3px;}
+.next-step-end-info .next-step-end-text {padding-top:30px;}
+.next-step-end-info .content {margin-left:214px;}
+
+.lecture-list-box {position:relative; background:#405163; border-radius:6px; box-shadow:5px 5px 5px rgba(50, 50, 50, 0.5);}
+.lecture-list-box h3 {padding:15px 0 20px 0; text-align:center; color:#ccd9e9; font-size:14px; font-weight:normal;}
+.lecture-list-box .prev,
+.lecture-list-box .next {position:absolute; top:80px; width:25px; height:40px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/player/common/icon_controler.png) no-repeat 0 -100px;}
+.lecture-list-box .prev {left:40px;}
+.lecture-list-box .next {right:40px; background-position:-25px -100px;}
+.lecture-list-box .swiper-container {width:620px; height:145px;}
+.lecture-list-box .swiper-container a {cursor:pointer;}
+.lecture-list-box .swiper-container a:hover * {text-decoration:underline;}
+.lecture-list-box .thumb,
+.lecture-list-box .subject {display:block; width:158px; margin:0 auto; text-align:center;}
+.lecture-list-box .thumb {position:relative; margin-bottom:5px;}
+.lecture-list-box .thumb img {width:158px; height:93px;}
+.lecture-list-box .thumb .icon-play {position:absolute; top:50%; left:50%; width:43px; height:43px; margin:-21px 0 0 -21px; overflow:hidden; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -450px;}
+.lecture-list-box .thumb .icon-next {position:absolute; top:0; left:0; width:40px; height:20px; line-height:18px; padding-left:10px; text-align:left; color:#0a0a0a; font-size:14px; font-weight:bold; background: #ff8364; text-decoration:none !important;}
+.lecture-list-box .thumb .icon-next:after {position:absolute; left:100%; border:solid transparent; content:" "; height:0; width:0; border-left-color:#ff8364; border-width:10px; top:0;}
+
+.lecture-list-box .subject {color:#fff; font-size:12px; line-height:18px;}
+
+.bg-overlay {position:absolute; top:0; left:0; width:100%; height:100%; background:#000; z-index:100; opacity:.6; filter:alpha(opacity=60);}
+.layer-star-rate {position:absolute; top:50%; left:50%; width:328px; height:336px; margin:108px 0 0 180px; padding:0 16px; border:1px solid #fff; background:#f0f0f0; z-index:101; border-radius:6px;}
+.layer-star-rate .header {padding:12px 0 17px 0; zoom:1;}
+.layer-star-rate .header:after {content:""; display:block; clear:both;}
+.layer-star-rate .header h1 {float:left; width:107px; margin-right:-122px;}
+.layer-star-rate .header-content {margin-left:122px;}
+.layer-star-rate .header-content .text {height:30px; margin-bottom:5px; padding-top:5px; font-size:18px; letter-spacing:-1px; color:#405163; border-bottom:1px dashed #b0afaf;}
+.layer-star-rate .header label {float:left; padding:3px 15px 0 3px; font-size:14px; color:#454545;}
+.layer-star-rate .textarea {margin-bottom:5px;}
+.layer-star-rate .textarea textarea {width:306px; height:90px; overflow:auto; padding:10px; font-size:14px; color:#323131; border:1px solid #c2c2c2; background:#fff;}
+.layer-star-rate .footer {height:43px; margin-bottom:15px; padding:0 0 0 0; border-bottom:1px dashed #b0afaf;}
+.layer-star-rate .btn-recommend {display:inline-block; padding:10px 0 5px 28px; font-size:14px; color:#1f1f1f; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -150px;}
+.layer-star-rate .btn-group {text-align:center;}
+.layer-star-rate .btn-group .btn {display:inline-block; width:150px; height:34px; line-height:34px; text-align:center; font-size:16px; color:#22110d; border:0; border-bottom:3px solid #e5765a; background:#ff8364; cursor:pointer;}
+.layer-star-rate .close {position:absolute; top:5px; right:5px; width:22px; height:21px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -100px;}
+/* star rate */
+div.rating-cancel,div.star-rating{float:left;width:22px;height:20px;text-indent:-999em;cursor:pointer;display:block;background:transparent;overflow:hidden}
+div.rating-cancel,div.rating-cancel a{display:none !important;}
+div.star-rating,div.star-rating a{background:url(http://img.hunet.co.kr/study/player/common/icon_star.png) no-repeat 0 0px}
+div.rating-cancel a,div.star-rating a{display:block;width:20px;height:100%;background-position:0 0px;border:0}
+div.star-rating-on a{background-position:0 -20px !important}
+div.star-rating-hover a{background-position:0 -20px}
+div.star-rating-readonly a{cursor:default !important}
+div.star-rating{background:transparent!important;overflow:hidden!important}
+
+/* popup */
+.pop {overflow-x:hidden; position:relative; padding:8px 10px 10px 10px; background:url(http://img.hunet.co.kr/study/player/common/bg.gif) repeat;}
+.pop.layer {position:absolute !important; z-index:101;}
+.pop-header {height:42px;}
+.pop-header .btn-group {position:absolute; top:13px; right:13px;}
+.pop-header .close {display:inline-block; width:22px; height:21px; overflow:hidden; text-indent:-9999em; *text-indent:0; *font-size:0; *line-height:0; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -500px; vertical-align:middle;}
+.pop-header .btn-list {display:inline-block;  height:24px; line-height:24px; padding:0 10px; color:#fff; font-size:12px; font-weight:bold; border-bottom:2px solid #777; background:#858585; vertical-align:middle;}
+.pop-header .btn-h-note-scrap {display:inline-block; height:24px; line-height:24px; padding:0 10px 0 35px; color:#fff; font-size:12px; font-weight:bold; border-bottom:2px solid #dd8408; background:#f69309 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 10px -947px; vertical-align:middle;}
+.pop-header h1 {height:36px; line-height:36px; color:#fff; font-size:20px;}
+.pop-header h1.icon-survey {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px 0;}
+.pop-header h1.icon-plus-ex {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px -50px;}
+.pop-header h1.icon-plus-tips {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px -50px;}
+.pop-header h1.icon-download {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px -100px;}
+.pop-header h1.icon-rec-lecture {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px -50px;}
+.pop-header h1.icon-teacher {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px -150px;}
+.pop-header h1.icon-keyword-dic {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px -200px;}
+.pop-header h1.icon-book {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px -250px;}
+.pop-header h1.icon-magic {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px -300px;}
+.pop-header h1.icon-summary {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px -400px;}
+.pop-header h1.icon-movie-index {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px -450px;}
+.pop-content {position:relative; padding:15px; background:#fff; border-radius:4px; overflow:auto; overflow-x:hidden;}
+.pop-content .help-text-survey-list {margin-bottom:10px; padding:2px 0 2px 25px; line-height:18px; font-size:14px; color:#5a5959; font-weight:bold; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -550px;}
+.pop-content .help-text-plus-ex-list {margin-bottom:10px; padding:2px 0 2px 25px; line-height:18px; font-size:14px; color:#5a5959; font-weight:bold; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -550px;}
+.pop-content .help-text-plus-tip-list {margin-bottom:10px; padding:2px 0 2px 25px; line-height:18px; font-size:14px; color:#5a5959; font-weight:bold; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -550px;}
+.pop-content .help-text-download {margin-bottom:20px; line-height:20px; font-size:14px; color:#3a3a3a;}
+.pop-content .help-text-rec-lecture {width:384px; height:25px; margin-bottom:20px; padding:12px 0 0 20px; line-height:20px; font-size:14px; color:#fff; background:url(http://img.hunet.co.kr/study/player/common/bg_help-text-rec-lecture.png) no-repeat;}
+.pop-content .help-text-rec-book {width:464px; height:25px; margin-bottom:20px; padding:12px 0 0 30px; line-height:20px; font-size:14px; color:#fff; background:url(http://img.hunet.co.kr/study/player/common/bg_help-text-rec-book.png) no-repeat;}
+.pop-content .help-text-plus-ex {margin-bottom:10px; padding:2px 0 2px 25px; line-height:18px; font-size:14px; color:#5a5959; font-weight:bold; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -550px;}
+.pop-content .survey-list {width:100%; *width:98%;}
+.pop-content .survey-list th,
+.pop-content .survey-list td {font-size:12px; text-align:center; line-height:18px;}
+.pop-content .survey-list thead th {padding:5px 0 7px 0; color:#fff; border:1px solid #858585; background:#858585;}
+.pop-content .survey-list td {padding:8px 0; font-weight:bold; color:#444; border:1px solid #bababa;}
+.pop-content .survey-list .no {width:13%; background:#d6d6d6;}
+.pop-content .survey-list .subject {padding:8px 10px; text-align:left;}
+.pop-content .survey-list .subject a {color:#444;}
+.pop-content .survey-list .subject a:hover {color:#375f92; text-decoration:underline;}
+.pop-content .survey-list .answer {width:19%; font-size:14px; color:#999;}
+.pop-content .survey-list .answer .answer-yes {color:#e95151;}
+.pop-content .survey-list .answer .answer-no {color:#375f92;}
+.pop-content .survey-list .highlight td {background:#eee;}
+.pop-content .survey-list .highlight .no {background:#ff8365;}
+.pop-content .file-download {padding:20px 0 10px 0;}
+.pop-content .file-download .help-text {margin-bottom:20px; line-height:20px; text-align:center; font-size:20px; color:#3a3a3a;}
+.pop-content .file-download .help-text strong {color:#5b87c1;}
+.pop-content .file-download .btn-group {margin-bottom:20px; text-align:center;}
+.pop-content .file-download .btn-download {display:inline-block; height:28px; line-height:28px; margin-top:-14px; padding:0 20px 0 40px; font-size:14px; color:#fff; background:#5b87c1 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 18px -644px;}
+.pop-content .file-download .caution {padding:15px; line-height:18px; color:#222; font-size:14px; background:#ededed; border-radius:6px;}
+.pop-content .file-download .caution strong {color:#5b87c1;}
+
+.pop-content .help-text-plus-info-top {margin-bottom:10px; line-height:18px; font-size:16px; color:#5a5959; font-weight:bold;}
+.pop-content .info-doc-down {margin-bottom:20px; padding:20px 0; text-align:center; background:#ededed; border-radius:5px;}
+.pop-content .info-doc-down p {margin-bottom:10px; font-weight:bold; font-size:17px; color:#222;}
+.pop-content .info-doc-down .btn-download {display:inline-block; height:28px; line-height:28px; padding:0 20px 0 40px; font-size:14px; color:#fff; background:#5b87c1 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 18px -644px;}
+
+.info-notice-link-list {width:100%; margin-bottom:15px;}
+.info-notice-link-list th,
+.info-notice-link-list td {font-size:12px; text-align:center; line-height:18px;}
+.info-notice-link-list thead th {padding:5px 0 7px 0; color:#fff; border:1px solid #858585; background:#858585;}
+.info-notice-link-list td {font-weight:bold; color:#444; border:1px solid #bababa;}
+.info-notice-link-list .category {width:25%; background:#d6d6d6;}
+.info-notice-link-list .site {text-align:left;}
+.info-notice-link-list .site a {display:block; padding:8px 40px 8px 10px; color:#444; background:url(http://img.hunet.co.kr/study/player/skin/information_security/icon_data-list.png) no-repeat right 10px;}
+.info-notice-link-list .site a:hover {color:#375f92; text-decoration:underline; background-position:right -173px;}
+
+.pop-content .info-data-help-text {font-size:11px; color:#646464;}
+.pop-content .info-data-help-text a {color:#375f92; text-decoration:underline;}
+
+.summary-list {width:100%; *width:98%; margin-bottom:15px;}
+.summary-list th,
+.summary-list td {font-size:12px; text-align:center; line-height:18px;}
+.summary-list thead th {padding:5px 0 7px 0; color:#fff; border:1px solid #858585; background:#858585;}
+.summary-list td {padding:8px 0; font-weight:bold; color:#444; border:1px solid #bababa;}
+.summary-list .no {width:13%; background:#d6d6d6;}
+.summary-list .step-subject {padding:8px 10px; text-align:left; background:#e7edf8;}
+.summary-list .subject {margin-bottom:5px;}
+.summary-list .subject a {color:#444;}
+.summary-list .subject a:hover {color:#375f92; text-decoration:underline;}
+.summary-list .tag {display:block; position:relative; padding:0 0 0 40px; font-size:12px; line-height:18px; color:#6f6d6d;}
+.summary-list .tag a {color:#6f6d6d;}
+.summary-list .tag a:hover {color:#375f92;}
+.summary-list .tag i {position:absolute; left:0; top:0; width:32px; text-align:center; color:#fff; font-style:normal; font-weight:bold; letter-spacing:-1px; background:#858585; border-radius:3px;}
+
+.summary-view-header {margin-bottom:15px; padding:15px; line-height:26px; text-align:center; font-size:18px; color:#fff; background:#6490c2; border-radius:6px;}
+.summary-view-content {*padding-right:17px; font-size:13px; color:#6f6d6d; line-height:21px;}
+.summary-view-content h3 {margin-bottom:2px; font-size:18px;}
+.summary-view-content .image {margin:10px 0 10px 0; text-align:center;}
+.summary-view-content .image img {max-width:100%;}
+.summary-view-content .btn-group {margin-top:15px; text-align:center;}
+.summary-view-content .btn-download {display:inline-block; height:28px; line-height:28px; margin-top:-14px; padding:0 20px 0 40px; font-size:14px; color:#fff; background:#5b87c1 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 18px -644px;}
+.summary-view-content .btn-list {display:inline-block; height:28px; line-height:28px; margin-top:-14px; padding:0 20px 0 40px; font-size:14px; color:#fff; background:#484747 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 18px -896px;}
+.summary-view-content-tag {position:relative; margin-top:20px; padding:13px 0 13px 40px; font-size:12px; line-height:18px; color:#6f6d6d; border-top:1px dashed #adacac;}
+.summary-view-content-tag a {color:#6f6d6d;}
+.summary-view-content-tag i {position:absolute; left:0; top:13px; width:32px; text-align:center; color:#fff; font-style:normal; font-weight:bold; letter-spacing:-1px; background:#858585; border-radius:3px;}
+
+
+.download-list {font-size:16px;}
+.download-list li {position:relative; margin-bottom:10px; color:#222; font-weight:bold; background:#ededed; border-radius:6px;}
+.download-list li a {display:block; padding:15px 160px 15px 15px; color:#222; zoom:1;}
+.download-list .btn-download {position:absolute; top:50%; right:10px; height:28px; line-height:28px; margin-top:-14px; padding:0 20px 0 40px; font-size:14px; color:#fff; background:#5b87c1 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 18px -644px;}
+
+
+.paginate {margin-bottom:10px; text-align:center; line-height:16px; font-size:12px;}
+.paginate a,
+.paginate strong {display:inline-block; height:16px; padding:0 4px; color:#7d7d7d;}
+.paginate strong {color:#222;}
+.paginate a:hover {text-decoration:underline;}
+.paginate .prev,
+.paginate .next {width:16px; padding:0; text-align:center; font-size:10px; border:1px solid #dedede;}
+
+/* ===============================================================
+Basic Swiper Styles 
+================================================================*/
+.swiper-container {
+	margin:0 auto;
+	position:relative;
+	overflow:hidden;
+	-webkit-backface-visibility:hidden;
+	-moz-backface-visibility:hidden;
+	-ms-backface-visibility:hidden;
+	-o-backface-visibility:hidden;
+	backface-visibility:hidden;
+	/* Fix of Webkit flickering */
+	z-index:1;
+}
+.swiper-wrapper {
+	position:relative;
+	width:100%;
+	-webkit-transition-property:-webkit-transform, left, top;
+	-webkit-transition-duration:0s;
+	-webkit-transform:translate3d(0px,0,0);
+	-webkit-transition-timing-function:ease;
+	
+	-moz-transition-property:-moz-transform, left, top;
+	-moz-transition-duration:0s;
+	-moz-transform:translate3d(0px,0,0);
+	-moz-transition-timing-function:ease;
+	
+	-o-transition-property:-o-transform, left, top;
+	-o-transition-duration:0s;
+	-o-transform:translate3d(0px,0,0);
+	-o-transition-timing-function:ease;
+	-o-transform:translate(0px,0px);
+	
+	-ms-transition-property:-ms-transform, left, top;
+	-ms-transition-duration:0s;
+	-ms-transform:translate3d(0px,0,0);
+	-ms-transition-timing-function:ease;
+	
+	transition-property:transform, left, top;
+	transition-duration:0s;
+	transform:translate3d(0px,0,0);
+	transition-timing-function:ease;
+}
+.swiper-free-mode > .swiper-wrapper {
+	-webkit-transition-timing-function: ease-out;
+	-moz-transition-timing-function: ease-out;
+	-ms-transition-timing-function: ease-out;
+	-o-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+	margin: 0 auto;
+}
+.swiper-slide {
+	float: left;
+}
+
+/* IE10 Windows Phone 8 Fixes */
+.swiper-wp8-horizontal {
+	-ms-touch-action: pan-y;
+}
+.swiper-wp8-vertical {
+	-ms-touch-action: pan-x;
+}
+
+
+/* TOOLTIP */
+.tooltip
+{
+opacity:0; filter:alpha(opacity=0);
+font-size: 12px;
+line-height: 1.5;
+font-weight:bold;
+color: #fff;
+background: #6f6d6d;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+-webkit-box-shadow: 0 3px 5px rgba( 0, 0, 0, .3 );
+-moz-box-shadow: 0 3px 5px rgba( 0, 0, 0, .3 );
+box-shadow: 0 3px 5px rgba( 0, 0, 0, .3 );
+position: absolute;
+z-index: 100;
+padding: 15px;
+}
+.tooltip:after
+{
+width: 0;
+height: 0;
+border-left: 10px solid transparent;
+border-right: 10px solid transparent;
+border-top: 10px solid #6f6d6d;
+content: '';
+position: absolute;
+left: 50%;
+bottom: -10px;
+margin-left: -10px;
+}
+.tooltip.top:after
+{
+border-top-color: transparent;
+border-bottom: 10px solid #6f6d6d;
+top: -20px;
+bottom: auto;
+}
+.tooltip.left:after
+{
+left: 10px;
+margin: 0;
+}
+.tooltip.right:after
+{
+right: 10px;
+left: auto;
+margin: 0;
+}
+
+
+/* text color */
+.txt-primary {color:#2f7f9e;}
+.txt-warning {color:#d55401;}
+
+
+
+
+/* mobile */
+.mobile-guide-container {width:100%; height:100%;}
+.mobile-guide-container .swiper-wrapper img {width:100%;}
+.btn-mobile-guide {position:absolute; left:10px; bottom:10px; z-index:3;}
+.mobile-guide-x {position:absolute; right:90px; bottom:40px;}
+.mobile-guide-x2 {position:absolute; right:30px; bottom:40px;}
+@media (max-width: 767px) {
+html,body{width:100%; height:100%; overflow:auto;}
+}
+.mobile {display:none;}
+#wrap.mobile-layout {height:100%; min-width:931px;}
+.mobile-layout .mobile {display:block;}
+.mobile-layout #header,
+.mobile-layout .footer-bar,
+.mobile-layout #study-index,
+.mobile-layout .btn-h-note-add {display:none;}
+.mobile-layout #content {padding:0; background-position:0 0;}
+.mobile-layout .btn-screen-prev,
+.mobile-layout .btn-screen-next {position:absolute; top:266px; width:70px; height:105px; overflow:hidden; text-indent:-9999em; background-color:#000; background-image:url(http://img.hunet.co.kr/study/player/common/icon_mobile.png); border-radius:10px; opacity:.7; filter:alpha(opacity=70);}
+.mobile-layout .btn-screen-prev {left:10px; background-position:15px -180px;}
+.mobile-layout .btn-screen-next {right:10px; background-position:20px -280px;}
+
+
+.m-btn-nav {position:absolute; top:10px; right:10px; width:80px; height:60px; overflow:hidden; text-indent:-9999em; background:#5b5e63 url(http://img.hunet.co.kr/study/player/common/icon_mobile.png) no-repeat 10px -90px; z-index:12; opacity:.8; filter:alpha(opacity=80); border-radius:5px;}
+#m-header {display:none; position:absolute; top:0; left:0; width:100%; height:80px; color:#fff; background:#000; z-index:11; opacity:.8; filter:alpha(opacity=80);}
+#m-header .m-btn-home {float:left; width:80px; height:60px; overflow:hidden; margin:10px 0 0 10px; text-indent:-9999em; background:#333 url(http://img.hunet.co.kr/study/player/common/icon_mobile.png) no-repeat 10px 5px; border-radius:5px;}
+#m-header .breadcrumb {float:left; height:80px; margin:0 0 0 20px; font-size:40px; line-height:80px;}
+#m-header .menu {float:right; height:80px; margin-right:100px;}
+#m-header .menu li {position:relative; float:left; border:1px solid #000; background-image:url(http://img.hunet.co.kr/study/player/common/icon_mobile.png); background-repeat:no-repeat;}
+#m-header .menu li a {display:block; color:#fff; font-size:28px;}
+#m-header .menu > li {background-color:#545454; background-position:right -417px;}
+#m-header .menu .headlink {display:block; height:78px; line-height:78px; padding:0 60px 0 20px;}
+#m-header .menu > li.current {background-color:#ff8364; background-position:right -524px;}
+#m-header .menu li ul {display:none; position:absolute; top:78px; left:0; line-height:40px; background:#000;}
+#m-header .menu > li > ul > li {border-bottom:1px solid #222;}
+#m-header .menu li li ul {display:block; position:static; padding-bottom:5px;}
+#m-header .menu li li {position:static; float:none; margin:0 10px; border:0; background-position:right -632px;}
+#m-header .menu li li a {display:block; padding:4px 40px 4px 20px; color:#fff; font-size:22px;}
+#m-header .menu li li li {margin-right:0; background-position:right -637px;}
+#m-header .menu li li li a {padding:1px 40px 1px 40px; font-size:20px; background:url(http://img.hunet.co.kr/study/player/common/icon_mobile.png) no-repeat 30px -881px;}
+#m-header .menu li li.current {background-position:right -732px;}
+#m-header .menu > li > ul > li.current > a {font-weight:bold; color:#ff8364;}
+#m-header .menu li li li.current {background-position:right -730px;}
+#m-header .menu li li li.current a {font-weight:bold; color:#ff8364;}
+#m-header .menu .index {left:auto; right:0; width:300px; max-height:505px; overflow:auto; -webkit-overflow-scrolling:touch;}
+#m-header .menu .toolmenu {left:auto; right:0; width:300px; max-height:505px; overflow:auto; -webkit-overflow-scrolling:touch;}
+
+.m-btn-play {position:absolute; top:50%; left:50%; margin:-80px 0 0 -80px;}
+.m-icon-play {display:block; width:160px; height:160px; border-radius:160px; background: rgba(255,255,255,.7); opacity:.7; filter:alpha(opacity=70);}
+.m-icon-play i {float:left; margin:38px 0 0 48px; border-style: solid; border-width:40px 40px 40px 80px; width:0; height:0; border-color:transparent transparent transparent #000;}
+
+
+/* 팝업 퀴즈 : 시작 */
+.pop-header h1.icon-plus-quizbox {padding:0 0 0 46px; background:url(http://img.hunet.co.kr/study/player/common/icon_pop-header.png) no-repeat 4px -350px;}
+
+.pop-header.quizbox {height:84px;}
+.pop-header.quizbox .select-lecture-no {position:relative; padding:0 33px; overflow:hidden; margin-top:10px}
+.pop-header.quizbox .select-lecture-no ul {width:100%; background-color:#6f6d6d; height:31px; border:solid #373636; border-width:1px 0;}
+.pop-header.quizbox .select-lecture-no li {position:absolute;}
+.pop-header.quizbox .select-lecture-no li a {color:#bcbcbc; font-size:14px; font-weight:bold; display:block; height:31px; line-height:31px; width:54px; text-align:center;}
+.pop-header.quizbox .select-lecture-no li a:hover,
+.pop-header.quizbox .select-lecture-no li.current a {background-color:#ff8364; color:#fff;}
+.pop-header.quizbox .select-lecture-no .prev a,
+.pop-header.quizbox .select-lecture-no .next a {position:absolute; top:0; background:#373636; color:#9a9a9a; width:33px; height:33px; line-height:33px; text-align:center;}
+.pop-header.quizbox .select-lecture-no .prev a {border-top-left-radius:5px; border-bottom-left-radius:5px; left:0}
+.pop-header.quizbox .select-lecture-no .next a {border-top-right-radius:5px; border-bottom-right-radius:5px; right:0}
+.pop-content .quiz {position:static; top:auto; left:auto; padding:0; width:637px; height:auto;}
+.pop-content .quiz h2 {background:none; color:#363233; font-size:18px; position:static; top:auto; left:auto; padding:0; height:auto; margin:10px 0 20px}
+.pop-content .quiz h2 strong {color:#ea4b24}
+.pop-content .quiz .content {border:0; background:#e5e5e5; box-shadow:none; position:relative; margin-left:45px;}
+.pop-content .quiz .content .title-quiz {position:absolute; top:-4px; left:-4px; color:#fff; font-size:15px; letter-spacing:-1px; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -1272px; height:28px; width:55px; padding-left:18px; line-height:20px;}
+.pop-content .quiz .type-ox {padding-left:0px;}
+.pop-content .quiz .type-ox dt {font-size:41px; left:30px;}
+.pop-content .quiz .type-ox dd.question {font-size:16px; width:330px; line-height:21px; color:#000;}
+.pop-content .quiz .type-ox dd.answer a {color:#a0a0a0}
+.pop-content .quiz .type-ox dd.answer a.selected, 
+.pop-content .quiz .type-ox dd.answer a:hover {color:#2f2f2f}
+.pop-content .quiz .footer {padding-bottom:20px}
+.pop-content .quiz .footer a {background:#375f92 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 44px -1219px; border-top:3px solid #5f7fa8; border-bottom:5px solid #315583; padding-left:10px}
+.pop-content .quiz .footer a.btn-ok-re {background-position:30px -1219px;}
+
+.pop-content .quiz .type-ox-result dd.question {width:330px; font-size:16px; color:#2f2f2f; line-height:21px; margin-left:-95px;}
+.pop-content .quiz .type-ox-result dd.question span {color:#2f2f2f; background-color:#375f92}
+.pop-content .quiz .type-ox-result dt {font-size:41px; top:auto; left:30px}
+.pop-content .quiz .type-ox-result dt .correct {background-position:0 -374px;}
+.pop-content .quiz .type-ox-result dt .incorrect {background-position:0 -488px; top:-5px}
+.pop-content .quiz .type-ox-result {padding-left:95px; font-weight:bold;}
+.pop-content .quiz .type-ox-result .explain {color:#375f92}
+.pop-content .quiz .type-ox-result .explain .icon {font-size:12px; width:32px; height:17px; line-height:17px}
+
+.pop-content .quiz .type-ox-ic {height:auto; padding:0 20px 0 210px;}
+.pop-content .quiz .type-ox-ic .thumb {border-right:0;}
+.pop-content .quiz .type-ox-ic .quiz-content-box {position:relative; padding:30px 20px 20px 20px; font-size:13px; line-height:21px; background:#e5e5e5; border-radius:5px;}
+/* 팝업 퀴즈 : 끝 */
+
+
+/* 팝업 - 셀프토크 : 시작 */
+.pop-content .help-text-self-talk-list {margin-bottom:10px; padding:2px 0 2px 25px; line-height:18px; font-size:14px; color:#5a5959; font-weight:bold; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -550px;}
+.pop-content .share-check {margin-right:15px; font-size:14px}
+
+.self-talk-list {width:100%; *width:98%; margin-bottom:15px;}
+.self-talk-list th,
+.self-talk-list td {font-size:12px; text-align:center; line-height:18px;}
+.self-talk-list thead th {padding:5px 0 7px 0; color:#fff; border:1px solid #858585; background:#858585;}
+.self-talk-list td {padding:8px 0; font-weight:bold; color:#444; border:1px solid #bababa;}
+.self-talk-list .no {width:13%; background:#d6d6d6;}
+.self-talk-list .subject {padding:8px 10px; text-align:left; background:#f2f7f0}
+.self-talk-list .subject strong {color:#375f92}
+.self-talk-list .subject a {color:#444;}
+.self-talk-list .subject a:hover {text-decoration:underline;}
+.self-talk-list .subject a span {display:block}
+.self-talk-list.list td {padding-top:18px;padding-bottom:18px}
+.self-talk-list.list .subject a:hover {color:#375f92}
+
+h1.self-talk-h1 {background:#6490c2; border-radius:3px; text-align:center; color:#fff; font-size:17.5px; padding:20px 24px; margin-bottom:5px;}
+.self-talk-thumb {text-align:center; *padding-right:17px; margin-bottom:5px;}
+/*.self-talk-thumb img {width:100%;}*/
+
+.selftalk-my-comment {margin-bottom:10px;}
+.selftalk-my-comment dt {padding:7px 0 7px 34px; color:#333; font-size:14px; line-height:20px; font-weight:bold; background:#e3e3e3 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 10px -545px;}
+.selftalk-my-comment .textarea {padding:10px; border:1px solid #bdbdbd; border-top:0;}
+.selftalk-my-comment .textarea textarea {width:100%; height:70px; overflow:auto; color:#363636; font-size:14px; border:0;}
+.selftalk-my-comment .text-count {padding:5px 0 0 0; text-align:right; font-size:11px; color:#5a5959;}
+
+.selftalk-other-comment {margin-top:40px}
+.selftalk-other-comment h4 {padding:7px 15px; line-height:18px; font-size:14px; background:url(http://img.hunet.co.kr/study/player/common/bg_opinion-box.gif) repeat; border-radius:6px; color:#fff}
+.selftalk-other-comment .list {margin-bottom:10px; font-weight:bold; border-bottom:2px solid #cdcdcd; font-size:12.5px; }
+.selftalk-other-comment .list li {padding:10px 0; line-height:18px; border-bottom:1px solid #e6e6e6; padding-left:10px; padding-bottom:10px}
+.selftalk-other-comment .list .info {color:#7d7d7d;}
+.selftalk-other-comment .list .text {color:#5a5959;}
+
+.self-talk-opinion-list {margin-top:-5px; margin-bottom:10px}
+.self-talk-opinion-list ul {background:#f2f7f0;}
+.self-talk-opinion-list li {padding:9px 13px; border-bottom:1px dotted #a8a9a6; color:#646464; font-size:13px}
+.self-talk-opinion-list li:last-child {border-bottom:0}
+
+
+.btn-selftalk-list {display:inline-block; width:145px; height:26px; line-height:26px; padding-left:20px; font-weight:bold; text-align:center; font-size:14px; color:#fff; border:0; border-bottom:2px solid #414040; cursor:pointer; background:#484747 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 38px -897px;}
+.btn-selftalk-modify {display:inline-block; width:155px; height:26px; line-height:26px; padding-left:20px; font-weight:bold; text-align:center; font-size:14px; color:#fff; border:0; border-bottom:2px solid #6387d2; cursor:pointer; background:#4c73c6 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 38px -1099px;}
+
+.vm * {vertical-align:middle}
+
+/* 팝업 - 셀프토크 : 끝 */
+
+
+/* 마법의 명언 : 시작 */
+.magic-saying {width:100%; *width:98%; margin-bottom:15px;}
+.magic-saying th,
+.magic-saying td {font-size:12px; text-align:center; line-height:18px;}
+.magic-saying thead th {padding:5px 0 7px 0; color:#fff; border:1px solid #858585; background:#858585;}
+.magic-saying td {padding:8px 0; font-weight:bold; color:#444; border:1px solid #bababa;}
+.magic-saying .no {width:13%; background:#d6d6d6;}
+.magic-saying .subject {padding:8px 10px; text-align:left; background:#f8f2e7}
+.magic-saying .subject strong {color:#444}
+.magic-saying .subject a {color:#8c8a85;}
+.magic-saying .subject a:hover strong {text-decoration:underline; color:#375f92}
+.magic-saying .subject a:hover span {color:#718bab}
+.magic-saying .subject a span {display:block}
+
+.magic-saying-content dt {height:119px; background:url(http://img.hunet.co.kr/study/player/common/bg_magic-saying-head.gif) no-repeat right 0; color:#fff; position:relative;}
+.magic-saying-content dt h1 {font-weight:normal; font-size:17.5px; text-align:center; padding:25px 5px 0;background:url(http://img.hunet.co.kr/study/player/common/img_magic-saying-head.gif) no-repeat left 0; height:94px}
+.magic-saying-content dd {background:url(http://img.hunet.co.kr/study/player/common/bg_magic-saying-content.gif) repeat-y 0 0; border-bottom-left-radius:4px; border-bottom-right-radius:4px; border-bottom:1px solid #d7d6b0; font-size:14px; line-height:33px; color:#6f6d6d; padding-left:42px; border-right:1px solid #d7d6b0}
+.magic-saying-content dd .magic-saying-img {text-align:right; margin:0 20px 30px 0}
+/* 마법의 명언 : 끝 */
+
+.layer-quiz-result {position:absolute; top:50%; left:50%; width:588px; height:450px; margin:60px 0 0 0px; padding:0 16px; background:#f0f0f0; z-index:101; border-radius:6px;}
+.layer-quiz-result .header {padding-top:10px; border-bottom:2px solid #d9dee1;}
+.layer-quiz-result h1 {text-align:center; border-bottom:1px solid #b6c4c9;}
+.layer-quiz-result .section {height:285px; margin-bottom:15px; padding-top:15px; border-bottom:1px dashed #bababa;}
+.layer-quiz-result .thumb {float:left; width:171px; height:205px; margin-right:-210px; padding:20px 20px 0 0; text-align:center; background:url(http://img.hunet.co.kr/study/player/skin/information_security/quiz-img.png) no-repeat 20px 20px;}
+.layer-quiz-result .text {height:270px; overflow:auto; overflow-x:hidden; margin-left:210px; font-size:13px; line-height:21px; letter-spacing:-1px; color:#000;}
+.layer-quiz-result .close {position:absolute; top:5px; right:5px; width:22px; height:21px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -100px;}
+.layer-quiz-result .footer {text-align:center;}
+.layer-quiz-result .footer a {display:inline-block; height:30px; line-height:30px; font-size:16px; background-image:url(http://img.hunet.co.kr/study/player/common/icon.png); background-repeat:no-repeat;}
+.layer-quiz-result .footer .btn-ok {padding:0 37px 0 60px; color:#fff; background-color:#6f6d6d; background-position:30px -1219px; border-top:3px solid #8c8a8a; border-bottom:3px solid #646262;}
+.layer-quiz-result .footer .btn-facebook {padding:0 20px 0 37px; color:#fff; background-color:#375f92; background-position:20px -1345px; border-top:3px solid #5f7fa8; border-bottom:3px solid #315583;}
+
+.layer-quiz-mix-result {position:absolute; top:60px; left:13%; width:768px; padding:0 16px 30px 16px; background:#f0f0f0; z-index:101; border-radius:6px;}
+.layer-quiz-mix-result .header {padding-top:10px; border-bottom:2px solid #d9dee1;}
+.layer-quiz-mix-result h1 {text-align:center; border-bottom:1px solid #b6c4c9;}
+.layer-quiz-mix-result .close {position:absolute; top:5px; right:5px; width:22px; height:21px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -100px;}
+.layer-quiz-mix-result .section {height:385px; overflow:auto; overflow-x:hidden; margin-bottom:15px; padding:15px 20px 0 20px; border-bottom:1px dashed #bababa;}
+.layer-quiz-mix-result .footer {text-align:center;}
+.layer-quiz-mix-result .footer a {display:inline-block; height:30px; line-height:30px; font-size:16px; background-image:url(http://img.hunet.co.kr/study/player/common/icon.png); background-repeat:no-repeat;}
+.layer-quiz-mix-result .footer .btn-ok {padding:0 37px 0 60px; color:#fff; background-color:#6f6d6d; background-position:30px -1219px; border-top:3px solid #8c8a8a; border-bottom:3px solid #646262;}
+.layer-quiz-mix-result .footer .btn-restart {padding:0 37px 0 37px; color:#fff; background:#375f92; border-top:3px solid #5f7fa8; border-bottom:3px solid #315583;}
+.layer-quiz-mix-result .question {position:relative; margin-bottom:10px; padding:25px 0 25px 90px; font-size:20px; color:#959595; line-height:30px; font-weight:bold;}
+.layer-quiz-mix-result .question i {position:absolute; top:50%; left:0; width:70px; height:77px; margin-top:-38px; line-height:64px; font-size:64px; color:#8f8f8f; font-weight:bold; border-right:1px solid #dad2cb;}
+.layer-quiz-mix-result .answer {padding:5px 0 0 90px; font-size:15px; color:#333; line-height:24px; background:url(http://img.hunet.co.kr/study/player/common/quiz-mix-result-answer.png) no-repeat 5px 0;}
+.layer-quiz-mix-result .answer .correct {padding:0 0 20px 0; color:#000; font-size:17px; font-weight:bold; letter-spacing:-1px;}
+.layer-quiz-mix-result .answer .correct strong {font-size:33px;}
+.layer-quiz-mix-result .answer .correct span {color:#dd1816;}
+
+
+.layer-quiz-mix-result-pop {position:absolute; top:60px; left:13%; width:568px; padding:0 16px 30px 16px; background:#f0f0f0; z-index:101; border-radius:6px;}
+.layer-quiz-mix-result-pop .header {padding-top:10px; border-bottom:2px solid #d9dee1;}
+.layer-quiz-mix-result-pop h1 {text-align:center; border-bottom:1px solid #b6c4c9;}
+.layer-quiz-mix-result-pop .close {position:absolute; top:5px; right:5px; width:22px; height:21px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -100px;}
+.layer-quiz-mix-result-pop .section {height:315px; overflow:auto; overflow-x:hidden; margin-bottom:15px; padding:15px 20px 0 20px; border-bottom:1px dashed #bababa;}
+.layer-quiz-mix-result-pop .footer {text-align:center;}
+.layer-quiz-mix-result-pop .footer a {display:inline-block; height:30px; line-height:30px; font-size:16px; background-image:url(http://img.hunet.co.kr/study/player/common/icon.png); background-repeat:no-repeat;}
+.layer-quiz-mix-result-pop .footer .btn-ok {padding:0 37px 0 60px; color:#fff; background-color:#6f6d6d; background-position:30px -1219px; border-top:3px solid #8c8a8a; border-bottom:3px solid #646262;}
+.layer-quiz-mix-result-pop .footer .btn-restart {padding:0 37px 0 37px; color:#fff; background:#375f92; border-top:3px solid #5f7fa8; border-bottom:3px solid #315583;}
+.layer-quiz-mix-result-pop .question {position:relative; margin-bottom:10px; padding:25px 0 25px 90px; font-size:20px; color:#959595; line-height:30px; font-weight:bold;}
+.layer-quiz-mix-result-pop .question i {position:absolute; top:50%; left:0; width:70px; height:77px; margin-top:-38px; line-height:64px; font-size:64px; color:#8f8f8f; font-weight:bold; border-right:1px solid #dad2cb;}
+.layer-quiz-mix-result-pop .answer {padding:5px 0 0 90px; font-size:15px; color:#333; line-height:24px; background:url(http://img.hunet.co.kr/study/player/common/quiz-mix-result-answer.png) no-repeat 5px 0;}
+.layer-quiz-mix-result-pop .answer .correct {padding:0 0 20px 0; color:#000; font-size:17px; font-weight:bold; letter-spacing:-1px;}
+.layer-quiz-mix-result-pop .answer .correct strong {font-size:33px;}
+.layer-quiz-mix-result-pop .answer .correct span {color:#dd1816;}
+
+.layer-quiz-mix-result-all {position:absolute; top:120px; left:22%; width:590px; padding:0 16px 30px 16px; background:#f0f0f0; z-index:101; border-radius:6px;}
+.layer-quiz-mix-result-all .header {padding-top:10px; border-bottom:2px solid #d9dee1;}
+.layer-quiz-mix-result-all h1 {text-align:center; border-bottom:1px solid #b6c4c9;}
+.layer-quiz-mix-result-all .close {position:absolute; top:5px; right:5px; width:22px; height:21px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -100px;}
+.layer-quiz-mix-result-all .section {height:250px; overflow:auto; overflow-x:hidden; margin-bottom:15px; padding:35px 20px 0 20px; text-align:center; border-bottom:1px dashed #bababa;}
+.layer-quiz-mix-result-all .footer {text-align:center;}
+.layer-quiz-mix-result-all .footer a {display:inline-block; height:30px; line-height:30px; font-size:16px; background-image:url(http://img.hunet.co.kr/study/player/common/icon.png); background-repeat:no-repeat;}
+.layer-quiz-mix-result-all .footer .btn-ok {padding:0 37px 0 60px; color:#fff; background-color:#6f6d6d; background-position:30px -1219px; border-top:3px solid #8c8a8a; border-bottom:3px solid #646262;}
+.layer-quiz-mix-result-all .footer .btn-restart {padding:0 37px 0 37px; color:#fff; background:#375f92; border-top:3px solid #5f7fa8; border-bottom:3px solid #315583;}
+.layer-quiz-mix-result-all .result {margin-bottom:15px; font-size:33px; color:#2f2f2f; font-weight:bold; letter-spacing:-1px;}
+.layer-quiz-mix-result-all .result strong {color:#dd1816;}
+.layer-quiz-mix-result-all .help {margin-bottom:20px; color:#333; font-size:20px; letter-spacing:-1px;}
+.layer-quiz-mix-result-all .state {}
+.layer-quiz-mix-result-all .state span {position:relative; display:inline-block; width:104px; height:104px; overflow:hidden; margin:0 5px; line-height:104px; font-weight:bold; font-size:52px; color:#2f2f2f; letter-spacing:-2px; border-radius:10px; border:3px solid #b6c4c9; background:#ebebeb;}
+.layer-quiz-mix-result-all .state span.x {background:#cfdbe0;}
+.layer-quiz-mix-result-all .state i {position:absolute; top:50%; left:50%; overflow:hidden; background:url(http://img.hunet.co.kr/study/player/common/icon_quiz.png) no-repeat 0 0;}
+.layer-quiz-mix-result-all .state span.o i {width:85px; height:85px; margin:-42px 0 0 -42px; background-position:0 -650px;}
+.layer-quiz-mix-result-all .state span.x i {width:73px; height:73px; margin:-36px 0 0 -36px; background-position:0 -750px;}
+
+.pop-content-teacher {background:#fff; width:662px; height:439px; overflow:auto; overflow-x:hidden;}
+
+.movie-index-list {height:300px; overflow:auto; overflow-x:hidden; padding:0 10px 20px 0; font-size:17px;}
+.movie-index-list li {border-bottom:1px dashed #adacac; background:url(http://img.hunet.co.kr/study/player/common/icon_movie-index.png) no-repeat right center;}
+.movie-index-list li a {display:block; padding:10px 50px 10px 10px; color:#222; font-weight:bold;}
+
+/* 의견등록 팝업 */
+.layer-opinion {position:absolute; top:50%; left:50%; width:468px; height:296px; margin:108px 0 0 180px; padding:0 16px; border:1px solid #fff; background:#f0f0f0; z-index:101; border-radius:6px;}
+.layer-opinion .header {padding:12px 0 0 0;}
+.layer-opinion .header-content {height:88px; padding-left:110px;background:url(http://img.hunet.co.kr/study/player/skin/leadership_essence/img_opinion.png) no-repeat 14px 0}
+.layer-opinion .header-content .text {margin-bottom:5px; padding-top:10px; padding-right:40px; font-size:15px; letter-spacing:-1px; color:#405163; line-height:20px;}
+.layer-opinion .header label {float:left; padding:3px 15px 0 3px; font-size:14px; color:#454545;}
+.layer-opinion .textarea {margin-bottom:15px;}
+.layer-opinion .textarea textarea {width:443px; height:85px; overflow:auto; padding:10px; font-size:14px; color:#323131; border:1px solid #c2c2c2; background:#fff;}
+.layer-opinion .footer {text-align:center;}
+.layer-opinion .footer * {vertical-align:middle}
+.layer-opinion .footer .share-check {font-size:14px; margin-right:5px}
+.layer-opinion .footer .btn-facebook {display:inline-block; height:43px; line-height:43px; padding:0 20px 0 65px; font-size:14px; font-weight:bold; color:#484848; background:#d1d1d1 url(http://img.hunet.co.kr/study/player/common/icon_facebook.png) no-repeat 25px 6px;}
+.layer-opinion .footer .btn-kakaostory {display:inline-block; height:43px; line-height:43px; padding:0 10px 0 55px; font-size:14px; font-weight:bold; color:#484848; background:#d1d1d1 url(http://img.hunet.co.kr/study/player/common/icon_kakaostory.png) no-repeat 15px 6px;}
+.layer-opinion .footer .btn-facebook:hover,
+.layer-opinion .footer .btn-kakaostory:hover {color:#2f2f2f; background-color:#b3b3b3;}
+.layer-opinion .close {position:absolute; top:5px; right:5px; width:22px; height:21px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -100px;}
+.layer-opinion .btn-opinion-submit {display:inline-block; width:160px; height:30px; line-height:30px; padding-left:20px; font-weight:bold; text-align:center; letter-spacing:-1px; font-size:14px; color:#fff; border:0; border-bottom:3px solid #5279ad; cursor:pointer; background:#5b87c1 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 40px -1098px;}
+.layer-opinion .btn-opinion-other-view {display:inline-block; width:160px; height:30px; line-height:30px; padding-left:20px; font-weight:bold; text-align:center; letter-spacing:-1px; font-size:14px; color:#fff; border:0; border-bottom:3px solid #414040; cursor:pointer; background:#484747 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 15px -895px;}
+
+/* 공유 팝업 */
+.layer-share {position:absolute; top:50%; left:50%; width:468px; height:226px; margin:-133px 0 0 -234px; padding:20px 16px; border:1px solid #fff; background:#f0f0f0; z-index:101; border-radius:6px;}
+.layer-share .close {position:absolute; top:5px; right:5px; width:22px; height:21px; overflow:hidden; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 0 -100px;}
+.layer-share .header {padding:1px 0 18px 45px; line-height:30px; font-size:25px; font-weight:bold; letter-spacing:-1px; color:#405163;}
+.layer-share .header-facebook {background:url(http://img.hunet.co.kr/study/player/common/icon_facebook-35.png) no-repeat 0 0;}
+.layer-share .header-kakaostory {background:url(http://img.hunet.co.kr/study/player/common/icon_kakaostory-35.png) no-repeat 0 0;}
+.layer-share .textarea {margin-bottom:15px;}
+.layer-share .textarea textarea {width:95%; height:100px; padding:10px; font-size:13px; color:#000; border:1px solid #c2c2c2;}
+.layer-share .footer {text-align:center;}
+.layer-share .footer .btn {display:inline-block; width:115px; height:28px; margin:0 2px; line-height:28px; text-align:center; font-weight:bold; font-size:14px; color:#fff; border:0; cursor:pointer;}
+.layer-share .footer .btn-submit {background-color:#5b87c1;}
+.layer-share .footer .btn-submit:hover {background-color:#386eb1;}
+.layer-share .footer .btn-cancel {background-color:#686868;}
+.layer-share .footer .btn-cancel:hover {background-color:#484747;}
+
+/* mp3다운로드 */
+.help-text-plus-tip-list .btn-download {display:inline-block; height:28px; line-height:28px; margin:-4px 0 0 5px; padding:0 8px 0 26px; font-size:13px; color:#fff; background:#5b87c1 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 8px -644px;}
+.mp3down-list {width:100%; *width:98%; margin-bottom:15px;}
+.mp3down-list th,
+.mp3down-list td {font-size:13px; text-align:center; line-height:18px;}
+.mp3down-list thead th {padding:5px 0 7px 0; color:#fff; border:1px solid #858585; background:#858585;}
+.mp3down-list td {padding:15px 0; font-weight:bold; color:#444; border:1px solid #bababa;}
+.mp3down-list .no {width:13%; background:#d6d6d6;}
+.mp3down-list .subject {padding:15px 10px; text-align:left; background:#f2f7f0;}
+.mp3down-list .down {width:13%; background:#f4f0e4;}
+
+/* 20150730 modal */
+.modal-backdrop {display:block; position: fixed; top:0; left:0; width:100%; height:100%; background:#000; z-index:9998; -webkit-transition:all .2s ease-in-out; transition:all .2s ease-in-out; opacity:.60; filter:alpha(opacity=60);}
+.modal-open {overflow:hidden;}
+.modal {display:none; position:fixed; top:0; right:0; bottom:0; left:0; z-index:9999; overflow:auto; -webkit-overflow-scrolling:touch; outline:0; -webkit-transition:all .2s ease-in-out; transition:all .2s ease-in-out;}
+.modal .modal-close {position:absolute; top:7px; right:7px; width:22px; height:21px; overflow:hidden; text-indent:-9999em; border:0; background:url(http://img.hunet.co.kr/study/player/common/icon-modal-x.png) no-repeat center center; cursor:pointer;}
+.modal-dialog {position:relative; width:auto; margin:20px;}
+.modal-content {position:relative; margin:0 auto; padding:20px; line-height:20px; color:#555; font-size:13px; font-family:'나눔고딕','nanumgothic','맑은 고딕','malgun gothic',sans-serif; background-color:#fff; outline:none; -webkit-box-shadow:0 3px 9px rgba(0, 0, 0, .5); box-shadow:0 3px 9px rgba(0, 0, 0, .5); border:2px solid #2c2c2c; border-radius:10px;}
+
+/* 20151228 키워드사전 */
+.keyword-dic-index .custom {width:109px; background-position:-548px 0;}
+.keyword-dic-index .disabled .custom {background-position:-548px -50px;}
+.keyword-dic-index .current .custom {background-position:-548px -100px;}
+.keyword-desc { font-size:17px; font-weight:600; color:#555; text-align:center; padding-bottom:15px; }
+.keyword-desc span { color:#fa4a2d; } 
