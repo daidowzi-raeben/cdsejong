@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link type="text/css" rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="player-wrap" id="playerWrap">
+		<button type="button" class="close"></button>
+		<!-- player 에 lock 클래스 추가시 동영상 스크롤바 잠김 -->
+		<div class="player lock" id="player">
+			<video id="player1" controls onended="nextBtn()" src="./video/01.mp4"></video>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		// 버튼 삽입 함수
+		function nextBtn(){
+			if(!document.getElementById('nextBtn')){
+				var nextButton = document.createElement('button')
+				nextButton.type = 'button'
+				nextButton.className = 'next-btn'
+				document.getElementById('player').appendChild(nextButton)
+			}
+		}
+	</script>
+</body>
+</html>

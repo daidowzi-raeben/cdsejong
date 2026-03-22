@@ -1,0 +1,45 @@
+<?php
+  $db_host = "localhost";
+  $db_user = "sejongsurvey";
+  $db_pass = "sejongdb21";
+  $database = "sejongsurvey";
+
+  ob_start();
+  $connection = mysql_connect($db_host, $db_user, $db_pass) or die("Cannot establish connection to MySql Server.");
+  $db = mysql_select_db($database, $connection) or die("Cannot select the database.");
+
+  $ip = $_SERVER['REMOTE_ADDR'];
+
+  if (mysql_num_rows(mysql_query("SELECT * FROM `poll` WHERE `ip` = '$ip'")) > 0) {
+    $start = '<img src="images/btn_poll2.gif" onclick="alert(\'이미 설문 참여 완료 되었습니다\');" alt="설문시작하기" width="291" height="66" />';
+  } else {
+    $start = '<a href="poll_01.html"><img src="images/btn_poll2.gif" alt="설문시작하기" width="291" height="66" /></a>';
+  }
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="default.css"/>
+</head>
+
+<body>
+<div id="wrap">
+  <div id="contents">
+    <div class="logo">
+      <img src="images/top2.gif" alt="로고" width="700" height="48" />
+    </div>
+    <div class="title">
+      <img src="images/title_01.gif" alt="조사참여가이드" width="428" height="30" />
+    </div>
+    <div class="poll">
+      <p><img src="images/guide.gif" width="700" height="469" /></p>
+      <p class="btn_poll"><?=$start?></p>
+      <p><img src="images/guide2.gif" alt="통계법 제33조(비밀의보호)" width="700" height="98" /></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

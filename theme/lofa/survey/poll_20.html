@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>고위직 청렴도 부패위험성진단</title>
+<link rel="stylesheet" type="text/css" href="default.css"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="default.js"></script>
+</head>
+
+<body>
+<div id="wrap">
+  <div id="contents">
+    <div class="logo">
+      <img src="images/top2.gif" alt="로고" width="700" height="48" />
+    </div>
+    <div class="title2">
+      <div class="text">
+        <img src="images/title_02.gif" alt="조사참여가이드" width="333" height="62" />
+      </div>
+      <div class="per">
+        <p><span class="text">설문진행률</span><span class="num">90%</span></p>
+        <p class="graph"></p>
+      </div>
+    </div>
+    <div class="poll">
+      <p class="subtitle"><img src="images/subtitle_03.gif" width="700" height="96" /></p>
+      <p class="subtitle2 question18">청렴에 대한 의지 및 부패방지 노력 수준</p>
+      <p><img src="images/box_top.gif" width="700" height="25" /></p>
+      <div class="p_con2">
+      <form name="poll" action="poll_21.html" method="post">
+          <p >
+          <span class="q_small">대 내․외적으로 청렴 의지를 전달하고 실천하는 등 기관의 청렴수준 향상을 위해 노력하고 있는지 여부</span>
+          <br />
+          <span class="q_small2">* ‘청렴수준 향상 노력’에는 평소 부패방지를 위한 관심‧언행•지시 등이 모두 포함됩니다.<br />
+          * 자기 자신이나 가족 또는 친족 등의 이해와 관련이 있는 직무를 수행하게 되었을 때 공직자가 이를 스스로&nbsp;회피하는 것은<br />
+&nbsp;&nbsp;이해충돌을 방지하는 적극적인 반부패 노력에 해당합니다</span></p>
+          <p>
+        <table width="665" border="1" cellspacing="0" class="answer2" >            
+            <tbody>
+            <tr>
+              <td width="551">잘 모르거나 합리적 판단이 곤란한 경우</td>
+              <th width="104">모름&nbsp;<input type="radio" name="sq18" value="11"/></th>
+              </tr>
+            <tr>
+              <td>대 내․외적으로 청렴의지를 적극 전파할 뿐 아니라 스스로 청렴을 실천하고 생활화하는 등 <br />
+              강력하게 노력하고 있음</td>
+              <th>10&nbsp;<input type="radio" name="sq18" value="10"/><br /> 
+                9&nbsp;<input type="radio" name="sq18" value="9"/><br /> 
+                8&nbsp;<input type="radio" name="sq18" value="8"/></th>
+              </tr>
+             <tr>
+              <td>청렴의지를 전파하고 스스로 청렴을 실천하려는 노력이 대체로 강함</td>
+              <th>7&nbsp;<input type="radio" name="sq18" value="7"/><br />
+                6&nbsp;<input type="radio" name="sq18" value="6"/><br /> 
+               5&nbsp;<input type="radio" name="sq18" value="5"/></th>
+              </tr>
+             <tr>
+              <td>청렴의지를 전파하고 스스로 청렴을 실천하려는 노력이 다소 약함</td>
+              <th>4&nbsp;<input type="radio" name="sq18" value="4"/><br /> 
+                3&nbsp;<input type="radio" name="sq18" value="3"/><br /></th>
+              </tr>
+             <tr>
+              <td>기관의 청렴도 향상 및 부패방지를 위해 어떠한 노력도 기울이지 않음</td>
+              <th>2&nbsp;<input type="radio" name="sq18" value="2"/><br />
+                1&nbsp;<input type="radio" name="sq18" value="1"/></th>
+              </tr>
+             </tbody>
+            </table>      
+        </p>
+      </div>
+      <p><img src="images/box_bottom.gif" width="700" height="10" /></p>
+      <p class="btn_next"><input type="image" src="images/btn_next.gif" alt="다음" width="112" height="51" /></p>
+<?php
+  foreach($_POST as $key => $value) {
+      if($key != "x" && $key != "y") {
+          echo "<input type='hidden' name='".$key."' value='".$value."'>";
+      }
+  } 
+?>
+    </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

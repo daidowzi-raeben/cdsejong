@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+
+.msec-cont{overflow:hidden; position:Relative;;}
+.msec-cont.msec-01{padding-left:30%;}
+
+.msec-cont .msec-member{ position:Absolute ;left:0; top:0; width:29%; box-sizing:border-box; border:1px solid #ccc; height:225px;}
+.msec-cont .msec-member h3{position:Relative;background:#2b559a ; line-height:40px; color:#fff; font-size:16px; font-weight:600; padding:0 20px;}
+.msec-cont .msec-member .login-input{margin:20px auto 0 auto; padding-bottom:22px;padding-right:92px;box-sizing:border-box; font-size:0; width:268px; position:Relative;}
+.msec-cont .msec-member .login-input button{width:86px;background:url(../_Img/Main/msec-login.png) no-repeat center 20px #2b559a; padding-top:40px;box-sizing:border-box; height:90px;display:block;font-weight:600; text-align:center;  font-size:16px; color:#fff; border:none; position:absolute; right:0; top:0;}
+.msec-cont .msec-member .login-input li input[type="text"],.msec-cont .msec-member .login-input li input[type="password"]{border:1px solid #ccc; height:40px; font-size:15px; box-sizing:border-box; width:100%; padding:0 5px;}
+.msec-cont .msec-member .login-input li input[type="text"]:focus,.msec-cont .msec-member .login-input li input[type="password"]:focus{border:1px solid #333; color:#333 !important}
+.msec-cont .msec-member .login-input li {margin-top:10px}
+.msec-cont .msec-member .login-input li:first-child{margin-top:0;}
+
+.msec-cont .msec-member .logout-input{margin:20px auto 0 auto; padding-bottom:37px;padding-right:92px;box-sizing:border-box; font-size:0; background:url(../_Img/Main/login_img.gif) no-repeat; width:268px; position:Relative;}
+.msec-cont .msec-member .logout-input button{width:86px;background:url(../_Img/Main/msec-login.png) no-repeat center 20px #2b559a; padding-top:40px;box-sizing:border-box; height:90px;display:block;font-weight:600; text-align:center;  font-size:16px; color:#fff; border:none; position:absolute; right:0; top:0;}
+.msec-cont .msec-member .logout-input p{ line-height:25px; font-size:16px;  text-align:left; padding-left:67px; letter-spacing:-0.03em; color:#555;}
+.msec-cont .msec-member .logout-input p span{font-weight:600; color:#111 }
+.msec-cont .msec-member .logout-input p a.btn{ font-size:16px; font-weight:600; color:#111 }
+
+.msec-cont .msec-member .login-other{border-top:1px dashed #ccc; margin:0 auto 0 auto; font-size:0; width:268px; text-align:center; padding-top:15px;}
+.msec-cont .msec-member .login-other li{display:inline-block; vertical-align:top;  position:relative;}
+.msec-cont .msec-member .login-other li a{display:block; line-height:130%; color:#218080; font-size:14px; margin-left:20px;}
+.msec-cont .msec-member .login-other li span{display:block; color:#218080; font-size:14px; margin-left:10px;}
+.msec-cont .msec-member .login-other li img{margin-right:5px;}
+.msec-cont .msec-member .login-other li span.name{color:#666666; font-size:15px; font-weight:bold; background:url(../_Img/Main/icon_mileage.gif) no-repeat; padding-left:28px; height:24px;}
+.msec-cont .msec-member .login-other li span.num{color:#f08200; font-size:22px; font-weight:bold; }
+.msec-cont .msec-member .login-other li a.line:nth-child(odd):after{ position:Absolute; right:-10px; width:1px; height:14px; background:#ccc; display:block; content:""; top:50%; margin-top:-7px}
+.msec-cont .msec-member .login-other li.login span{background:url(../_Img/Main/icon_attention.gif) no-repeat; padding-left:29px; height:24px;}
+.msec-cont .msec-member .login-other li.logout{display:none;}
+
+
+
+.msec-cont .msec-safe{position:Absolute ;left:0; bottom:0; width:29%; height:144px;}
+.msec-cont .msec-safe span.mileage{position:Absolute ;left:150; bottom:0; width:29%; height:144px;}
+
+.msec-cont .msec-visual{ border:1px solid #ccc;}
+.msec-cont .msec-visual .item{position:Relative;}
+.msec-cont .msec-visual .item a{display:block}
+.msec-cont .msec-visual .item img{width:100%;}
+
+.msec-visual .slick-dots{height:15px; margin:0; padding:0; display:block; position:absolute; right:0; bottom:15px; text-align:center;}
+.msec-visual .slick-dots li{width:14px; height:14px;padding:0; margin:0 0 0 5px;}
+.msec-visual .slick-dots li button{position:relative;margin:0; padding:0; width:14px; height:14px; background:#fff; display:inline-block; vertical-align:top;border-radius:100%;}
+.msec-visual .slick-dots li.slick-active button{ background:#2b559a;}
+
+
+
+
+
+.msec-cont.msec-02{margin-top:15px;}
+
+.msec-cont .msec-help{float:left; width:29%; box-sizing:border-box; padding:20px; height:248px;border:1px solid #ccc;position:relative;}
+.msec-cont .msec-help h3{ font-size:22px; font-weight:600; color:#111; border-bottom:2px solid #ccc ;padding-bottom:13px; margin-bottom:10px;}
+.msec-cont .msec-help h3 span{font-size:18px; padding-left:7px; color:#666}
+.msec-cont .msec-help .info{width:288px; height:73px; margin:10px auto 0px auto;; box-sizing:border-box;letter-spacing:-0.03em;;padding-left:70px;background:url(../_Img/Main/msec-cs.gif) no-repeat;background-size:59px auto; }
+.msec-cont .msec-help .info .btxt{font-size:20px; color:#666; font-weight:bold; line-height:120%; padding-top:10px}
+.msec-cont .msec-help .info .stxt{font-size:27px; color:#579635; line-height:120%; font-weight:bold;}
+.msec-cont .msec-help .ctxt{font-size:15px; line-height:150%; color:#333;}
+.msec-cont .msec-help .ctxt.mg30t{margin-top:15px}
+
+.msec-cont .msec-notice{float:left; width:39.9%; box-sizing:border-box; padding:20px;height:248px;border:1px solid #ccc;margin:0 1%;position:relative;}
+.msec-cont .msec-notice h3{ font-size:22px; font-weight:600; color:#111;border-bottom:2px solid #ccc;padding-bottom:15px; margin-bottom:10px;}
+.msec-cont .msec-notice .more{ width:24px; height:28px; background:url(../_Img/Main/more-btn.jpg) no-repeat center center; position:Absolute; right:20px; top:17px;}
+.msec-cont .msec-notice li{border-top:1px solid #e1e1e1}
+.msec-cont .msec-notice li a{display:block; position:relative; padding:8px 100px 8px 10px;  line-height:120%;}
+.msec-cont .msec-notice li a:before{width:3px; height:3px; border-radius:100%; position:absolute; left:0; top:15px; display:block; content:"";background:#555;}
+.msec-cont .msec-notice li .tit{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;display:block;  color:#111;}
+.msec-cont .msec-notice li .date{position:absolute; right:0; top:12px; line-height:120%; color:#555;font-size:15px; }
+.msec-cont .msec-notice li:first-child{border-top:none;}
+
+
+.msec-cont .msec-quick{ float:right;box-sizing:border-box;}
+.msec-cont .msec-quick a{display:block; width:305px; height:248px; background:url(../_Img/Main/b_info.jpg) no-repeat center center;}
+
+
+
+

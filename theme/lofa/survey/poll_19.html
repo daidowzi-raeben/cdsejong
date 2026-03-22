@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>고위직 청렴도 부패위험성진단</title>
+<link rel="stylesheet" type="text/css" href="default.css"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="default.js"></script>
+</head>
+
+<body>
+<div id="wrap">
+  <div id="contents">
+    <div class="logo">
+      <img src="images/top2.gif" alt="로고" width="700" height="48" />
+    </div>
+    <div class="title2">
+      <div class="text">
+        <img src="images/title_02.gif" alt="조사참여가이드" width="333" height="62" />
+      </div>
+      <div class="per">
+        <p><span class="text">설문진행률</span><span class="num">85.5%</span></p>
+        <p class="graph"></p>
+      </div>
+    </div>
+    <div class="poll">
+      <p class="subtitle"><img src="images/subtitle_03.gif" width="700" height="96" /></p>
+      <p class="subtitle2 question17">직원 또는 업무관계자 등과의 부적절한 금전관계</p>
+      <p><img src="images/box_top.gif" width="700" height="25" /></p>
+      <div class="p_con2">
+      <form name="poll" action="poll_20.html" method="post">
+          <p>
+          <span class="q_small">하위직원 및 외부 업무관계자 등과 금전거래를 하거나 금전적 도움을 받는 등 <br />
+          부적절한 금전관계를 맺고 있는 경우가 있는지 여부</span>
+          <br />
+        <span class="q_small2">* 개인적인 친분이 있다 하더라도 직무관련자인 경우에는 금전 등을 빌리거나 빌려주어서는 아니되며, 부득이한 경우에는<br />
+&nbsp;&nbsp;기관장에 신고하여야 합니다.<br />* ‘부적절한 금전관계’에는 업무관계가 없는 순수한 사적관계에서의 금전거래는 제외됨</span></p>
+          <p>
+        <table width="665" border="1" cellspacing="0" class="answer2" >            
+            <tbody>
+            <tr>
+              <td width="551">잘 모르거나 합리적 판단이 곤란한 경우</td>
+              <th width="104">모름&nbsp;<input type="radio" name="sq17" value="11"/></th>
+              </tr>
+            <tr>
+              <td>직원이나 업무관계자 등과는 일체 금전관계를 맺지 않음</td>
+              <th>10&nbsp;<input type="radio" name="sq17" value="10"/><br /> 
+                9&nbsp;<input type="radio" name="sq17" value="9"/><br /> 
+                8&nbsp;<input type="radio" name="sq17" value="8"/></th>
+              </tr>
+             <tr>
+              <td>대부분의 경우에는 그런 경우가 없지만, 경우에 따라  직원이나 업무관련자로부터 금전적 도움을 받거나 금전거래를 하는 등 부적절한 관계를 맺는 경우가 가끔 있음</td>
+              <th>7&nbsp;<input type="radio" name="sq17" value="7"/><br />
+                6&nbsp;<input type="radio" name="sq17" value="6"/><br /> 
+               5&nbsp;<input type="radio" name="sq17" value="5"/></th>
+              </tr>
+             <tr>
+              <td>직원이나 업무관련자로부터 금전적 도움을 받거나 금전거래를 하는 등 <br />
+               부적절한 관계를 맺는 경우가 자주 발생함</td>
+              <th>4&nbsp;<input type="radio" name="sq17" value="4"/><br /> 
+                3&nbsp;<input type="radio" name="sq17" value="3"/><br /></th>
+              </tr>
+             <tr>
+              <td>직원이나 업무관련자로부터 금전적 도움을 받거나 금전거래를 하는 등 <br />
+               부적절한 관계를 맺는 경우가 매우 빈번하게  발생함</td>
+              <th>2&nbsp;<input type="radio" name="sq17" value="2"/><br />
+                1&nbsp;<input type="radio" name="sq17" value="1"/></th>
+              </tr>
+             </tbody>
+            </table>      
+        </p>
+      </div>
+      <p><img src="images/box_bottom.gif" width="700" height="10" /></p>
+      <p class="btn_next"><input type="image" src="images/btn_next.gif" alt="다음" width="112" height="51" /></p>
+<?php
+  foreach($_POST as $key => $value) {
+      if($key != "x" && $key != "y") {
+          echo "<input type='hidden' name='".$key."' value='".$value."'>";
+      }
+  } 
+?>
+    </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

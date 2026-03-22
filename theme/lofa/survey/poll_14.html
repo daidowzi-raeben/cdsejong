@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>고위직 청렴도 부패위험성진단</title>
+<link rel="stylesheet" type="text/css" href="default.css"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="default.js"></script>
+</head>
+
+<body>
+<div id="wrap">
+  <div id="contents">
+    <div class="logo">
+      <img src="images/top2.gif" alt="로고" width="700" height="48" />
+    </div>
+    <div class="title2">
+      <div class="text">
+        <img src="images/title_02.gif" alt="조사참여가이드" width="333" height="62" />
+      </div>
+      <div class="per">
+        <p><span class="text">설문진행률</span><span class="num">63%</span></p>
+        <p class="graph"></p>
+      </div>
+    </div>
+    <div class="poll">
+      <p class="subtitle"><img src="images/subtitle_03.gif" width="700" height="96" /></p>
+      <p class="subtitle2 question12">직위를 이용한 순서 끼어들기</p>
+      <p><img src="images/box_top.gif" width="700" height="25" /></p>
+      <div class="p_con2">
+      <form name="poll" action="poll_15.html" method="post">
+          <p>
+          <span class="q_small">병원, 콘도, 골프 등 각종 예약에 있어 직위를 이용한 순서 끼어들기(새치기)를 하는 경우가 있는지 여부</span>
+          <br />
+          <span class="q_small2">* 순서 끼어들기(새치기)’에는 자신뿐 아니라 가족, 친구 등 제3자를 위한 병원진료 예약 또는 입원실 배정,&nbsp;콘도‧항공권 <br />
+          &nbsp;&nbsp;예약 또는 골프부킹 등에 영향을 미치는 것도 포함됩니다.</span></p>
+          <p>
+        <table width="665" border="1" cellspacing="0" class="answer2" >            
+            <tbody>
+            <tr>
+              <td width="551">잘 모르거나 합리적 판단이 곤란한 경우</td>
+              <th width="104">모름&nbsp;<input type="radio" name="sq12" value="11"/></th>
+              </tr>
+            <tr>
+              <td>본인의 직위를 이용해 자기 자신이나 가족, 친구, 업무관련자  등의 순서 끼어들기(새치기)에 <br />
+              관여하는 경우가 전혀 없음</td>
+              <th>10&nbsp;<input type="radio" name="sq12" value="10"/><br /> 
+                9&nbsp;<input type="radio" name="sq12" value="9"/><br /> 
+                8&nbsp;<input type="radio" name="sq12" value="8"/></th>
+              </tr>
+             <tr>
+              
+              <td>대부분의 경우에는 그런 경우가 없지만, 경우에 따라 직위를 이용하여 병원 입원실 배정, <br />
+               콘도‧항공권 예약, 골프부킹 등에 영향을 미치는 경우가 가끔 있음</td>
+               <th>7&nbsp;<input type="radio" name="sq12" value="7"/><br />
+                6&nbsp;<input type="radio" name="sq12" value="6"/><br /> 
+               5&nbsp;<input type="radio" name="sq12" value="5"/></th>
+              </tr>
+             <tr>
+              
+              <td>직위를 이용하여 병원 입원실 배정, 콘도‧항공권 예약, 골프부킹 등에 영향을 미치는 경우가 <br />
+               자주 발생함</td>
+               <th>4&nbsp;<input type="radio" name="sq12" value="4"/><br /> 
+                3&nbsp;<input type="radio" name="sq12" value="3"/><br /></th>
+              </tr>
+             <tr>
+               <td>직위를 이용하여 병원 입원실 배정, 콘도‧항공권 예약, 골프부킹 등에 영향을 미치는 경우가 <br />
+               매우 빈번하게 발생함</td>
+               <th>2&nbsp;<input type="radio" name="sq12" value="2"/><br />
+                1&nbsp;<input type="radio" name="sq12" value="1"/></th>
+              </tr>
+             </tbody>
+            </table>      
+        </p>
+      </div>
+      <p><img src="images/box_bottom.gif" width="700" height="10" /></p>
+      <p class="btn_next"><input type="image" src="images/btn_next.gif" alt="다음" width="112" height="51" /></p>
+<?php
+  foreach($_POST as $key => $value) {
+      if($key != "x" && $key != "y") {
+          echo "<input type='hidden' name='".$key."' value='".$value."'>";
+      }
+  } 
+?>
+    </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>
