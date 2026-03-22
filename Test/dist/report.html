@@ -1,3 +1,6 @@
+<?php
+include_once("./_common.php");
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -22,6 +25,9 @@
         </div>
     </header>
     <div class="container">
+		<form action="../srvy_update.php" enctype="multipart/form-data" name="survey" id="survey" method="post">
+		<input type="hidden" name="srvy_code" value="1" />
+		<input type="hidden" name="srvy_count" value="14" />
         <div id="step1" class="tab" style="display: block;">
             <div class="description description--white">
                 <p>
@@ -45,11 +51,11 @@
                         <div class="step-quiz__answer">
                             <div class="step-quiz__form">
                                 <label class="choice" for="q1-1-y">
-                                    <input type="radio" class="choice" name="q1-1" id="q1-1-y">
+                                    <input type="radio" class="choice" name="q1-1" id="q1-1-y" value="Y">
                                     <span></span> YES
                                 </label>
                                 <label class="choice" for="q1-1-n">
-                                    <input type="radio" class="choice" name="q1-1" id="q1-1-n">
+                                    <input type="radio" class="choice" name="q1-1" id="q1-1-n" value="N">
                                     <span></span> NO
                                 </label>
                             </div>
@@ -77,11 +83,11 @@
                         <div class="step-quiz__answer">
                             <div class="step-quiz__form">
                                 <label class="choice" for="q1-2-y">
-                                    <input type="radio" class="choice" name="q1-2" id="q1-2-y">
+                                    <input type="radio" class="choice" name="q1-2" id="q1-2-y" value="Y">
                                     <span></span> YES
                                 </label>
                                 <label class="choice" for="q1-2-n">
-                                    <input type="radio" class="choice" name="q1-2" id="q1-2-n">
+                                    <input type="radio" class="choice" name="q1-2" id="q1-2-n" value="N">
                                     <span></span> NO
                                 </label>
                             </div>
@@ -107,11 +113,11 @@
                         <div class="step-quiz__answer">
                             <div class="step-quiz__form">
                                 <label class="choice" for="q1-3-y">
-                                    <input type="radio" class="choice" name="q1-3" id="q1-3-y">
+                                    <input type="radio" class="choice" name="q1-3" id="q1-3-y" value="Y">
                                     <span></span> YES
                                 </label>
                                 <label class="choice" for="q1-3-n">
-                                    <input type="radio" class="choice" name="q1-3" id="q1-3-n">
+                                    <input type="radio" class="choice" name="q1-3" id="q1-3-n" value="N">
                                     <span></span> NO
                                 </label>
                             </div>
@@ -137,11 +143,11 @@
                         <div class="step-quiz__answer">
                             <div class="step-quiz__form">
                                 <label class="choice" for="q1-4-y">
-                                    <input type="radio" class="choice" name="q1-4" id="q1-4-y">
+                                    <input type="radio" class="choice" name="q1-4" id="q1-4-y" value="Y">
                                     <span></span> YES
                                 </label>
                                 <label class="choice" for="q1-4-n">
-                                    <input type="radio" class="choice" name="q1-4" id="q1-4-n">
+                                    <input type="radio" class="choice" name="q1-4" id="q1-4-n" value="N">
                                     <span></span> NO
                                 </label>
                             </div>
@@ -167,11 +173,11 @@
                         <div class="step-quiz__answer">
                             <div class="step-quiz__form">
                                 <label class="choice" for="q1-5-y">
-                                    <input type="radio" class="choice" name="q1-5" id="q1-5-y">
+                                    <input type="radio" class="choice" name="q1-5" id="q1-5-y" value="Y">
                                     <span></span> YES
                                 </label>
                                 <label class="choice" for="q1-5-n">
-                                    <input type="radio" class="choice" name="q1-5" id="q1-5-n">
+                                    <input type="radio" class="choice" name="q1-5" id="q1-5-n" value="N">
                                     <span></span> NO
                                 </label>
                             </div>
@@ -202,11 +208,11 @@
                         <div class="step-quiz__answer">
                             <div class="step-quiz__form">
                                 <label class="choice" for="q1-6-y">
-                                    <input type="radio" class="choice" name="q1-6" id="q1-6-y">
+                                    <input type="radio" class="choice" name="q1-6" id="q1-6-y" value="Y">
                                     <span></span> YES
                                 </label>
                                 <label class="choice" for="q1-6-n">
-                                    <input type="radio" class="choice" name="q1-6" id="q1-6-n">
+                                    <input type="radio" class="choice" name="q1-6" id="q1-6-n" value="N">
                                     <span></span> NO
                                 </label>
                             </div>
@@ -244,11 +250,11 @@
                         <div class="step-quiz__answer">
                             <div class="step-quiz__form">
                                 <label class="choice" for="q2-1-y">
-                                    <input type="radio" class="choice" name="q2-1" id="q2-1-y">
+                                    <input type="radio" class="choice" name="q2-1" id="q2-1-y" value="Y">
                                     <span></span> YES
                                 </label>
                                 <label class="choice" for="q2-1-n">
-                                    <input type="radio" class="choice" name="q2-1" id="q2-1-n">
+                                    <input type="radio" class="choice" name="q2-1" id="q2-1-n" value="N">
                                     <span></span> NO
                                 </label>
                             </div>
@@ -276,11 +282,11 @@
                         <div class="step-quiz__answer">
                             <div class="step-quiz__form">
                                 <label class="choice" for="q2-2-y">
-                                    <input type="radio" class="choice" name="q2-2" id="q2-2-y">
+                                    <input type="radio" class="choice" name="q2-2" id="q2-2-y" value="Y">
                                     <span></span> YES
                                 </label>
                                 <label class="choice" for="q2-2-n">
-                                    <input type="radio" class="choice" name="q2-2" id="q2-2-n">
+                                    <input type="radio" class="choice" name="q2-2" id="q2-2-n" value="N">
                                     <span></span> NO
                                 </label>
                             </div>
@@ -309,11 +315,11 @@
                         <div class="step-quiz__answer">
                             <div class="step-quiz__form">
                                 <label class="choice" for="q2-3-y">
-                                    <input type="radio" class="choice" name="q2-3" id="q2-3-y">
+                                    <input type="radio" class="choice" name="q2-3" id="q2-3-y" value="Y">
                                     <span></span> YES
                                 </label>
                                 <label class="choice" for="q2-3-n">
-                                    <input type="radio" class="choice" name="q2-3" id="q2-3-n">
+                                    <input type="radio" class="choice" name="q2-3" id="q2-3-n" value="N">
                                     <span></span> NO
                                 </label>
                             </div>
@@ -342,11 +348,11 @@
                         <div class="step-quiz__answer">
                             <div class="step-quiz__form">
                                 <label class="choice" for="q2-4-y">
-                                    <input type="radio" class="choice" name="q2-4" id="q2-4-y">
+                                    <input type="radio" class="choice" name="q2-4" id="q2-4-y" value="Y">
                                     <span></span> YES
                                 </label>
                                 <label class="choice" for="q2-4-n">
-                                    <input type="radio" class="choice" name="q2-4" id="q2-4-n">
+                                    <input type="radio" class="choice" name="q2-4" id="q2-4-n" value="N">
                                     <span></span> NO
                                 </label>
                             </div>
@@ -375,11 +381,11 @@
                         <div class="step-quiz__answer">
                             <div class="step-quiz__form">
                                 <label class="choice" for="q2-5-y">
-                                    <input type="radio" class="choice" name="q2-5" id="q2-5-y">
+                                    <input type="radio" class="choice" name="q2-5" id="q2-5-y" value="Y">
                                     <span></span> YES
                                 </label>
                                 <label class="choice" for="q2-5-n">
-                                    <input type="radio" class="choice" name="q2-5" id="q2-5-n">
+                                    <input type="radio" class="choice" name="q2-5" id="q2-5-n" value="N">
                                     <span></span> NO
                                 </label>
                             </div>
@@ -415,11 +421,11 @@
                         <div class="step-quiz__answer">
                             <div class="step-quiz__form">
                                 <label class="choice" for="q3-1-y">
-                                    <input type="radio" class="choice" name="q3-1" id="q3-1-y">
+                                    <input type="radio" class="choice" name="q3-1" id="q3-1-y" value="Y">
                                     <span></span> YES
                                 </label>
                                 <label class="choice" for="q3-1-n">
-                                    <input type="radio" class="choice" name="q3-1" id="q3-1-n">
+                                    <input type="radio" class="choice" name="q3-1" id="q3-1-n" value="N">
                                     <span></span> NO
                                 </label>
                             </div>
@@ -448,11 +454,11 @@
                         <div class="step-quiz__answer">
                             <div class="step-quiz__form">
                                 <label class="choice" for="q3-2-y">
-                                    <input type="radio" class="choice" name="q3-2" id="q3-2-y">
+                                    <input type="radio" class="choice" name="q3-2" id="q3-2-y" value="Y">
                                     <span></span> YES
                                 </label>
                                 <label class="choice" for="q3-2-n">
-                                    <input type="radio" class="choice" name="q3-2" id="q3-2-n">
+                                    <input type="radio" class="choice" name="q3-2" id="q3-2-n" value="N">
                                     <span></span> NO
                                 </label>
                             </div>
@@ -485,11 +491,11 @@
                         <div class="step-quiz__answer">
                             <div class="step-quiz__form">
                                 <label class="choice" for="q3-3-y">
-                                    <input type="radio" class="choice" name="q3-3" id="q3-3-y">
+                                    <input type="radio" class="choice" name="q3-3" id="q3-3-y" value="Y">
                                     <span></span> YES
                                 </label>
                                 <label class="choice" for="q3-3-n">
-                                    <input type="radio" class="choice" name="q3-3" id="q3-3-n">
+                                    <input type="radio" class="choice" name="q3-3" id="q3-3-n" value="N">
                                     <span></span> NO
                                 </label>
                             </div>
@@ -561,8 +567,8 @@
 
             <div class="checkUser">
                 
-                <span>사번 <input type="text" id="usernumber"></span>
-                <span>이름 <input type="text" id="username"></span>
+                <span>사번 <input type="text" name="usernumber" id="usernumber"></span>
+                <span>이름 <input type="text" name="username" id="username" value="<?php echo $member['mb_name']?>"></span>
             </div>
         </div>
         <div id="step5" class="tab" style="display: none;">
@@ -594,6 +600,13 @@
                 </p>
             </div>
         </div>
+		<?php
+		for($i=1; $i<15; $i++)
+		{
+			echo "<input type='hidden' name='q{$i}' value='' />";
+		}
+		?>
+		</form>
     </div>
     <div class="footer footer--report">
         <div class="btnbox">
@@ -670,6 +683,13 @@ $('.confirm').on('click', function(){
             alert('6번 문항을 답해주세요.');
             return false;
         };
+		
+		$('input[name="q1"]').val($('input[name="q1-1"]:checked').val());
+		$('input[name="q2"]').val($('input[name="q1-2"]:checked').val());
+		$('input[name="q3"]').val($('input[name="q1-3"]:checked').val());
+		$('input[name="q4"]').val($('input[name="q1-4"]:checked').val());
+		$('input[name="q5"]').val($('input[name="q1-5"]:checked').val());
+		$('input[name="q6"]').val($('input[name="q1-6"]:checked').val());
 
         tabPass();
     }
@@ -695,6 +715,12 @@ $('.confirm').on('click', function(){
             alert('5번 문항을 답해주세요.');
             return false;
         };
+		
+		$('input[name="q7"]').val($('input[name="q2-1"]:checked').val());
+		$('input[name="q8"]').val($('input[name="q2-2"]:checked').val());
+		$('input[name="q9"]').val($('input[name="q2-3"]:checked').val());
+		$('input[name="q10"]').val($('input[name="q2-4"]:checked').val());
+		$('input[name="q11"]').val($('input[name="q2-5"]:checked').val());
 
         tabPass();
     }
@@ -712,6 +738,10 @@ $('.confirm').on('click', function(){
             alert('3번 문항을 답해주세요.');
             return false;
         };
+		
+		$('input[name="q12"]').val($('input[name="q3-1"]:checked').val());
+		$('input[name="q13"]').val($('input[name="q3-2"]:checked').val());
+		$('input[name="q14"]').val($('input[name="q3-3"]:checked').val());
 
         tabPass();
     }
@@ -730,8 +760,9 @@ $('.confirm').on('click', function(){
 
         if( confirm('완료처리 하시겠습니까?') ) {
 
-            alert('자가진단 완료');
-			window.close();
+            //alert('자가진단 완료');
+			//window.close();
+			$("form").submit();
         }
     }
 })

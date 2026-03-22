@@ -1,5 +1,5 @@
 <?php
-$sub_menu = "200100";
+$sub_menu = "100100";
 include_once('./_common.php');
 
 auth_check($auth[$sub_menu], 'r');
@@ -9,24 +9,25 @@ $sql_common = " from {$g5['member_table']} as m ";
 #$sql_common .= " on m.bl_no = b.bl_no ";
 
 $sql_search = " where (1) and m.mb_level = '1' ";
-if ($stx) {
-    $sql_search .= " and ( ";
-    switch ($sfl) {
-        case 'mb_point' :
-            $sql_search .= " ({$sfl} >= '{$stx}') ";
-            break;
-        case 'mb_level' :
-            $sql_search .= " ({$sfl} = '{$stx}') ";
-            break;
-        case 'mb_tel' :
-        case 'mb_hp' :
-            $sql_search .= " ({$sfl} like '%{$stx}') ";
-            break;
-        default :
-            $sql_search .= " ({$sfl} like '{$stx}%') ";
-            break;
-    }
-    $sql_search .= " ) ";
+
+if ($type) {
+	if ($mb_3)
+		$sql_search .= " and m.mb_3 like '{$mb_3}%' ";
+
+	if ($mb_10)
+		$sql_search .= " and m.mb_10 like '{$mb_10}%' ";
+
+	if ($mb_profile)
+		$sql_search .= " and m.mb_profile like '{$mb_profile}%' ";
+	
+    if ($mb_4)
+		$sql_search .= " and m.mb_4 like '{$mb_4}%' ";
+
+	if ($mb_id)
+		$sql_search .= " and m.mb_id like '{$mb_id}%' ";
+
+	if ($mb_name)
+		$sql_search .= " and m.mb_name like '{$mb_name}%' ";
 }
 
 if ($is_admin != 'super')
@@ -50,22 +51,13 @@ $from_record = ($page - 1) * $rows; // 시작 열을 구함
 
 $startNum = 1 + (($page-1) * $rows);
 
-// 탈퇴회원수
-$sql = " select count(*) as cnt {$sql_common} {$sql_search} and mb_leave_date <> '' {$sql_order} ";
-$row = sql_fetch($sql);
-$leave_count = $row['cnt'];
-
-// 차단회원수
-$sql = " select count(*) as cnt {$sql_common} {$sql_search} and mb_intercept_date <> '' {$sql_order} ";
-$row = sql_fetch($sql);
-$intercept_count = $row['cnt'];
-
 $listall = '<a href="'.$_SERVER['SCRIPT_NAME'].'" class="ov_listall">전체목록</a>';
 
 $g5['title'] = '회원관리';
 include_once('./cd.admin.head.php');
 
 $sql = " select * {$sql_common} {$sql_search} {$sql_order} limit {$from_record}, {$rows} ";
+//echo $sql;
 $result = sql_query($sql);
 
 $colspan = 16;
@@ -80,7 +72,7 @@ $colspan = 16;
 </div>-->
 
 <div class="tbl_frm02 tbl_wrap">
-    <?php include_once('./admin.fsearch.php'); ?>
+    <?php include_once('./cd.admin.fsearch2.php'); ?>
 </div>
 
 <form name="fmemberlist" id="fmemberlist" action="./member_list_update.php" onsubmit="return fmemberlist_submit(this);" method="post">
@@ -98,8 +90,8 @@ $colspan = 16;
 	<div class="r_div">
 		<?php if ($is_admin == 'super') { ?>
 		<input type="submit" name="act_button" value="선택삭제" onclick="document.pressed=this.value" class="btn btn_02">
-		<a href="./memberexcel_down.php?sfl=<?php echo $sfl ?>&amp;stx=<?php echo $stx ?>" onclick="return excel_down(f);" target="_blank" id="member_add" class="btn btn_04">전체EXCEL</a>
-		<a href="./member_excel_form.php" id="member_add" class="btn btn_01">회원일괄등록</a>
+		<a href="./cd.member_excel_down.php?sfl=<?php echo $sfl ?>&amp;stx=<?php echo $stx ?>" onclick="return excel_down(f);" target="_blank" id="member_add" class="btn btn_04">전체EXCEL</a>
+		<a href="./cd.member_excel_form.php" id="member_add" class="btn btn_01">회원일괄등록</a>
 		<a href="./cd.member_form.php" id="member_add" class="btn btn_03">회원추가</a>
 		<?php } ?>
 	</div>
@@ -115,19 +107,18 @@ $colspan = 16;
             <input type="checkbox" name="chkall" value="1" id="chkall" onclick="check_all(this.form)">
         </th>
         <th scope="col" id="mb_list_no">No</a></th>
-		<th scope="col" id="mb_list_id"><?php echo subject_sort_link('bl_year') ?>년도</a></th>
-		<th scope="col" id="mb_list_id">분류</a></th>
-		<th scope="col" id="mb_list_id">소속</a></th>
+		<th scope="col" id="mb_list_id">년도</a></th>
+		<!--<th scope="col" id="mb_list_id">분류</a></th>
+		<th scope="col" id="mb_list_id">소속</a></th>-->
 		<th scope="col" id="mb_list_name"><?php echo subject_sort_link('mb_name') ?>이름</a></th>
 		<th scope="col" id="mb_list_id"><?php echo subject_sort_link('mb_id') ?>아이디</a></th>
-		<th scope="col" id="mb_list_id"><?php echo subject_sort_link('mb_2') ?>부서1</a></th>
-		<th scope="col" id="mb_list_id"><?php echo subject_sort_link('mb_3') ?>부서2</a></th>
-		<th scope="col" id="mb_list_id"><?php echo subject_sort_link('mb_4') ?>부서3</a></th>
+		<th scope="col" id="mb_list_id"><?php echo subject_sort_link('mb_3') ?>부서1</a></th>
+		<th scope="col" id="mb_list_id"><?php echo subject_sort_link('mb_4') ?>부서2</a></th>
 		<th scope="col" id="mb_list_join"><?php echo subject_sort_link('mb_datetime', '', 'desc') ?>가입일</a></th>
 		<th scope="col" id="mb_list_lastcall"><?php echo subject_sort_link('mb_today_login', '', 'desc') ?>최종접속</a></th>
 		<th scope="col" id="mb_list_id">학습기간</a></th>
 		<th scope="col" id="mb_list_point"><?php echo subject_sort_link('mb_point', '', 'desc') ?> 마일리지</a></th>
-		<th scope="col" id="mb_list_id"><?php echo subject_sort_link('mb_id') ?>수료유무</a></th>
+		<!--<th scope="col" id="mb_list_id"><?php echo subject_sort_link('mb_id') ?>수료유무</a></th>-->
 		<th scope="col" id="mb_list_id"><?php echo subject_sort_link('mb_id') ?>상태</a></th>
         <th scope="col" id="mb_list_mng">관리</th>
     </tr>
@@ -145,7 +136,7 @@ $colspan = 16;
         if ($is_admin == 'group') {
             $s_mod = '';
         } else {
-            $s_mod = '<a href="./member_form.php?'.$qstr.'&amp;w=u&amp;mb_id='.$row['mb_id'].'" class="btn btn_03">수정</a>';
+            $s_mod = '<a href="./cd.member_form.php?'.$qstr.'&amp;w=u&amp;mb_id='.$row['mb_id'].'" class="btn btn_03">수정</a>';
         }
         $s_grp = '<a href="./boardgroupmember_form.php?mb_id='.$row['mb_id'].'" class="btn btn_02">그룹</a>';
 
@@ -201,21 +192,20 @@ $colspan = 16;
             <input type="checkbox" name="chk[]" value="<?php echo $i ?>" id="chk_<?php echo $i ?>">
         </td>
 		<td headers="mb_list_"><?php echo $startNum ?></td>
-		<td headers="mb_list_"><?php echo get_text($row['bl_year']); ?></td>
-		<td headers="mb_list_"><?php echo get_text($row['bl_cate']); ?></td>
-		<td headers="mb_list_"><?php echo get_text($row['bl_name']); ?></td>
+		<td headers="mb_list_"><?php echo get_text($row['mb_10']); ?></td>
+		<!--<td headers="mb_list_"><?php echo get_text($row['bl_cate']); ?></td>
+		<td headers="mb_list_"><?php echo get_text($row['bl_name']); ?></td>-->
         <td headers="mb_list_name" class="td_mbname2"><?php echo get_text($row['mb_name']); ?></td>
 		<td headers="mb_list_id" class="td_name2">
             <?php echo $mb_id ?>
         </td>
-		<td headers="mb_list_"><?php echo get_text($row['mb_2']); ?></td>
 		<td headers="mb_list_"><?php echo get_text($row['mb_3']); ?></td>
 		<td headers="mb_list_"><?php echo get_text($row['mb_4']); ?></td>
 		<td headers="mb_list_join" class="td_date"><?php echo substr($row['mb_datetime'],2,8); ?></td>
 		<td headers="mb_list_lastcall" class="td_date"><?php echo substr($row['mb_today_login'],2,8); ?></td>
 		<td headers="mb_list_"><?php echo date("y-m-d", strtotime($row['mb_8'])); ?> ~ <?php echo date("y-m-d", strtotime($row['mb_9'])); ?></td>
 		<td headers="mb_list_point" class="td_num"><a href="point_list.php?sfl=mb_id&amp;stx=<?php echo $row['mb_id'] ?>"><?php echo number_format($row['mb_point']) ?></a></td>
-		<td headers="mb_list_"></td>
+		<!--<td headers="mb_list_"></td>-->
 		<td headers="mb_list_"></td>
 		<td headers="mb_list_mng" class="td_mng td_mng_s"><?php echo $s_mod ?></td>
     </tr>

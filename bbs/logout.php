@@ -1,5 +1,6 @@
 <?php
 include_once('./_common.php');
+$profile = $member['mb_profile'];
 
 if(function_exists('social_provider_logout')){
     social_provider_logout();
@@ -34,6 +35,9 @@ if ($url) {
     $link = G5_URL;
 }
 
+if($profile == '엘에스오토모티브') {
+	$link = '/ls.php';
+}
 run_event('member_logout', $link);
 
 goto_url($link);

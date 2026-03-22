@@ -113,15 +113,13 @@ function imageview(id, w, h)
 		<div id="tnb2">
 			<ul>
 				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/cd.member_list.php" class="tnb_service">회원정보관리</a></li>
-				<!--<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/survey_list.php" class="tnb_service">설문관리</a></li>
-				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/belong_list.php" class="tnb_service">회원소속관리</a></li>-->
-				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/process_ce_list.php" class="tnb_service">과정관리</a></li>
-				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/board/board.php?bo_table=e_campaign" class="tnb_service">커뮤니티관리</a></li>
-				<!--<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/board/board.php?bo_table=schedule" class="tnb_service">일정관리</a></li>-->
-				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/learn_list.php" class="tnb_service">학습진도관리</a></li>
-				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/point_list.php" class="tnb_service">마일리지관리</a></li>
-				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/board/board.php?bo_table=notice" class="tnb_service">홈페이지관리</a></li>
-				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/cd.config_form.php" class="tnb_service">시스템관리</a></li>
+				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/cd.survey_list.php" class="tnb_service">진단마당관리</a></li>
+				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/cd.process_list.php" class="tnb_service">교육마당관리</a></li>
+				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/board/board.php?bo_table=free" class="tnb_service">참여마당관리</a></li>
+				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/cd.learn_list.php" class="tnb_service">학습진도관리</a></li>
+				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/co_cat.php" class="tnb_service">인큐베이터관리</a></li>
+				<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/board/board.php?bo_table=notice" class="tnb_service">지원마당관리</a></li>
+				<!--<li class="tnb_li"><a href="<?php echo G5_ADMIN_URL ?>/cd.config_form.php" class="tnb_service">시스템관리</a></li>-->
 			</ul>
 		</div>
 		

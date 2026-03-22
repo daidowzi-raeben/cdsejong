@@ -16,7 +16,7 @@ $new_write_rows = 5;
 
 $sql_common = " from {$g5['member_table']} ";
 
-$sql_search = " where (1) ";
+$sql_search = " where (1) and mb_level = 1 ";
 
 if ($is_admin != 'super')
     $sql_search .= " and mb_level <= '{$member['mb_level']}' ";
@@ -28,6 +28,17 @@ if (!$sst) {
 
 $sql_order = " order by {$sst} {$sod} ";
 
+//오늘 학습회원 수
+$sql = " select count(distinct att_uid) as cnt from {$g5['chapter_att_table']} where att_study_last >= curdate() ";
+$row = sql_fetch($sql);
+$today_lrn_count = $row['cnt'];
+
+//어제 학습회원 수
+$sql = " select count(distinct att_uid) as cnt from {$g5['chapter_att_table']} where att_study_last > CURDATE() - INTERVAL 1 DAY and att_study_last <= curdate() ";
+$row = sql_fetch($sql);
+$last_lrn_count = $row['cnt'];
+
+//학습자 총원
 $sql = " select count(*) as cnt {$sql_common} {$sql_search} {$sql_order} ";
 $row = sql_fetch($sql);
 $total_count = $row['cnt'];
@@ -36,11 +47,6 @@ $total_count = $row['cnt'];
 $sql = " select count(*) as cnt {$sql_common} {$sql_search} and mb_leave_date <> '' {$sql_order} ";
 $row = sql_fetch($sql);
 $leave_count = $row['cnt'];
-
-// 차단회원수
-$sql = " select count(*) as cnt {$sql_common} {$sql_search} and mb_intercept_date <> '' {$sql_order} ";
-$row = sql_fetch($sql);
-$intercept_count = $row['cnt'];
 
 $sql = " select * {$sql_common} {$sql_search} {$sql_order} limit {$new_member_rows} ";
 $result = sql_query($sql);
@@ -91,7 +97,6 @@ $colspan = 12;
 			<th scope="col">아이디</th>
             <th scope="col">부서1</th>
 			<th scope="col">부서2</th>
-			<th scope="col">부서3</th>
             <th scope="col">등록일</th>
 			<th scope="col">접속일</th>
 			<th scope="col">상태</th>
@@ -135,7 +140,6 @@ $colspan = 12;
         <tr>
             <td class="td_mbname"><?php echo get_text($row['mb_name']); ?></td>
 			<td class="td_mbid"><?php echo $mb_id ?></td>
-            <td class=""><?php echo $row['mb_2'] ?></td>
 			<td class=""><?php echo $row['mb_3'] ?></td>
 			<td class=""><?php echo $row['mb_4'] ?></td>
             <td class=""><?php echo $row['mb_datetime'] ?></td>
@@ -151,7 +155,7 @@ $colspan = 12;
         </table>
     </div>
 	<div class="btn_list03 btn_list">
-        <a href="./member_list.php">회원 전체보기</a>
+        <a href="./cd.member_list.php">회원 전체보기</a>
     </div>
 
 </section>

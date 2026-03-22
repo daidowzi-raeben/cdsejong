@@ -64,7 +64,7 @@ if ($_POST['act_button'] == "선택수정") {
         $k = isset($_POST['chk'][$i]) ? (int) $_POST['chk'][$i] : 0;
 
         $mb_datas[] = $mb = get_member($_POST['mb_id'][$k]);
-
+/*
         if (!$mb['mb_id']) {
             $msg .= $mb['mb_id'].' : 회원자료가 존재하지 않습니다.\\n';
         } else if ($member['mb_id'] == $mb['mb_id']) {
@@ -75,15 +75,25 @@ if ($_POST['act_button'] == "선택수정") {
             $msg .= $mb['mb_id'].' : 자신보다 권한이 높거나 같은 회원은 삭제할 수 없습니다.\\n';
         } else {
             // 회원자료 삭제
-            member_delete($mb['mb_id']);
+           // member_delete($mb['mb_id']);
+		   foreach($mb_datas as $key=>$val) {
+			   echo $val->'mb_no';
+		   }
         }
+		*/
     }
+
+	for($i=0; $i<count($mb_datas); $i++) {
+		sql_query("DELETE FROM cd_member WHERE mb_no = ".$mb_datas[$i]['mb_no']); 
+	}
 }
+
 
 if ($msg)
     //echo '<script> alert("'.$msg.'"); </script>';
     alert($msg);
 
 run_event('admin_member_list_update', $_POST['act_button'], $mb_datas);
-
-goto_url('./member_list.php?'.$qstr);
+//echo $_POST['act_button'];
+//return;
+goto_url('./cd.member_list.php?'.$qstr);

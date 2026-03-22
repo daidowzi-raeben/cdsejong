@@ -1,0 +1,792 @@
+<?php
+include_once("./_common.php");
+echo $member['mb_name'];
+?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>자가진단</title>
+    <link rel="stylesheet" href="./assets/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+<div class="wrapper wrapper-report">
+    <header class="header header-report">
+        <div class="wrap">
+            <h1>
+                1단계<br/>
+                <span>L<i>O</i>FA</span> 행동강령 준수<br/>
+                자가진단(총14문항)
+            </h1>
+            <img src="./assets/images/step-1.png" alt="">
+        </div>
+    </header>
+    <div class="container">
+		<form action="../srvy_update.php" enctype="multipart/form-data" name="survey" id="survey" method="post">
+        <div id="step1" class="tab" style="display: block;">
+            <div class="description description--white">
+                <p>
+                    우리 회는 임직원이 준수하여야 할 행동기준으로서 ‘임직원 행동강령’을 제정·운영하고 있으며, 임직원의 윤리적 갈등 발생 시 다음과 같은 행동기준을 자세히 읽어보시고 항상 준수하시기 바랍니다. 만약 최근 1년간 각각의 행동기준과 관련하여 한 차례라도 위반한 사례 또는 위반소지
+                    가 있거나 이와 관련하여 조직의 건강한 발전을 위해 신고할 사항이 발견된 경우 <span>청탁방지담당관과의 상담 또는 ‘LOFA 헬프라인’ (홈페이지, 전용App)을 통해 자발적으로 신고하여 주시기 바랍니다.</span> 내부 신고자에 대하여는 <span>우리회 임직원 행동강령 및 내부 신고자 보호규칙, 관련 법령에 의하여 보호될 수 있음을 알려드립니다.</span>
+                </p>
+            </div>
+            <h2 class="step-title">
+                1. 공정한 직무수행(6문항)
+            </h2>
+            <ul>
+                <li class="step-quiz">
+                    <h3 class="step-quiz__title">① 공정한 직무수행을 저해하는 지시</h3>
+                    <div class="step-quiz__body">
+                        <div class="step-quiz__content">
+                            <p>
+                                임직원은 하급자에게 자기 또는 제3자의 이익을 도모할 목적으로 법령이나 규정에 위반하여 공정한 직무수행을 저해하
+                                는 지시를 하여서는 아니된다.
+                            </p>
+                        </div>
+                        <div class="step-quiz__answer">
+                            <div class="step-quiz__form">
+                                <label class="choice" for="q1-1-y">
+                                    <input type="radio" class="choice" name="q1-1" id="q1-1-y" value="Y">
+                                    <span></span> YES
+                                </label>
+                                <label class="choice" for="q1-1-n">
+                                    <input type="radio" class="choice" name="q1-1" id="q1-1-n" value="N">
+                                    <span></span> NO
+                                </label>
+                            </div>
+                            <div class="step-quiz__description">
+                                <a href=""><img src="./assets/images/desc-img.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-quiz__footer">
+                        <strong>임직원 행동강령 제5조(공정한 직무수행을 저해하는 지시 등에 대한 처리)</strong>
+                        ① 임직원은 하급자에게 자기 또는 제3자의 이익을 도모할 목적으로 법령이나 규정에 위반하여 공정한 직무수행을 저해하는 지시를 하여서는 아니 된다.<br/>
+                        ② 상급자로부터 제1항을 위반하는 지시를 받은 임직원은 그 사유를 소명하고 지시에 따르지 아니하거나, 제38조에 따라 지정된 행동강령 업무를 담당하는 임직
+                        원(이하 “행동강령책임관” 이라 한다)과 상담할 수 있다.
+                    </div>
+                </li>
+                <li class="step-quiz">
+                    <h3 class="step-quiz__title">② 인사청탁 등의 금지</h3>
+                    <div class="step-quiz__body">
+                        <div class="step-quiz__content">
+                            <p>
+                                임직원은 임용·승진·전보 등 인사에 관하여 부당한 영향을 미치기 위해 타인으로 하여금 인사업무 담당자에게 청탁을
+                                하게 하거나 다른 임직원이 자신의 직위를 이용하여 다른 임직원의 임용·승진·전보 등 인사에 부당하게 개입할 수 있다.
+                            </p>
+                        </div>
+                        <div class="step-quiz__answer">
+                            <div class="step-quiz__form">
+                                <label class="choice" for="q1-2-y">
+                                    <input type="radio" class="choice" name="q1-2" id="q1-2-y" value="Y">
+                                    <span></span> YES
+                                </label>
+                                <label class="choice" for="q1-2-n">
+                                    <input type="radio" class="choice" name="q1-2" id="q1-2-n" value="N">
+                                    <span></span> NO
+                                </label>
+                            </div>
+                            <div class="step-quiz__description">
+                                <a href=""><img src="./assets/images/desc-img.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-quiz__footer">
+                        <strong>임직원 행동강령 제10조(인사청탁 등의 금지)</strong>
+                        ① 임직원은 자신의 임용·승진·전보 등 인사에 관하여 부당한 영향을 미치기 위하여 타인으로 하여금 인사업무를 담당하는 자에게 청탁을 하게 하여서는 아니 된다.<br/>
+                        ② 임직원은 직위를 이용하여 다른 임직원의 임용·승진·전보 등 인사에 부당하게 개입하여서는 아니 된다.</div>
+                </li>
+                <li class="step-quiz">
+                    <h3 class="step-quiz__title">③ 직무 관련 영리행위 금지</h3>
+                    <div class="step-quiz__body">
+                        <div class="step-quiz__content">
+                            <p>
+                                임직원은 직무와 관련하여 직무관련자에게 사적으로 노무 또는 조언·자문을 제공하고 그 대가로 소정의 사례금을 받을
+                                수 있다.
+                            </p>
+                        </div>
+                        <div class="step-quiz__answer">
+                            <div class="step-quiz__form">
+                                <label class="choice" for="q1-3-y">
+                                    <input type="radio" class="choice" name="q1-3" id="q1-3-y" value="Y">
+                                    <span></span> YES
+                                </label>
+                                <label class="choice" for="q1-3-n">
+                                    <input type="radio" class="choice" name="q1-3" id="q1-3-n" value="N">
+                                    <span></span> NO
+                                </label>
+                            </div>
+                            <div class="step-quiz__description">
+                                <a href=""><img src="./assets/images/desc-img.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-quiz__footer">
+                        <strong>임직원 행동강령 제6조의3(직무 관련 영리행위 등 금지)</strong>
+                        ① 임직원은 직무와 관련하여 다음 각 호의 행위를 해서는 아니 된다. 다만 다른 규정에 따라 허용되는 경우에는 그러하지 아니하다.<br/>
+                        1.직무관련자에게 사적으로 노무 또는 조언․자문을 제공하고 대가를 받는 행위</div>
+                </li>
+                <li class="step-quiz">
+                    <h3 class="step-quiz__title">④ 직무관련자와의 사적 접촉 신고 제한</h3>
+                    <div class="step-quiz__body">
+                        <div class="step-quiz__content">
+                            <p>
+                                임직원은 직무관련자(소속기관의 퇴직자는 퇴직한 날부터 2년이 지나지 아니한 사람)와 골프, 여행, 사행성 오락을 같
+                                이 하는 행위 등 사적 접촉을 하는 경우 이사장에게 서면으로 신고하여야 한다.
+                            </p>
+                        </div>
+                        <div class="step-quiz__answer">
+                            <div class="step-quiz__form">
+                                <label class="choice" for="q1-4-y">
+                                    <input type="radio" class="choice" name="q1-4" id="q1-4-y" value="Y">
+                                    <span></span> YES
+                                </label>
+                                <label class="choice" for="q1-4-n">
+                                    <input type="radio" class="choice" name="q1-4" id="q1-4-n" value="N">
+                                    <span></span> NO
+                                </label>
+                            </div>
+                            <div class="step-quiz__description">
+                                <a href=""><img src="./assets/images/desc-img.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-quiz__footer">
+                        <strong>임직원 행동강령 제6조의6(직무관련자와의 사적 접촉 제한)</strong>
+                        ① 임직원은 직무관련자(소속기관의 퇴직자는 퇴직한 날부터 2년이 지나지 아니한 사람만 해당한다)와 골프, 여행, 사행성 오락을 같이 하는 행위 등 사적인 접촉을 하는 경우 이사장에게 신고하여야 한다. 다른 법령이나 규정 또는 사회상규에 따라 허용되는 경우에는 그러하지 아니하다.
+                    </div>
+                </li>
+                <li class="step-quiz">
+                    <h3 class="step-quiz__title">⑤ 직무권한 등을 행사한 부당행위 금지</h3>
+                    <div class="step-quiz__body">
+                        <div class="step-quiz__content">
+                            <p>
+                                임직원은 자신이 소속된 기관의 소속기관에 소속된 기관의 업무를 부당하게 전가하거나 그 업무에 관한 비용이나 인력
+                                을 부담하도록 전가 할 수 있다.
+                            </p>
+                        </div>
+                        <div class="step-quiz__answer">
+                            <div class="step-quiz__form">
+                                <label class="choice" for="q1-5-y">
+                                    <input type="radio" class="choice" name="q1-5" id="q1-5-y" value="Y">
+                                    <span></span> YES
+                                </label>
+                                <label class="choice" for="q1-5-n">
+                                    <input type="radio" class="choice" name="q1-5" id="q1-5-n" value="N">
+                                    <span></span> NO
+                                </label>
+                            </div>
+                            <div class="step-quiz__description">
+                                <a href=""><img src="./assets/images/desc-img.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-quiz__footer">
+                        <strong>임직원 행동강령 제18조의3(직무권한 등을 행사한 부당 행위의 금지)</strong>
+						임직원은 자신의 직무권한을 행사하거나 지위ㆍ직책 등에서 유래되는 사실상 영향력을 행사하여 다음 각 호의 어느 하나에 해당하는 부당한 행위를 해서는 안 된다.<br/>
+                        1. 인가ㆍ허가 등을 담당하는 임직원이 그 신청인에게 불이익을 주거나 제3자에게 이익ㆍ불이익을 주기 위하여 부당하게 접수를 지연하거나 거부하는 행위<br/>
+                        2. 직무관련임직원에게 직무와 관련이 없거나 직무의 범위를 벗어나 부당한 지시ㆍ요구를 하는 행위<br/>
+                        3. 자신이 소속된 기관이 체결하는 물품ㆍ용역ㆍ공사 등 계약에 관하여 직무관련자에게 자신이 소속된 기관의 의무 또는 부담의 이행을 부당하게 전가하거나 업무처리를 부당하게 지연하는 행위<br/>
+						4. 자신이 소속된 기관의 소속 기관에 자신이 소속된 기관의 업무를 부당하게 전가하거나 그 업무에 관한 비용이나 인력을 부담하도록 부당하게 전가하는 행위<br/>
+                        5. 그 밖에 직무관련자, 직무관련임직원, 자신이 소속된 기관에 소속된 기관의 권리ㆍ권한을 부당하게 제한하거나 의무가 없는 일을 부당하게 요구하는 행위<br/>
+                    </div>
+                </li>
+                <li class="step-quiz">
+                    <h3 class="step-quiz__title">⑥ 직무권한 등을 행사한 부당행위 금지</h3>
+                    <div class="step-quiz__body">
+                        <div class="step-quiz__content">
+                            <p>
+                                임직원은 소속 기관의 출장ᆞ행사ᆞ연수 등과 관련하여 감독ᆞ감사ᆞ조사ᆞ평가 등을 받는 기관에 부당한 요구를 해서
+                                는 안 된다.
+                            </p>
+                        </div>
+                        <div class="step-quiz__answer">
+                            <div class="step-quiz__form">
+                                <label class="choice" for="q1-6-y">
+                                    <input type="radio" class="choice" name="q1-6" id="q1-6-y" value="Y">
+                                    <span></span> YES
+                                </label>
+                                <label class="choice" for="q1-6-n">
+                                    <input type="radio" class="choice" name="q1-6" id="q1-6-n" value="N">
+                                    <span></span> NO
+                                </label>
+                            </div>
+                            <div class="step-quiz__description">
+                                <a href=""><img src="./assets/images/desc-img.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-quiz__footer">
+                        <strong>임직원 행동강령 제29조의3(감독기관의 부당한 요구 금지)</strong>
+                        ① 감독ㆍ감사ㆍ조사ㆍ평가 등을 하는 기관(이하 이 조에서 “감독기관”이라 한다)에 소속된 임직원은 소속 기관의 출장ㆍ행사ㆍ연수 등과 관련하여 감독ㆍ감사ㆍ조사ㆍ평가 등을 받는 기관(이하 이 조에서 “피감기관”이라 한다)에 다음 각 호의 어느 하나에 해당하는 부당한 요구를 해서는 안 된다.<br/>
+                        1. 법령에 근거가 없거나 예산의 목적ㆍ용도에 부합하지 않는 금품등의 제공 요구<br/>
+                        2. 감독기관 소속 임직원에 대하여 정상적인 관행을 벗어난 예우ㆍ의전의 요구<br/>
+                        ② 감독기관에 소속된 임직원으로부터 제1항에 따른 부당한 요구를 받은 피감기관 소속 임직원은 그 이행을 거부하여야 하며, 거부에도 불구하고 같은 요구를 다시 받은 때에는 그 사실을 피감기관의 행동강령책임관에게 별지 제19호의2 서식에 따른 서면으로 알려야 한다. 이 경우 행동강령책임관은 그 요구가 같은 항 각 호의 어느 하나에 해당하는 경우에는 신속하게 소속 기관의 장에게 보고하여야 한다.<br/>
+                        ③ 제2항에 따라 보고를 받은 피감기관의 장은 제1항 각 호의 어느 하나에 해당하는 경우에는 그 사실을 해당 감독기관의 장에게 알려야 하며, 그 사실을 통지받은 감독기관의 장은 해당 요구를 한 임직원에 대하여 징계 등 필요한 조치를 하여야 한다.<br/>
+					</div>
+
+                </li>
+            </ul>
+        </div>
+        <div id="step2" class="tab" style="display: none;">
+            <h2 class="step-title">
+                2.부당이득의 수수 금지(5문항)
+            </h2>
+            <ul>
+                <li class="step-quiz">
+                    <h3 class="step-quiz__title">① 직위의 사적 이용 금지</h3>
+                    <div class="step-quiz__body">
+                        <div class="step-quiz__content">
+                            <p>
+                                임직원은 직무 범위를 벗어나 사적 이익을 위하여 우리회의 명칭이나 직위를 공표·게시하는 등의 방법으로 이용하거나
+                                이용하도록 도와줄 수 있다.
+                            </p>
+                        </div>
+                        <div class="step-quiz__answer">
+                            <div class="step-quiz__form">
+                                <label class="choice" for="q2-1-y">
+                                    <input type="radio" class="choice" name="q2-1" id="q2-1-y" value="Y">
+                                    <span></span> YES
+                                </label>
+                                <label class="choice" for="q2-1-n">
+                                    <input type="radio" class="choice" name="q2-1" id="q2-1-n" value="N">
+                                    <span></span> NO
+                                </label>
+                            </div>
+                            <div class="step-quiz__description">
+                                <a href=""><img src="./assets/images/desc-img.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-quiz__footer">
+                        <strong>
+                            임직원 행동강령 제14조의2(직위의 사적 이용 금지)
+                        </strong>
+                        임직원은 직무의 범위를 벗어나 사적 이익을 위하여 소속 기관의 명칭이나 직위를 공표ㆍ게시하는 등의 방법으로 이용하거나 이용하게 해서는 아니 된다.
+                    </div>
+                </li>
+                <li class="step-quiz">
+                    <h3 class="step-quiz__title">② 알선·청탁 등의 금지</h3>
+                    <div class="step-quiz__body">
+                        <div class="step-quiz__content">
+                            <p>
+                                임직원은 자기 또는 타인의 부당한 이익을 위하여 다른 공직자의 공정한 직무수행을 저해하는 알선·청탁 등을 하거나 직무수행과 관련하여 자기 또는 타인의 부당한 이익을 위하여 직무관련자를 다른 직무관련자 또는 공직자에게 소개하
+                                여서는 아니 된다.
+                            </p>
+                        </div>
+                        <div class="step-quiz__answer">
+                            <div class="step-quiz__form">
+                                <label class="choice" for="q2-2-y">
+                                    <input type="radio" class="choice" name="q2-2" id="q2-2-y" value="Y">
+                                    <span></span> YES
+                                </label>
+                                <label class="choice" for="q2-2-n">
+                                    <input type="radio" class="choice" name="q2-2" id="q2-2-n" value="N">
+                                    <span></span> NO
+                                </label>
+                            </div>
+                            <div class="step-quiz__description">
+                                <a href=""><img src="./assets/images/desc-img.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-quiz__footer">
+                        <strong>
+                            임직원 행동강령 제15조(알선·청탁 등의 금지)
+                        </strong>
+                        ① 임직원은 자기 또는 타인의 부당한 이익을 위하여 다른 공직자(부패방지 및 국민권익위원회의 설치와 운영에 관한 법률 제2조제3호가목 및 나목에 따른 공직자를 말한다.)의 공정한 직무수행을 저해하는 알선·청탁 등을 하여서는 아니 된다.<br/>
+						② 임직원은 직무수행과 관련하여 자기 또는 타인의 부당한 이익을 위하여 직무관련자를 다른 직무관련자 또는 공직자에게 소개하여서는 아니 된다
+                    </div>
+                </li>
+                <li class="step-quiz">
+                    <h3 class="step-quiz__title">③ 직무관련 정보 이용 거래 등 제한</h3>
+                    <div class="step-quiz__body">
+                        <div class="step-quiz__content">
+                            <p>
+                                임직원은 직무수행과 관련하여 알게 된 미공개 정보를 이용하여 주식 등 유가증권·부동산 등과 관련된 재산상 거래 또
+                                는 투자를 하거나 타인에게 그러한 정보를 제공하여 재산상 거래 또는 투자를 돕는 행위를 하여서는 아니 된다.
+                            </p>
+                        </div>
+                        <div class="step-quiz__answer">
+                            <div class="step-quiz__form">
+                                <label class="choice" for="q2-3-y">
+                                    <input type="radio" class="choice" name="q2-3" id="q2-3-y" value="Y">
+                                    <span></span> YES
+                                </label>
+                                <label class="choice" for="q2-3-n">
+                                    <input type="radio" class="choice" name="q2-3" id="q2-3-n" value="N">
+                                    <span></span> NO
+                                </label>
+                            </div>
+                            <div class="step-quiz__description">
+                                <a href=""><img src="./assets/images/desc-img.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-quiz__footer">
+                        <strong>
+                            임직원 행동강령 제16조(직무관련 정보를 이용한 거래 등의 제한)
+                        </strong>
+                        ① 임직원은 직무수행과 관련하여 알게 된 미공개 정보를 이용하여 주식 등 유가증권·부동산 등과 관련된 재산상 거래 또는 투자를 하거나 타인에게 그러한 정보를 제공하여 재산상 거래 또는 투자를 돕는 행위를 하여서는 아니 된다.<br/>
+                        ② 제1항에 따라 이용 또는 제공이 제한되는 정보란 임직원이 다음 각 호의 사항에 관한 직무를 수행하던 중 알게 된 미공개 정보를 말한다.<br/>
+                    </div>
+                </li>
+                <li class="step-quiz">
+                    <h3 class="step-quiz__title">④ 금품 등의 수수 금지</h3>
+                    <div class="step-quiz__body">
+                        <div class="step-quiz__content">
+                            <p>
+                                임직원은 직무 관련 여부 및 기부, 후원, 증여 등 그 명목에 관계없이 동일인으로부터 1회에 100만원 또는 매 회계연도
+                                300만원을 초과하는 금품 등을 받거나 요구 또는 약속해서는 아니된다.
+                            </p>
+                        </div>
+                        <div class="step-quiz__answer">
+                            <div class="step-quiz__form">
+                                <label class="choice" for="q2-4-y">
+                                    <input type="radio" class="choice" name="q2-4" id="q2-4-y" value="Y">
+                                    <span></span> YES
+                                </label>
+                                <label class="choice" for="q2-4-n">
+                                    <input type="radio" class="choice" name="q2-4" id="q2-4-n" value="N">
+                                    <span></span> NO
+                                </label>
+                            </div>
+                            <div class="step-quiz__description">
+                                <a href=""><img src="./assets/images/desc-img.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-quiz__footer">
+                        <strong>
+                            임직원 행동강령 제18조(금품 등의 수수 금지)
+                        </strong>
+                        ① 임직원은 직무 관련 여부 및 기부ㆍ후원ㆍ증여 등 그 명목에 관계없이 동일인으로부터 1회에 100만원 또는 매 회계연도에 300만원을 초과하는 금품등을 받거나 요구 또는 약속해서는 아니 된다.<br/>
+                        ② 임직원은 직무와 관련하여 대가성 여부를 불문하고 제1항에서 정한 금액 이하의 금품등을 받거나 요구 또는 약속해서는 아니 된다.
+                    </div>
+                </li>
+                <li class="step-quiz">
+                    <h3 class="step-quiz__title">⑤ 사적 노무 요구 금지</h3>
+                    <div class="step-quiz__body">
+                        <div class="step-quiz__content">
+                            <p>
+                                임직원은 자신의 직무권한을 행사하거나 지위·직책 등에서 유래되는 사실상 영향력을 행사하여 직무관련자 또는 직무
+                                관련임직원으로부터 사적 노무를 제공받거나 요구 또는 약속해서는 아니된다.
+                            </p>
+                        </div>
+                        <div class="step-quiz__answer">
+                            <div class="step-quiz__form">
+                                <label class="choice" for="q2-5-y">
+                                    <input type="radio" class="choice" name="q2-5" id="q2-5-y" value="Y">
+                                    <span></span> YES
+                                </label>
+                                <label class="choice" for="q2-5-n">
+                                    <input type="radio" class="choice" name="q2-5" id="q2-5-n" value="N">
+                                    <span></span> NO
+                                </label>
+                            </div>
+                            <div class="step-quiz__description">
+                                <a href=""><img src="./assets/images/desc-img.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-quiz__footer">
+                        <strong>
+                            임직원 행동강령 제18조의2(사적 노무 요구 금지)
+                        </strong>
+                        임직원은 자신의 직무권한을 행사하거나 지위·직책 등에서 유래되는 사실상 영향력을 행사하여 직무관련자 또는 직무관련임직원으로부터 사적 노무를 제공받거나 요구 또는 약속해서는 아니 된다. 다만, 다른 규정 또는 사회상규에 따라 허용되는 경우에는 그러지 아니하다.
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <div id="step3" class="tab" style="display: none;">
+            <h2 class="step-title">
+                3.건전한 직장 분위기 조성(3문항)
+            </h2>
+            <ul>
+                <li class="step-quiz">
+                    <h3 class="step-quiz__title">① 직무관련자 등과의 거래 신고</h3>
+                    <div class="step-quiz__body">
+                        <div class="step-quiz__content">
+                            <p>
+                                임직원은 자신, 배우자, 직계존속·비속 또는 특수관계사업자가 임직원 자신의 직무관련자 또는 직무관련임직원과 금전
+                                을 빌리거나 빌려주는 행위 및 유가증권을 거래하는 행위 등을 하는 경우 이사장에게 미리 서면으로 신고하여야 한다.
+                            </p>
+                        </div>
+                        <div class="step-quiz__answer">
+                            <div class="step-quiz__form">
+                                <label class="choice" for="q3-1-y">
+                                    <input type="radio" class="choice" name="q3-1" id="q3-1-y" value="Y">
+                                    <span></span> YES
+                                </label>
+                                <label class="choice" for="q3-1-n">
+                                    <input type="radio" class="choice" name="q3-1" id="q3-1-n" value="N">
+                                    <span></span> NO
+                                </label>
+                            </div>
+                            <div class="step-quiz__description">
+                                <a href=""><img src="./assets/images/desc-img.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-quiz__footer">
+                        <strong>임직원 행동강령 제28조의2(직무관련자 등과의 거래 신고)</strong>
+                        ① 임직원은 자신, 배우자, 직계존속·비속(생계를 같이 하는 경우만 해당한다. 이하 이 조에서 같다) 또는 특수관계사업자가 임직원 자신의 직무관련자 또는 직무
+                        관련임직원과 직접 다음 각 호의 어느 하나에 해당하는 행위를 하는 경우(무상인 경우를 포함한다)에는 이사장에게 미리 별지 제20호 서식에 따른 서면으로 신고
+                        하여야 한다.<br/>
+                        1. 금전을 빌리거나 빌려주는 행위 및 유가증권을 거래하는 행위. 다만, 「금융실명거래 및 비밀보장에 관한 법률」 제2조제1호에 따른 금융회사등으로부터 통상적인 조건으로 금전을 빌리는 행위 및 유가증권을 거래하는 행위는 제외한다.
+                    </div>
+                </li>
+                <li class="step-quiz">
+                    <h3 class="step-quiz__title">② 직장 내 괴롭힘 금지</h3>
+                    <div class="step-quiz__body">
+                        <div class="step-quiz__content">
+                            <p>
+                                임직원은 직위, 업무상의 우월한 지위 또는 다수의 우월성을 이용하여 다른 임직원의 신체적·정신적 건강을 훼손하거
+                                나 인격을 침해하는 행위를 하여서는 아니된다.
+                            </p>
+                        </div>
+                        <div class="step-quiz__answer">
+                            <div class="step-quiz__form">
+                                <label class="choice" for="q3-2-y">
+                                    <input type="radio" class="choice" name="q3-2" id="q3-2-y" value="Y">
+                                    <span></span> YES
+                                </label>
+                                <label class="choice" for="q3-2-n">
+                                    <input type="radio" class="choice" name="q3-2" id="q3-2-n" value="N">
+                                    <span></span> NO
+                                </label>
+                            </div>
+                            <div class="step-quiz__description">
+                                <a href=""><img src="./assets/images/desc-img.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-quiz__footer">
+                        <strong>임직원 행동강령 제29조의2(직장 내 괴롭힘 금지)</strong>
+                       임직원은 직위, 업무상의 우월한 지위 또는 다수의 우월성을 이용하여 다른 임직원의 신체적·정신적 건강을 훼손하거나 인격을 침해하는 다음 각 호의 1에 해당하는 행위를 하여서는 아니된다.<br/>
+                        1. 폭행·상해 등 신체적으로 공격하는 행위<br/>
+                        2. 폭언 등 반복적으로 모욕적인 표현을 사용하여 인격을 침해하는 행위<br/>
+                        3. 반복적으로 특정 사실 또는 거짓된 정보를 유포하여 명예를 훼손하는 행위<br/>
+                        4. 개인의 사생활이나 사적인 일에 지나치게 개입하고 간섭하는 행위<br/>
+                        5. 업무상 불필요하거나 수행이 불가능한 일을 반복적으로 지시하는 행위<br/>
+                        6. 정당한 이유 없이 지속적으로 업무를 배제하는 행위<br/>
+                        7. 의도와 적극성을 가지고 반복·지속적으로 소외시키거나 괴롭히는 행위<br/>
+                        8. 그 밖에 임직원의 신체적·정신적 건강을 훼손하거나 인격을 침해하는 행위<br/>
+                    </div>
+                </li>
+                <li class="step-quiz">
+                    <h3 class="step-quiz__title">③ 외부강의등의 사례금 수수 제한</h3>
+                    <div class="step-quiz__body">
+                        <div class="step-quiz__content">
+                            <p>
+                                임직원은 사례금을 받는 외부강의등을 할 때에는 외부강의등의 요청 명세 등을 이사장에게 그 외부강의등을 마친 날부터 10일 이내에 신고할 수 있다.
+                            </p>
+                        </div>
+                        <div class="step-quiz__answer">
+                            <div class="step-quiz__form">
+                                <label class="choice" for="q3-3-y">
+                                    <input type="radio" class="choice" name="q3-3" id="q3-3-y" value="Y">
+                                    <span></span> YES
+                                </label>
+                                <label class="choice" for="q3-3-n">
+                                    <input type="radio" class="choice" name="q3-3" id="q3-3-n" value="N">
+                                    <span></span> NO
+                                </label>
+                            </div>
+                            <div class="step-quiz__description">
+                                <a href=""><img src="./assets/images/desc-img.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-quiz__footer">
+                        <strong>
+                            임직원 행동강령 제27조(외부강의등의 사례금 수수 제한)
+                        </strong>
+                        ① 임직원은 자신의 직무와 관련되거나 그 지위 ᆞ직책 등에서 유래되는 사실상의 영향력을 통하여 요청받은 교육ᆞ홍보ᆞ토론회ᆞ세미나ᆞ공청회 또는 그 밖의 회의 등에서 한 강의ᆞ강연ᆞ기고 등(이하 “외부강의등”이라 한다)의 대가로서 별표 2에서 정하는 금액을 초과하는 사례금을 받아서는 아니 된다.<br/>
+                        ② 임직원은 사례금을 받는 외부강의등을 할 때에는 외부강의등의 요청 명세 등을 이사장에게 그 외부강의등을 마친 날부터 10일 이내에 별지 제12호 서식에 따라 신고하여야 한다. 다만, 외부강의등을 요청한 자가 국가나 지방자치단체인 경우에는 그러하지 아니하다.<br/>
+                        ③ 임직원은 제2항에 따른 신고를 할 때 상세 명세 또는 사례금 총액 등을 미리 알 수 없는 경우에는 해당 사항을 제외한 사항을 신고한 후 해당 사항을 안 날부터 5일 이내에 보완하여야 한다.<br/>
+                        ④ 이사장은 제2항에 따라 임직원이 신고한 외부강의등이 공정한 직무수행을 저해할 수 있다고 판단하는 경우에는 그 임직원의 외부강의등을 제한할 수 있다.<br/>
+                        ⑤ 임직원은 제1항에 따른 금액을 초과하는 사례금을 받은 경우에는 이사장에게 신고하고, 제공자에게 그 초과금액을 지체 없이 반환하여야 한다.<br/>
+                        ⑥ 임직원은 제6항에 따라 초과금액을 반환한 경우에는 증명자료를 첨부하여 별지 제16호 서식으로 그 반환 비용을 이사장에게 청구할 수 있다.<br/>
+                        ⑦ 임직원은 월 3회를 초과하여 대가를 받고 외부강의등을 하려는 경우에는 미리 이사장의 승인을 받아야 한다. 다만, 국가나 지방자치단체에서 요청하거나 겸직허가를 받고 수행하는 외부강의등은 그 횟수에 포함하지 아니한다.<br/>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="step4" class="tab" style="display: none;">
+            <div class="description description--white">
+                <p>
+                    「It’s on US」 캠페인은 직장 내 성희롱 및 괴롭힘 등은 피해자와 가해자만의 문제가 아니라 모두의 문제로서 모두가 문제 해결에 동참해야 한다는 것을 강조하는 것이며 <u>목격자에 대한 개입을 인정</u>하고 <u>피해자를 지지하는 의사표명</u>에 대한 일련의 활동을 말합니다.<br>
+                    직장내 성희롱 및 괴롭힘 근절 선언에 동참하시어 건전한 직장생활을 유지하여 주시기 바랍니다.
+                </p>
+            </div>
+            <div class="policy">
+                <h2 class="policy__header">직장 내 성희롱 등 근절 선언문</h2>
+                <div class="policy__body">
+                    <ul>
+                        <li class="text">
+                            나는 ‘직장 내 성희롱 등 성범죄 예방 지킴이’가 되어 <strong>우리 기관의 성범죄 근절과 성평등한 인식 확산을 위해 노력하고 성범죄 발생 시 당사자만의 문제가 아닌 모두의 문제로서 이를 적극적으로 해결하려는 기관의 노력에 동참</strong>할 것을 다짐하며 아래와 같이 서약합니다.
+                        </li>
+                        <li>
+                            <span class="idx">1. </span>한국지방재정공제회에서 주최하는 <strong>폭력예방교육을 의무적으로 이수</strong>하고, <strong>성적 언동을 하지 않는 등 성희롱·성폭력 예방을 위해 최선을 다하겠습니다.</strong>
+                        </li>
+                        <li>
+                            <span class="idx">2. </span>직무수행 및 사업 추진 과정에서 <strong>성희롱·성폭력 사건이 발생할 경우 신속하고 공정한 조사가 이뤄질 수 있도록 협력하겠습니다.</strong>
+                        </li>
+                        <li>
+                            <span class="idx">3. </span><strong>성희롱·성폭력 피해자의 신분을 보호</strong>하고, <strong>피해자의 잘못이 아니라는 것을 명확히 알며 피해자에게 2차 가해를 하지 않겠습니다.</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="policy">
+                <h2 class="policy__header">직장 내 괴롭힘 근절 선언문</h2>
+                <div class="policy__body">
+                    <ul>
+                        <li class="text">
+                            우리 한국지방재정공제회에서 근무하는 모든 임직원은 유연한 마음으로 <strong>임직원들의 상호간 차이를 인정하고 적절한 커뮤니케이션을 유지하는데 힘쓰며 서로의 인격과 존엄을 존중</strong>합니다. 우리는 <strong>직장 내 권력형 괴롭힘, 성희롱, 임신 및 출산과 관련된 여성 차별, 육아 휴직을 원하는 남성 직원 에 대한 괴롭힘 등을 포함하여 상대에게 불쾌함과 불이익을 주고 개인의 존엄을 짓밟는 모든 직장 내 괴롭힘 행위를 하지 않겠다</strong>는 결의를 표명 하고, 근무하는 모든 사람들이 충분한 능력을 발휘할 수 있는 직장 환경을 조성하는데 힘쓸 것을 다짐하며 아래와 같이 서약합니다.
+                        </li>
+                        <li>
+                            <span class="idx">1. </span>나는 <strong>한국지방재정공제회에서 주관하는 직장 내 괴롭힘 방지 교육을 의무적으로 이수</strong>하고 모든 임직원은 이 기회를 통해 <strong>직장 내 괴롭힘 및 인권에 대한 이해</strong>와 <strong>더 좋은 직장 환경을 조성하는데 힘쓰겠습니다.</strong>
+                        </li>
+                        <li>
+                            <span class="idx">2. </span>나는 <strong>직무수행 시 인격적인 불이익이나 처우를 하지 않으며 모든 이해관계자의 인권을 존중하겠습니다.</strong>
+                        </li>
+                        <li>
+                            <span class="idx">3. </span>나는 <strong>불공정 갑질 및 직장 내 괴롭힘 행위를 예방하는 활동에 적극 참여</strong>하고 <strong>신고자 및 피해자 보호에 적극 앞장서겠습니다.</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="checkUser">
+                
+                <span>사번 <input type="text" name="usernumber" id="usernumber"></span>
+                <span>이름 <input type="text" name="username" id="username" value="<?php echo $member['mb_name']?>"></span>
+            </div>
+        </div>
+        <div id="step5" class="tab" style="display: none;">
+            <div class="policy">
+                <h2 class="policy__header">LOFA 반부패·청렴 선언문</h2>
+                <div class="policy__body">
+                    <ul>
+                        <li>
+                            <span class="idx">첫째,</span>부패방지 방침과 관련하여 내·외부 의사소통을 강화하였습니다. 임직원을 비롯한 주요 이해 관계자들이 우리 공제회의 부패방지 방침
+                            을확인하고, 준수할 수 있도록 온·오프라인으로 소통하고 있습니다.
+                        </li>
+                        <li>
+                            <span class="idx">둘째,</span>부패방지 책임자의 주도하에 부패방지 TF를 구축하여 시스템 운영의 실효성을 제고하였습니다. 부패방지 책임자는 감사실장이 담당
+                            하고있으며, 중요부서 중간관리자는 부패 예방 및 식별 과정에 참여하여 신뢰도 높은 시스템을 구축하는데 기여하고 있습니다.
+                        </li>
+                        <li>
+                            <span class="idx">셋째,</span>부패방지 경영의 내재화를 위하여 임직원 교육을 강화하였습니다. 임직원이 부패방지경영시스템을 이해하고, 부패방지의 중요성을 인
+                            지함으로써 청렴 조직 문화를 조성할 수 있도록 부패방지 내재화 교육을 실시하고 있습니다.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="description description--white mt1">
+                <p>
+                    우리회사는 의심되는 부패상황이나 부패 이슈에 대해 보고 및 신고를 독려하며, 선의적으로 또는 타당한 확신에 근거하여 신고한 경우, 신고자에
+                    대한 어떠한 보복이나 차별이 존재하지 않도록 보호하고 있습니다. 향후 이사장의 책임 하에 부패방지경영시스템의 현황을 주기적으로 관리하고
+                    계속적으로 개선해 나가겠습니다.우리회가 반부패·비윤리·부정청탁 없는 최고 청렴 기관으로 도약할 수 있도록 최선의 노력을 다해주신 직원
+                    여러분의 노고에 감사드립니다.
+                </p>
+            </div>
+        </div>
+		<?php
+		for($i=1; $i<15; $i++)
+		{
+			echo "<input type='hidden' name='q{$i}' value='' />";
+		}
+		?>
+		</form>
+    </div>
+    <div class="footer footer--report">
+        <div class="btnbox">
+            <button class="confirm">
+                <img src="./assets/images/icon-confirm.png" alt=""> <span>확인</span>
+            </button>
+            <a href="#//" class="next">다음 <img src="./assets/images/icon-arrow.png" alt=""></a>
+        </div>
+    </div>
+</div>
+
+<div class="passImg"><img src="" alt=""></div>
+
+<script src="./assets/plugins/jquery.js"></script>
+<script src="./assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script>
+var tabState = 1;
+var tabConfirm = false;
+var tabPassing = false;
+
+$('.next').on('click', function(){
+    if( !tabConfirm ) {
+        alert('자가진단을 완료 후 확인을 눌러주세요.');
+        tabConfirm = false;
+    } else {
+        tabState++;
+        $('.tab').hide();
+        $('#step'+tabState).show();
+        $('.passImg').hide();
+        tabConfirm = false;
+
+        if( tabState === 4 ) {
+            var step2HTML = '2단계<br/>\n' +
+                '            <span>It’s on <i>US</i></span><br>직장 내 성희롱 및 괴롭힘 예방 캠페인';
+            $('.header-report.header .wrap h1').html(step2HTML);
+            $('.header-report.header .wrap img').attr('src', './assets/images/step-2.png');
+
+            //$('.footer .confirm').hide();
+            $('.footer .next').hide();
+            $('.footer .confirm').show();
+            tabConfirm = true;
+        }
+        if( tabState === 5 ) {
+            // $('.footer .next').hide();
+            // $('.footer .confirm').show();
+        }
+    }
+});
+
+$('.confirm').on('click', function(){
+    if( tabState === 1 ) {
+        // 1번화면
+        if( !$('input[name="q1-1"]').is(':checked') ) {
+            alert('1번 문항을 답해주세요.');
+            return false;
+        };
+        if( !$('input[name="q1-2"]').is(':checked') ) {
+            alert('2번 문항을 답해주세요.');
+            return false;
+        };
+        if( !$('input[name="q1-3"]').is(':checked') ) {
+            alert('3번 문항을 답해주세요.');
+            return false;
+        };
+        if( !$('input[name="q1-4"]').is(':checked') ) {
+            alert('4번 문항을 답해주세요.');
+            return false;
+        };
+        if( !$('input[name="q1-5"]').is(':checked') ) {
+            alert('5번 문항을 답해주세요.');
+            return false;
+        };
+        if( !$('input[name="q1-6"]').is(':checked') ) {
+            alert('6번 문항을 답해주세요.');
+            return false;
+        };
+		
+		$('input[name="q1"]').val($('input[name="q1-1"]:checked').val());
+		$('input[name="q2"]').val($('input[name="q1-2"]:checked').val());
+		$('input[name="q3"]').val($('input[name="q1-3"]:checked').val());
+		$('input[name="q4"]').val($('input[name="q1-4"]:checked').val());
+		$('input[name="q5"]').val($('input[name="q1-5"]:checked').val());
+		$('input[name="q6"]').val($('input[name="q1-6"]:checked').val());
+
+        tabPass();
+    }
+    if( tabState === 2 ) {
+        // 1번화면
+        if( !$('input[name="q2-1"]').is(':checked') ) {
+            alert('1번 문항을 답해주세요.');
+            return false;
+        };
+        if( !$('input[name="q2-2"]').is(':checked') ) {
+            alert('2번 문항을 답해주세요.');
+            return false;
+        };
+        if( !$('input[name="q2-3"]').is(':checked') ) {
+            alert('3번 문항을 답해주세요.');
+            return false;
+        };
+        if( !$('input[name="q2-4"]').is(':checked') ) {
+            alert('4번 문항을 답해주세요.');
+            return false;
+        };
+        if( !$('input[name="q2-5"]').is(':checked') ) {
+            alert('5번 문항을 답해주세요.');
+            return false;
+        };
+		
+		$('input[name="q7"]').val($('input[name="q2-1"]:checked').val());
+		$('input[name="q8"]').val($('input[name="q2-2"]:checked').val());
+		$('input[name="q9"]').val($('input[name="q2-3"]:checked').val());
+		$('input[name="q10"]').val($('input[name="q2-4"]:checked').val());
+		$('input[name="q11"]').val($('input[name="q2-5"]:checked').val());
+
+        tabPass();
+    }
+    if( tabState === 3 ) {
+        // 1번화면
+        if( !$('input[name="q3-1"]').is(':checked') ) {
+            alert('1번 문항을 답해주세요.');
+            return false;
+        };
+        if( !$('input[name="q3-2"]').is(':checked') ) {
+            alert('2번 문항을 답해주세요.');
+            return false;
+        };
+        if( $('textarea[name="q3-3"]').val() == "" ) {
+            alert('3번 문항을 답해주세요.');
+            return false;
+        };
+		
+		$('input[name="q12"]').val($('input[name="q3-1"]:checked').val());
+		$('input[name="q13"]').val($('input[name="q3-2"]:checked').val());
+		$('input[name="q14"]').val($('input[name="q3-3"]:checked').val());
+
+        tabPass();
+    }
+
+    if( tabState === 4 ) {
+        if( !$('#usernumber').val() ) {
+            alert('사번을 입력해주세요.');
+            $('#usernumber').focus();
+            return false;
+        }
+        if( !$('#username').val() ) {
+            alert('이름을 입력해주세요.');
+            $('#username').focus();
+            return false;
+        }
+
+        if( confirm('완료처리 하시겠습니까?') ) {
+
+            //alert('자가진단 완료');
+			//window.close();
+			$("form").submit();
+        }
+    }
+})
+
+$('.passImg').on('click', function(){
+    $(this).hide();
+});
+
+$('.step-quiz__description a').on('click', function(e){
+    e.preventDefault();
+    $(this).parents('.step-quiz').find('.step-quiz__footer').toggle();
+})
+
+function tabPass() {
+    // 문답 체크 후 tabPassing 값 변경하기
+    tabPassing ? $('.passImg img').attr('src', './assets/images/pass.png') : $('.passImg img').attr('src', './assets/images/fail.png') ;
+    $('.passImg').show();
+
+    // 3초뒤 사라짐
+    setTimeout(function(){
+        $('.passImg').hide();
+    }, 3000);
+
+    tabConfirm = true;
+}
+</script>
+</body>
+</html>

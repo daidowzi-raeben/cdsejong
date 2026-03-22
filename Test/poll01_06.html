@@ -29,6 +29,9 @@ $(document).ready(function(){
 <body>
 <p><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/title5.png" width="810" height="164" alt="" /></p>
 <div id="contents" class="w810">
+<form action="./srvy_update.php" enctype="multipart/form-data" name="survey" id="survey" method="post">
+<input type="hidden" name="srvy_code" value="3" />
+<input type="hidden" name="srvy_count" value="28" />
     <p class="top-info">
         안녕하세요? 본 설문조사는 <span class="accent">‘직장 내 괴롭힘’ 관련 우리 기관의 실태를 파악</span>하기 위한 것입니다. 조사결과는 <span class="accent">직장 내 괴롭힘
         실태를 파악하고 향후에 발생 가능한 문제를 예방・완화할 수 있는 방안을 마련하는 데 중요한 자료로 활용</span>됩니다. <span class="accent">응답내용은
@@ -42,12 +45,12 @@ $(document).ready(function(){
             </h3>
             <ul class="survey-answer">
                 <li>
-                    <input type="radio" name="check1" id="check1_1" value="check1_1"></input>
-                    <label for="check1_1">① 남성</label>
+                    <input type="radio" name="q1" id="q1_1" value="1"></input>
+                    <label for="q1_1">① 남성</label>
                 </li>
                 <li>
-                    <input type="radio" name="check1" id="check1_2" value="check1_2"></input>
-                    <label for="check1_2">② 여성</label>
+                    <input type="radio" name="q1" id="q1_2" value="2"></input>
+                    <label for="q1_2">② 여성</label>
                 </li>
             </ul>
         </li>
@@ -57,20 +60,20 @@ $(document).ready(function(){
             </h3>
             <ul class="survey-answer">
                 <li>
-                    <input type="radio" name="check2" id="check2_1" value="check2_1"></input>
-                    <label for="check2_1">① 만 20~29세</label>
+                    <input type="radio" name="q2" id="q2_1" value="1"></input>
+                    <label for="q2_1">① 만 20~29세</label>
                 </li>
                 <li>
-                    <input type="radio" name="check2" id="check2_2" value="check2_2"></input>
-                    <label for="check2_2">② 만 30~39세</label>
+                    <input type="radio" name="q2" id="q2_2" value="2"></input>
+                    <label for="q2_2">② 만 30~39세</label>
                 </li>
                 <li>
-                    <input type="radio" name="check2" id="check2_3" value="check2_3"></input>
-                    <label for="check2_3">③ 만 40~49세</label>
+                    <input type="radio" name="q2" id="q2_3" value="3"></input>
+                    <label for="q2_3">③ 만 40~49세</label>
                 </li>
                 <li>
-                    <input type="radio" name="check2" id="check2_4" value="check2_4"></input>
-                    <label for="check2_4">④ 만 50~59세</label>
+                    <input type="radio" name="q2" id="q2_4" value="4"></input>
+                    <label for="q2_4">④ 만 50~59세</label>
                 </li>
             </ul>
         </li>
@@ -84,12 +87,12 @@ $(document).ready(function(){
             </div>
             <ul class="survey-answer">
                 <li>
-                    <input type="radio" name="check3" id="check3_1" value="check3_1"></input>
-                    <label for="check3_1">① 있다.</label>
+                    <input type="radio" name="q3" id="q3_1" value="1"></input>
+                    <label for="q3_1">① 있다.</label>
                 </li>
                 <li>
-                    <input type="radio" name="check3" id="check3_2" value="check3_2"></input>
-                    <label for="check3_2">② 없다.</label>
+                    <input type="radio" name="q3" id="q3_2" value="2"></input>
+                    <label for="q3_2">② 없다.</label>
                 </li>
             </ul>
         </li>
@@ -99,32 +102,32 @@ $(document).ready(function(){
             </h3>
             <ul class="survey-answer">
                 <li>
-                    <input type="checkbox" name="check4" id="check4_1" value="check4_1"></input>
-                    <label for="check4_1">① 성희롱(성폭력)</label>
+                    <input type="checkbox" name="q4" id="q4_1" value="1"></input>
+                    <label for="q4_1">① 성희롱(성폭력)</label>
                 </li>
                 <li>
-                    <input type="checkbox" name="check4" id="check4_2" value="check4_2"></input>
-                    <label for="check4_2">② 직장 내 괴롭힘</label>
+                    <input type="checkbox" name="q4" id="q4_2" value="2"></input>
+                    <label for="q4_2">② 직장 내 괴롭힘</label>
                 </li>
                 <li>
-                    <input type="checkbox" name="check4" id="check4_3" value="check4_3"></input>
-                    <label for="check4_3">③ 과도한 스트레스 및 정서상 문제</label>
+                    <input type="checkbox" name="q4" id="q4_3" value="3"></input>
+                    <label for="q4_3">③ 과도한 스트레스 및 정서상 문제</label>
                 </li>
                 <li>
-                    <input type="checkbox" name="check4" id="check4_4" value="check4_4"></input>
-                    <label for="check4_4">④ 인사평가 등</label>
+                    <input type="checkbox" name="q4" id="q4_4" value="4"></input>
+                    <label for="q4_4">④ 인사평가 등</label>
                 </li>
                 <li>
-                    <input type="checkbox" name="check4" id="check4_5" value="check4_5"></input>
-                    <label for="check4_5">⑤ 근로조건(임금, 근로시간 등)</label>
+                    <input type="checkbox" name="q4" id="q4_5" value="5"></input>
+                    <label for="q4_5">⑤ 근로조건(임금, 근로시간 등)</label>
                 </li>
                 <li>
-                    <input type="checkbox" name="check4" id="check4_6" value="check4_6"></input>
-                    <label for="check4_6">⑥ 기타(　　　　　　　　)</label>
+                    <input type="checkbox" name="q4" id="q4_6" value="6"></input>
+                    <label for="q4_6">⑥ 기타(　　　　　　　　)</label>
                 </li>
                 <li>
-                    <input type="checkbox" name="check4" id="check4_7" value="check4_7"></input>
-                    <label for="check4_7">⑦ 상담한 적이 없다</label>
+                    <input type="checkbox" name="q4" id="q4_7" value="7"></input>
+                    <label for="q4_7">⑦ 상담한 적이 없다</label>
                 </li>
             </ul>
         </li>
@@ -134,18 +137,18 @@ $(document).ready(function(){
             </h3>
             <ul class="survey-answer">
                 <li>
-                    <input type="radio" name="check5" id="check5_1" value="check5_1"></input>
-                    <label for="check5_1">① 상담을 하거나 해결을 위해 지원해준다.</label>
+                    <input type="radio" name="q5" id="q5_1" value="1"></input>
+                    <label for="q5_1">① 상담을 하거나 해결을 위해 지원해준다.</label>
                 </li>
                 <br>
                 <li>
-                    <input type="radio" name="check5" id="check5_2" value="check5_2"></input>
-                    <label for="check5_2">② 상담을 하거나 해결을 위해 지원하지 않는다.</label>
+                    <input type="radio" name="q5" id="q5_2" value="2"></input>
+                    <label for="q5_2">② 상담을 하거나 해결을 위해 지원하지 않는다.</label>
                 </li>
                 <br>
                 <li>
-                    <input type="radio" name="check5" id="check5_3" value="check5_3"></input>
-                    <label for="check5_3">③ 상담을 하거나 해결을 위해 지원을 하는지 모르겠다.</label>
+                    <input type="radio" name="q5" id="q5_3" value="3"></input>
+                    <label for="q5_3">③ 상담을 하거나 해결을 위해 지원을 하는지 모르겠다.</label>
                 </li>
             </ul>
         </li>
@@ -155,44 +158,44 @@ $(document).ready(function(){
             </h3>
             <ul class="survey-answer">
                 <li>
-                    <input type="checkbox" name="check6" id="check6_1" value="check6_1"></input>
-                    <label for="check6_1">① 상사와 부하의 의사소통이 원활하다.</label>
+                    <input type="checkbox" name="q6" id="q6_1" value="1"></input>
+                    <label for="q6_1">① 상사와 부하의 의사소통이 원활하다.</label>
                 </li>
                 <li>
-                    <input type="checkbox" name="check6" id="check6_2" value="check6_2"></input>
-                    <label for="check6_2">② 잔업이 많다. / 휴식을 취하기 어렵다.</label>
+                    <input type="checkbox" name="q6" id="q6_2" value="2"></input>
+                    <label for="q6_2">② 잔업이 많다. / 휴식을 취하기 어렵다.</label>
                 </li>
                 <li>
-                    <input type="checkbox" name="check6" id="check6_3" value="check6_3"></input>
-                    <label for="check6_3">③ 실패를 허용하지 않는다. / 실패에 대한 허용도가 낮다.</label>
+                    <input type="checkbox" name="q6" id="q6_3" value="3"></input>
+                    <label for="q6_3">③ 실패를 허용하지 않는다. / 실패에 대한 허용도가 낮다.</label>
                 </li>
                 <li>
-                    <input type="checkbox" name="check6" id="check6_4" value="check6_4"></input>
-                    <label for="check6_4">④ 직원간의 경쟁이 치열하다. / 평가와 실적과의 연관이 철저하다.</label>
+                    <input type="checkbox" name="q6" id="q6_4" value="4"></input>
+                    <label for="q6_4">④ 직원간의 경쟁이 치열하다. / 평가와 실적과의 연관이 철저하다.</label>
                 </li>
                 <li>
-                    <input type="checkbox" name="check6" id="check6_5" value="check6_5"></input>
-                    <label for="check6_5">⑤ 직원끼리 서로 간섭하지 않는다.</label>
+                    <input type="checkbox" name="q6" id="q6_5" value="5"></input>
+                    <label for="q6_5">⑤ 직원끼리 서로 간섭하지 않는다.</label>
                 </li>
                 <li>
-                    <input type="checkbox" name="check6" id="check6_6" value="check6_6"></input>
-                    <label for="check6_6">⑥ 직원끼리 간섭이 심하다.</label>
+                    <input type="checkbox" name="q6" id="q6_6" value="6"></input>
+                    <label for="q6_6">⑥ 직원끼리 간섭이 심하다.</label>
                 </li>
                 <li>
-                    <input type="checkbox" name="check6" id="check6_7" value="check6_7"></input>
-                    <label for="check6_7">⑦ 명확한 업무 분담과 역할 분담이 이루어지고 있다.</label>
+                    <input type="checkbox" name="q6" id="q6_7" value="7"></input>
+                    <label for="q6_7">⑦ 명확한 업무 분담과 역할 분담이 이루어지고 있다.</label>
                 </li>
                 <li>
-                    <input type="checkbox" name="check6" id="check6_8" value="check6_8"></input>
-                    <label for="check6_8">⑧ 직원들이 대부분 늦게 퇴근하는 편이다.</label>
+                    <input type="checkbox" name="q6" id="q6_8" value="8"></input>
+                    <label for="q6_8">⑧ 직원들이 대부분 늦게 퇴근하는 편이다.</label>
                 </li>
                 <li>
-                    <input type="checkbox" name="check6" id="check6_9" value="check6_9"></input>
-                    <label for="check6_9">⑨ 회식이 자주 있으며 회식 참여가 직접적/간접적으로 강제되는 편이다.</label>
+                    <input type="checkbox" name="q6" id="q6_9" value="9"></input>
+                    <label for="q6_9">⑨ 회식이 자주 있으며 회식 참여가 직접적/간접적으로 강제되는 편이다.</label>
                 </li>
                 <li>
-                    <input type="checkbox" name="check6" id="check6_10" value="check6_10"></input>
-                    <label for="check6_10">⑩ 기타(구체적으로　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　)</label>
+                    <input type="checkbox" name="q6" id="q6_10" value="10"></input>
+                    <label for="q6_10">⑩ 기타(구체적으로　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　)</label>
                 </li>
             </ul>
         </li>
@@ -221,31 +224,31 @@ $(document).ready(function(){
                 <tbody>
                     <tr>
                         <td class="q">①<p class="con">고민, 불만, 문제라고 느끼는 일을 회사에 말하기 쉽다.</p></td>
-                        <td><input type="radio" name="q1" id="radio1_1" value="1_1" /></td>
-                        <td><input type="radio" name="q1" id="radio1_2" value="1_2" /></td>
-                        <td><input type="radio" name="q1" id="radio1_3" value="1_3" /></td>
-                        <td><input type="radio" name="q1" id="radio1_4" value="1_4" /></td>
+                        <td><input type="radio" name="q7" id="radio1_1" value="1" /></td>
+                        <td><input type="radio" name="q7" id="radio1_2" value="2" /></td>
+                        <td><input type="radio" name="q7" id="radio1_3" value="3" /></td>
+                        <td><input type="radio" name="q7" id="radio1_4" value="4" /></td>
                     </tr>
                     <tr>
                         <td class="q">②<p class="con">고민, 불만, 문제라고 느끼는 일을 상사에게 말하기 쉽다.</p></td>
-                        <td><input type="radio" name="q2" id="radio2_1" value="2_1" /></td>
-                        <td><input type="radio" name="q2" id="radio2_2" value="2_2" /></td>
-                        <td><input type="radio" name="q2" id="radio2_3" value="2_3" /></td>
-                        <td><input type="radio" name="q2" id="radio2_4" value="2_4" /></td>
+                        <td><input type="radio" name="q8" id="radio2_1" value="1" /></td>
+                        <td><input type="radio" name="q8" id="radio2_2" value="2" /></td>
+                        <td><input type="radio" name="q8" id="radio2_3" value="3" /></td>
+                        <td><input type="radio" name="q8" id="radio2_4" value="4" /></td>
                     </tr>
                     <tr>
                         <td class="q">③<p class="con">동료 간 의사소통이 원활하다.</p></td>
-                        <td><input type="radio" name="q3" id="radio3_1" value="3_1" /></td>
-                        <td><input type="radio" name="q3" id="radio3_2" value="3_2" /></td>
-                        <td><input type="radio" name="q3" id="radio3_3" value="3_3" /></td>
-                        <td><input type="radio" name="q3" id="radio3_4" value="3_4" /></td>
+                        <td><input type="radio" name="q9" id="radio3_1" value="1" /></td>
+                        <td><input type="radio" name="q9" id="radio3_2" value="2" /></td>
+                        <td><input type="radio" name="q9" id="radio3_3" value="3" /></td>
+                        <td><input type="radio" name="q9" id="radio3_4" value="4" /></td>
                     </tr>
                     <tr>
                         <td class="q">④<p class="con">업무 외적인 것을 상담할 수 있는 동료가 있다.</p></td>
-                        <td><input type="radio" name="q4" id="radio4_1" value="4_1" /></td>
-                        <td><input type="radio" name="q4" id="radio4_2" value="4_2" /></td>
-                        <td><input type="radio" name="q4" id="radio4_3" value="4_3" /></td>
-                        <td><input type="radio" name="q4" id="radio4_4" value="4_4" /></td>
+                        <td><input type="radio" name="q10" id="radio4_1" value="1" /></td>
+                        <td><input type="radio" name="q10" id="radio4_2" value="2" /></td>
+                        <td><input type="radio" name="q10" id="radio4_3" value="3" /></td>
+                        <td><input type="radio" name="q10" id="radio4_4" value="4" /></td>
                     </tr>
                 </tbody>
             </table>
@@ -274,105 +277,105 @@ $(document).ready(function(){
                 <tbody>
                     <tr>
                         <td class="q">①<p class="con wide">부하직원의 실수에 대해 폭언, 욕설, 인격을 모독하는 발언을 하며 강하게 질책했다.</p></td>
-                        <td><input type="checkbox" name="q5" id="checkbox5_1" value="5_1" /></td>
-                        <td><input type="checkbox" name="q5" id="checkbox5_2" value="5_2" /></td>
-                        <td><input type="checkbox" name="q5" id="checkbox5_3" value="5_3" /></td>
+                        <td><input type="checkbox" name="q11" id="checkbox5_1" value="1" /></td>
+                        <td><input type="checkbox" name="q11" id="checkbox5_2" value="2" /></td>
+                        <td><input type="checkbox" name="q11" id="checkbox5_3" value="3" /></td>
                     </tr>
                     <tr>
                         <td class="q">②<p class="con wide">문서를 던지면서 수정을 지시했다.</p></td>
-                        <td><input type="checkbox" name="q6" id="checkbox6_1" value="6_1" /></td>
-                        <td><input type="checkbox" name="q6" id="checkbox6_2" value="6_2" /></td>
-                        <td><input type="checkbox" name="q6" id="checkbox6_3" value="6_3" /></td>
+                        <td><input type="checkbox" name="q12" id="checkbox6_1" value="1" /></td>
+                        <td><input type="checkbox" name="q12" id="checkbox6_2" value="2" /></td>
+                        <td><input type="checkbox" name="q12" id="checkbox6_3" value="3" /></td>
                     </tr>
                     <tr>
                         <td class="q">③<p class="con wide">부하직원을 질책할 때 사물(펜, 종이 등)을 이용하여 건드렸다.</p></td>
-                        <td><input type="checkbox" name="q7" id="checkbox7_1" value="7_1" /></td>
-                        <td><input type="checkbox" name="q7" id="checkbox7_2" value="7_2" /></td>
-                        <td><input type="checkbox" name="q7" id="checkbox7_3" value="7_3" /></td>
+                        <td><input type="checkbox" name="q13" id="checkbox7_1" value="1" /></td>
+                        <td><input type="checkbox" name="q13" id="checkbox7_2" value="2" /></td>
+                        <td><input type="checkbox" name="q13" id="checkbox7_3" value="3" /></td>
                     </tr>
                     <tr>
                         <td class="q">④<p class="con wide">“앞으로 한번만 더 실수하면 회사생활 접어야 할 거다.”라는 등의 해고 관련 말을 했다.</p></td>
-                        <td><input type="checkbox" name="q8" id="checkbox8_1" value="8_1" /></td>
-                        <td><input type="checkbox" name="q8" id="checkbox8_2" value="8_2" /></td>
-                        <td><input type="checkbox" name="q8" id="checkbox8_3" value="8_3" /></td>
+                        <td><input type="checkbox" name="q14" id="checkbox8_1" value="1" /></td>
+                        <td><input type="checkbox" name="q14" id="checkbox8_2" value="2" /></td>
+                        <td><input type="checkbox" name="q14" id="checkbox8_3" value="3" /></td>
                     </tr>
                     <tr>
                         <td class="q">⑤<p class="con wide">다른 직원들 앞에서 사물(책상, 의자 등)을 치면서 언성을 높여 질책했다.</p></td>
-                        <td><input type="checkbox" name="q9" id="checkbox9_1" value="9_1" /></td>
-                        <td><input type="checkbox" name="q9" id="checkbox9_2" value="9_2" /></td>
-                        <td><input type="checkbox" name="q9" id="checkbox9_3" value="9_3" /></td>
+                        <td><input type="checkbox" name="q15" id="checkbox9_1" value="1" /></td>
+                        <td><input type="checkbox" name="q15" id="checkbox9_2" value="2" /></td>
+                        <td><input type="checkbox" name="q15" id="checkbox9_3" value="3" /></td>
                     </tr>
                     <tr>
                         <td class="q">⑥<p class="con wide">“머리는 폼으로 달고 다니냐”, “월급을 주는게 아깝다.” 등과 같이 무시 또는 조롱하는 말을 했다.</p></td>
-                        <td><input type="checkbox" name="q10" id="checkbox10_1" value="10_1" /></td>
-                        <td><input type="checkbox" name="q10" id="checkbox10_2" value="10_2" /></td>
-                        <td><input type="checkbox" name="q10" id="checkbox10_3" value="10_3" /></td>
+                        <td><input type="checkbox" name="q16" id="checkbox10_1" value="1" /></td>
+                        <td><input type="checkbox" name="q16" id="checkbox10_2" value="2" /></td>
+                        <td><input type="checkbox" name="q16" id="checkbox10_3" value="3" /></td>
                     </tr>
                     <tr>
                         <td class="q">⑦<p class="con wide">아무 이유 없이 본래 업무에서 소외시켰다.<br>(업무배제, 회의 제외, 사무실 외의 장소에 고립 등)</p></td>
-                        <td><input type="checkbox" name="q11" id="checkbox11_1" value="11_1" /></td>
-                        <td><input type="checkbox" name="q11" id="checkbox11_2" value="11_2" /></td>
-                        <td><input type="checkbox" name="q11" id="checkbox11_3" value="11_3" /></td>
+                        <td><input type="checkbox" name="q17" id="checkbox11_1" value="1" /></td>
+                        <td><input type="checkbox" name="q17" id="checkbox11_2" value="2" /></td>
+                        <td><input type="checkbox" name="q17" id="checkbox11_3" value="3" /></td>
                     </tr>
                     <tr>
                         <td class="q">⑧<p class="con wide">업무수행에 필요한 정보를 일부러 주지 않거나 기한에 맞출 수 없는 일을 지시하기도 했다.</p></td>
-                        <td><input type="checkbox" name="q12" id="checkbox12_1" value="12_1" /></td>
-                        <td><input type="checkbox" name="q12" id="checkbox12_2" value="12_2" /></td>
-                        <td><input type="checkbox" name="q12" id="checkbox12_3" value="12_3" /></td>
+                        <td><input type="checkbox" name="q18" id="checkbox12_1" value="1" /></td>
+                        <td><input type="checkbox" name="q18" id="checkbox12_2" value="2" /></td>
+                        <td><input type="checkbox" name="q18" id="checkbox12_3" value="3" /></td>
                     </tr>
                     <tr>
                         <td class="q">⑨<p class="con wide">능력에 걸맞지 않는 아주 낮은 수준의 일을 계속 시켰다.</p></td>
-                        <td><input type="checkbox" name="q13" id="checkbox13_1" value="13_1" /></td>
-                        <td><input type="checkbox" name="q13" id="checkbox13_2" value="13_2" /></td>
-                        <td><input type="checkbox" name="q13" id="checkbox13_3" value="13_3" /></td>
+                        <td><input type="checkbox" name="q19" id="checkbox13_1" value="1" /></td>
+                        <td><input type="checkbox" name="q19" id="checkbox13_2" value="2" /></td>
+                        <td><input type="checkbox" name="q19" id="checkbox13_3" value="3" /></td>
                     </tr>
                     <tr>
                         <td class="q">⑩<p class="con wide">개인적인 취미・성향에 관한 사항을 필요 이상으로 간섭했다. <span class="blue">[개인사항에 대한 간섭]</span></p></td>
-                        <td><input type="checkbox" name="q14" id="checkbox14_1" value="14_1" /></td>
-                        <td><input type="checkbox" name="q14" id="checkbox14_2" value="14_2" /></td>
-                        <td><input type="checkbox" name="q14" id="checkbox14_3" value="14_3" /></td>
+                        <td><input type="checkbox" name="q20" id="checkbox14_1" value="1" /></td>
+                        <td><input type="checkbox" name="q20" id="checkbox14_2" value="2" /></td>
+                        <td><input type="checkbox" name="q20" id="checkbox14_3" value="3" /></td>
                     </tr>
                     <tr>
                         <td class="q">⑪<p class="con wide">지각을 자주 하는 부하직원을 다른 직원들 앞에서 질책했다. <span class="blue">[공개적인 망신 주기]</span></p></td>
-                        <td><input type="checkbox" name="q15" id="checkbox15_1" value="15_1" /></td>
-                        <td><input type="checkbox" name="q15" id="checkbox15_2" value="15_2" /></td>
-                        <td><input type="checkbox" name="q15" id="checkbox15_3" value="15_3" /></td>
+                        <td><input type="checkbox" name="q21" id="checkbox15_1" value="1" /></td>
+                        <td><input type="checkbox" name="q21" id="checkbox15_2" value="2" /></td>
+                        <td><input type="checkbox" name="q21" id="checkbox15_3" value="3" /></td>
                     </tr>
                     <tr>
                         <td class="q">⑫<p class="con wide">명확한 업무지시(업무담당, 업무내용, 업무일정 등)을 하지않아 업무수행을 어렵게 만들었다.</p></td>
-                        <td><input type="checkbox" name="q16" id="checkbox16_1" value="16_1" /></td>
-                        <td><input type="checkbox" name="q16" id="checkbox16_2" value="16_2" /></td>
-                        <td><input type="checkbox" name="q16" id="checkbox16_3" value="16_3" /></td>
+                        <td><input type="checkbox" name="q22" id="checkbox16_1" value="1" /></td>
+                        <td><input type="checkbox" name="q22" id="checkbox16_2" value="2" /></td>
+                        <td><input type="checkbox" name="q22" id="checkbox16_3" value="3" /></td>
                     </tr>
                     <tr>
                         <td class="q">⑬<p class="con wide">업무와 무관한 사적인 일(개인적인 심부름 등)을 지시하거나 간접적으로 강제했다. <span class="blue">[사적노무 강요]</span></p></td>
-                        <td><input type="checkbox" name="q17" id="checkbox17_1" value="17_1" /></td>
-                        <td><input type="checkbox" name="q17" id="checkbox17_2" value="17_2" /></td>
-                        <td><input type="checkbox" name="q17" id="checkbox17_3" value="17_3" /></td>
+                        <td><input type="checkbox" name="q23" id="checkbox17_1" value="1" /></td>
+                        <td><input type="checkbox" name="q23" id="checkbox17_2" value="2" /></td>
+                        <td><input type="checkbox" name="q23" id="checkbox17_3" value="3" /></td>
                     </tr>
                     <tr>
                         <td class="q">⑭<p class="con wide">퇴근 후 또는 휴일에 여러 차례 연락(이메일, 문자, 전화, SNS 등)을 하였다.</p></td>
-                        <td><input type="checkbox" name="q18" id="checkbox18_1" value="18_1" /></td>
-                        <td><input type="checkbox" name="q18" id="checkbox18_2" value="18_2" /></td>
-                        <td><input type="checkbox" name="q18" id="checkbox18_3" value="18_3" /></td>
+                        <td><input type="checkbox" name="q24" id="checkbox18_1" value="1" /></td>
+                        <td><input type="checkbox" name="q24" id="checkbox18_2" value="2" /></td>
+                        <td><input type="checkbox" name="q24" id="checkbox18_3" value="3" /></td>
                     </tr>
                     <tr>
                         <td class="q">⑮<p class="con wide">개인 의사와 상관없이 회식이나 친목모임 참여를 강요했다.</p></td>
-                        <td><input type="checkbox" name="q19" id="checkbox19_1" value="19_1" /></td>
-                        <td><input type="checkbox" name="q19" id="checkbox19_2" value="19_2" /></td>
-                        <td><input type="checkbox" name="q19" id="checkbox19_3" value="19_3" /></td>
+                        <td><input type="checkbox" name="q25" id="checkbox19_1" value="1" /></td>
+                        <td><input type="checkbox" name="q25" id="checkbox19_2" value="2" /></td>
+                        <td><input type="checkbox" name="q25" id="checkbox19_3" value="3" /></td>
                     </tr>
                     <tr>
                         <td class="q">⑯<p class="con wide">명확한 업무지시(업무담당, 업무내용, 업무일정 등)을 하지않아 업무수행을 어렵게 만들었다.</p></td>
-                        <td><input type="checkbox" name="q20" id="checkbox20_1" value="20_1" /></td>
-                        <td><input type="checkbox" name="q20" id="checkbox20_2" value="20_2" /></td>
-                        <td><input type="checkbox" name="q20" id="checkbox20_3" value="20_3" /></td>
+                        <td><input type="checkbox" name="q26" id="checkbox20_1" value="1" /></td>
+                        <td><input type="checkbox" name="q26" id="checkbox20_2" value="2" /></td>
+                        <td><input type="checkbox" name="q26" id="checkbox20_3" value="3" /></td>
                     </tr>
                     <tr>
                         <td class="q">⑰<p class="con wide">기타 폭행, 폭언, 모욕, 협박, 따돌림, 무시, 지나친 감시, 차별, 과도한 업무부여, 사적 노무 지시, 업무배제, 퇴사강요, 정당한 이유 없이 휴가나 병가를 못 쓰도록 하는 행위로 스트레스를 받은 적이 있다.</p></td>
-                        <td><input type="checkbox" name="q21" id="checkbox21_1" value="21_1" /></td>
-                        <td><input type="checkbox" name="q21" id="checkbox21_2" value="21_2" /></td>
-                        <td><input type="checkbox" name="q21" id="checkbox21_3" value="21_3" /></td>
+                        <td><input type="checkbox" name="q27" id="checkbox21_1" value="1" /></td>
+                        <td><input type="checkbox" name="q27" id="checkbox21_2" value="2" /></td>
+                        <td><input type="checkbox" name="q27" id="checkbox21_3" value="3" /></td>
                     </tr>
                 </tbody>
             </table>
@@ -385,13 +388,13 @@ $(document).ready(function(){
             <p class="blue mt5">
                 ※비밀보장 등의 염려가 있다면 IP 추적이 차단되는 ‘레드휘슬’을 통해 작성하여 주시기 바랍니다.
             </p>
-            <textarea class="textarea" rows="10"></textarea>
+            <textarea class="textarea" rows="10" name="q28"></textarea>
         </li>
     </ul>
     
     <p class="bottom-info">- 귀한 시간을 내어 설문에 응답해 주셔서 진심으로 감사합니다 -</p>
-  
-  <p class="btn"><span class="btn_confirm2"><a href="#"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_confirm2.png" alt="확인" width="auto" height="46" /></a> </span><span class="btn_next2"><a href="#"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_close.png" alt="나가기" width="138" height="46" /></a> </span> </p>
+	<p class="btn"><span class="btn_confirm2"><a href="#"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_confirm2.png" alt="확인" width="auto" height="46" /></a> </span><span class="btn_next2"><a href="#"><img src="<?php echo G5_THEME_URL ?>/_Img/Content/poll/btn_close.png" alt="나가기" width="138" height="46" /></a> </span> </p>
+</form>
 </div>
 
 <script>
@@ -406,111 +409,75 @@ $(document).ready(function(){
 		var chk = true;
 		var list = []
 
-		console.log($('input[name=check1]:checked').val())
+		console.log($('input[name=q1]:checked').val())
 
-		if($('input[name=check1]:checked').val() == null){
-			$('input[name=check1]').focus();
+		if($('input[name=q1]:checked').val() == null){
+			$('input[name=q1]').focus();
 			alert("1번 문항 답해주세요");
 			chk = false;
 			return false;
 		}
 
-		if($('input[name=check2]:checked').val() == null){
-			$('input[name=check2]').focus();
+		if($('input[name=q2]:checked').val() == null){
+			$('input[name=q2]').focus();
 			alert("2번 문항 답해주세요");
 			chk = false;
 			return false;
 		}
 
-		if($('input[name=check3]:checked').val() == null){
-			$('input[name=check3]').focus();
+		if($('input[name=q3]:checked').val() == null){
+			$('input[name=q3]').focus();
 			alert("3번 문항 답해주세요");
 			chk = false;
 			return false;
 		}
 
-		if($('input[name=check4]:checked').val() == null){
-			$('input[name=check4]').focus();
-			alert("4번 문항 답해주세요");
-			chk = false;
-			return false;
-		}
-
-		if($('input[name=check5]:checked').val() == null){
-			$('input[name=check5]').focus();
-			alert("5번 문항 답해주세요");
-			chk = false;
-			return false;
-		}
-
-		if($('input[name=check6]:checked').val() == null){
-			$('input[name=check6]').focus();
-			alert("6번 문항 답해주세요");
-			chk = false;
-			return false;
-		}
-
-		if($('input[name=q1]:checked').val() == null){
-			$('input[name=q1]').focus();
-			alert("7번 문항 답해주세요");
-			chk = false;
-			return false;
-		}
-		if($('input[name=q2]:checked').val() == null){
-			$('input[name=q2]').focus();
-			alert("7번 문항 답해주세요");
-			chk = false;
-			return false;
-		}
-		if($('input[name=q3]:checked').val() == null){
-			$('input[name=q3]').focus();
-			alert("7번 문항 답해주세요");
-			chk = false;
-			return false;
-		}
 		if($('input[name=q4]:checked').val() == null){
 			$('input[name=q4]').focus();
-			alert("7번 문항 답해주세요");
+			alert("4번 문항 답해주세요");
 			chk = false;
 			return false;
 		}
 
 		if($('input[name=q5]:checked').val() == null){
 			$('input[name=q5]').focus();
-			alert("8번 문항 답해주세요");
+			alert("5번 문항 답해주세요");
 			chk = false;
 			return false;
 		}
+
 		if($('input[name=q6]:checked').val() == null){
 			$('input[name=q6]').focus();
-			alert("8번 문항 답해주세요");
+			alert("6번 문항 답해주세요");
 			chk = false;
 			return false;
 		}
+
 		if($('input[name=q7]:checked').val() == null){
 			$('input[name=q7]').focus();
-			alert("8번 문항 답해주세요");
+			alert("7번 문항 답해주세요");
 			chk = false;
 			return false;
 		}
 		if($('input[name=q8]:checked').val() == null){
 			$('input[name=q8]').focus();
-			alert("8번 문항 답해주세요");
+			alert("7번 문항 답해주세요");
 			chk = false;
 			return false;
 		}
 		if($('input[name=q9]:checked').val() == null){
 			$('input[name=q9]').focus();
-			alert("8번 문항 답해주세요");
+			alert("7번 문항 답해주세요");
 			chk = false;
 			return false;
 		}
 		if($('input[name=q10]:checked').val() == null){
 			$('input[name=q10]').focus();
-			alert("8번 문항 답해주세요");
+			alert("7번 문항 답해주세요");
 			chk = false;
 			return false;
 		}
+
 		if($('input[name=q11]:checked').val() == null){
 			$('input[name=q11]').focus();
 			alert("8번 문항 답해주세요");
@@ -524,7 +491,7 @@ $(document).ready(function(){
 			return false;
 		}
 		if($('input[name=q13]:checked').val() == null){
-			$('input[name=check8]').focus();
+			$('input[name=q13]').focus();
 			alert("8번 문항 답해주세요");
 			chk = false;
 			return false;
@@ -560,7 +527,7 @@ $(document).ready(function(){
 			return false;
 		}
 		if($('input[name=q19]:checked').val() == null){
-			$('input[name=q19]').focus();
+			$('input[name=check19]').focus();
 			alert("8번 문항 답해주세요");
 			chk = false;
 			return false;
@@ -577,52 +544,47 @@ $(document).ready(function(){
 			chk = false;
 			return false;
 		}
-
-
-
-
-		// $.each($('tbody tr'),function (index, item){
-		//
-		// 	if(chk == false){
-		// 		return false;
-		// 	}
-		//
-		// 	var _score = $(this).find('input[type=radio]:checked').val()
-		//
-		//
-		// 	if(index == 0 || index == 1 || index == 2 || index == 4){
-		//
-		// 		if(_score == null){
-		// 			switch (index) {
-		// 				case 0 :
-		// 					alert("1번 문항 답해주세요");
-		// 					break;
-		// 				case 1 :
-		// 					alert("2번 문항 답해주세요");
-		// 					break;
-		// 				case 2 :
-		// 					alert("3번 문항 답해주세요");
-		// 					break;
-		// 				case 4 :
-		// 					alert("43번 문항 답해주세요.");
-		// 					break;
-		// 			}
-		//
-		// 			$(this).find('input[type=radio]').focus();
-		// 			chk = false;
-		// 			return  false;
-		// 		}
-		// 	}else{
-		//
-		//
-		// 	}
-		//
-		// 	list.push(_score)
-		// })
+		if($('input[name=q22]:checked').val() == null){
+			$('input[name=q22]').focus();
+			alert("8번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+		if($('input[name=q23]:checked').val() == null){
+			$('input[name=q23]').focus();
+			alert("8번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+		if($('input[name=q24]:checked').val() == null){
+			$('input[name=q24]').focus();
+			alert("8번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+		if($('input[name=q25]:checked').val() == null){
+			$('input[name=q25]').focus();
+			alert("8번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+		if($('input[name=q26]:checked').val() == null){
+			$('input[name=q26]').focus();
+			alert("8번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
+		if($('input[name=q27]:checked').val() == null){
+			$('input[name=q27]').focus();
+			alert("8번 문항 답해주세요");
+			chk = false;
+			return false;
+		}
 
 		if(chk){
-			alert("응답이 완료되었습니다.");
-			window.close();
+			//alert("응답이 완료되었습니다.");
+			//window.close();
+			$("form").submit();
 		}
 	})
 

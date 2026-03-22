@@ -696,3 +696,13 @@ header('Pragma: no-cache'); // HTTP/1.0
 run_event('common_header');
 
 $html_process = new html_process();
+?>
+
+
+<?php
+if($_SERVER[ "PHP_SELF" ] == '/Edu/edu03_ls.php') { ?>
+<style>
+    #header-wrap,#svisual-wrap, .quick, #subNavi-wrap,.cont-top, #footer-wrap, .login-sub {display:none !important;}
+    #container-wrap {max-width:800px !important;}
+</style>
+<?php } ?>

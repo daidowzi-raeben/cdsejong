@@ -25,7 +25,7 @@ date_default_timezone_set("Asia/Seoul");
 입력예) https://www.domain.com:443/gnuboard5
 */
 define('G5_DOMAIN', '');
-define('G5_HTTPS_DOMAIN', '');
+define('G5_HTTPS_DOMAIN', 'cd.sejong21.co.kr');
 
 // 디버깅 상수, 실제 서버운영시 false 로 설정해 주제요.
 define('G5_DEBUG', false);
@@ -133,7 +133,7 @@ define('G5_PHPMAILER_PATH', G5_PLUGIN_PATH.'/'.G5_PHPMAILER_DIR);
 //------------------------------------------------------------------------------
 define('G5_SET_DEVICE', 'both');
 
-define('G5_USE_MOBILE', true); // 모바일 홈페이지를 사용하지 않을 경우 false 로 설정
+define('G5_USE_MOBILE', false); // 모바일 홈페이지를 사용하지 않을 경우 false 로 설정
 define('G5_USE_CACHE',  true); // 최신글등에 cache 기능 사용 여부
 
 

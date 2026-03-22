@@ -3,6 +3,9 @@ define('G5_IS_ADMIN', true);
 include_once ('../../common.php');
 switch($board['bo_table'])
 {
+	case "free":
+		$sub_menu = "400100";
+		break;
 	case "notice":
 		$sub_menu = "700100";
 		break;

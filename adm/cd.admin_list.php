@@ -1,5 +1,5 @@
 <?php
-$sub_menu = "200300";
+$sub_menu = "100300";
 include_once('./_common.php');
 
 auth_check($auth[$sub_menu], 'r');
@@ -45,6 +45,8 @@ $rows = $config['cf_page_rows'];
 $total_page  = ceil($total_count / $rows);  // 전체 페이지 계산
 if ($page < 1) $page = 1; // 페이지가 없으면 첫 페이지 (1 페이지)
 $from_record = ($page - 1) * $rows; // 시작 열을 구함
+
+$startNum = 1 + (($page-1) * $rows);
 
 
 $listall = '<a href="'.$_SERVER['SCRIPT_NAME'].'" class="ov_listall">전체목록</a>';
@@ -123,7 +125,7 @@ $colspan = 16;
 	</div>
 	<div class="r_div">
 		<?php if ($is_admin == 'super') { ?>
-		<a href="./admin_form.php" id="member_add" class="btn btn_03">관리자등록</a>
+		<a href="./cd.admin_form.php" id="member_add" class="btn btn_03">관리자등록</a>
 		<?php } ?>
 	</div>
 </div>
@@ -146,7 +148,6 @@ $colspan = 16;
             <input type="checkbox" name="chkall" value="1" id="chkall" onclick="check_all(this.form)">
         </th>
         <th scope="col" id="mb_list_no">No</a></th>
-		<th scope="col" id="mb_list_id">소속</a></th>
 		<th scope="col" id="mb_list_name"><?php echo subject_sort_link('mb_name') ?>이름</a></th>
 		<th scope="col" id="mb_list_id"><?php echo subject_sort_link('mb_id') ?>아이디</a></th>
 		<th scope="col" id="mb_list_id">휴대전화</a></th>
@@ -169,7 +170,7 @@ $colspan = 16;
         if ($is_admin == 'group') {
             $s_mod = '';
         } else {
-            $s_mod = '<a href="./admin_form.php?'.$qstr.'&amp;w=u&amp;mb_id='.$row['mb_id'].'" class="btn btn_03">수정</a>';
+            $s_mod = '<a href="./cd.admin_form.php?'.$qstr.'&amp;w=u&amp;mb_id='.$row['mb_id'].'" class="btn btn_03">수정</a>';
         }
         $s_grp = '<a href="./boardgroupmember_form.php?mb_id='.$row['mb_id'].'" class="btn btn_02">그룹</a>';
 
@@ -224,8 +225,7 @@ $colspan = 16;
             <label for="chk_<?php echo $i; ?>" class="sound_only"><?php echo get_text($row['mb_name']); ?> <?php echo get_text($row['mb_nick']); ?>님</label>
             <input type="checkbox" name="chk[]" value="<?php echo $i ?>" id="chk_<?php echo $i ?>">
         </td>
-		<td headers="mb_list_"></td>
-		<td headers="mb_list_"></td>
+		<td headers="mb_list_"><?php echo $startNum ?></td>
         <td headers="mb_list_name" class="td_mbname2"><?php echo get_text($row['mb_name']); ?></td>
 		<td headers="mb_list_id" class="td_name2"><?php echo $mb_id ?></td>
 		<td headers="mb_list_"><?php echo $row['mb_hp'] ?></td>
@@ -236,6 +236,7 @@ $colspan = 16;
     </tr>
     
     <?php
+		$startNum++;
     }
     if ($i == 0)
         echo "<tr><td colspan=\"".$colspan."\" class=\"empty_table\">자료가 없습니다.</td></tr>";

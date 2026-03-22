@@ -1,5 +1,8 @@
 <?php
-$sub_menu = "100100";
+if(basename($_SERVER['PHP_SELF']) == "config_form.php")
+	$sub_menu = "900000";
+else
+	$sub_menu = "100100";
 include_once('./_common.php');
 
 auth_check_menu($auth, $sub_menu, 'r');
