@@ -1,0 +1,20 @@
+/*
+ * Nanum Gothic (Korean) http://www.google.com/fonts/earlyaccess
+ */
+@font-face {
+  font-family: 'esamanru_Light';
+  font-style: normal;
+  src: url(woff/esamanru-Light.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'esamanru_Medium';
+  font-style: normal;
+  src: url(woff/esamanru-Medium.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'esamanru_Bold';
+  font-style: normal;
+  src: url(woff/esamanru-Bold.woff) format('woff')
+}

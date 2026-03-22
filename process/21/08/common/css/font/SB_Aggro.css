@@ -1,0 +1,20 @@
+/*
+ * Nanum Gothic (Korean) http://www.google.com/fonts/earlyaccess
+ */
+@font-face {
+  font-family: 'SB_Aggro_L';
+  font-style: normal;
+  src: url(SB_Aggro/SB_Aggro_L.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'SB_Aggro_M';
+  font-style: normal;
+  src: url(SB_Aggro/SB_Aggro_M.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'SB_Aggro_B';
+  font-style: normal;
+  src: url(SB_Aggro/SB_Aggro_B.woff) format('woff')
+}

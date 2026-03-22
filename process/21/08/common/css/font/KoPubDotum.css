@@ -1,0 +1,20 @@
+/*
+ * Nanum Gothic (Korean) http://www.google.com/fonts/earlyaccess
+ */
+@font-face {
+  font-family: 'KoPub-Dotum-Light';
+  font-style: normal;
+  src: url(woff/KoPub-Dotum-Light.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'KoPub-Dotum-Medium';
+  font-style: normal;
+  src: url(woff/KoPub-Dotum-Medium.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'KoPub-Dotum-Bold';
+  font-style: normal;
+  src: url(woff/KoPub-Dotum-Bold.woff) format('woff')
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><Menu>
+<item menu_no="1" parent_menu_no="1" frame_nm="들어가기" frame_no="1" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="2" parent_menu_no="0" frame_nm="Intro" frame_no="1" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="3" parent_menu_no="0" frame_nm="학습목표" frame_no="2" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="4" parent_menu_no="1" frame_nm="학습하기" frame_no="3" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="5" parent_menu_no="0" frame_nm="1.청탁금지법 시행에 대한 평가와 영향 인식" frame_no="3" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="6" parent_menu_no="0" frame_nm="2.위반신고와 제재현황" frame_no="4" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="7" parent_menu_no="1" frame_nm="적용하기" frame_no="5" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="8" parent_menu_no="0" frame_nm="Summary" frame_no="5" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="9" parent_menu_no="0" frame_nm="Next" frame_no="6" type_cd="" child_frame_no="0" child_type_cd="" />
+</Menu>

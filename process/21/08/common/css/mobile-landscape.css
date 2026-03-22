@@ -1,0 +1,68 @@
+/* 모바일 가로 화면 모드 최적화 CSS */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    html, body {
+        height: 100vh !important;
+        height: 100dvh !important;
+        overflow: hidden !important;
+    }
+    
+    #Container {
+        height: 100vh !important;
+        height: 100dvh !important;
+        width: 100% !important;
+        left: 0 !important;
+        top: 0 !important;
+    }
+    
+    #contentsCtn {
+        height: 100vh !important;
+        height: 100dvh !important;
+        width: 100% !important;
+    }
+    
+    #videoCtn {
+        height: 100vh !important;
+        height: 100dvh !important;
+        width: 100% !important;
+    }
+    
+    #multipleQuizCtn {
+        height: 100vh !important;
+        height: 100dvh !important;
+        width: 100% !important;
+    }
+    
+    #multipleQuiz_questionNum {
+        top: 60px !important;
+        left: 30px !important;
+        font-size: 36px !important;
+    }
+    
+    #multipleQuiz_question {
+        top: 60px !important;
+        left: 80px !important;
+        width: 70% !important;
+        font-size: 24px !important;
+    }
+    
+    #multipleQuiz_example {
+        top: 140px !important;
+        left: 80px !important;
+        width: 70% !important;
+        height: 250px !important;
+    }
+    
+    #multipleQuiz_checkBtn,
+    #multipleQuiz_nextBtn,
+    #multipleQuiz_resultBtn {
+        top: 420px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+    
+    .topMenu,
+    .bottomMenu,
+    #treeMenu {
+        display: none !important;
+    }
+}

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+<meta name="viewport" content="width=1000">
+<link type="text/css" href="../css/reset.css" rel="stylesheet" />
+<link type="text/css" href="../css/jplayer.css" rel="stylesheet" />
+<link type="text/css" href="../css/content.css" rel="stylesheet" />
+<link type="text/css" href="../css/animate.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jplayer.js"></script>
+<script type="text/javascript" src="../js/transit.js"></script>
+<script type="text/javascript" src="../js/jquery.textillate.js"></script>
+<script type="text/javascript" src="../js/jquery.fittext.js"></script>
+<script type="text/javascript" src="../js/jquery.lettering.js"></script>
+<script type="text/javascript" src="../js/siteSecurity_1.1.js"></script>
+<script type="text/javascript" src="../js/jquery.easing.js"></script>
+<script type="text/javascript" src="pageinfo.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+<div id="allWrap">
+<div id="wrap">
+
+
+	<!-- bg background -->
+	<div class="main_area"></div>
+	<!-- //bg background -->
+		<div id="headTit"><img src="img/title.png" /></div>
+	<!--div id="slogo"><img src="../images/img/s_logo.png"/></div-->
+
+    <div id="jp_container_1" class="jp-video jp-video-360p subVideo" role="application" aria-label="media player">
+		
+
+
+		<!-- 영상 플레이어 -->
+        <div class="jp-type-single">
+            <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+			<div class="jpback"></div>
+			<div class="jp-gui">
+				<div class="jp-video-play"></div>
+				<div class="jp-interface">
+					<div class="jp-inbox">
+						<div class="jp-util">
+							<ul>
+								<li><a href="javascript:;" class="u_index"><span></span></a></li>
+							</ul>
+						</div>
+						<div class="jp-progress">
+							<div class="jp-seek-bar">
+								<div class="jp-play-bar"></div>
+							</div>
+						</div>
+						<div class="jp-controls-holder">
+							<div class="jp-controls">
+							<button class="jp-script" role="button" tabindex="0">script</button>	
+								<button class="jp-play" role="button" tabindex="0">play</button>								
+								<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+								
+								<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+							</div>
+						</div>
+						<div class="jp-volume-controls">
+							<button class="jp-mute" role="button" tabindex="0">mute</button>
+							<div class="jp-volume-bar">
+								<div class="jp-volume-bar-value"></div>
+							</div>
+						</div>
+						<div class="jp-toggles">
+							<div class="jp-speed">
+								<div class="jp-toggles-text">SPEED</div>
+								<button class="speed sp2" data-speed="0">0.5</button>
+								<button class="speed sp3" data-speed="2">1.0</button>
+								<button class="speed sp4" data-speed="4">1.5</button>
+								<button class="speed sp5" data-speed="6">2.0</button>  
+							</div>
+						</div>
+					</div>
+					<div id="paging">
+						<a href="javascript:prev(5);" class="pagePrev"></a>
+						<span><strong>05</strong> / 09</span>
+						<a href="javascript:;" class="nextFunc pageNext" data-page="5"></a>
+						<div class="click"><a href="javascript:next(5);"><img src="../images/img/btn_click.png" alt="" /></a></div>
+					</div>
+					<div class="jp-limit"></div> <!-- 컨트롤차단 -->
+				</div>
+				<!-- 스크립트 -->
+				<div id="scriptBox">
+					<div class="scHead">
+						<div class="scTit"></div>
+						<a href="javascript:;" class="scClose"><img src="../images/img/img_script_close.gif" alt="CLOSE" /></a>
+					</div>
+					<div class="scConfBox">
+						<div class="scConf">
+							<p>임직원행동강령(윤리규범)에는 윤리적 직무수행의 핵심이 되는 중요 업무의 수행 방법이 규정되어 있습니다. 지금부터 윤리적 직무수행의 핵심사항에 대하여 살펴보겠습니다.
+							먼저 투명한 회계 처리에 대해 살펴보겠습니다. 회사의 회계, 재무 정보는 사실에 근거하고 공정하며, 시기적절하고 정확하여야 합니다. 또한 모든 거래는 올바르고 명확하게 기록되어야 하며, 장부 기입은 신뢰할 만한 공급자에 의해 발행된 적절한 증빙자료가 뒷받침되어야 합니다. 그리하여 모든 기록은 관련 법률 및 회사 정책에 따라 유지, 보관되어야 합니다. 
+							관련하여 공직유관단체 임직원행동강령 표준안 제15조 투명한 회계관리의 내용을 살펴보면 임직원은 관련 법령과 일반적으로 인정된 회계원칙 등에 따라 사실에 근거하여 정확하고 투명하게 회계를 관리하여야 합니다.
+							다음은 이해 상충입니다. 일반적으로 이해 상충 또는 이해 상충의 가능성이 있는 상황은 피해야 합니다. 이해 상충이란 공직자의 사적 이익과 공익을 수호해야 할 책무가 서로 부딪치는 상황을 말합니다. 임직원들은 자신의 개인적 이해나 가까운 친인척 또는 지인들의 이해가 회사의 이해와 상충될 가능성이 있음을 알게 된 경우, 본인의 직상위자 또는 행동강령책임자에게 그 사실을 알려야 합니다. 
+							공직자의 이익충돌 상황을 방지하기 위해 공직자윤리법에 '이해충돌 방지 의무'를 명시하고 있습니다. 이해 상충은 공익에 반하여 행동함으로써 이득을 취할 수 있는 기회가 생길 때에 나타납니다. 또한 임직원의 가까운 친인척과 지인들의 활동 또는 이해가 회사의 이해와 상충하는 경우에도 동일하게 나타납니다. 이해 상충은 다양한 형태로 발생할 수 있습니다. 이에 대하여 의문이 발생하는 경우에는 반드시 자문을 구해야 합니다. 
+							직원들은 발생 가능성이 있는 이해 상충의 상황을 서면으로 직상위자 또는 행동강령책임자에게 즉시 알려야 하며, 이에 의해 영향을 받을 수 있는 의사결정 과정에 참여해서는 안 됩니다. 
+							직원은 자신이 수행하는 직무가 자신, 자신의 직계 존속·비속, 배우자 및 배우자의 직계 존속·비속의 금전적 이해와 직접적인 관련이 있거나, 다음 각 호의 어느 하나에 해당하는 자가 직무관련자인 경우에는 그 직무의 회피 여부에 관하여 직상위자 또는 행동강령책임자와 상담한 후 처리하여야 합니다. 다만, 회사가 공정한 직무수행에 영향을 받지 않는다고 판단하여 정하는 단순 민원업무의 경우에는 그러하지 않습니다. 
+							여기서 다음 각 호의 내용은 다음과 같습니다. 참고하시기 바랍니다.
+							단, 절대 허용되지 않는 이해 상충 상황도 있는데요. 먼저 자기거래(Self-dealing)는 허용되지 않습니다. 자기거래의 유형을 보면, 어떠한 형태로든 고객 또는 잠재 고객에게 전문적 서비스나 자문을 개인적으로 제공하거나 관여하는 행위나 회사와 경업하거나 경쟁관계에 있는 회사의 직원이 되는 행위, 회사의 직위를 남용하거나 내부 정보를 입수하여 개인적 이익을 취득하거나 가까운 친인척에게 혜택을 주는 행위 등 이 있습니다.
+							둘째, 납품업체, 경쟁업체 그리고 고객에 대한 개인투자는 허용되지 않습니다. 회사의 직원 또는 가까운 친인척이 직, 간접적으로 상당량의 지분을 보유하고 있거나 다른 재정적 이해관계를 가지고 있는 납품업체 또는 공급업체와 거래하는 것은 예외의 경우를 제외하고는 허용되지 않습니다. 해당 직원의 직상위자에게 잠재적인 이해 상충 상황이 투명하게 보고되고, 해당 직원이 계약 과정에 개입하지 않은 경우입니다. 공개적으로 거래되는 주식매매를 통한 주식취득이 아닌 이상, 납품업체, 공급업체, 경쟁업체 또는 고객에게 개인적으로 투자하는 것은 허용되지 않습니다. 
+							이와 관련하여 공직유관단체 임직원행동강령 표준안 제5조(사적 이해관계의 신고 등)의 내용을 참고하시기 바랍니다.
+							다음은 회사 자산과 재원의 사용에 대해 살펴보겠습니다. 임직원은 회사의 자산과 자금을 보호하고, 적절한 통제하에 이를 사용하여야 할 의무가 있습니다. 개인적인 이익이나 외부 단체를 위해서 회사의 자산과 재원을 사용하는 것은 금지됩니다. 
+							회사의 컴퓨터, 네트워크 시스템 그리고 전자 통신기기는 회사 정책에 따라 업무 수행을 위해서만 사용되어야 합니다. 만일 e-mail과 인터넷, 다른 전자 통신 수단이 개인적인 목적을 위해 사용될 우려가 있는 경우에 모니터링 되거나 내부감사를 받게 됩니다.
+							납품업체로부터 물품과 서비스의 구매 또는 공급업체 선정을 담당하고 있는 직원은 납품업체의 품질관리 우수성과 명성을 충분히 고려하여 서비스의 전반적인 품질을 최선으로 유지하기 위해 노력하여야 합니다. 필요한 경우, 공개입찰을 통해 경쟁력 있는 납품업체 또는 공급업체를 선정하여야 합니다. 회사는 담당 직원의 개인적 선호에 따라 납품업체와 계약을 맺지 않습니다. 납품업체 또는 납품을 희망하는 자에게 어떤 형태의 개인적 이익을 요구하는 것도 허용되지 않습니다. 
+							이와 관련하여 공직유관단체 임직원행동강령 표준안 제12조 예산의 목적 외 사용 금지 내용을 살펴보면 임직원은 출장비, 업무추진비 등 업무수행을 위한 예산을 목적 외의 용도로 사용하여 소속 기관에 재산상 손해를 입혀서는 안 됩니다. 계속해서 제20조 공용재산의 사적 사용 · 수익 금지를 살펴보면 임직원은 차량, 부동산 등 소유의 재산과 예산의 사용으로 제공되는 항공마일리지, 적립포인트 등 부가서비스를 정당한 사유 없이 사적인 용도로 사용 · 수익해서는 안 됩니다.
+							다음으로 뇌물 공여 및 부정부패에 대해 살펴보겠습니다. 회사는 사업을 펼치고 있는 모든 국가에서 어떠한 형태로도 뇌물 공여 및 부정부패 행위에 개입하지 말아야 합니다. 회사를 대표하는 모든 직원들은 정부 공무원들의 결정에 영향을 미치거나 그들로부터 부적절한 혜택을 받기 위해서, 직•간접적으로 공무원들에게 뇌물을 제공하거나 선물 또는 향응을 제공해서는 안 됩니다. 이는 민간기업의 임원 및 직원의 경우에도 똑같이 적용됩니다. 뇌물을 요구 받은 직원은 직상위자 또는 행동강령책임자에게 즉시 보고해야 합니다. 
+							이와 관련하여 공직유관단체 임직원행동강령 표준안 제22조 금품 등의 수수 금지의 내용을 참고하시기 바랍니다.
+							다음으로 선물과 향응에 대해 살펴보겠습니다. 일반적으로 사업 결정에 부적절한 영향을 미치거나 부적절한 영향력을 행사할 수 있는 선물과 접대, 향응을 제공하거나 제공받아서는 안 됩니다. 선물과 접대, 향응은 통상적인 사업 관계에서 이루어지는 수준을 초과해서는 안 되며, 회사의 명예를 훼손할 수 있는 경우에는 어떠한 형태의 향응도 허용되지 않습니다. 
+							회사 직원으로서 지켜야 할 행동에 대하여 명확한 기준에 대해 살펴보겠습니다. 납품업체 또는 고객으로부터의 금전, 팁(봉사료), 융자 또는 금전에 상응하는 선물 수수를 금지하고 업무와 관련하여 받는 개인적인 선물, 호의, 향응 또는 접대 수수를 금지합니다. 그리고 공급업체 또는 납품업체 선정에 참여하는 직원은 해당 업체 또는 납품 희망 업체로부터의 선물 수수를 금지합니다. 다만, 해당 업체들이 후원하는 무역 박람회 또는 유사한 전문행사 참가와 같은 일반적인 접대와 향응은 보고와 승인의 절차를 거쳐 허용이 가능합니다.
+							다음으로 환경, 건강, 안전입니다. 먼저 환경적 측면에서 살펴보면 회사는 천연자원의 효율적인 사용을 장려하고, 오염을 줄이고 방지하며, 해로운 물질과 온실가스의 배출을 최소화함으로써, 회사의 활동으로 인한 환경파괴를 줄이기 위해 노력합니다. 
+							건강과 안전의 측면에서, 직원들은 부상과 직업병을 예방하기 위한 적절한 조치와 함께 안전한 작업 환경과 조건 그리고 장비를 제공받아야 합니다. 직원들은 회사 정책이나 관련 법률에 따라 모든 업무 관련 재해나 오염사고를 보고하고 기록하여야 합니다. 어떤 직원도 재해 혹은 오염사고의 보고를 이유로 불이익을 당하지 않습니다.
+							다음은 기밀유지입니다. 회사는 업무 수행 과정에서 고객과 제3자에 의해 맡겨진 기밀정보를 존중하고 보호하며, 유출 사고를 막기 위해 적절한 조치를 취해야 합니다. 또한 회사는 직원들의 사생활을 존중하고 개인 정보 보호를 위해 노력해야 합니다. 회사는 업무의 효율적인 수행 혹은 법적 요구 사항을 준수하기 위해서만 직원과 고객 그리고 사업 파트너들의 개인 정보를 수집하고 보호합니다. 
+							어떠한 직원도 합법적인 사업목적이 아닌 한 개인정보 혹은 기밀정보에 접근해서는 안 됩니다. 직원들은 회사 정보와 동료들의 개인 정보에 대한 기밀을 유지해야 합니다. 또한, 회사의 재무 성과, 투자, 전략, 계획 그리고 고객들에 대한 어떠한 민감한 정보도 밝히거나 논의해서는 안 됩니다. 이러한 의무는 고용관계가 종료된 이후에도 유지됩니다.
+							이번에는 지적재산권에 대해 살펴보겠습니다. 회사는 자사의 지적재산권을 보호하고, 타인의 지적재산권을 존중해야 합니다. 회사는 직원들의 혁신을 위한 노력과 역량을 통해, 가치 있는 아이디어, 서비스, 사업 과정과 전략을 만들어 냅니다. 회사의 지적 재산은 절차, 디자인, 방법, 운영 과정, 상업과 마케팅 전략, 고객 정보, 가격과 경비 책정 모델 등 다양한 형태가 될 수 있습니다. 
+							직원들은 의도된 목적 외에는 지적 재산을 유출, 복제 혹은 사용해서는 안 됩니다. 직원들은 고객들의 지적재산권에 대해서도 같은 수준의 주의를 기울여야 합니다. 
+							회사는 고의로 제3자의 지적재산권을 침해하지 않습니다. 불법 소프트웨어를 사용하는 것, 허락 없이 저작권이 있는 자료를 사용하거나 복제하는 것, 혹은 고의로 유효한 특허권을 침해하는 것은 금지됩니다.
+							다음은 대외적 의사표시입니다. 회사는 투자자들이 시기적절하게 올바른 정보에 근거한 투자 결정을 내릴 수 있도록 정보를 공개할 의무가 있습니다. 회사는 회사의 업무와 활동에 관한 지속적이고 정확한 정보, 그리고 투명하고 명확한 정보를 주주와 투자자들, 시장과 지역사회에 제공해야 합니다. 
+							또한 어떠한 직원도 구체적인 승인 없이는 회사를 대표하는 것으로 여겨질 수 있는 공개적인 발표가 허용되지 않습니다. 종교와 정치에 관한 개인적인 의견이나 어떠한 형태의 의사 표명도 회사의 공식 문서나 회사 이메일, 혹은 회사를 대표하는 것으로 여겨질 만한 방식으로 표현되어서는 안 됩니다. 그리고 온라인 포럼이나 소셜 미디어에 참여하는 임직원들은 임직원윤리행동강령과 회사 소셜 미디어 정책을 준수하여야 합니다.
+							내부자거래에 대해 살펴보겠습니다. 직원들은 회사, 고객 그리고 납품업체에 관한 비공개 정보를 기초로 개인적인 투자나 사업 기회를 추구해서는 안 됩니다. 공개될 경우 회사의 주식가격에 영향을 미칠 수 있는 비공개 내부정보를 지득한 직원은 회사의 주식, 매수 선택권, 회사가 발행한 기타 유가증권의 거래가 금지됩니다. 
+							회사가 주식매매 규정에 따라서 공식적으로 공개하지 않은 모든 정보는 비공개 사항입니다. 비공개 재무성과, 회사의 전략계획 초안, 인수합병 계획안, 고위 경영진의 교체 계획 등이 전형적으로 내부정보에 속합니다. 이러한 범주에 해당하는 모든 형태의 정보에 대한 처리는 사전에 회사 법무부서의 조언을 구해야 합니다. 
+							사실 업무 수행 과정에서, 회사는 때때로 고객 혹은 제3자의 중요한 비공개 정보를 지득하게 됩니다. 직원들은 그러한 비공개 정보를 가지고 고객 또는 제3자의 주식을 거래해서는 안 됩니다. 회사 업무 수행 중에 취득한 내부정보를 기초로 제3자 혹은 가까운 친인척에게 제공하거나 이를 근거로 투자조언 하는 것도 허용되지 않습니다.
+							이와 관련하여 공직유관단체 임직원행동강령 표준안 제19조 직무관련 정보를 이용한 거래 등의 제한을 살펴보면 첫째, 임직원은 직무수행 중 알게 된 정보를 이용하여 주식 등 유가증권․부동산 등과 관련된 재산상 거래 또는 투자를 하거나 타인에게 그러한 정보를 제공하여 재산상 거래 또는 투자를 돕는 행위를 해서는 안 됩니다. 둘째, 제1항에 따라 이용 또는 제공이 제한되는 정보란 임직원이 다음 각 호의 사항에 관한 직무를 수행하던 중 알게 된 미공개 정보를 말하는 것으로 기관장은 제19조제2항에 각 호를 신설하여 미정보의 이용 또는 제공이 제한되는 직무를 정하여야 합니다.
+							다음은 법규 준수입니다. 회사는 사업을 펼치고 있는 해당 국가의 적용 법률을 준수해야 합니다. 회사의 다양한 업무 특성 상 준수하여야 할 법률은 매우 복잡할 수 있습니다. 직원들은 회사 및 그들 개인에게 적용되는 법률을 숙지하고 있어야 하며, 해당 법률 준수에 대하여 궁금한 점은 회사의 법무부서에 조언을 구해야 합니다. 법률 규정에 대한 무지는 법규 준수 여부 판단에 있어 고려 사항이 되지 않습니다. 
+							임직원행동강령과 회사의 정책이 관련 법률에 명시된 것보다 더 엄격한 준수 기준을 요구하는 경우, 직원들은 더 엄격한 기준을 따라야 합니다. 임직원행동강령과 관련 법률이 모순된 행동기준을 정하고 있다면, 직원들은 반드시 조언을 구해야 합니다. 
+							업무 수행 과정에서, 직원들은 회사에 대한 조사와 관련하여 규제 기관 또는 정부 공무원들의 연락을 받을 수 있습니다. 통상적이지 않은 정보 또는 서류를 요구하는 경우, 직원들은 회사 법무부서에 조언을 구해야 합니다. 회사를 대표하는 자는 누구든지 어떠한 경우에도 진실을 왜곡하거나 증거를 은폐하거나 문서를 손괴하거나 혹은 합법적인 조사를 방해하려는 시도를 해서는 안 됩니다. 
+							마지막 윤리규범으로 직장 내 괴롭힘에 관한 사항입니다. 직장 내 괴롭힘이란 사용자 또는 근로자가 직장에서의 지위 또는 관계 등의 우위를 이용하여 업무상 적정 범위를 넘어 다른 근로자에게 신체적 · 정신적 고통을 주거나 근무환경을 악화시키는 행위를 가리킵니다.
+							직장 내 괴롭힘 판단 기준으로는 다섯 가지가 있는데요. 당사자와의 관계, 행위 장소 및 상황, 행위에 대한 피해자의 반응, 행위 내용 및 정도, 행위기간(일회적/단기간/지속적)이 바로 그것입니다. 이러한 다섯 가지 기준에 비추어 구체적인 사정을 참작하여 종합적으로 판단하게 됩니다. 
+							이렇게 문제가 된 행위를 피해자와 같은 처지에 있는 21 일반적이고 평균적인 사람의 입장에서 바라보았을 때 신체적 · 정신적 고통이나 근무환경 악화가 발생할 수 있다는 점이 인정되어야 합니다. 또한 피해자가 실제로 신체적 · 정신적으로 고통을 받았거나 근무환경이 악화되었다는 결과가 발생해야 합니다.
+							직장 내 괴롭힘 행위 예시에는 어떤 것들이 있을까요? 지금 나열되는 다양한 상황들처럼 정당한 이유가 없이 불합리한 일들을 피해자에게 주는 상황 등이 바로 직장 내 괴롭힘 행위입니다.
+							여기에는 신체적인 폭력이나 욕설, 따돌림 등의 다양한 상황들도 해당되니 참고하시기 바랍니다.
+
+
+
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- //스크립트 -->				<!-- 인덱스 메뉴 -->
+				<div id="indexNavi"></div>
+				<!-- //인덱스 메뉴 -->
+
+			</div>
+        </div>
+		<!-- //영상 플레이어 -->
+		
+
+        <a href="javascript:;" class="play"><img src="../images/img/btn_play.png" alt="play" /></a>
+    </div>
+
+
+
+</div>
+</div>
+
+
+<div class="effectspeak01"><audio controls muted preload="auto"><source type="audio/mp3" src="../mp3/next.mp3" /></audio></div>
+
+
+<link type="text/css" href="../css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var effectAudio01 = function(){  $('.effectspeak01').find('audio')[0].play(); $('.effectspeak01').find('audio')[0].muted = false;};
+	
+
+    // win height
+    var winHChk = function(){
+        var winH = $(window).height();
+        $('#allWrap').css('height',winH);
+    }
+    winHChk();
+    pageInit();
+    $(window).resize(function(){winHChk();});
+	
+	// next 넘기기, 클릭유도
+	var nextEnd = false;
+    var endClick = function(){
+		$('.click').fadeIn(600,function(){
+			$(this).fadeOut(600,function(){
+				$(this).fadeIn(600,function(){
+					$(this).fadeOut(600,function(){
+						$(this).fadeIn(600);
+					});
+				});
+			})
+		}); 
+		effectAudio01();
+		nextEnd = true;
+		playbar = true;
+		playControl();
+	}
+	
+	$('.nextFunc').bind('click',function(){
+		var mypage = parseInt($(this).attr('data-page'));
+		if (nextEnd == true){
+			next(mypage);
+		} else {
+			next(mypage);
+			return false;
+		}
+	});
+	
+
+	// player bar
+	var playbar = true;
+	var playControl = function(){
+		if (playbar == false){
+			$('.jp-seek-bar').css('display','none');
+		} else {
+			$('.jp-seek-bar').css('display','block');
+			$('.jp-progress').unbind('click');
+		}
+	}
+	$('.jp-progress').bind('click',function(){		
+		next(mypage);
+		return false;
+	});
+	playControl();
+
+
+    // movie
+    var movieUrl = [mp4_Name]; // 1300k, 500k
+        function jplayerControll(a){
+		var mUrl = movieUrl[a];
+		$('#jquery_jplayer_1').jPlayer({			
+			ready: function (event) {
+				$(this).jPlayer('setMedia', {
+					m4v: mUrl,
+					poster: '../images/img/cover.jpg'
+				});
+
+				if(!navigator.userAgent.match(/Android|Mobile|iP(hone|od|ad)|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/)){
+					$(this).jPlayer('play');
+				}
+			
+			},
+			swfPath:'js',
+			supplied:'m4v',
+			size: {
+				width:'1280px',
+				height:'720px',
+				cssClass:'jp-video-360p'
+			},
+			useStateClassSkin: true,
+			autoBlur: false,
+			smoothPlayBar: true,
+			keyEnabled: true,
+			remainingDuration: false,
+			toggleDuration: false,
+		//	autohide: {restored: true, fadeIn:200},
+			volume: 0.5,
+			ended : function(){
+                endClick();
+			}
+		});
+	}
+
+	var nowspeed = function(){
+		var nows = $('.jp-speed').children('.on').index()-1;		
+		setTimeout( function() { $('.speed').eq(nows).click(); },200);
+	}
+
+	$('.play').bind('click',function(){
+		$('#jquery_jplayer_1').jPlayer('play');
+		$(this).fadeOut();
+		nowspeed();
+	});
+
+	$('.jp-stop').bind('click',function(){
+		$('.play').fadeIn();
+		nowspeed();
+	});
+
+	$('.jp-play').bind('click',function(){
+		if ($('#jp_container_1').is('.jp-state-playing')){
+			$('.play').fadeIn();
+		} else {
+			$('.play').fadeOut();
+		}
+		nowspeed();
+	});
+
+	if(!navigator.userAgent.match(/Android|Mobile|iP(hone|od|ad)|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/)){
+		$('.play').fadeOut();
+	} else {
+		$('.play').fadeIn();
+	}
+
+	// 스피드 변경
+	$('.speed').each(function(){
+		$(this).bind('click',function(){
+			if (!$(this).hasClass('on')){
+				var dataNum = $(this).attr('data-speed');
+				var speed = [0.5, 0.8, 1, 1.2, 1.5, 1.8, 2];
+				$('.speed').removeClass('on');
+				$(this).addClass('on');				
+				$('#jquery_jplayer_1').jPlayer('option','playbackRate',speed[dataNum]);
+			}
+		});
+	});
+	$('.speed').eq(1).click();
+
+	// 해상도 변경
+	$('.resolution').each(function(){
+		$(this).bind('click',function(index){
+			if (!$(this).hasClass('active')){
+				var dataType = $(this).attr('data-type');
+				$('.resolution').removeClass('active');
+				$(this).addClass('active');
+	
+				$('#jquery_jplayer_1').jPlayer('destroy');
+				if (dataType == 'high'){ jplayerControll(0);
+				} else { jplayerControll(1); }
+	//			setTimeout(function() { $('#jquery_jplayer_1').jPlayer('play'); },1200);
+			}
+		});
+	});
+
+
+
+	// replay
+	$('.jp-replay').bind('click',function(){
+		$('#jquery_jplayer_1').jPlayer('stop');
+		$('#jquery_jplayer_1').jPlayer('play');
+		nowspeed();
+	});
+
+	jplayerControll(0);
+
+    $(window).load(function(){
+        $('.jp-gui').css('opacity','1');
+    });
+
+
+
+
+	// 교안 다운로드
+	$('#tgDown').load('teacher_guide.html');
+
+	// 놀이영상
+	$('#tgMovie').load('movie_list.html');
+	
+	// 인덱스 네비
+	var depth1 = 2; // 1차뎁스
+	var depth2 = 2; // 2차뎁스
+	$('#indexNavi').load('index_navi.html',function(){
+		var de1 = depth1 - 1;
+		var de2 = depth2 - 1;
+		$('#navigation > ul > li:eq('+de1+') > a').addClass('on');
+		$('#navigation > ul > li:eq('+de1+') ul li:eq('+de2+') a').addClass('on');
+	});
+	
+	// 스크립트 스크롤바
+	$(".scConf").mCustomScrollbar({theme:'dark',mouseWheelPixels:150});
+
+
+	// 보안
+	$('body').siteSecurity({
+	//	f12:'y',         //f12키 막기
+		rightclick: 'y' //우클릭 막기
+	});
+
+});
+</script>
+
+
+
+
+</body>
+</html>

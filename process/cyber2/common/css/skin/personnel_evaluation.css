@@ -1,0 +1,51 @@
+﻿#content {background-image:url(http://img.hunet.co.kr/study/player/skin/personnel_evaluation/bg_content.jpg);}
+#content .header-subject {color:#6b513f; background-image:url(http://img.hunet.co.kr/study/player/skin/personnel_evaluation/icon_header-subject.png);}
+.learning-map-content .learning-map {background:url(http://img.hunet.co.kr/study/player/skin/personnel_evaluation/bg_learning-map.jpg) no-repeat;}
+.learning-map-content .learning-map li {position:relative; float:left; height:219px; text-indent:-9999em; background:url(http://img.hunet.co.kr/study/player/skin/personnel_evaluation/learning-map.png) no-repeat;}
+
+#content h1 {color:#6b513f;}
+#content .help-text {color:#eb872f;}
+
+.survey h2 {color:#67594f;}
+.survey .btn-yes-no a {color:#a0aab6;}
+.survey .btn-yes-no a span {color:#3a3a3a; background-color:#ebaf78;}
+.survey .btn-yes-no a .icon-hover {background-image:url(http://img.hunet.co.kr/study/player/skin/personnel_evaluation/icon_quiz.png);}
+.survey .btn-yes-no a.selected,
+.survey .btn-yes-no a:hover {color:#333332;}
+
+.quiz .type-ox dd.answer a .icon-hover {background-image:url(http://img.hunet.co.kr/study/player/skin/personnel_evaluation/icon_quiz.png);}
+.quiz .type-ox-result dt span {background-image:url(http://img.hunet.co.kr/study/player/skin/personnel_evaluation/icon_quiz.png);}
+.quiz .type-ox-result dd.answer a .icon-hover {background-image:url(http://img.hunet.co.kr/study/player/skin/personnel_evaluation/icon_quiz.png);}
+.survey-answer-select .answer a .icon-hover {background-image:url(http://img.hunet.co.kr/study/player/skin/personnel_evaluation/icon_quiz.png);}
+
+
+.survey .comment {background-color:#6a5f56;}
+.survey .comment dd textarea {color:#363636; background-color:#e5e5e5;}
+
+.btn-survey-submit {background-color:#f2b279; border-color:#d9a06d;}
+.layer-star-rate .btn-group .btn {background-color:#f2b279; border-color:#d9a06d;}
+.layer-star-rate .header-content .text {color:#67594f;}
+
+
+.quiz h2 {color:#67594f; background-image:url(http://img.hunet.co.kr/study/player/skin/personnel_evaluation/bg_quiz.png);}
+.quiz h2 strong {color:#67594f;}
+.quiz .content {border-color:#fff; background-color:#fff;}
+.quiz .footer a {color:#000; border-color:#d9a06d; background-color:#f2b279;}
+.quiz .type-text-select dd.answer a .icon-hover {background-image:url(http://img.hunet.co.kr/study/player/skin/personnel_evaluation/icon_quiz.png);}
+.quiz .type-text-select-result dt span {background-image:url(http://img.hunet.co.kr/study/player/skin/personnel_evaluation/icon_quiz.png);}
+.quiz .type-text-select-result dd.answer a .icon-hover {background-image:url(http://img.hunet.co.kr/study/player/skin/personnel_evaluation/icon_quiz.png);}
+
+
+.step-end h2 {color:#67594f;}
+.step-end h2 strong {color:#000;}
+
+.next-step-info .next-step-text {color:#67594f;}
+.next-step-info .next-step-subject {color:#eb872f;}
+.step-end .btn-review,
+.step-end .btn-next-step-go {border-color:#d9a06d; background-color:#f2b279;}
+
+.lecture-list-box {background-color:#595450;}
+.lecture-list-box h3 {color:#c7b390;}
+.lecture-list-box .thumb .icon-next {background: #eb872f;}
+.lecture-list-box .thumb .icon-next:after {border-left-color:#eb872f;}
+

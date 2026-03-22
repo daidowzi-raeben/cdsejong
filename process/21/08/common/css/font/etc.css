@@ -1,0 +1,38 @@
+/*
+ * Nanum Gothic (Korean) http://www.google.com/fonts/earlyaccess
+ */
+@font-face {
+  font-family: 'forturn';
+  font-style: normal;
+  src: url(woff/Forturn.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'payb';
+  font-style: normal;
+  src: url(woff/paybooc-Bold.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'payeb';
+  font-style: normal;
+  src: url(woff/paybooc-ExtraBold.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'ygj';
+  font-style: normal;
+  src: url(woff/ygotJalnanfont.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'ELANDNice_M';
+  font-style: normal;
+  src: url(woff/ELANDNice_M.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'KATURI';
+  font-style: normal;
+  src: url(woff/KATURI.woff) format('woff')
+}

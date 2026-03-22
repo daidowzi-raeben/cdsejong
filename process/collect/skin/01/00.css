@@ -1,0 +1,86 @@
+/* �ֿ� ��ư�� ��ü ����� �ּ��� Ǯ���ּ���.
+.btn-primary {color:#fff !important; background-color:#c2135d !important; border-color:#c2135d !important;}
+*/
+
+.btn-pager-prev,
+.btn-pager-next {color:#f43400; background-color:#fff;} /* ������ ��/�� ��ư ���ڻ�, ���� */
+
+.body-intro {background-image:url(bg.jpg);} /* ��Ʈ�� ��� */
+.body-movie {background-image:url(bg.jpg);} /* ������ ��� */
+.body-quiz {background-image:url(bg.jpg);} /* ���� ��� */
+.body-summary {background-image:url(bg.jpg);} /* ���Ӹ� ��� */
+.body-image {background-image:url(bg.jpg);} /* �̹��� ��� */
+.body-talk {background-image:url(bg.jpg);} /* �ǰ� ��� */
+.body-next {background-image:url(bg.jpg);} /* �������� ��� */
+
+#tool .nav {background-color:#2c2c2c;} /* ����TOOL ���� */
+#tool .nav li a {color:#ffffff;} /* ����TOOL �޴� ���ڻ� */
+#tool .btn-tool {color:#4fc2ff; background-color:#2c2c2c;} /* ����TOOL ��ư ���ڻ�, ���� */
+#tool .btn-tool .caret {border-top-color:#4fc2ff;} /* ����TOOL ��ư ȭ��ǥ�� */
+#tool .btn-tool.opened .caret {border-bottom-color:#4fc2ff;} /* ����TOOL �������� �� ��ư ȭ��ǥ�� */
+
+#index .btn-index {color:#ffffff; background:#2c2c2c;background-repeat:no-repeat; background-position:center center;background-image:url(icon-index-start.png);} /* INDEX ��ư ���ڻ�, ���� */
+#index .btn-index .caret {border-left-color:#ffffff;} /* INDEX ��ư ȭ��ǥ�� */
+#index .btn-index.opened .caret {border-right-color:#4fc2ff;} /* INDEX �������� �� ��ư ȭ��ǥ�� */
+#index ol {font-size:18px;} /* INDEX ���� */
+#index ol li a {color:#ffffff;margin-top: 8px;} /* INDEX �޴� ���ڻ� */
+#index ol li a:hover {color:#4fc2ff;} /* INDEX �޴� ������ ���ڻ� */
+#index ol li.active {color:#4fc2ff;} /* INDEX �޴� Ȱ��ȭ�� ���ڻ� */
+#index ol li.active a {color:#4fc2ff;} /* INDEX �޴� Ȱ��ȭ�� ���ڻ� */
+#index ol li.active-hr {color:#fff;padding:0px;margin-top: 50px;margin-bottom: 5px;border-bottom: 1px solid #efefef;font-size: 22px;padding-bottom:5px;} /* INDEX �޴� Ȱ��ȭ�� ���ڻ� */
+#index ol li.active-hd {color:#4fc2ff;padding:0px;margin-top:50px;margin-bottom: 5px;border-bottom: 1px solid #efefef;font-size: 22px;padding-bottom:5px;} /* INDEX �޴� Ȱ��ȭ�� ���ڻ� */
+
+.btn-hnote {color:#fff; background:#aa77ff;} /* H��Ʈ ���ڻ�, ����*/
+
+#footer .pull-left a {color:#fff;} /* �ϴ� ���� �����ܸ޴� ���ڻ� */
+#footer .pull-left i {background-color:#2c2c2c;} /* �ϴ� ���� ������ ���� */
+#footer .page {color:#fff;} /* �ϴ� ���� ������ ��ȣ ���ڻ� */
+.page_point {color:#f43400;} /* �ϴ� ���� ������ ���� ���ڻ� */
+.btn-pager {color:#000; background-color:#fff;} /* �ϴ� ���� ����,������ư ���ڻ�, ���� */
+
+#header .hgroup h1 {color:#fff;    position: relative;
+    top: 20px;} /* ���ø� ���ڻ� */
+#header .hgroup p {color:#fff;     background: url(/theme/lofa/_Img/logo.png) no-repeat left center / 100%;
+    text-indent: -9999px;
+    width: 120px;
+    height: 50px;
+    margin-bottom: -20px;} /* ������ ���ڻ� �� ������ */
+#header .check-text {color:#fff;} /* ���� ���ڻ� */
+.h1-intro {color:#2c2c2c;} /* ��Ʈ�� ������ ���� ���ڻ� */
+
+
+
+.quiz-box-footer .btn-primary {color:#ffffff; border-color:#2c2c2c; background-color:#2c2c2c;} /* ���� �ϴ� ��ư ���ڻ�, ����, ���� */
+.layer-quiz-mix-result .footer .btn-primary {color:#fff; border-color:#2c2c2c; background-color:#2c2c2c;} /* ���� ���â �ϴ� ��ư ���ڻ�, ����, ���� */
+
+.summary-box .footer .btn-primary {color:#ffffff; border-color:#2c2c2c; background-color:#2c2c2c;} /* ���Ӹ� �ϴ� ��ư ���ڻ�, ����, ���� */
+
+.image-box .pager a {color:#666; border-color:#b5b5b5; background:#fff;} /* image�� pager �⺻ ����, �ܰ���, ��� �� */
+.image-box .pager .current {color:#fff; border-color:#005f96; background-color:#005f96;} /* image�� pager Ȱ��ȭ �� ����, �ܰ���, ��� �� */
+
+.talk-box .body {color:#000;} /* �ǰ� ���� ���ڻ� */
+.talk-box .comment {background-color:#adadad;} /* �ǰ� �ۼ� �ڽ� ���� */
+.talk-box .comment dt {color:#000;} /* �ǰ� �ۼ� �ڽ� ���� ���ڻ� */
+.talk-box .footer .btn {color:#ffffff; border-color:#2c2c2c; background-color:#2c2c2c;} /* �ǰ� �ϴ� ��ư ����, �ܰ���, ����*/
+
+
+.nextinfo-box-header {color:#000;} /* ���� �н��� ���� ���ڻ� */
+.nextinfo-box-body .body .text-sm {color:#30a3df;} /* ���� �ð����� ���ڻ� */
+.nextinfo-box-body .body .text-lg {color:#213243;} /* ���� ���� ���ڻ� */
+
+.nextinfo-box-body .btn-box span{width: auto;}
+
+.nextinfo-box-body .this_btn,
+.nextinfo-box-body .next_btn {display:inline-block;}
+.nextinfo-box-body .this_btn a,
+.nextinfo-box-body .next_btn a{color:#ffffff;}
+
+.nextinfo-box-body .this_btn{background-color:#2650a4;margin:5px;}
+.nextinfo-box-body .next_btn{background-color:#b43333;margin:5px;}
+
+
+.nextinfo-box-body .this_btn i,
+.nextinfo-box-body .next_btn i {display:inline-block; width:40px; height:30px; vertical-align:middle; background-repeat:no-repeat; background-position:center center;}
+.icon-re {background-image:url(icon-last-re.png);}
+.icon-next {background-image:url(icon-last-next.png);}
+

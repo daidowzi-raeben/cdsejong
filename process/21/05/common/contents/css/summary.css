@@ -1,0 +1,230 @@
+#summaryCtn{
+	position:absolute;
+	width:1100px;
+	height:668px;
+	left:0px;
+	top:0px;
+	/*background: url(../images/summaryBG.png) no-repeat 0px 0px;*/
+}
+
+
+#sum_contents{
+	display:none;
+	position:absolute;
+	width:1060px;
+	height:540px;
+	left:84px;
+	top:100px;
+
+	/*border: 1px solid red;*/
+}
+
+
+#sum_cPage{
+	display:none;
+	position:absolute;
+	width:32px;
+	height:34px;
+	left:602px;
+	top:645px;
+	
+	font-size: 18px;
+	font-family: 'SCDream5';
+	text-align: right;
+	color:#00349a;
+
+	/*border: 1px solid black;*/
+}
+
+#sum_tPage{
+	display:none;
+	position:absolute;
+	width:32px;
+	height:34px;
+	left:638px;
+	top:645px;
+	
+	font-size: 18px;
+	font-family: 'SCDream5';
+	text-align: right;
+	color:#6b6b6b;
+}
+
+#sum_line{
+	display:none;
+	position:absolute;
+	width:3px;
+	height:3px;
+	left:638px;
+	top:656px;
+	
+	background-color: #6b6b6b;
+	border-radius: 3px;
+
+	/*
+	font-size: 20px;
+	font-family: 'KoPub-Dotum-Bold';
+	text-align: right;
+	color:#c9a214;
+	*/
+}
+
+#sum_prevBtn{
+	display:none;
+	cursor: pointer;
+	position:absolute;
+	width:30px;
+	height:30px;
+	left:578px;
+	top:642px;
+	background: url(../images/summary_prevBtn.png) no-repeat 0px 0px;
+}
+
+#sum_prevBtn:hover{
+	background-position: 0px -30px;
+}
+
+#sum_nextBtn{
+	display:none;
+	cursor: pointer;
+	position:absolute;
+	width:30px;
+	height:30px;
+	left:672px;
+	top:642px;
+	background: url(../images/summary_nextBtn.png) no-repeat 0px 0px;
+}
+
+#sum_nextBtn:hover{
+	background-position: 0px -30px;
+}
+
+
+#sum_downBtn{
+	display:none;
+	cursor: pointer;
+	position:absolute;
+	width:156px;
+	height:56px;
+	left:582px;
+	top:80px;
+	/*background: url(../images/app-btn-bg.png) no-repeat 0px 0px;
+	border: 1px solid black;*/
+	
+	text-align:center;
+	color:#ffffff;
+	font-family:"GmarketSansMedium";
+	font-size:22px;
+	letter-spacing:-1px;
+	line-height:62px;
+}
+
+
+#sum_printBtn{
+	display:none;
+	cursor: pointer;
+	position:absolute;
+	width:44px;
+	height:44px;
+	left:1200px;
+	top:60px;
+	background: url(../images/summary_printBtn.png) no-repeat 0px 0px;
+	
+	/*
+	text-align:center;
+	color:#ffffff;
+	font-family:"GmarketSansMedium";
+	font-size:22px;
+	letter-spacing:-1px;
+	line-height:62px;
+	*/
+}
+
+#sum_popBtn{
+	display:none;
+	cursor: pointer;
+	position:absolute;
+	width:156px;
+	height:56px;
+	left:934px;
+	top:80px;
+	/*background: url(../images/app-btn-bg.png) no-repeat 0px 0px;*/
+
+	text-align:center;
+	color:#ffffff;
+	font-family:"GmarketSansMedium";
+	font-size:22px;
+	letter-spacing:-1px;
+	line-height:62px;
+}
+
+
+#sum_popCtn{
+	display:none;
+	position:absolute;
+	width:1100px;
+	height:668px;
+	left:0px;
+	top:0px;
+}
+
+#sum_popCtnBG{
+	position:absolute;
+	width:1100px;
+	height:668px;
+	left:0px;
+	top:0px;
+	/*background: url(../images/summary_popBG.png) no-repeat 0px 0px;*/
+	background-color: #000000;
+	opacity:0.5;
+}
+
+#sum_popContents{
+	position:absolute;
+	width:1000px;
+	height:514px;
+	left:50px;
+	top:58px;
+	overflow: hidden;
+	background-color: #ffffff;
+	/*border: 1px solid red;*/
+}
+
+
+.sum_popContents-wrap{
+	width:990px;
+	height:424px;
+	padding-top:10px;
+	padding-left:10px;
+	overflow:auto;
+	/*border: 1px solid red;*/
+}
+
+#sum_popTitle{
+	width:1100px;
+	height:70px;
+	
+	background: url(../images/summary_titleBG.png) no-repeat 0px 0px;
+}
+
+#sum_popTitle_text{
+	position:absolute;
+	left:70px;
+	top:19px;
+	
+	color:#333333;
+	font-family:"GmarketSansBold";
+	font-size:35px;
+	letter-spacing:-1px;
+}
+
+#sum_closeBtn{
+	cursor: pointer;
+	position:absolute;
+	width:40px;
+	height:40px;
+	left:990px;
+	top:74px;
+	background: url(../images/summary_popCloseBtn.png) no-repeat 0px 0px;
+	/*border: 1px solid red;*/
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><Menu>
+<item menu_no="1" parent_menu_no="1" frame_nm="New Start" frame_no="1" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="2" parent_menu_no="0" frame_nm="Intro" frame_no="1" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="3" parent_menu_no="0" frame_nm="이슈 체크" frame_no="2" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="4" parent_menu_no="0" frame_nm="학습목표" frame_no="3" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="5" parent_menu_no="1" frame_nm="New Study" frame_no="4" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="6" parent_menu_no="0" frame_nm="1.대규모유통업법의 적용대상 및 기준" frame_no="4" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="7" parent_menu_no="0" frame_nm="2.대규모유통업자의 의무" frame_no="5" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="8" parent_menu_no="1" frame_nm="New Synergy" frame_no="19" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="9" parent_menu_no="0" frame_nm="Quiz" frame_no="19" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="10" parent_menu_no="0" frame_nm="정리하기" frame_no="20" type_cd="" child_frame_no="0" child_type_cd="" />
+<item menu_no="11" parent_menu_no="0" frame_nm="차시 예고" frame_no="21" type_cd="" child_frame_no="0" child_type_cd="" />
+</Menu>

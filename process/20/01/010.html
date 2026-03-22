@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0,user-scalable=yes" />
+<link rel="shortcut icon" href="#">
+
+<script type="text/javascript" src="js/pageData.js"></script>
+<script type="text/javascript" src="js/scriptData.js"></script>
+    
+<link rel="stylesheet" type="text/css" href="../common/css/contentsUI.css">
+<link rel="stylesheet" type="text/css" href="../common/css/jquery.mCustomScrollbar.css">
+
+<script type="text/javascript" src="../common/js/jquery1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="../common/js/jquery1.11.2/jquery-ui.min.js"></script>
+
+
+<script type="text/javascript" src="../common/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../common/js/touchpunch/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="../common/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="../common/js/gsap.min.js"></script>
+
+<script type="text/javascript" src="../common/common.js"></script>
+
+<script type="text/javascript" src="../common/js/cookie.js"></script>
+<script type="text/javascript" src="../common/js/index.js"></script>
+<script type="text/javascript" src="../common/js/sliderEvent.js"></script>
+<script type="text/javascript" src="../common/js/makeUI.js"></script>
+<script type="text/javascript" src="../common/js/leftMenu.js"></script>
+<script type="text/javascript" src="../common/js/video.js"></script>
+<script type="text/javascript" src="../common/js/audio.js"></script>
+<script type="text/javascript" src="../common/js/bookMark.js"></script>
+<script type="text/javascript" src="../common/js/popup.js"></script>
+<script type="text/javascript" src="../common/js/studyPop.js"></script>
+<script type="text/javascript" src="../common/js/examplePop.js"></script>
+<script type="text/javascript" src="../common/js/practicePop.js"></script>
+
+<!-- 학습정리 추가 -->
+<link rel="stylesheet" type="text/css" href="../common/contents/css/summary.css">
+<script type="text/javascript" src="../common/contents/js/summary.js"></script>
+
+</head>
+
+
+<body>
+	<div id="Container">
+		<div id="contentsCtn">
+			<div id="videoCtn"> <video playsinline id="video" preload="none" autoplay> </video> </div>			
+			<div id="loadCtn">
+				<div id="summaryCtn">
+					<div id="sum_contents"></div>
+					<div id="sum_downBtn"></div>
+					<div id="sum_printBtn"></div>
+					<div id="sum_popBtn"></div>
+					<div id="sum_line"></div>
+					<div id="sum_cPage"></div>
+					<div id="sum_tPage"></div>
+					<div id="sum_prevBtn"></div>
+					<div id="sum_nextBtn"></div>
+					
+					<div id="sum_popCtn">
+						<div id="sum_popCtnBG"></div>
+						<div id="sum_popContents"> 
+							<div id="sum_popTitle"> <div id="sum_popTitle_text"></div> </div>
+							<div class="sum_popContents-wrap"></div>
+						</div>
+						
+						<div id="sum_closeBtn"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="popupVideoCtn"> 
+				<div id="popupVideo_bg"></div>
+				<video playsinline id="popupVideo" preload="none" autoplay> </video>
+				<div id="popupVideoSync"><div id="popupVideoSyncText"></div></div>
+				<div id="popupVideo_closeBG"></div>
+				<div id="popupVideo_closeBtn"></div>
+			</div>
+
+			<div class="topMenu">
+				<div id="lec"></div>
+				<div id="chasi_titleBG"></div>
+				<div id="chasi_titleText"></div>
+				<!--
+				<div id="toggleMenu">
+					<div id="toggleMenu_bg"></div>
+					<div id="toggleMenu_closeBtn"></div>
+					<div id="studyBtn"></div>
+					<div id="practiceVideoBtn"></div>
+					<div id="bookmarkBtn"></div>
+					<div id="memoBtn"></div>
+					<div id="questionBtn"></div>
+				</div>
+				<div id="toggleMenuMask"></div>
+				-->
+			</div>
+			
+			
+			<div id="treeMenu">
+				<div id="menuCtn"></div>
+				<div id="bookMarkCtn"></div>
+                <div id="menuTapeBtn"></div>
+				<div id="bookMarkTapeBtn"></div>
+				<div id="menuCloseBtn"></div>
+			</div>
+			
+			<div id="menuMask"></div>
+
+			<div id="scriptCtn">
+				<div id="scriptBG"></div>
+				<div id="closeScript"></div>
+				<div id="scriptText"></div>
+			</div>
+			<div id="bookMark_savePop"></div>
+
+			<div class="bottomMenu">
+				<img id="logo"></img>
+				<div id="line_grup"></div>
+				<div id="indexBtn"></div>
+				<div id="discussBtn"></div>
+				<div id="memoBtn"></div>
+				<div id="questionBtn"></div>
+				<div id="learningBtn"></div>				
+				<div id="timeText"></div>
+				<div id="playBtn"></div>
+				<div id="pauseBtn"></div>
+				<div id="reBtn"></div>
+				<div id="script_btn"></div>
+				<div id="fullScreenBtn"></div>
+				<div id="rateBtn"></div>
+				<div id="rate_popCtn"></div>
+				<div id="muteBtn"></div>
+				
+				<div id="nextPop"></div>
+				<div id="prevBtn"></div>
+				<div id="nextBtn"></div>
+				<div id="pageText">
+					<div id="pageDot"></div>
+					<div id="cPage"></div>
+					<div id="tPage"></div>
+				</div>
+				
+				<div class="control-slider"> <div id="slider"></div> </div>
+				<div id="sliderArea"></div>
+				<div class="vol_control-slider"> <div id="vol_slider"></div> </div>
+				
+			</div>
+			
+			<div id="learningPopCtn"></div>
+			<div id="studyPopCtn"></div>
+			<div id="examplePopCtn"></div>
+			<div id="practicePopCtn"></div>
+
+			<audio id="audioCtn" autoplay></audio>
+		</div>
+
+		<div id="mPrevBtn"></div>
+		<div id="mNextBtn"></div>
+		<div id="loadingPop"> <div id="loadingImg"></div> </div>		
+		<div id="messageBox">
+			<div id="messageBox_bg"></div>
+			<div id="confirmBtn"></div>
+		</div>
+		<audio class='effect_snd'></audio>
+		<audio loop class='bgm_snd'></audio>
+	</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+/*
+ * Nanum Gothic (Korean) http://www.google.com/fonts/earlyaccess
+ */
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(woff/NanumGothic-Regular.eot);
+  src: url(woff/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(woff/NanumGothic-Regular.woff2) format('woff2'),
+       url(woff/NanumGothic-Regular.woff) format('woff'),
+       url(woff/NanumGothic-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(woff/NanumGothic-Bold.eot);
+  src: url(woff/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),
+       url(woff/NanumGothic-Bold.woff2) format('woff2'),
+       url(woff/NanumGothic-Bold.woff) format('woff'),
+       url(woff/NanumGothic-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url(woff/NanumGothic-ExtraBold.eot);
+  src: url(woff/NanumGothic-ExtraBold.eot?#iefix) format('embedded-opentype'),
+       url(woff/NanumGothic-ExtraBold.woff2) format('woff2'),
+       url(woff/NanumGothic-ExtraBold.woff) format('woff'),
+       url(woff/NanumGothic-ExtraBold.ttf) format('truetype');
+}
+
+/* 
+ * Nanum Square Web Fonts
+ * https://github.com/hiun/NanumSquare
+ * Copyright (c) 2010, NAVER Corporation (http://www.nhncorp.com) 
+ */
+ 
+@font-face {
+  font-family: 'Nanum Square';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./woff/NanumSquareR.eot');
+  src: local('./woff/Nanum Square Regular'),
+       local('./woff/NanumSquareR'),
+       url('./woff/NanumSquareR.eot?#iefix') format('embedded-opentype'),
+       url('./woff/NanumSquareR.woff2') format('woff2'),
+       url('./woff/NanumSquareR.woff') format('woff'),
+       url('./woff/NanumSquareR.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nanum Square';
+  font-style: bold;
+  font-weight: 700;
+  src: url('./woff/NanumSquareB.eot');
+  src: local('./woff/Nanum Square Bold'),
+       local('./woff/NanumSquareB'),
+       url('./woff/NanumSquareB.eot?#iefix') format('embedded-opentype'),
+       url('./woff/NanumSquareB.woff2') format('woff2'),
+       url('./woff/NanumSquareB.woff') format('woff'),
+       url('./woff/NanumSquareB.ttf') format('truetype');
+}

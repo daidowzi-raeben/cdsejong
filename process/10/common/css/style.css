@@ -1,0 +1,407 @@
+html
+{
+  overflow: hidden;
+  min-width: 1010px;
+}
+
+nav#top-nav
+{
+  z-index: 1;
+  max-height: 36px;
+  display: flex;
+  justify-content: right;
+}
+
+nav#top-nav .column
+{
+  top: 0;
+  /* position: absolute; */
+}
+/* 
+nav#top-nav .column:first-child
+{
+  left: 0;
+}
+
+nav#top-nav .column:nth-child(2)
+{
+  right: 0;
+} */
+
+body
+{
+  background: transparent url('../images/bg.png') no-repeat 0 0;
+  background-size: cover;
+  overflow: hidden;
+  
+}
+
+#course-title
+{
+  background: transparent url('../images/course_title.png') no-repeat 0 0;
+  width: 412px;
+  height: 24px;
+  text-indent: -9999em;
+  margin-top: 5px;
+  margin-right: 5px;
+  /* margin-right: 0.75em;
+  margin-top: 0.75em; */
+}
+
+#chapter-title
+{
+  background: transparent no-repeat 0 0;
+  width: 500px;
+  height: 34px;
+  font-family: 'GyeonggiTitle';
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 34px;
+  text-shadow: #000 1px 1px 2px;
+  color: #fff !important;
+  display: none;
+  padding: 0 8px;
+}
+
+span.subj_number { color: #ff0; }
+
+#video
+{
+  width: 1010px;
+  height: 568px;
+}
+
+#video video
+{
+  /* width: 1010px;
+  height: 568px; */
+}
+
+#section-img
+{
+  /* left: calc(50% - 505px); */
+  display: none; /*임시삭제*/
+  left: 12px;
+  top: 15px;
+  height: 34px;
+  z-index: 9999;
+}
+
+#script
+{
+  display: none;
+  width: 1000px;
+  height: 140px;
+  padding: 0.25em 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-family: 'NotoSans', '맑은 고딕', '돋움', sans-serif;
+  font-size: 1em;
+  left: calc(50% - 500px);
+  top: calc(100% - 180px);
+  overflow-y: auto;
+}
+
+#script p
+{
+  color: #fff;
+  padding: 0.25em 1em;
+  font-size: 0.95em;
+}
+
+#index
+{
+  display: none;
+  width: 1000px;
+  height: 210px;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-family: 'GyeonggiTitle';
+  font-size: 1em;
+  left: calc(50% - 500px);
+  top: calc(100% - 250px);
+}
+#index .module
+{
+  float: left;
+  height: 200px;
+  margin: 5px 0;
+}
+
+#index .module p
+{
+  color: #fadd4c;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#index .module ul
+{
+  padding: 0 20px;
+  margin-top: 0.5em;
+}
+
+#index .module ul li
+{
+  color: #fff;
+  padding: 0.2em;
+  cursor: pointer;
+}
+
+#index .module ul li:hover, #index .module ul li.active
+{
+  color: #ff98ff;
+}
+
+#index .module ul li::before
+{
+  content: '⊙ ';
+}
+
+#index #module_2.module ul li::before
+{
+  content: '';
+}
+
+#index #module_1
+{
+  width: 250px;
+  border-right: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+#index #module_2
+{
+  width: 500px;
+  border-right: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+#index #module_3
+{
+  width: 250px;
+}
+
+#notice
+{
+  display: none;
+  left: calc(50% + 435px);
+  top: calc(100% - 65px);
+}
+#notice div
+{
+  width: 70px;
+  height: 28px;
+  background: transparent url(../images/notice.png) no-repeat 0 0;
+}
+
+#notice div#next-notice
+{
+  background-position: 0 0;
+  display: none;
+}
+
+#notice div#end-notice
+{
+  background-position: -70px 0;
+  display: none;
+}
+
+/* .columns:not(:last-child)
+{
+  margin-bottom: 0;
+} */
+
+.hidden_sound
+{
+  display: none;
+}
+
+/* Utils */
+.bgc-transparent
+{
+  background-color: transparent;
+}
+
+.modal.is-active
+{
+  z-index: 9999;
+}
+
+section.columns.is-fullhd.is-vcentered.is-centered.is-overlay.is-marginless
+{
+  display: flex;
+  overflow: hidden;
+  /* display: none; */
+}
+
+
+.ta-right {
+  text-align: right;
+}
+
+blockquote, body, dd, dl, dt, fieldset, figure, h1, h2, h3, h4, h5, h6, hr, html, iframe, legend, li, ol, p, pre, textarea, ul
+{
+  word-break: keep-all;
+}
+
+ul.exam
+{
+  border: 1px solid #ccc;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-size: 0.7em;
+  color: #333;
+  border-radius: 10px;
+  margin: 0.5em;
+}
+
+ul.exam li
+{
+  font-size: 0.7em;
+  line-height: 1.6em;
+  padding: 0 1em;
+}
+
+#assessment ul.exam
+{
+  font-size: 1.2em;
+  padding: 0.5em 0;
+}
+
+#modal-reading .modal-content .box ul > li.not-bullet {
+  text-indent: 0;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#modal-reading section.page ul li.not-bullet::before {
+  content: '' !important;
+  margin-right: 0px !important;
+}
+
+#modal-reading .modal-content .box ul > li > p, #modal-reading .modal-content .box ul > li.not-bullet > p
+{
+  font-size: 1em;
+  color: #4a4a4a;
+  margin-top: 0;
+}
+
+#modal-reading .modal-content .box p.referer
+{
+  font-size: 0.9em;
+  text-indent: 0;
+  width: 100%;
+  color: #333;
+  word-break: break-all;
+  text-decoration: underline;
+  margin-top: 2em !important;
+}
+
+.indent-0em
+{
+  text-indent: 0em !important;
+}
+
+.indent-1em
+{
+  text-indent: 1em;
+}
+
+.indent-2em
+{
+  text-indent: 2em;
+}
+
+.ml-1em
+{
+  margin-left: 1em;
+}
+
+.ml-2em
+{
+  margin-left: 2em;
+}
+
+.mb-1em
+{
+  margin-bottom: 1em !important;
+}
+
+.mt-1em
+{
+  margin-top: 1em !important;
+}
+
+#map
+{
+  background: transparent url(../images/learningmap_bg.png) no-repeat 0 0;
+  position: absolute;
+  width: 1010px;
+  height: 568px;
+  left: calc(50% - 505px);
+  top: calc(50% - 284px);
+  overflow: hidden;
+  display: none;
+  padding: 34px 0 0 0;
+}
+
+#map .map-left
+{
+  margin-left: 130px;
+}
+
+#map .map-left, #map .map-right
+{
+  float: left;
+  width: 440px;
+  padding: 20px 35px 0 35px;
+}
+
+#map h3
+{
+  background-color: #a88abe;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: normal;
+  font-size: 18px;
+  font-family: 'GyeonggiTitle';
+  text-align: center;
+  margin: 4px 0 2px 0;
+}
+
+#map h3.active
+{
+  font-weight: bold;
+  color: #fcff26;
+}
+
+#map ul li
+{
+  font-family: 'GyeonggiTitle';
+  font-size: 16px;
+  color: #4e4e4e;
+  text-indent: 1em;
+}
+
+#map ul li.active
+{
+  color: #dd496b;
+}
+
+#map button#map-close
+{
+  position: absolute;
+  right: 0;
+  background: transparent url(../images/popclose.png) no-repeat 0 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+  text-indent: -9999em;
+  cursor: pointer;
+}
+
+#map button#map-close:hover
+{
+  background-position: 0 -40px;
+}
+
+button:focus {
+  outline: none;
+}

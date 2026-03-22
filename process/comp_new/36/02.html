@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=1010, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>e-준법교육 퀴즈 캠페인</title>
+        <!-- library -->
+        <link rel="stylesheet" href="../common/css/animate.css">
+        <link rel="stylesheet" href="../common/css/nanumsquare.css">
+        <link rel="stylesheet" href="../common/css/nanumsquareround.min.css">
+        <link rel="stylesheet" href="../common/css/jquery.mCustomScrollbar.min.css">
+        <!-- common -->
+        <link rel="stylesheet" href="../common/css/player.css">
+        <!-- custom -->
+        <link rel="stylesheet" href="../common/css/custom.css">
+        <!-- quiz -->
+        <link rel="stylesheet" href="../common/css/quiz.css">
+        
+        <!-- library -->
+        <script src="../common/js/jquery-3.3.1.min.js"></script>
+        <script src="../common/js/jquery.mCustomScrollbar.min.js"></script>
+        <script src="../common/js/jquery-ui.player.js"></script>
+        <script src="../common/js/jquery-ui-touch.min.js"></script>
+        <script src="../common/js/jquery.cookie.js"></script>
+        <script src="../common/js/now_content_091.js"></script>
+    </head>
+
+    <body onselectstart="return false" oncontextmenu="return false">
+        <div id="container">
+            <div id="top-wrapper">
+                <span class="chapter"></span>
+            </div>
+            <div id="content-wrapper">
+                <div id="quiz-wrapper">
+                    <div id="quiz-home">
+                        <p class="btn-start"></p>
+                    </div>
+                    <div id="quiz-content">
+                        <ul class="quiz-tab"></ul>
+                        <span class="quiz-num"></span>
+                        <span class="quiz-question"></span>
+                        <div class="ox-wrapper">
+                            <input type="radio" name="ox" id="ox-o"><label for="ox-o"></label>
+                            <input type="radio" name="ox" id="ox-x"><label for="ox-x"></label>
+                        </div>
+                        <div class="choice-wrapper"></div>
+                        <div class="input-wrapper">
+                            <input type="text" name="input-text" id="input-text">
+                        </div>
+                        <p class="btn-confirm"></p>
+                        <div class="pop"></div>
+                        <div class="answer-wrapper">
+                            <span></span><span class="answer-answer">1</span>
+                            <span></span><div class="answer-comment"><span></span></div>
+                            <p class="btn-next"></p>
+                        </div>
+                        <div class="cover"></div>
+                    </div>
+                    <div id="quiz-result">
+                        <span class="quiz-count">0</span>
+                        <span class="quiz-score">0</span>
+                        <table class="quiz-result">
+                            <thead>
+                                <tr></tr>
+                            </thead>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                        <p class="btn-restart"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="toolbar-mobile">
+                <p class="btn-prev"></p>
+                <p class="btn-next"></p>
+            </div>
+            <div id="toolbar">
+                <div class="timebar-wrapper">
+                    <p class="timebar"><span class="time-range"></span></p>
+                    <time class="currtime" title="현재시간">00:00</time>
+                    <time class="duration" title="전체시간">00:00</time>
+                </div>
+                <div class="speed-wrapper">
+                    <p class="btn-slow"></p>
+                    <span class="currspeed">1.0</span><span>배속</span>
+                    <p class="btn-fast"></p>
+                </div>
+                <p class="btn-play" title="재생"></p>
+                <p class="btn-pause on" title="일시정지"></p>
+                <p class="btn-replay" title="다시보기"></p>
+                <div class="script-wrapper">
+                    <p class="btn-close"></p>
+                    <div class="script-inner">
+                        <span>내레이션</span>
+                        <span></span>
+                    </div>
+                </div>
+                <p class="btn-script"></p>
+                <p class="btn-mute"></p>
+                <div class="volbar"><p class="vol-bar"><span class="vol-range"></span></p></div>
+                <p class="btn-fullscreen"></p>
+                <div class="page-wrapper">
+                    <p class="btn-prev"></p>
+					<span id="curpageTxt" class="currPage"><script>document.write(isPageNum)</script></span>
+		      		<span id="totalpageTxt" class="totalpage"><script>document.write(isTotalNum)</script></span>
+                    <p class="btn-next"></p>
+                </div>
+                <span class="pop-next"></p>
+            </div>
+        </div>
+    </body>
+    <!-- init -->
+    <script src="../common/js/config.js"></script>
+    <script src="../common/js/init.js"></script>
+    <!-- custom -->
+    <script src="../common/js/pageinfo.js"></script>
+    <script src="../common/js/interactive.js"></script>
+    <script src="../common/js/script.js"></script>
+    <!-- common -->
+    <script src="../common/js/video.js"></script>
+    <script src="../common/js/player.js"></script>
+    <script src="../common/js/interactive.js"></script>
+    <!-- custom -->
+    <script src="../common/js/custom.js"></script>
+    <!-- quiz -->
+    <script>
+        /* quiz
+         * type 0 : ox / 1 : 객관식 / 2 : 주관식
+         * question : 문제 {강조}
+         * choice : 객관식 보기
+         * answer : 정답
+         * comment : 해설
+         * choiceposition : 보기 위치
+         */
+        const o = true;
+        const x = false;
+        const quiz = [{
+            type: 1,
+            choiceposition: 260,
+            question: '다음 중 계약에 관한 설명으로 틀린 것은 무엇인가?',
+            choice: ['계약이란, 당사자들이 서로 대립되는 두 개 이상의 이해관계 협의를 통하여 그 의사표시가 합치되었을 경우 성립되는 법률관계를 말한다.',
+			'계약은 계약자유의 원칙에 따라 체결 여부, 내용, 상대방, 방식 등이 자유이나 법령 등에 의한 제한을 받기도 한다.',
+			'계약자유의 원칙에 따라 구두계약도 유효하므로, 별도로 계약서를 작성하지 않거나 작성한 계약서를 보관하지 않아도 된다.',
+			'계약서는 제3자가 알 수 있도록 육하원칙에 따라 작성하여야 한다.'
+			],
+            answer: 3,
+            comment: '원론적으로는 계약자유의 원칙에 따라 구두계약도 유효합니다. 다만, 계약서는 계약의 성립 및 내용을 입증하기 위한 가장 중요한 증거이므로, NS임직원은 NS 「계약/채권 업무처리 지침」에 따라 계약서를 작성/보관하여야 합니다. 특히, 대규모유통업법 제6조는 거래형태, 거래품목, 기간 등 법정사항을 명시한 서면(계약서)을 납품업자(협력사)에 교부하고(제①항), 계약이 끝난 날로부터 5년간 보존하도록 정하고 있습니다(제⑧항)',
+	        },{
+
+            type: 1,
+            choiceposition: 350,
+            question: '김합리 과장은 협력사와 장마 시즌에 레인부츠를 판매하기로 하고 반품 조건을 명시한 계약을 체결하였으나, 협력사가 인력 부족 등을 사유로 상품의 납품을 지체하여 장마 시즌에 해당 상품을 판매할 수 없게 되었다. 이에 김합리 과장은 반품 품목, 사유 등을 기재한 반품합의서를 작성하여 레인부츠를 반품하였다. 김합리 과장의 행위는 적법한가?',
+            choice: ['위법',
+			'적법'],
+            answer: 2,
+            comment: '대규모유통업에서의 거래 공정화에 관한 법률 제10조에 따르면 원칙적으로 대규모유통업자는 정당한 사유 없이 납품 받은 상품의 전부 또는 일부를 반품할 수 없습니다. 그러나 시즌 상품에 대해 반품 조건을 명시하여 계약을 체결하고 그에 따라 반품 조건이 명시된 서면을 납품업자에게 준 경우는 정당한 사유로 인한 반품으로 인정됩니다.'
+			}];
+    </script>
+    <script src="../common/js/quiz.js"></script>
+</html>

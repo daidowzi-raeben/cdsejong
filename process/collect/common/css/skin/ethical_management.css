@@ -1,0 +1,56 @@
+﻿.vm * {vertical-align:middle}
+
+#content {background-image:url(http://img.hunet.co.kr/study/player/skin/ethical_management/bg_content.jpg);}
+#content .header-subject {color:#2a2e36; background-image:url(http://img.hunet.co.kr/study/player/skin/ethical_management/icon_header-subject.png); padding:6px 0 6px 30px}
+
+#content .help-text {color:#8a6437}
+
+.quiz h2 {color:#493a29;}
+.quiz .content {background:#fff; border-color:#8c6f4c; box-shadow:none}
+.quiz .footer a {border-color:#7b8930; background-color:#899936; color:#fff;}
+
+.quiz h2 strong {color:#8a6437}
+.quiz .type-ox-result dd.answer a span {background:#ffad99}
+
+.step-end h2 {color:#67594f; font-weight:normal}
+.step-end h2 strong {color:#8a6437}
+.next-step-info .next-step-text {color:#67594f}
+.next-step-info .next-step-subject {color:#8a6437}
+.step-end .btn-review,
+.step-end .btn-next-step-go {background-color:#899936; border-color:#7b8930; color:#fff}
+.step-end .btn-review {background-position:12px -1143px}
+.step-end .btn-next-step-go {background-position:170px -1178px}
+
+.lecture-list-box {background-color:#57534d; box-shadow:5px 5px 5px rgba(0,0,0,0.19)}
+.lecture-list-box h3 {color:#c8b391}
+
+.learning-map-content .study-process-map .img-content {display:none}
+
+#content .help-text.together {top:83px;}
+.talkbox .talkbox-thumb {text-align:center; margin:35px 0 20px}
+.talkbox .comment {background-image:url(http://img.hunet.co.kr/study/player/skin/ethical_management/bg_together-campaign-comment-box.gif);}
+.btn-talkbox-submit,
+.btn-talkbox-view {background-color:#899936; border-color:#7b8930}
+.talkbox .comment {box-shadow:none; margin-bottom:15px}
+.talkbox .comment dd textarea {color:#363636; background:#e5e5e5;}
+
+
+/* 함께해요 캠페인 : 시작 */
+.together-campaign {position:absolute; top:102px; left:59px; width:832px; height:472px;}
+
+.together-campaign h2 {margin-bottom:20px; padding:30px 0 0 150px; color:#fff; font-size:28px; line-height:34px; letter-spacing:-1px;}
+
+.together-campaign .title-image {text-align:center; margin:25px 0 20px}
+.together-campaign .comment {margin:0 30px 20px 30px; padding:15px; background:url(http://img.hunet.co.kr/study/player/skin/ethical_management/bg_together-campaign-comment-box.gif); border-radius:6px; box-shadow:5px 5px 5px rgba(50, 50, 50, 0.5);}
+.together-campaign .comment dt {position:relative; padding:0 0 12px 0; color:#fff; font-size:14px; line-height:20px; z-index:1;}
+.together-campaign .comment dt span {display:inline-block; padding:1px 0 1px 23px; background:url(http://img.hunet.co.kr/study/player/common/icon_together-campaign-comment.png) no-repeat;}
+.together-campaign .comment dt .share-check {position:absolute; right:0; color:#fff;}
+.together-campaign .comment dt .share-check input {vertical-align:middle;}
+.together-campaign .comment dd {}
+.together-campaign .comment dd textarea {width:722px;height:80px; overflow:auto; padding:10px; color:#363636; font-size:14px; border:0; background:#e5e5e5; border-radius:6px;}
+
+.together-campaign .btn-save {display:inline-block; width:145px; height:26px; line-height:26px; padding-left:10px; font-weight:bold; text-align:center; font-size:14px; color:#ffffff; border:0; border-bottom:2px solid #7b8930; cursor:pointer; background:#899936 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 35px -994px; letter-spacing:-1px; margin-right:5px}
+.together-campaign .btn-other-opinion {display:inline-block; width:145px; height:26px; line-height:26px; padding-left:10px; font-weight:bold; text-align:center; font-size:14px; color:#ffffff; border:0; border-bottom:2px solid #7b8930; cursor:pointer; background:#899936 url(http://img.hunet.co.kr/study/player/common/icon.png) no-repeat 10px -1045px; letter-spacing:-1px}
+
+.together-campaign .tCenter .share-check {font-size:14px; margin-right:12px; color:#464646}
+/* 함께해요 캠페인 : 끝 */

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=1010, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>e-준법교육 퀴즈 캠페인</title>
+        <!-- library -->
+        <link rel="stylesheet" href="../common/css/animate.css">
+        <link rel="stylesheet" href="../common/css/nanumsquare.css">
+        <link rel="stylesheet" href="../common/css/nanumsquareround.min.css">
+        <link rel="stylesheet" href="../common/css/jquery.mCustomScrollbar.min.css">
+        <!-- common -->
+        <link rel="stylesheet" href="../common/css/player.css">
+        <!-- custom -->
+        <link rel="stylesheet" href="../common/css/custom.css">
+        <!-- quiz -->
+        <link rel="stylesheet" href="../common/css/quiz.css">
+        
+        <!-- library -->
+        <script src="../common/js/jquery-3.3.1.min.js"></script>
+        <script src="../common/js/jquery.mCustomScrollbar.min.js"></script>
+        <script src="../common/js/jquery-ui.player.js"></script>
+        <script src="../common/js/jquery-ui-touch.min.js"></script>
+        <script src="../common/js/jquery.cookie.js"></script>
+        <script src="../common/js/now_content_091.js"></script>
+    </head>
+
+    <body onselectstart="return false" oncontextmenu="return false">
+        <div id="container">
+            <div id="top-wrapper">
+                <span class="chapter"></span>
+            </div>
+            <div id="content-wrapper">
+                <div id="quiz-wrapper">
+                    <div id="quiz-home">
+                        <p class="btn-start"></p>
+                    </div>
+                    <div id="quiz-content">
+                        <ul class="quiz-tab"></ul>
+                        <span class="quiz-num"></span>
+                        <span class="quiz-question"></span>
+                        <div class="ox-wrapper">
+                            <input type="radio" name="ox" id="ox-o"><label for="ox-o"></label>
+                            <input type="radio" name="ox" id="ox-x"><label for="ox-x"></label>
+                        </div>
+                        <div class="choice-wrapper"></div>
+                        <div class="input-wrapper">
+                            <input type="text" name="input-text" id="input-text">
+                        </div>
+                        <p class="btn-confirm"></p>
+                        <div class="pop"></div>
+                        <div class="answer-wrapper">
+                            <span></span><span class="answer-answer">1</span>
+                            <span></span><div class="answer-comment"><span></span></div>
+                            <p class="btn-next"></p>
+                        </div>
+                        <div class="cover"></div>
+                    </div>
+                    <div id="quiz-result">
+                        <span class="quiz-count">0</span>
+                        <span class="quiz-score">0</span>
+                        <table class="quiz-result">
+                            <thead>
+                                <tr></tr>
+                            </thead>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                        <p class="btn-restart"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="toolbar-mobile">
+                <p class="btn-prev"></p>
+                <p class="btn-next"></p>
+            </div>
+            <div id="toolbar">
+                <div class="timebar-wrapper">
+                    <p class="timebar"><span class="time-range"></span></p>
+                    <time class="currtime" title="현재시간">00:00</time>
+                    <time class="duration" title="전체시간">00:00</time>
+                </div>
+                <div class="speed-wrapper">
+                    <p class="btn-slow"></p>
+                    <span class="currspeed">1.0</span><span>배속</span>
+                    <p class="btn-fast"></p>
+                </div>
+                <p class="btn-play" title="재생"></p>
+                <p class="btn-pause on" title="일시정지"></p>
+                <p class="btn-replay" title="다시보기"></p>
+                <div class="script-wrapper">
+                    <p class="btn-close"></p>
+                    <div class="script-inner">
+                        <span>내레이션</span>
+                        <span></span>
+                    </div>
+                </div>
+                <p class="btn-script"></p>
+                <p class="btn-mute"></p>
+                <div class="volbar"><p class="vol-bar"><span class="vol-range"></span></p></div>
+                <p class="btn-fullscreen"></p>
+                <div class="page-wrapper">
+                    <p class="btn-prev"></p>
+					<span id="curpageTxt" class="currPage"><script>document.write(isPageNum)</script></span>
+		      		<span id="totalpageTxt" class="totalpage"><script>document.write(isTotalNum)</script></span>
+                    <p class="btn-next"></p>
+                </div>
+                <span class="pop-next"></p>
+            </div>
+        </div>
+    </body>
+    <!-- init -->
+    <script src="../common/js/config.js"></script>
+    <script src="../common/js/init.js"></script>
+    <!-- custom -->
+    <script src="../common/js/pageinfo.js"></script>
+    <script src="../common/js/interactive.js"></script>
+    <script src="../common/js/script.js"></script>
+    <!-- common -->
+    <script src="../common/js/video.js"></script>
+    <script src="../common/js/player.js"></script>
+    <script src="../common/js/interactive.js"></script>
+    <!-- custom -->
+    <script src="../common/js/custom.js"></script>
+    <!-- quiz -->
+    <script>
+        /* quiz
+         * type 0 : ox / 1 : 객관식 / 2 : 주관식
+         * question : 문제 {강조}
+         * choice : 객관식 보기
+         * answer : 정답
+         * comment : 해설
+         * choiceposition : 보기 위치
+         */
+        const o = true;
+        const x = false;
+        const quiz = [{
+            type: 0,
+            choiceposition: 360,
+            question: 'A홈쇼핑의 B직원은 C협력사의 상품판매방송 실적이 부진하여, 당초 약속한 횟수의 방송 중 진행되지 않은 나머지 방송에 대해 판매수수료 수취 방식을 정액제로 변경함으로써 C협력사로 하여금 정률제 대비 높은 수수료를 부담하도록 하였다. 판매수수료 수취 방식 변경 과정에서 C협력사의 동의가 있었다면 B직원의 행위는 적법하다.',
+            choice: ['o',
+			'x'
+			],
+            answer: x,
+            comment: '대규모유통업법 제17조 제10호는 “그 밖에 1호부터 제9호까지의 규정에 준하는 것으로서 납품업자등에게 불이익을 주거나 이익을 제공하게 하는 행위”를 금지하면서, TV홈쇼핑사업자의 특정 불공정거래행위에 대한 위법성 심사지침에서 그 예로 판매수수료 수취 방식의 부당한 변경을 들고 있습니다. 대규모유통업법 및 위 심사지침은 납품업자의 동의 여부와 무관하게 불이익 제공행위를 금지하고 있으므로, C협력사의 동의 여부와는 상관 없이 B직원의 행위는 위법합니다.'
+	        },{
+
+            type: 1,
+            choiceposition: 260,
+            question: '다음 중 건강기능식품의 판매방송 시에 금지되는 광고가 아닌 것은 무엇인가?',
+            choice: ['인체적용시험에서는 실제 내장지방 감소 여부에 대해 다루고 있지 않음에도 ‘내장지방 감소가 확인’ 되었다는 광고',
+			'건강기능식품을 판매하면서 갱년기 11가지 증상을 모두 개선시킨다는 광고',
+			'의사/대학교수가 해당 제품의 연구/개발에 직접 참여했음을 홍보하는 광고',
+			'건강기능식품을 판매하면서 게스트의 성공적인 제품 체험기를 통해 제품의 효과를 일반화하는 광고'
+			],
+            answer: 3,
+            comment: '상품소개 및 판매방송 심의에 관한 규정에 따르면 ① 은 허위 사실을 방송한 광고 ② 는 건강기능식품을 의약품으로 오인/혼동케 하는 광고 ④ 는 특정인의 체험을 일반적인 효능인 것처럼 표현한 광고로써 건강기능식품 판매방송 시 금지되는 광고의 종류입니다. ③의 경우 의사/대학교수 등 전문가가 제품의 기능성을 보증하거나 추천하였다는 사실을 광고하는 것은 금지되나, 전문가가 해당 제품의 연구/개발에 직접 참여하였다는 단순 사실을 밝히는 것은 가능합니다.'
+			}];
+    </script>
+    <script src="../common/js/quiz.js"></script>
+</html>

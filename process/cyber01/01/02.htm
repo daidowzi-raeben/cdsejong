@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><title>
+
+</title>
+<link href="../assets/css/style.css" rel="stylesheet" />
+<link type="text/css" rel="stylesheet" href="../skin/01/01.css" />
+<link href="https://fonts.googleapis.com/css?family=Anton|Noto+Serif+SC" rel="stylesheet">
+    <script src="../assets/js/jquery-1.11.3.min.js"></script>
+    <script src="../assets/js/front.js"></script>     
+    <script src="../assets/js/videoblock.js"></script>        
+    <script>
+
+
+        $(document).ready(function () {
+
+
+            $('#Video1').bind('contextmenu', function () { return false; });
+            fnGetFrameMenu();            
+            //Page
+            $("#realContents").removeClass();
+            //$(".pull-left").hide();
+            $("#btnInmunNote").hide();
+
+            //Intro전용
+            if ("ft04" == "ft01")
+            {
+                $(".h1-intro").show();
+                $(".hgroup").hide();
+            }
+            else {
+                $(".hgroup").show();
+
+                $("#realContents").addClass("movie-box");
+
+                if ("movie" == "talk")
+                {
+                    $("#realContents").addClass("movie-box-type2");
+                }
+                
+                $(".h1-intro").hide();
+            }
+
+            if ("ft04" == "ft05") {
+                //$(".pull-left").show();
+            }
+
+            if ("ft04" == "ft06" || "ft04" == "ft07") {
+                $("#sideNav").hide();                
+            }
+
+            //$("#realContents").height(580);
+            
+            var iever = getBrowserVersion();
+            //alert(iever);
+            if (iever == 8 || iever == 7) {
+                parent.window.resizeTo(1020, 790);
+                //$("#realContents").height(500);
+            }
+
+            //선택모듈
+            $('.btn-tool').click(function () {
+                toolheight = $('#tool').height() - 30;
+                if ($(this).hasClass('opened')) {
+                    $(this).removeClass('opened');
+                    $('#tool').css({ top: '-' + toolheight + 'px' });                    
+                }
+                else {
+                    $(this).addClass("opened");
+                    $('#tool').css({ top: '0px' });                    
+                }
+
+                clearTimeout(studyToolTimer);
+                return false;
+            });
+
+            var studyToolTimer = setTimeout(function () {
+                $('.btn-tool').trigger('click');
+            }, 1000);
+
+            //좌측 INDEX
+            $('.btn-index').click(function () {
+                if ($(this).hasClass('opened')) {
+                    $(this).removeClass('opened');
+                    $('#index').css({ left: '-320px' });
+					 $(this).show();
+
+                } else {
+                    $(this).addClass('opened');
+                    $('#index').css({ left: '0px' });
+					 $(this).hide();
+                }
+                clearTimeout(studyIndexTimer);
+                return false;
+            });
+            $('#index').click(function () {
+				$('.btn-index').show();
+	            $('.btn-index').removeClass('opened');
+                 $('#index').css({ left: '-320px' });
+                clearTimeout(studyIndexTimer);
+                return false;
+           });
+
+            var studyIndexTimer = setTimeout(function () {
+                $('.btn-index').trigger('click');
+            }, 1000);
+
+			$('#index').css({ left: '-320px' });
+        });
+
+
+        function fnGetSelectModule()
+        {
+            $.ajax({
+                type: "GET",
+                url: "../menu/selectModule.xml",
+                dataType: "xml",
+                success: function (xml) {
+                    var ul_main = $("<ul>");
+                    liNum = $(xml).find("module").length;
+                    var liWidth = 100 / liNum;
+                    $(xml).find("module").each(function () {
+                        ul_main.append("<li style='width:" + liWidth + "%';><a href=javascript:void('0'); onclick=\"fnPopMenu('" + $(this).attr("cd") + "');\">" + $(this).attr("name") + "</a></li>");
+                    });
+                    ul_main.append("</ul>");
+
+                    $("#selectModule").append(ul_main);
+                }
+            });
+        }
+
+        function fnGetFrameMenu()
+        {
+            $.ajax({
+                type: "GET",
+                url: "../menu/frameMenu_0101.xml",
+                    dataType: "xml",
+                    success: function (xml) {
+                        var ul_main = $("<ol />");
+                        $(xml).find("item").each(function () {
+							if ($(this).attr("parent_menu_no") == "1") {
+									ul_main.append("<li id=" + $(this).attr("menu_no") + " class='active-hr'>" + $(this).attr("frame_nm") + "</li>");
+									}
+								else {
+									ul_main.append("<li id=" + $(this).attr("menu_no") + "><a href='javascript:void(0);' onclick=\"fnMove('" + $(this).attr("frame_no") + "','" + $(this).attr("type_cd") + "');\">" + $(this).attr("frame_nm") + "</a></li>");
+							}
+
+
+
+					});
+                        $("#indexMenu").append("<div class='index-tit'><span class='index-img'><img src='../assets/img/icon-index.png'/></span><span class='index-close'><img src='../assets/img/icon-index-close.png'/></span></div>");
+                        $("#indexMenu").append(ul_main);
+		                $("#1").addClass("active-hd");
+		                $("#3").addClass("active");
+                    }
+            });
+        }
+        function getBrowserVersion() {
+
+            var _ua = navigator.userAgent;
+            var rv = -1;
+
+            //IE 11,10,9,8
+            var trident = _ua.match(/Trident\/(\d.\d)/i);
+            if (trident != null) {
+                if (trident[1] == "7.0") return "11";
+                if (trident[1] == "6.0") return "10";
+                if (trident[1] == "5.0") return "9";
+                if (trident[1] == "4.0") return "8";
+            }
+
+            //IE 7...
+            if (navigator.appName == 'Microsoft Internet Explorer') return "7";
+
+            /*
+    ????????var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+    ????????if(re.exec(_ua) != null) rv = parseFloat(RegExp.$1);
+    ????????if( rv == 7 ) return rv = "IE" + 7; 
+    ????????*/
+
+            //other
+            var agt = _ua.toLowerCase();
+            if (agt.indexOf("chrome") != -1) return 'other';
+            if (agt.indexOf("opera") != -1) return 'other';
+            if (agt.indexOf("staroffice") != -1) return 'other';
+            if (agt.indexOf("webtv") != -1) return 'other';
+            if (agt.indexOf("beonex") != -1) return 'other';
+            if (agt.indexOf("chimera") != -1) return 'other';
+            if (agt.indexOf("netpositive") != -1) return 'other';
+            if (agt.indexOf("phoenix") != -1) return 'other';
+            if (agt.indexOf("firefox") != -1) return 'other';
+            if (agt.indexOf("safari") != -1) return 'other';
+            if (agt.indexOf("skipstone") != -1) return 'other';
+            if (agt.indexOf("netscape") != -1) return 'other';
+            if (agt.indexOf("mozilla/5.0") != -1) return 'other';
+        }
+
+
+
+
+
+
+        function fnHidePopDispSequence() {
+            $("#divPopDisp").html("");
+            $("#divPop").hide();
+            fnMove('3');
+        }
+
+      
+    </script>
+
+    
+    
+    
+</head>
+<body class="body-movie">
+
+        <!-- tool -->
+        <div id="tool">
+            <!-- nav -->
+            <div class="nav">
+                <!-- container -->
+
+                <!-- /container -->
+            </div>
+            <!-- /nav -->
+            <!-- footer -->
+            <div class="footer">
+                                                
+            </div>
+            <!-- /footer -->
+        </div>
+        <!-- /tool -->
+        <!-- index -->
+        <div id="index">            
+            <div id="indexMenu"></div>          
+            <button type="button" class="btn-index opened"><i class="caret"></i></button>            
+        </div>
+        <!-- /index -->
+        <!-- header -->
+        <div id="header">
+            <!-- container -->
+            <div class="container">
+                <h1 class="h1-intro">1. 윤리경영 수준제고의 필요성</h1>
+
+                <div class="hgroup">
+			        <h1>1. 윤리경영 수준제고의 필요성</h1>
+			        <p>아름다운 동행을 위한 윤리경영과 청탁금지법 이해와 실천</p>
+		        </div>
+		        <p class="check-text"><strong>들어가기&nbsp;:&nbsp; </strong>이슈 체크</p>
+
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /header -->
+        <!-- contents -->
+        <div id="realContents">
+            
+    <script>
+        function fnPlayEnd() {
+            var totalFrame = parseInt("17", 10);
+             var nowFrame = parseInt("2", 10);
+
+             if (nowFrame >= totalFrame) {
+                 alert("본 차시의 학습을 다 하셨습니다");
+             }
+             else {
+                 fnMove2('3');
+            }
+        }
+
+    </script>
+
+    <!-- container -->
+	<div class="container">
+        <video id="Video1" controlsList="nodownload" controls="controls" autoplay="autoplay" style="border: 0px solid;" width="100%"   title="아름다운 동행을 위한 윤리경영과 청탁금지법 이해와 실천" onended="fnPlayEnd()" >
+                
+				<source src="../vod/01_02.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                <object id="StudyPlayer1" width="832" height="468" classid="CLSID:22D6F312-B0F6-11D0-94AB-0080C74C7E95" standby="Loading Windows Media Player..." type="application/x-oleobject" style="margin-left:10px;">
+                    <param name="FileName" VALUE="./vod/01_02.mp4">
+                    <param name="ShowControls" VALUE="false">
+                    <param name="ShowStatusBar" value="false">
+                    <param name="ShowDisplay" VALUE="false">
+                    <param name="autostart" VALUE="true">
+                    <param name="enablecontextmenu" VALUE="false">
+                    <param name="wmode" value="Opaque">
+                    <param name="windowlessVideo" value="true">
+                    <embed type="application/x-mplayer2" 
+                        src="../vod/01_02.mp4" 
+                        name="MediaPlayer" 
+                        width="880" 
+                        height="495" 
+                        showcontrols="0" 
+                        showstatusBar="0" 
+                        ShowDisplay="0" 
+                        autostart="1"
+                        enablecontextmenu="0"
+                        wmode="Opaque"
+                        windowlessVideo="1" />   
+                </object>
+            </video>  
+	</div>
+	<!-- /container -->
+
+
+        </div>
+    
+        <!-- /contents -->
+        <!-- footer -->
+        <div id="footer">
+            <!-- container -->
+            <div class="container">
+                
+                <div class="pull-left">                    
+                    
+                </div>
+                        
+                <div class="pull-right">
+                    <a href="javascript:fnMove('1');" class="btn-pager"><i>&lt;</i> prev</a>
+                    <span class="page"><span class="page_point">02</span>/17</span>
+                    <a href="javascript:fnMove('3');" class="btn-pager">next <i>&gt;</i></a>
+                </div>
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /footer -->        
+        <div id="sideNav">
+            <a href="javascript:fnMove('1');" class="btn-pager-prev">&lt;</a>
+            <a href="javascript:fnMove('3');" class="btn-pager-next">&gt;</a>
+        </div>
+
+        <div id="divModal" class="modal" style="display:none;">
+            <div id="divModalContents"></div>
+        </div>
+
+        <div id="divPop" style="display:none;z-index:99999999999;position:absolute; top:0px; left:0px;width:100%; height:100%; text-align:center;">
+            <div class="bg-overlay"></div>
+            <div id="divPopDisp" style="top:20px; width:90%; left:50px; position:absolute; z-index:99999999999; background-color:#fff;"></div>
+        </div>
+
+        <div id="divMModule" style="display:none;z-index:99999999999; position:absolute; top:0px; left:0px;width:98%; height:98%;">
+            <div class="bg-overlay"></div>
+            <iframe id="frmMModule" style="z-index:999999999999;" class="pop"></iframe>
+        </div>
+      
+    </form>
+
+    
+
+</body>
+</html>
+

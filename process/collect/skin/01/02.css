@@ -1,0 +1,81 @@
+/* 주요 버튼색 전체 변경시 주석을 풀어주세요.
+.btn-primary {color:#fff !important; background-color:#c2135d !important; border-color:#c2135d !important;}
+*/
+
+.btn-pager-prev,
+.btn-pager-next {color:#f43400; background-color:#fff;} /* 페이지 좌/우 버튼 글자색, 배경색 */
+
+.body-intro {background-image:url(bg.jpg);} /* 인트로 배경 */
+.body-movie {background-image:url(bg.jpg);} /* 동영상 배경 */
+.body-quiz {background-image:url(bg.jpg);} /* 퀴즈 배경 */
+.body-summary {background-image:url(bg.jpg);} /* 서머리 배경 */
+.body-image {background-image:url(bg.jpg);} /* 이미지 배경 */
+.body-talk {background-image:url(bg.jpg);} /* 의견 배경 */
+.body-next {background-image:url(bg.jpg);} /* 다음차시 배경 */
+
+#tool .nav {background-color:#2c2c2c;} /* 러닝TOOL 배경색 */
+#tool .nav li a {color:#ffffff;} /* 러닝TOOL 메뉴 글자색 */
+#tool .btn-tool {color:#4fc2ff; background-color:#2c2c2c;} /* 러닝TOOL 버튼 글자색, 배경색 */
+#tool .btn-tool .caret {border-top-color:#4fc2ff;} /* 러닝TOOL 버튼 화살표색 */
+#tool .btn-tool.opened .caret {border-bottom-color:#4fc2ff;} /* 러닝TOOL 펼쳐졌을 때 버튼 화살표색 */
+
+#index .btn-index {color:#ffffff; background:#2c2c2c;background-repeat:no-repeat; background-position:center center;background-image:url(icon-index-start.png);} /* INDEX 버튼 글자색, 배경색 */
+#index .btn-index .caret {border-left-color:#ffffff;} /* INDEX 버튼 화살표색 */
+#index .btn-index.opened .caret {border-right-color:#4fc2ff;} /* INDEX 펼쳐졌을 때 버튼 화살표색 */
+#index ol {font-size:18px;} /* INDEX 배경색 */
+#index ol li a {color:#ffffff;margin-top: 8px;} /* INDEX 메뉴 글자색 */
+#index ol li a:hover {color:#4fc2ff;} /* INDEX 메뉴 오버시 글자색 */
+#index ol li.active {color:#4fc2ff;} /* INDEX 메뉴 활성화시 글자색 */
+#index ol li.active a {color:#4fc2ff;} /* INDEX 메뉴 활성화시 글자색 */
+#index ol li.active-hr {color:#fff;padding:0px;margin-top: 50px;margin-bottom: 5px;border-bottom: 1px solid #efefef;font-size: 22px;padding-bottom:5px;} /* INDEX 메뉴 활성화시 글자색 */
+#index ol li.active-hd {color:#4fc2ff;padding:0px;margin-top:50px;margin-bottom: 5px;border-bottom: 1px solid #efefef;font-size: 22px;padding-bottom:5px;} /* INDEX 메뉴 활성화시 글자색 */
+
+.btn-hnote {color:#fff; background:#aa77ff;} /* H노트 글자색, 배경색*/
+
+#footer .pull-left a {color:#fff;} /* 하단 좌측 아이콘메뉴 글자색 */
+#footer .pull-left i {background-color:#2c2c2c;} /* 하단 좌측 아이콘 배경색 */
+#footer .page {color:#fff;} /* 하단 우측 페이지 번호 글자색 */
+.page_point {color:#f43400;} /* 하단 우측 페이지 강조 글자색 */
+.btn-pager {color:#000; background-color:#fff;} /* 하단 우측 이전,다음버튼 글자색, 배경색 */
+
+#header .hgroup h1 {color:#fff;} /* 차시명 글자색 */
+#header .hgroup p {color:#fff; background:url(icon_header-subject.png) no-repeat left center;} /* 과정명 글자색 및 아이콘 */
+#header .check-text {color:#fff;} /* 도움말 글자색 */
+.h1-intro {color:#2c2c2c;} /* 인트로 페이지 제목 글자색 */
+
+
+
+.quiz-box-footer .btn-primary {color:#ffffff; border-color:#2c2c2c; background-color:#2c2c2c;} /* 퀴즈 하단 버튼 글자색, 선색, 배경색 */
+.layer-quiz-mix-result .footer .btn-primary {color:#fff; border-color:#2c2c2c; background-color:#2c2c2c;} /* 퀴즈 결과창 하단 버튼 글자색, 선색, 배경색 */
+
+.summary-box .footer .btn-primary {color:#ffffff; border-color:#2c2c2c; background-color:#2c2c2c;} /* 서머리 하단 버튼 글자색, 선색, 배경색 */
+
+.image-box .pager a {color:#666; border-color:#b5b5b5; background:#fff;} /* image형 pager 기본 글자, 외곽선, 배경 색 */
+.image-box .pager .current {color:#fff; border-color:#005f96; background-color:#005f96;} /* image형 pager 활성화 시 글자, 외곽선, 배경 색 */
+
+.talk-box .body {color:#000;} /* 의견 내용 글자색 */
+.talk-box .comment {background-color:#adadad;} /* 의견 작성 박스 배경색 */
+.talk-box .comment dt {color:#000;} /* 의견 작성 박스 제목 글자색 */
+.talk-box .footer .btn {color:#ffffff; border-color:#2c2c2c; background-color:#2c2c2c;} /* 의견 하단 버튼 글자, 외곽선, 배경색*/
+
+
+.nextinfo-box-header {color:#000;} /* 현재 학습한 차시 글자색 */
+.nextinfo-box-body .body .text-sm {color:#30a3df;} /* 다음 시간에는 글자색 */
+.nextinfo-box-body .body .text-lg {color:#213243;} /* 다음 차시 글자색 */
+
+.nextinfo-box-body .btn-box span{width: auto;}
+
+.nextinfo-box-body .this_btn,
+.nextinfo-box-body .next_btn {display:inline-block;}
+.nextinfo-box-body .this_btn a,
+.nextinfo-box-body .next_btn a{color:#ffffff;}
+
+.nextinfo-box-body .this_btn{background-color:#2650a4;margin:5px;}
+.nextinfo-box-body .next_btn{background-color:#b43333;margin:5px;}
+
+
+.nextinfo-box-body .this_btn i,
+.nextinfo-box-body .next_btn i {display:inline-block; width:40px; height:30px; vertical-align:middle; background-repeat:no-repeat; background-position:center center;}
+.icon-re {background-image:url(icon-last-re.png);}
+.icon-next {background-image:url(icon-last-next.png);}
+

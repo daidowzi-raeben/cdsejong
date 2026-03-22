@@ -1,0 +1,421 @@
+#think_question{
+	display:none;
+	position:absolute;
+	left:370px;
+	top:85px;
+	width:156px;
+	height:153px;
+	
+	background: url(../images/think_queBG.png) no-repeat 0px 0px;
+
+	/*
+	color:#036df3;
+	font-family:"GmarketSansBold";
+	font-size:133px;
+	line-height:150px;
+	background-image: linear-gradient(to right, red, yellow);
+
+	background: linear-gradient(to right, #036df3 0%, #adadfe 100%);
+    background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	*/
+}
+
+#think_queBG{
+	display:none;
+	position:absolute;
+	top:159px;
+	left:162px;
+	width:18px;
+	height:18px;
+	background-color: #8bc3f3;
+	border-radius: 9px;
+
+	/*
+	color:#8bc3f3;
+	font-family:"forturn";
+	font-size:50px;
+	transform:rotate(-10deg);
+	-webkit-transform:rotate(-10deg);
+	*/
+}
+
+#think_queText{
+	display:none;
+	position:absolute;
+	width:760px;
+	height:auto;
+	left:532px;
+	top:94px;
+	/*border: 1px solid black;*/
+	
+	color:#33429e;
+	font-family:"KATURI";
+	font-size:38px;
+	line-height:39px;
+	/*text-align:center;*/
+	
+	transform: scale(0.95, 1);
+	
+	/*border: 1px solid red;*/
+
+	/*text-shadow: -1px -1px 1px #ffffff, 1px 1px 1px #ffffff, 2px 2px 1px #ffffff, 3px 3px 1px #ffffff;*/
+
+}
+
+#thinkTextBox{
+	display:none;
+	position:absolute;
+	width:738px;
+	height:328px;
+	left:474px;
+	top:280px;
+	/*background: url(../images/think_textBG.png) no-repeat 0px 0px;*/
+	/*border: 5px solid #b5b5b5;*/
+	border: 5px solid rgba(181, 181, 181, .4);
+
+	background-color:#fff;
+	
+
+	/*filter: drop-shadow(3px 3px 5px #6a6a6a);*/
+}
+
+#thinkTextArea{
+	display:none;
+	position:absolute;
+	padding: 10px;
+	width:716px;
+	height:306px;
+	left:479px;
+	top:285px;
+	resize: none;
+	/*border:none;*/
+	border: none;
+	outline:none;
+	border: 1px solid #000000;
+
+	font-size: 22px;
+	line-height: 30px;
+	color:#1b1b1b;
+	letter-spacing:-1px;
+	background-color:transparent;
+	font-family:"SCDream5";
+	white-space: pre-wrap;	
+    
+    
+	/*overflow: hidden;*/
+	
+	
+	/*
+	font-size: 24px;
+	font-family:"payb";
+	color:#373638;
+	letter-spacing:-1px;
+	
+	
+	white-space: pre-wrap;
+
+	background-image:    
+    background-attachment: local;
+    background-image:
+        linear-gradient(to right, #fbd55a 10px, transparent 10px),
+        linear-gradient(to left, #fbd55a 10px, transparent 10px),
+        repeating-linear-gradient(#fbd55a, #fbd55a 42px, #293479 42px, #293479 31px, #fbd55a 43px);
+    line-height: 42px;
+    padding: 4px 10px;
+	
+	*/
+
+	/*
+	
+	background-color:transparent;
+	
+	
+	
+	overflow: hidden;
+	
+	
+
+	
+	*/
+}
+
+
+#thinkCtn{
+	position:absolute;
+	width:1280px;
+	height:720px;
+	left:0px;
+	top:0px;
+	/*background: url(../images/thinkBG.png) no-repeat 0px 0px;*/
+}
+
+#think_wrongPop{
+	display:none;
+	position:absolute;
+	left:0px;
+}
+
+#think_wrongPop_bg{
+	position:absolute;
+	width:1280px;
+	height:720px;
+	left:0px;
+	top:0px;
+	opacity:0.3;
+	background-color: #000000;
+}
+
+#think_wrongPop_icon{
+	position:absolute;
+	width:300px;
+	height:300px;
+	left:490px;
+	top:210px;
+	background: url(../images/alert_bg.png) no-repeat 0px 0px;
+}
+
+#think_wrongPop_txt1{
+	position:absolute;
+	left:520px;
+	top:330px;
+	width:241px;
+
+	font-size: 35px;
+	line-height:40px;
+	text-align:center;
+	font-family:"KATURI";
+	color:#ffffff;
+	letter-spacing:-1px;
+	/*border: 1px solid black;*/
+}
+
+
+#think_wrongPop_txt2{
+	position:absolute;
+	left:520px;
+	top:420px;
+	width:241px;
+	height:80px;
+
+	font-size: 20px;
+	font-family:"SCDream5";
+	color:#ffffff;
+	letter-spacing:-1px;
+	text-align:center;
+
+	/*border: 1px solid black;*/
+}
+
+#think_opinion_wrongPop{
+	display:none;
+	position:absolute;
+	left:0px;
+}
+
+#think_opinion_wrongPop_bg{
+	position:absolute;
+	width:1280px;
+	height:720px;
+	left:0px;
+	top:0px;
+	opacity:0.3;
+	background-color: #000000;
+}
+
+#think_opinion_wrongPop_icon{
+	position:absolute;
+	width:300px;
+	height:300px;
+	left:490px;
+	top:210px;
+	background: url(../images/alert_bg.png) no-repeat 0px 0px;
+}
+
+#think_opinion_wrongPop_txt1{
+	position:absolute;
+	left:520px;
+	top:330px;
+	width:241px;
+
+	font-size: 30px;
+	line-height:32px;
+	text-align:center;
+	font-family:"KATURI";
+	color:#ffffff;
+	letter-spacing:-1px;
+	/*border: 1px solid black;*/
+}
+
+
+#think_opinion_wrongPop_txt2{
+	position:absolute;
+	left:430px;
+	top:360px;
+	width:241px;
+	height:80px;
+
+	font-size: 20px;
+	font-family:"SCDream5";
+	color:#ffffff;
+	letter-spacing:-1px;
+	text-align:center;
+
+	/*border: 1px solid black;*/
+}
+
+
+#think_resultPop{
+	display:none;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+
+#think_resultPop_bg{
+	position:absolute;
+	width:1280px;
+	height:720px;
+	left:0px;
+	top:0px;
+	opacity:0.3;
+	background-color: #000000;
+}
+
+#think_resultPop_icon{
+	position:absolute;
+	width:300px;
+	height:300px;
+	left:490px;
+	top:210px;
+	background: url(../images/alert_bg.png) no-repeat 0px 0px;
+}
+
+#think_resultPop_txt1{
+	position:absolute;
+	left:520px;
+	top:340px;
+	width:241px;
+
+	font-size: 40px;
+	line-height:40px;
+	text-align:center;
+	font-family:"KATURI";
+	color:#ffffff;
+	letter-spacing:-1px;
+	/*border: 1px solid black;*/
+}
+
+#think_resultPop_txt2{
+	position:absolute;
+	left:520px;
+	top:390px;
+	width:241px;
+	height:80px;
+
+	font-size: 20px;
+	font-family:"SCDream5";
+	color:#ffffff;
+	letter-spacing:-1px;
+	text-align:center;
+
+	/*border: 1px solid black;*/
+}
+
+
+
+
+#think_saveBtn{
+	display:none;
+	cursor: pointer;
+	position:absolute;
+	width:180px;
+	height:50px;
+	top:630px;
+	background: url(../images/think_saveBtn.png) no-repeat 0px 0px;
+	/*border: 1px solid black;*/
+	
+	/*
+	text-align:center;
+	color:#ffffff;
+	font-family:"GmarketSansMedium";
+	font-size:22px;
+	letter-spacing:-1px;
+	line-height:62px;
+	*/
+}
+
+#think_teacherBtn{
+	display:none;
+	cursor: pointer;
+	position:absolute;
+	width:210px;
+	height:50px;
+	top:630px;
+	background: url(../images/think_teacherBtn.png) no-repeat 0px 0px;
+	/*border: 1px solid black;*/
+	
+	/*
+	text-align:center;
+	color:#ffffff;
+	font-family:"GmarketSansMedium";
+	font-size:22px;
+	letter-spacing:-1px;
+	line-height:62px;
+	*/
+}
+
+
+#think_opinionBtn{
+	display:none;
+	cursor: pointer;
+	position:absolute;
+	width:210px;
+	height:50px;
+	top:630px;
+	background: url(../images/think_opinionBtn.png) no-repeat 0px 0px;
+	/*border: 1px solid black;*/
+	
+	/*
+	text-align:center;
+	color:#ffffff;
+	font-family:"GmarketSansMedium";
+	font-size:22px;
+	letter-spacing:-1px;
+	line-height:62px;
+	*/
+}
+
+
+#think_opinion_popup{
+	display: none;
+	position:absolute;
+	width:1280px;
+	height:720px;
+	left:0px;
+	top:0px;
+	background: url(../images/think_opinion_popBG.png) no-repeat 0px 0px;
+}
+
+#think_opinion_popup_closeBtn{
+	cursor: pointer;
+	position:absolute;
+	width:30px;
+	height:30px;
+	left:328px;
+	top:68px;
+	background: url(../images/think_opinion_popup_closeBtn.png) no-repeat 0px 0px;
+}
+
+#think_opinion_popup_contents{
+	position:absolute;
+	width:1130px;
+	height:460px;
+	left:80px;
+	top:134px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	/*border: 1px solid red;*/
+}
+

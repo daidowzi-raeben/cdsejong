@@ -1,0 +1,353 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><title>
+
+</title>
+<link href="../assets/css/style.css" rel="stylesheet" />
+<link type="text/css" rel="stylesheet" href="../skin/01/04.css" />
+<link href="https://fonts.googleapis.com/css?family=Anton|Noto+Serif+SC" rel="stylesheet">
+    <script src="../assets/js/jquery-1.11.3.min.js"></script>
+    <script src="../assets/js/front.js"></script>        
+    <script>
+        $(document).ready(function () {
+
+            $('#Video1').bind('contextmenu', function () { return false; });
+            fnGetFrameMenu();            
+            //Page
+            $("#realContents").removeClass();
+            //$(".pull-left").hide();
+            $("#btnInmunNote").hide();
+
+            //Intro전용
+            if ("ft08" == "ft01")
+            {
+                $(".h1-intro").show();
+                $(".hgroup").hide();
+            }
+            else {
+                $(".hgroup").show();
+
+                $("#realContents").addClass("summary-box");
+
+                if ("summary" == "talk")
+                {
+                    $("#realContents").addClass("summary-box-type2");
+                }
+                
+                $(".h1-intro").hide();
+            }
+
+            if ("ft08" == "ft05") {
+                //$(".pull-left").show();
+            }
+
+            if ("ft08" == "ft06" || "ft08" == "ft07") {
+                $("#sideNav").hide();                
+            }
+
+            //$("#realContents").height(580);
+            
+            var iever = getBrowserVersion();
+            //alert(iever);
+            if (iever == 8 || iever == 7) {
+                parent.window.resizeTo(1020, 790);
+                //$("#realContents").height(500);
+            }
+
+            //선택모듈
+            $('.btn-tool').click(function () {
+                toolheight = $('#tool').height() - 30;
+                if ($(this).hasClass('opened')) {
+                    $(this).removeClass('opened');
+                    $('#tool').css({ top: '-' + toolheight + 'px' });                    
+                }
+                else {
+                    $(this).addClass("opened");
+                    $('#tool').css({ top: '0px' });                    
+                }
+
+                clearTimeout(studyToolTimer);
+                return false;
+            });
+
+            var studyToolTimer = setTimeout(function () {
+                $('.btn-tool').trigger('click');
+            }, 1000);
+
+            //좌측 INDEX
+            $('.btn-index').click(function () {
+                if ($(this).hasClass('opened')) {
+                    $(this).removeClass('opened');
+                    $('#index').css({ left: '-320px' });
+					 $(this).show();
+
+                } else {
+                    $(this).addClass('opened');
+                    $('#index').css({ left: '0px' });
+					 $(this).hide();
+                }
+                clearTimeout(studyIndexTimer);
+                return false;
+            });
+            $('#index').click(function () {
+				$('.btn-index').show();
+	            $('.btn-index').removeClass('opened');
+                 $('#index').css({ left: '-320px' });
+                clearTimeout(studyIndexTimer);
+                return false;
+           });
+
+            var studyIndexTimer = setTimeout(function () {
+                $('.btn-index').trigger('click');
+            }, 1000);
+        });
+
+
+        function fnGetSelectModule()
+        {
+            $.ajax({
+                type: "GET",
+                url: "../menu/selectModule.xml",
+                dataType: "xml",
+                success: function (xml) {
+                    var ul_main = $("<ul>");
+                    liNum = $(xml).find("module").length;
+                    var liWidth = 100 / liNum;
+                    $(xml).find("module").each(function () {
+                        ul_main.append("<li style='width:" + liWidth + "%';><a href=javascript:void('0'); onclick=\"fnPopMenu('" + $(this).attr("cd") + "');\">" + $(this).attr("name") + "</a></li>");
+                    });
+                    ul_main.append("</ul>");
+
+                    $("#selectModule").append(ul_main);
+                }
+            });
+        }
+
+        function fnGetFrameMenu()
+        {
+            $.ajax({
+                type: "GET",
+                url: "../menu/frameMenu_0401.xml",
+                    dataType: "xml",
+                    success: function (xml) {
+                        var ul_main = $("<ol />");
+                        $(xml).find("item").each(function () {
+							if ($(this).attr("parent_menu_no") == "1") {
+									ul_main.append("<li id=" + $(this).attr("menu_no") + " class='active-hr'>" + $(this).attr("frame_nm") + "</li>");
+									}
+								else {
+									ul_main.append("<li id=" + $(this).attr("menu_no") + "><a href='javascript:void(0);' onclick=\"fnMove('" + $(this).attr("frame_no") + "','" + $(this).attr("type_cd") + "');\">" + $(this).attr("frame_nm") + "</a></li>");
+							}
+
+
+
+					});
+                        $("#indexMenu").append("<div class='index-tit'><span class='index-img'><img src='../assets/img/icon-index.png'/></span><span class='index-close'><img src='../assets/img/icon-index-close.png'/></span></div>");
+                        $("#indexMenu").append(ul_main);
+		                $("#8").addClass("active-hd");
+		                $("#10").addClass("active");
+                    }
+            });
+        }
+        function getBrowserVersion() {
+
+            var _ua = navigator.userAgent;
+            var rv = -1;
+
+            //IE 11,10,9,8
+            var trident = _ua.match(/Trident\/(\d.\d)/i);
+            if (trident != null) {
+                if (trident[1] == "7.0") return "11";
+                if (trident[1] == "6.0") return "10";
+                if (trident[1] == "5.0") return "9";
+                if (trident[1] == "4.0") return "8";
+            }
+
+            //IE 7...
+            if (navigator.appName == 'Microsoft Internet Explorer') return "7";
+
+            /*
+    ????????var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+    ????????if(re.exec(_ua) != null) rv = parseFloat(RegExp.$1);
+    ????????if( rv == 7 ) return rv = "IE" + 7; 
+    ????????*/
+
+            //other
+            var agt = _ua.toLowerCase();
+            if (agt.indexOf("chrome") != -1) return 'other';
+            if (agt.indexOf("opera") != -1) return 'other';
+            if (agt.indexOf("staroffice") != -1) return 'other';
+            if (agt.indexOf("webtv") != -1) return 'other';
+            if (agt.indexOf("beonex") != -1) return 'other';
+            if (agt.indexOf("chimera") != -1) return 'other';
+            if (agt.indexOf("netpositive") != -1) return 'other';
+            if (agt.indexOf("phoenix") != -1) return 'other';
+            if (agt.indexOf("firefox") != -1) return 'other';
+            if (agt.indexOf("safari") != -1) return 'other';
+            if (agt.indexOf("skipstone") != -1) return 'other';
+            if (agt.indexOf("netscape") != -1) return 'other';
+            if (agt.indexOf("mozilla/5.0") != -1) return 'other';
+        }
+
+        function fnHidePopDispSequence() {
+            $("#divPopDisp").html("");
+            $("#divPop").hide();
+            fnMove('4');
+        }
+
+        function fnHidePopDisp_play() {
+            $("#divPopDisp").html("");
+            $("#divPop").hide();
+            fnYoutubeClosePlay();
+        }
+
+
+
+        
+    </script>
+
+        
+    </script>
+
+    
+    
+    
+</head>
+<body class="body-summary">
+    <form name="form1" method="post" action="/(X(1)S(1flou12a0lvbhj45tah1hvmo))/Study/Module/Output/Main.aspx?courseCd=01&amp;chapterNo=0101&amp;frameNo=9&amp;frameType=ft08&amp;saveType=save&amp;AspxAutoDetectCookieSupport=1" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTgzMjQyMDE0MA9kFgICAQ9kFgJmDxYCHgRUZXh0BZUGDQogICAgPHNjcmlwdD4gICAgICAgIA0KICAgICAgICBmdW5jdGlvbiBmblByaW50KCkNCiAgICAgICAgew0KICAgICAgICAgICAgDQogICAgICAgICAgICAgICAgYWxlcnQoJ0xNU+yXkOyEnCDtmZXsnbjtlaAg7IiYIOyeiOyKteuLiOuLpC4nKTsNCiAgICAgICAgICAgIA0KICAgICAgICB9DQoNCiAgICA8L3NjcmlwdD4NCiAgICA8IS0tIGNvbnRhaW5lciAtLT4NCgk8ZGl2IGNsYXNzPSJjb250YWluZXIiPg0KCQk8IS0tIHN1bW1hcnktYm94LWJvZHkgLS0+DQoJCTxkaXYgY2xhc3M9InN1bW1hcnktYm94LWJvZHkiPg0KCQkJPCEtLTxoMz4xLiDsoITrnrXqs7wg7KCE65617KCBIOydmOyCrOqysOyglTwvaDM+LS0+DQoJCQk8ZGl2IGNsYXNzPSJpbWFnZSI+PGltZyBzcmM9Imh0dHA6Ly9pbWcuaHVuZXQuY28ua3IvZmlsZXMvU3R1ZHkvU2tpbi9ITFNDMjM0MDMvc3VtbWFyeV8wMS5qcGciPjxiciAvPg0KCQkJPGRpdiBjbGFzcz0idGFnIj4NCgkJCQk8aT5UQUc8L2k+DQoJCQkJ7KCV7ZmV7ZWcIOyLnOyekeydhCDsnITtlZwg7ZSE66CI7KCg7YWM7J207IWYIOuUlOyekOyduOydmCDsnbTtlbQNCgkJCTwvZGl2Pg0KCQkJPGRpdiBjbGFzcz0iZm9vdGVyIj4NCgkJCQk8YSBocmVmPSJqYXZhc2NyaXB0OnZvaWQoMCk7IiBvbmNsaWNrPSJmblByaW50KCk7IiBjbGFzcz0iYnRuIGJ0bi1sZyBidG4tcHJpbWFyeSI+7J247IeE7ZWY6riwPC9hPg0KCQkJPC9kaXY+DQoJCTwvZGl2Pg0KCQk8IS0tIC9zdW1tYXJ5LWJveC1ib2R5IC0tPg0KCTwvZGl2Pg0KCTwhLS0gL2NvbnRhaW5lciAtLT4NZGSHRyxInGhx44gBFiEu8Ypr2Hupsg==" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="07E15A02" />
+        <!-- tool -->
+        <div id="tool">
+            <!-- nav -->
+            <div class="nav">
+                <!-- container -->
+
+                <!-- /container -->
+            </div>
+            <!-- /nav -->
+            <!-- footer -->
+            <div class="footer">
+                                                
+            </div>
+            <!-- /footer -->
+        </div>
+        <!-- /tool -->
+        <!-- index -->
+        <div id="index">            
+            <div id="indexMenu"></div>          
+            <button type="button" class="btn-index opened"><i class="caret"></i></button>            
+        </div>
+        <!-- /index -->
+        <!-- header -->
+        <div id="header">
+            <!-- container -->
+            <div class="container">
+                <h1 class="h1-intro">4. 윤리경영을 위한 임직원 실천과제</h1>
+
+                <div class="hgroup">
+			        <h1>4. 윤리경영을 위한 임직원 실천과제</h1>
+			        <p>아름다운 동행을 위한 윤리경영과 청탁금지법 이해와 실천</p>
+		        </div>
+		        <p class="check-text"><strong>적용하기&nbsp;:&nbsp; </strong>Summary</p>
+
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /header -->
+        <!-- contents -->
+        <div id="realContents">
+            
+    <script>        
+        function fnPrint()
+        {
+            
+			var url = "../skin/01/print4.htm"
+			var win = window.open("", "print", ' width=970,height=510');
+			win.location.href = url
+			win.focus();     
+            
+        }
+
+    </script>
+    <!-- container -->
+
+	<div class="container">
+		<!-- summary-box-body -->
+		<div class="summary-box-tit">이번 시간에 학습한 주요 내용을 다시 한번 확인해 보세요.</div>			
+		<div class="summary-box-body">
+			<h3><span class="box-num">1</span> 윤리규정의 숙지</h3>
+			<ul>
+				<li>아무리 회사관행, 또는 자신의 지식, 판단이나 경험으로 바람직하다고 여긴 사항이라도 법이나 회사의 명시적 윤리규정에 우선할 수는 없음</li>
+				<li>윤리규정은  임직원으로 하여금 올바른 의사결정을 가능하게 해주고 판단의 근거로 작용함</li>
+				<li>임직원은 최소한 협력업체와의 거래관계와 관련하여 자사의 윤리규정은 물론 청탁금지법과 행동강령을 숙지할 필요가 큼</li>
+			</ul>
+			<h3><span class="box-num">2</span> 윤리적 조직문화 구축을 위해 부정행위를 유발하는 언어사용 지양</h3>
+			<ul>
+				<li>‘말이 씨가 된다’는 속담처럼 긍정적이든 부정적이든 무의식적으로 사용하는 언어는 자기 암시 뿐 아니라 본인은 물론 동료에게도 전염</li>
+				<li>부패를 조장하고 윤리적 의사결정을 마비시키는 언어는 사용 지양</li>
+			</ul>
+			<h3><span class="box-num">3</span> 사소한 업무도 철저히 수행 </h3>
+			<ul>
+				<li>윤리경영 실천은 거창한 것에서 시작되지 않고 오히려 현장에서의 업무 마무리, 말 한마디와 같은 사소한 것에서 시작</li>
+				<li>디테일한 부분까지 윤리적 태도로 임할 때 품질과 서비스의 질을 향상시켜 거래관계 발전은 물론 안전 등 중요한 위기를 예방할 수 있음</li>
+			</ul>
+
+		</div>
+		<!-- /summary-box-body -->
+	</div>
+	<!-- /container -->
+
+        </div>
+    
+        <!-- /contents -->
+        <!-- footer -->
+        <div id="footer">
+            <!-- container -->
+            <div class="container">
+                
+                <div class="pull-left">                    
+        
+                        <a href="javascript:void(0);" onclick="return fnViewPopDisp('FileDown');"><i class="icon-down"></i> 다운로드</a>
+                        <a href="javascript:void(0);" onclick="fnPrint();"><i class="icon-print"></i> 프린트</a>
+
+                </div>
+                        
+                <div class="pull-right">
+                    <a href="javascript:fnMove('6');" class="btn-pager"><i>&lt;</i> prev</a>
+                    <span class="page"><span class="page_point">07</span>/08</span>
+                    <a href="javascript:fnMove2('8');" class="btn-pager">next <i>&gt;</i></a>
+                </div>
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /footer -->        
+        <div id="sideNav">
+            <a href="javascript:fnMove('6');" class="btn-pager-prev">&lt;</a>
+            <a href="javascript:fnMove2('8');" class="btn-pager-next">&gt;</a>
+        </div>
+
+        <div id="divModal" class="modal" style="display:none;">
+            <div id="divModalContents"></div>
+        </div>
+
+        <div id="divPop" style="display:none;z-index:99999999999;position:absolute; top:0px; left:0px;width:100%; height:100%; text-align:center;">
+            <div class="bg-overlay"></div>
+            <div id="divPopDisp" style="top:20px; width:90%; left:50px; position:absolute; z-index:99999999999; background-color:#fff;"></div>
+        </div>
+
+        <div id="divMModule" style="display:none;z-index:99999999999; position:absolute; top:0px; left:0px;width:98%; height:98%;">
+            <div class="bg-overlay"></div>
+            <iframe id="frmMModule" style="z-index:999999999999;" class="pop"></iframe>
+        </div>
+      
+    </form>
+
+    
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+</title>
+<link href="../assets/css/style.css" rel="stylesheet" />
+<link type="text/css" rel="stylesheet" href="../skin/01/10.css" />
+<link type="text/css" rel="stylesheet" href="quiz/css/afterquiz.css" />
+<link href="https://fonts.googleapis.com/css?family=Anton|Noto+Serif+SC" rel="stylesheet">
+    <script src="../assets/js/jquery-1.11.3.min.js"></script>
+    <script src="../assets/js/front.js"></script>
+	<script type="text/javascript" src="quiz/script/quiz-tools.js"></script>	
+    <script>
+        $(document).ready(function () {
+
+            $('#Video1').bind('contextmenu', function () { return false; });
+            fnGetFrameMenu();            
+            //Page
+            $("#realContents").removeClass();
+            //$(".pull-left").hide();
+            $("#btnInmunNote").hide();
+
+            //Intro전용
+            if ("ft07" == "ft01")
+            {
+                $(".h1-intro").show();
+                $(".hgroup").hide();
+            }
+            else {
+                $(".hgroup").show();
+
+                $("#realContents").addClass("quiz-box");
+
+                if ("quiz" == "talk")
+                {
+                    $("#realContents").addClass("quiz-box-type2");
+                }
+                
+                $(".h1-intro").hide();
+            }
+
+            if ("ft07" == "ft05") {
+                //$(".pull-left").show();
+            }
+
+            if ("ft07" == "ft06" || "ft07" == "ft07") {
+                $("#sideNav").hide();                
+            }
+
+            //$("#realContents").height(580);
+            
+            var iever = getBrowserVersion();
+            //alert(iever);
+            if (iever == 8 || iever == 7) {
+                parent.window.resizeTo(1020, 790);
+                //$("#realContents").height(500);
+            }
+
+            //선택모듈
+            $('.btn-tool').click(function () {
+                toolheight = $('#tool').height() - 30;
+                if ($(this).hasClass('opened')) {
+                    $(this).removeClass('opened');
+                    $('#tool').css({ top: '-' + toolheight + 'px' });                    
+                }
+                else {
+                    $(this).addClass("opened");
+                    $('#tool').css({ top: '0px' });                    
+                }
+
+                clearTimeout(studyToolTimer);
+                return false;
+            });
+
+            var studyToolTimer = setTimeout(function () {
+                $('.btn-tool').trigger('click');
+            }, 1000);
+
+            //좌측 INDEX
+            $('.btn-index').click(function () {
+                if ($(this).hasClass('opened')) {
+                    $(this).removeClass('opened');
+                    $('#index').css({ left: '-320px' });
+					 $(this).show();
+
+                } else {
+                    $(this).addClass('opened');
+                    $('#index').css({ left: '0px' });
+					 $(this).hide();
+                }
+                clearTimeout(studyIndexTimer);
+                return false;
+            });
+            $('#index').click(function () {
+				$('.btn-index').show();
+	            $('.btn-index').removeClass('opened');
+                 $('#index').css({ left: '-320px' });
+                clearTimeout(studyIndexTimer);
+                return false;
+           });
+
+            var studyIndexTimer = setTimeout(function () {
+                $('.btn-index').trigger('click');
+            }, 1000);
+        });
+
+
+
+        function fnGetFrameMenu()
+        {
+            $.ajax({
+                type: "GET",
+                url: "../menu/frameMenu_1001.xml",
+                    dataType: "xml",
+                    success: function (xml) {
+                        var ul_main = $("<ol />");
+                        $(xml).find("item").each(function () {
+							if ($(this).attr("parent_menu_no") == "1") {
+									ul_main.append("<li id=" + $(this).attr("menu_no") + " class='active-hr'>" + $(this).attr("frame_nm") + "</li>");
+									}
+								else {
+									ul_main.append("<li id=" + $(this).attr("menu_no") + "><a href='javascript:void(0);' onclick=\"fnMove('" + $(this).attr("frame_no") + "','" + $(this).attr("type_cd") + "');\">" + $(this).attr("frame_nm") + "</a></li>");
+							}
+
+
+
+					});
+                        $("#indexMenu").append("<div class='index-tit'><span class='index-img'><img src='../assets/img/icon-index.png'/></span><span class='index-close'><img src='../assets/img/icon-index-close.png'/></span></div>");
+                        $("#indexMenu").append(ul_main);
+		                $("#6").addClass("active-hd");
+		                $("#7").addClass("active");
+                    }
+            });
+        }
+
+        function getBrowserVersion() {
+
+            var _ua = navigator.userAgent;
+            var rv = -1;
+
+            //IE 11,10,9,8
+            var trident = _ua.match(/Trident\/(\d.\d)/i);
+            if (trident != null) {
+                if (trident[1] == "7.0") return "11";
+                if (trident[1] == "6.0") return "10";
+                if (trident[1] == "5.0") return "9";
+                if (trident[1] == "4.0") return "8";
+            }
+
+            //IE 7...
+            if (navigator.appName == 'Microsoft Internet Explorer') return "7";
+
+            /*
+    ????????var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+    ????????if(re.exec(_ua) != null) rv = parseFloat(RegExp.$1);
+    ????????if( rv == 7 ) return rv = "IE" + 7; 
+    ????????*/
+
+            //other
+            var agt = _ua.toLowerCase();
+            if (agt.indexOf("chrome") != -1) return 'other';
+            if (agt.indexOf("opera") != -1) return 'other';
+            if (agt.indexOf("staroffice") != -1) return 'other';
+            if (agt.indexOf("webtv") != -1) return 'other';
+            if (agt.indexOf("beonex") != -1) return 'other';
+            if (agt.indexOf("chimera") != -1) return 'other';
+            if (agt.indexOf("netpositive") != -1) return 'other';
+            if (agt.indexOf("phoenix") != -1) return 'other';
+            if (agt.indexOf("firefox") != -1) return 'other';
+            if (agt.indexOf("safari") != -1) return 'other';
+            if (agt.indexOf("skipstone") != -1) return 'other';
+            if (agt.indexOf("netscape") != -1) return 'other';
+            if (agt.indexOf("mozilla/5.0") != -1) return 'other';
+        }
+
+
+        function fnHidePopDispSequence() {
+            $("#divPopDisp").html("");
+            $("#divPop").hide();
+            fnMove('4');
+        }
+
+        function fnHidePopDisp_play() {
+            $("#divPopDisp").html("");
+            $("#divPop").hide();
+            fnYoutubeClosePlay();
+        }
+
+
+
+        
+    </script>
+
+
+    
+    
+    
+</head>
+<body class="body-quiz">
+
+        <!-- tool -->
+        <div id="tool">
+            <!-- nav -->
+            <div class="nav">
+                <!-- container -->
+
+                <!-- /container -->
+            </div>
+            <!-- /nav -->
+            <!-- footer -->
+            <div class="footer">
+                                                
+            </div>
+            <!-- /footer -->
+        </div>
+        <!-- /tool -->
+        <!-- index -->
+        <div id="index">            
+            <div id="indexMenu"></div>          
+            <button type="button" class="btn-index opened"><i class="caret"></i></button>            
+        </div>
+        <!-- /index -->
+        <!-- header -->
+        <div id="header">
+            <!-- container -->
+            <div class="container">
+                <h1 class="h1-intro">10. 청탁금지법 준수를 위한 실천 과제</h1>
+
+                <div class="hgroup">
+			        <h1>10. 청탁금지법 준수를 위한 실천 과제</h1>
+			        <p>아름다운 동행을 위한 윤리경영과 청탁금지법 이해와 실천</p>
+		        </div>
+		        <p class="check-text"><strong>적용하기&nbsp;:&nbsp; </strong>Quiz</p>
+
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /header -->
+        <!-- contents -->
+        <div id="realContents">
+            
+
+    <!-- container -->
+	<div class="container-quiz">
+
+		<!-- quiz-box-body -->
+			<!-- 퀴즈 --> 
+			<div class="after_quiz">
+				<div id="quiz1" ></div>
+			</div>
+			<!--// 퀴즈 -->
+		<!-- /quiz-box-body -->
+	</div>
+	<!-- /container -->
+    <!-- quiz-box-footer -->
+	<div class="quiz-box-footer">
+		
+	</div>
+	<!-- /quiz-box-footer -->
+
+    <a href="javascript:fnMove('22')" class="btn-pager-prev">&lt;</a>
+    <a href="javascript:fnMove('24')" class="btn-pager-next">&gt;</a>
+  
+
+        </div>
+    
+        <!-- /contents -->
+        <!-- footer -->
+        <div id="footer">
+            <!-- container -->
+            <div class="container">
+                
+                <div class="pull-left">                    
+         
+                </div>
+                        
+                <div class="pull-right">
+                    <a href="javascript:fnMove('3');" class="btn-pager"><i>&lt;</i> prev</a>
+                    <span class="page"><span class="page_point">04</span>/06</span>
+                    <a href="javascript:fnMove('5');" class="btn-pager">next <i>&gt;</i></a>
+                </div>
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /footer -->        
+        <div id="sideNav">
+            <a href="javascript:fnMove('3');" class="btn-pager-prev">&lt;</a>
+            <a href="javascript:fnMove('5');" class="btn-pager-next">&gt;</a>
+        </div>
+
+   
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+		var text = [
+			{
+				question : '법인 소속 종업원이 업무와 관련하여 부정청탁을 한 경우 직접 청탁한 것이므로 제재를 받지 않는다.',
+				example : '',
+				explain : '법인 소속 종업원이 업무와 관련하여 부정청탁을 한 경우 제3자인 법인을 위한 부정청탁이므로 부정청탁을 한 종업원은 2천만원 이하의 과태료 부과대상에 해당하고 법인도 위반행위를 방지하기 위한 상당한 주의･감독을 다하지 않았다면 법 제24조의 양벌규정에 따라 과태료 부과대상에 해당합니다.'
+			},
+			{
+				question : '수수 금지 금품등을 제공하겠다는 약속을 하는 것도 위반이다. ',
+				example : '',
+				explain : '공직자등은 금지된 금품등을 수수하는 것 뿐 만 아니라 요구 또는 약속하는 행위도 금지되며, 누구든지 공직자등에게 금지된 금품등을 제공하거나 제공의 약속 또는 의사표시를 하는 행위도 금지됩니다.'
+			},
+			{
+				question : '현재 이해관계가 없는 직무관련자의 자녀 결혼식에 축의금 5만원, 화환 8만원 짜리를 보냈다. 화환은 농수산물로 간주되어 10만원까지 가능하므로 가액범위가 초과되지 않는다. ',
+				example : '',
+				explain : '축의금과 화환을 함께 줄 경우 화환은 농수산물 선물로 취급되어 10만원이 가액범위이고 축의금은 5만원이 가액범위이므로 전체 가액범위는 10만원으로서 합산금액이 10만원을 초과하지 않아야 합니다. 또한 각각의 가액범위를 초과해서는 안됩니다. '
+			}
+		];
+
+        var opt = [
+            { type:'1', answer:'x', exam:true, txt:text[0] },
+            { type:'1', answer:'o', exam:false, txt:text[1] },
+            { type:'1', answer:'x', exam:true, txt:text[2] }
+        ];
+        var size =  { w:1170, h:662 };
+        var btn = { check:true, replay:true, next:true, prev:false, auto:false, index:true, result:true };
+        quiztools('#quiz1', opt, size, btn);
+    });
+</script>
+</body>
+</html>

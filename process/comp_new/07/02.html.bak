@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=1010, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>윤리청렴 힐링캠프</title>
+        <!-- library -->
+        <link rel="stylesheet" href="../common/css/animate.css">
+        <link rel="stylesheet" href="../common/css/nanumsquare.css">
+        <link rel="stylesheet" href="../common/css/nanumsquareround.min.css">
+        <link rel="stylesheet" href="../common/css/jquery.mCustomScrollbar.min.css">
+        <!-- common -->
+        <link rel="stylesheet" href="../common/css/player.css">
+        <!-- custom -->
+        <link rel="stylesheet" href="../common/css/custom.css">
+        <!-- quiz -->
+        <link rel="stylesheet" href="../common/css/quiz.css">
+        
+        <!-- library -->
+        <script src="../common/js/jquery-3.3.1.min.js"></script>
+        <script src="../common/js/jquery.mCustomScrollbar.min.js"></script>
+        <script src="../common/js/jquery-ui.player.js"></script>
+        <script src="../common/js/jquery-ui-touch.min.js"></script>
+        <script src="../common/js/jquery.cookie.js"></script>
+        <script src="../common/js/now_content_091.js"></script>
+    </head>
+
+    <body onselectstart="return false" oncontextmenu="return false">
+        <div id="container">
+            <div id="top-wrapper">
+                <span class="chapter"></span>
+            </div>
+            <div id="content-wrapper">
+                <div id="quiz-wrapper">
+                    <div id="quiz-home">
+                        <p class="btn-start"></p>
+                    </div>
+                    <div id="quiz-content">
+                        <ul class="quiz-tab"></ul>
+                        <span class="quiz-num"></span>
+                        <span class="quiz-question"></span>
+                        <div class="ox-wrapper">
+                            <input type="radio" name="ox" id="ox-o"><label for="ox-o"></label>
+                            <input type="radio" name="ox" id="ox-x"><label for="ox-x"></label>
+                        </div>
+                        <div class="choice-wrapper"></div>
+                        <div class="input-wrapper">
+                            <input type="text" name="input-text" id="input-text">
+                        </div>
+                        <p class="btn-confirm"></p>
+                        <div class="pop"></div>
+                        <div class="answer-wrapper">
+                            <span></span><span class="answer-answer">1</span>
+                            <span></span><div class="answer-comment"><span></span></div>
+                            <p class="btn-next"></p>
+                        </div>
+                        <div class="cover"></div>
+                    </div>
+                    <div id="quiz-result">
+                        <span class="quiz-count">0</span>
+                        <span class="quiz-score">0</span>
+                        <table class="quiz-result">
+                            <thead>
+                                <tr></tr>
+                            </thead>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                        <p class="btn-restart"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="toolbar-mobile">
+                <p class="btn-prev"></p>
+                <p class="btn-next"></p>
+            </div>
+            <div id="toolbar">
+                <div class="timebar-wrapper">
+                    <p class="timebar"><span class="time-range"></span></p>
+                    <time class="currtime" title="현재시간">00:00</time>
+                    <time class="duration" title="전체시간">00:00</time>
+                </div>
+                <div class="speed-wrapper">
+                    <p class="btn-slow"></p>
+                    <span class="currspeed">1.0</span><span>배속</span>
+                    <p class="btn-fast"></p>
+                </div>
+                <p class="btn-play" title="재생"></p>
+                <p class="btn-pause on" title="일시정지"></p>
+                <p class="btn-replay" title="다시보기"></p>
+                <div class="script-wrapper">
+                    <p class="btn-close"></p>
+                    <div class="script-inner">
+                        <span>내레이션</span>
+                        <span></span>
+                    </div>
+                </div>
+                <p class="btn-script"></p>
+                <p class="btn-mute"></p>
+                <div class="volbar"><p class="vol-bar"><span class="vol-range"></span></p></div>
+                <p class="btn-fullscreen"></p>
+                <div class="page-wrapper">
+                    <p class="btn-prev"></p>
+					<span id="curpageTxt" class="currPage"><script>document.write(isPageNum)</script></span>
+		      		<span id="totalpageTxt" class="totalpage"><script>document.write(isTotalNum)</script></span>
+                    <p class="btn-next"></p>
+                </div>
+                <span class="pop-next"></p>
+            </div>
+        </div>
+    </body>
+    <!-- init -->
+    <script src="../common/js/config.js"></script>
+    <script src="../common/js/init.js"></script>
+    <!-- custom -->
+    <script src="../common/js/pageinfo.js"></script>
+    <script src="../common/js/interactive.js"></script>
+    <script src="../common/js/script.js"></script>
+    <!-- common -->
+    <script src="../common/js/video.js"></script>
+    <script src="../common/js/player.js"></script>
+    <script src="../common/js/interactive.js"></script>
+    <!-- custom -->
+    <script src="../common/js/custom.js"></script>
+    <!-- quiz -->
+    <script>
+        /* quiz
+         * type 0 : ox / 1 : 객관식 / 2 : 주관식
+         * question : 문제 {강조}
+         * choice : 객관식 보기
+         * answer : 정답
+         * comment : 해설
+         * choiceposition : 보기 위치
+         */
+        const o = true;
+        const x = false;
+        const quiz = [{
+            type: 1,
+            choiceposition: 260,
+            question: '이준법 과장은 NS의 계열회사인 B회사와 다음과 같은 거래를 하고자 한다. 이 중 법상 금지되는 거래행위가 아닌 것은 무엇인가?',
+            choice: ['NS가 C사업을 직접 수행할 능력이 있음에도 불구하고 B회사에게 그 사업기회를 제공하는 행위',
+			'NS에게 효율성 증대효과나 보안성, 긴급성 등의 불가피한 사유가 없음에도 불구하고 합리적 검토과정 없이 B회사와 상당한 규모로 거래하는 행위',
+			'정당한 사유 없이 B회사에 대한 매출채권 회수를 지연하거나 상각하여 회수불가능 채권으로 처리하는 행위',
+			'B회사에 대한 업무지원을 위해 B회사와 인력파견계약을 체결하는 행위'
+			],
+            answer: 4,
+            comment: '독점규제 및 공정거래에 관한 법률 제23조 제1항 및 제23조의2 규정에 따르면 특수관계인 등에 대한 지원행위 및 부당한 이익제공이 금지되고 있습니다. 인력 지원의 경우 인력파견계약을 체결하는 자체가 금지되는 것은 아니고, 인력을 제공하면서 퇴직충당금 등 인건비의 전부나 일부를 회수하지 않는 등으로 인력제공 주체가 인건비를 부담하는 것이 금지됩니다.'
+
+	        },{
+
+            type: 1,
+            choiceposition: 260,
+            question: '김공정 과장은 A업체와 판매촉진행사를 진행하였다. 다음 중 김공정 과장이 판매촉진행사 과정에서 잘못한 것은 무엇인가?',
+            choice: ['판매촉진행사에 소요되는 비용에 대해 A업체와 약정을 체결하였다.',
+			'판매촉진행사에 대한 약정은 NS와 A업체가 주고받은 E-mail로 이루어졌다.',
+			'판매촉진비용을 NS와 A업체가 5:5의 비율로 분담하였다.',			
+			'판매촉진비용의 분담비율은 NS와 A업체가 해당 행사를 통해 직접 얻을 것으로 예상되는 경제적 이익에 따라 정하였다.'
+			],
+            answer: 2,
+            comment: '대규모유통업에서의 거래 공정화에 관한 법률 제11조 제2항에 의하면, 판매촉진행사에 대한 약정은 반드시 대규모유통업자와 납품업자등이 각각 서명 또는 기명날인한 서면으로 이루어져야 합니다.'
+			}];
+    </script>
+    <script src="../common/js/quiz.js"></script>
+</html>

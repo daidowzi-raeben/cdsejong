@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+<meta name="viewport" content="width=1000">
+<link type="text/css" href="../css/reset.css" rel="stylesheet" />
+<link type="text/css" href="../css/jplayer.css" rel="stylesheet" />
+<link type="text/css" href="../css/content.css" rel="stylesheet" />
+<link type="text/css" href="../css/animate.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jplayer.js"></script>
+<script type="text/javascript" src="../js/transit.js"></script>
+<script type="text/javascript" src="../js/jquery.textillate.js"></script>
+<script type="text/javascript" src="../js/jquery.fittext.js"></script>
+<script type="text/javascript" src="../js/jquery.lettering.js"></script>
+<script type="text/javascript" src="../js/siteSecurity_1.1.js"></script>
+<script type="text/javascript" src="../js/jquery.easing.js"></script>
+<script type="text/javascript" src="pageinfo.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+<div id="allWrap">
+<div id="wrap">
+
+
+	<!-- bg background -->
+	<div class="main_area"></div>
+	<!-- //bg background -->
+		<div id="headTit"><img src="img/title.png" /></div>
+	<!--div id="slogo"><img src="../images/img/s_logo.png"/></div-->
+	
+
+    <div id="jp_container_1" class="jp-video jp-video-360p subVideo" role="application" aria-label="media player">
+		
+
+		<!-- 영상 플레이어 -->
+        <div class="jp-type-single">
+            <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+			<div class="jpback"></div>
+			<div class="jp-gui">
+				<div class="jp-video-play"></div>
+				<div class="jp-interface">
+					<div class="jp-inbox">
+						<div class="jp-util">
+							<ul>
+								<li><a href="javascript:;" class="u_index"><span></span></a></li>
+							</ul>
+						</div>
+						<div class="jp-progress">
+							<div class="jp-seek-bar">
+								<div class="jp-play-bar"></div>
+							</div>
+						</div>
+						<div class="jp-controls-holder">
+							<div class="jp-controls">
+								<button class="jp-script" role="button" tabindex="0">script</button>	
+								<button class="jp-play" role="button" tabindex="0">play</button>								
+								<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+								<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+							</div>
+						</div>
+						<div class="jp-volume-controls">
+							<button class="jp-mute" role="button" tabindex="0">mute</button>
+							<div class="jp-volume-bar">
+								<div class="jp-volume-bar-value"></div>
+							</div>
+						</div>
+						<div class="jp-toggles">
+							<div class="jp-speed">
+								<div class="jp-toggles-text">SPEED</div>
+								<button class="speed sp2" data-speed="0">0.5</button>
+								<button class="speed sp3" data-speed="2">1.0</button>
+								<button class="speed sp4" data-speed="4">1.5</button>
+								<button class="speed sp5" data-speed="6">2.0</button>  
+							</div>
+						</div>
+					</div>
+					<div id="paging">
+						<a href="javascript:prev(2);" class="pagePrev"></a>
+						<span><strong>02</strong> / 09</span>
+						<a href="javascript:;" class="nextFunc pageNext" data-page="2"></a>
+						<div class="click"><a href="javascript:next(2);"><img src="../images/img/btn_click.png" alt="" /></a></div>
+					</div>
+					<div class="jp-limit"></div> <!-- 컨트롤차단 -->
+				</div>
+				<!-- 스크립트 -->
+				<div id="scriptBox">
+					<div class="scHead">
+						<div class="scTit"></div>
+						<a href="javascript:;" class="scClose"><img src="../images/img/img_script_close.gif" alt="CLOSE" /></a>
+					</div>
+					<div class="scConfBox">
+						<div class="scConf">
+							<p>오늘 우리가 확인해야 할 첫 번째 사례는  국회의원이 3천억을 수주하여 논란이 불거진 사례입니다.  건설회사 출신인 P 의원은  직권남용과 부패방지법 및 공직자윤리법 위반 등의 혐의로  경찰청에 고발을 당했는데요. P 의원이 국회 국토교통위원회 위원으로 활동하던 5년 동안  P 의원 자신이나 가족이 대주주로 있는 건설사들이 국토위의 피감기관으로부터 3천억 원이 넘는 거액을 벌어들였기 때문입니다. 불과 3개 건설사가 받은  수주액만 770억 원이 넘고,  신기술 이용료로 370여억 원을 추가로 받은 것으로 전해집니다. 또한 P 의원이 과거 직접 운영했거나 현재 P 의원의 측근이 운영하는 것으로 알려진 업체들은  해당 기간 동안 경기도와 경상북도에서 487억 원대 사업을 수주하였던 것으로 파악됩니다.  P 의원이 국토위 야당 간사를 지낸 2년 동안 피감기관인 국토부 산하기관들로부터 받은 공사 수주금액이 크게 늘었다는 점 및  P 의원이 국정감사에서 비리 의혹을 제기하고 이듬해 간사가 된 뒤 해당 업체와 계약한 단독도급 건수가 무려 4배나 증가했다는 점에서  역대 최악의 이익충돌 행위라고 할 수 있습니다. 두 번째 사례는  국회의원의 정무위원회 배정과 관련되어 논란이 일어난 사례입니다.  A물산 사외이사 출신인 Y국회의원은  정무위원회 위원 배정 당시부터 이해충돌 의혹이 제기된 바 있습니다.  Y 의원은 8년 동안 A물산 사외이사로 장기 재직하면서 A물산과 B모직 합병을 통한 오너의 불법 경영권 승계에 관여했다는 의혹을 받고 있는데,  정무위에서는 A그룹 지배구조 관련 보험업법 개정안을 소관하기 때문입니다. Y 의원이  정무위 위원이자 법안심사소위 위원으로  A그룹 부회장의 경영권을 제한하는 A그룹 관련 법안과 사안을 다루는 것은  공직자 이해충돌이라는 측면에서 상당히 부적절한바,  이에 대한 우려가 매우 큰 상황입니다.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- //스크립트 -->				
+				<!-- 인덱스 메뉴 -->
+				<div id="indexNavi"></div>
+				<!-- //인덱스 메뉴 -->
+
+			</div>
+        </div>
+		<!-- //영상 플레이어 -->
+
+
+        <a href="javascript:;" class="play"><img src="../images/img/btn_play.png" alt="play" /></a>
+    </div>
+
+
+
+</div>
+</div>
+
+
+<div class="effectspeak01"><audio controls muted preload="auto"><source type="audio/mp3" src="../mp3/next.mp3" /></audio></div>
+
+
+<link type="text/css" href="../css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var effectAudio01 = function(){  $('.effectspeak01').find('audio')[0].play(); $('.effectspeak01').find('audio')[0].muted = false;};
+	
+
+    // win height
+    var winHChk = function(){
+        var winH = $(window).height();
+        $('#allWrap').css('height',winH);
+    }
+    winHChk();
+    pageInit();
+    $(window).resize(function(){winHChk();});
+	
+	// next 넘기기, 클릭유도
+	var nextEnd = false;
+    var endClick = function(){
+		$('.click').fadeIn(600,function(){
+			$(this).fadeOut(600,function(){
+				$(this).fadeIn(600,function(){
+					$(this).fadeOut(600,function(){
+						$(this).fadeIn(600);
+					});
+				});
+			})
+		}); 
+		effectAudio01();
+		nextEnd = true;
+		playbar = true;
+		playControl();
+	}
+	
+	$('.nextFunc').bind('click',function(){
+		var mypage = parseInt($(this).attr('data-page'));
+		if (nextEnd == true){
+			next(mypage);
+		} else {
+			next(mypage);
+			return false;
+		}
+	});
+	
+
+	// player bar
+	var playbar = true;
+	var playControl = function(){
+		if (playbar == false){
+			$('.jp-seek-bar').css('display','none');
+		} else {
+			$('.jp-seek-bar').css('display','block');
+			$('.jp-progress').unbind('click');
+		}
+	}
+	$('.jp-progress').bind('click',function(){		
+		next(mypage);
+		return false;
+	});
+	playControl();
+
+
+    // movie
+    var movieUrl = [mp4_Name]; // 1300k, 500k
+      function jplayerControll(a){
+		var mUrl = movieUrl[a];
+		$('#jquery_jplayer_1').jPlayer({			
+			ready: function (event) {
+				$(this).jPlayer('setMedia', {
+					m4v: mUrl,
+					poster: '../images/img/cover.jpg'
+				});
+
+				if(!navigator.userAgent.match(/Android|Mobile|iP(hone|od|ad)|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/)){
+					$(this).jPlayer('play');
+				}
+			
+			},
+			swfPath:'js',
+			supplied:'m4v',
+			size: {
+				width:'1280px',
+				height:'720px',
+				cssClass:'jp-video-360p'
+			},
+			useStateClassSkin: true,
+			autoBlur: false,
+			smoothPlayBar: true,
+			keyEnabled: true,
+			remainingDuration: false,
+			toggleDuration: false,
+		//	autohide: {restored: true, fadeIn:200},
+			volume: 0.5,
+			ended : function(){
+                endClick();
+			}
+		});
+	}
+	
+
+	var nowspeed = function(){
+		var nows = $('.jp-speed').children('.on').index()-1;		
+		setTimeout( function() { $('.speed').eq(nows).click(); },200);
+	}
+
+	$('.play').bind('click',function(){
+		$('#jquery_jplayer_1').jPlayer('play');
+		$(this).fadeOut();
+		nowspeed();
+	});
+
+	$('.jp-stop').bind('click',function(){
+		$('.play').fadeIn();
+		nowspeed();
+	});
+
+	$('.jp-play').bind('click',function(){
+		if ($('#jp_container_1').is('.jp-state-playing')){
+			$('.play').fadeIn();
+		} else {
+			$('.play').fadeOut();
+		}
+		nowspeed();
+	});
+
+	if(!navigator.userAgent.match(/Android|Mobile|iP(hone|od|ad)|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/)){
+		$('.play').fadeOut();
+	} else {
+		$('.play').fadeIn();
+	}
+
+	// 스피드 변경
+	$('.speed').each(function(){
+		$(this).bind('click',function(){
+			if (!$(this).hasClass('on')){
+				var dataNum = $(this).attr('data-speed');
+				var speed = [0.5, 0.8, 1, 1.2, 1.5, 1.8, 2];
+				$('.speed').removeClass('on');
+				$(this).addClass('on');				
+				$('#jquery_jplayer_1').jPlayer('option','playbackRate',speed[dataNum]);
+			}
+		});
+	});
+	$('.speed').eq(1).click();
+
+	// 해상도 변경
+	$('.resolution').each(function(){
+		$(this).bind('click',function(index){
+			if (!$(this).hasClass('active')){
+				var dataType = $(this).attr('data-type');
+				$('.resolution').removeClass('active');
+				$(this).addClass('active');
+	
+				$('#jquery_jplayer_1').jPlayer('destroy');
+				if (dataType == 'high'){ jplayerControll(0);
+				} else { jplayerControll(1); }
+	//			setTimeout(function() { $('#jquery_jplayer_1').jPlayer('play'); },1200);
+			}
+		});
+	});
+
+
+	// replay
+	$('.jp-replay').bind('click',function(){
+		$('#jquery_jplayer_1').jPlayer('stop');
+		$('#jquery_jplayer_1').jPlayer('play');
+		nowspeed();
+	});
+
+	jplayerControll(0);
+
+    $(window).load(function(){
+        $('.jp-gui').css('opacity','1');
+    });
+
+
+
+
+	// 교안 다운로드
+	$('#tgDown').load('teacher_guide.html');
+
+	// 놀이영상
+	$('#tgMovie').load('movie_list.html');
+	
+	// 인덱스 네비
+	var depth1 = 1; // 1차뎁스
+	var depth2 = 2; // 2차뎁스
+	$('#indexNavi').load('index_navi.html',function(){
+		var de1 = depth1 - 1;
+		var de2 = depth2 - 1;
+		$('#navigation > ul > li:eq('+de1+') > a').addClass('on');
+		$('#navigation > ul > li:eq('+de1+') ul li:eq('+de2+') a').addClass('on');
+	});
+	
+	// 스크립트 스크롤바
+	$(".scConf").mCustomScrollbar({theme:'dark',mouseWheelPixels:150});
+
+
+	// 보안
+	$('body').siteSecurity({
+	//	f12:'y',         //f12키 막기
+		rightclick: 'y' //우클릭 막기
+	});
+
+});
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0,user-scalable=yes" />
+<link rel="shortcut icon" href="#">
+
+<script type="text/javascript" src="js/pageData.js"></script>
+<script type="text/javascript" src="js/scriptData.js"></script>
+    
+<link rel="stylesheet" type="text/css" href="../common/css/contentsUI.css">
+
+<script type="text/javascript" src="../common/js/jquery1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="../common/js/jquery1.11.2/jquery-ui.min.js"></script>
+
+<script type="text/javascript" src="../common/js/jquery.cookie.js"></script>
+<!-- start : 20250604 제이제이 - mCustomScrollbar 플러그인이 로드되지 않은 경우를 방지하기 위한 처리-->
+<script type="text/javascript" src="../common/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- // end -->
+<script type="text/javascript" src="../common/js/gsap.min.js"></script>
+
+<script type="text/javascript" src="../common/common.js"></script>
+
+<script type="text/javascript" src="../common/js/cookie.js"></script>
+<script type="text/javascript" src="../common/js/index.js"></script>
+<script type="text/javascript" src="../common/js/sliderEvent.js"></script>
+<script type="text/javascript" src="../common/js/makeUI.js"></script>
+<script type="text/javascript" src="../common/js/leftMenu.js"></script>
+<script type="text/javascript" src="../common/js/video.js"></script>
+<script type="text/javascript" src="../common/js/audio.js"></script>
+<script type="text/javascript" src="../common/js/bookMark.js"></script>
+<script type="text/javascript" src="../common/js/popup.js"></script>
+
+<!-- start : 20250604 제이제이 - studyPop 로드되지 않은 경우를 방지하기 위한 처리 -->
+<script type="text/javascript" src="../common/js/studyPop.js"></script>
+<!-- // end -->
+
+<link rel="stylesheet" type="text/css" href="../common/contents/css/summary.css">
+<script type="text/javascript" src="../common/contents/js/summary.js"></script>
+
+<!-- 제목 설정 스크립트 -->
+<script type="text/javascript">
+  var titleName = "직장인의 품격! 직무윤리 메시지";
+  document.title = titleName;
+</script>
+
+<style>
+		@font-face {
+		font-family: 'GmarketSans';
+		src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+	body {
+		background-color: #156082;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100vh;
+		overflow: hidden;
+	}
+
+	#Container, #contentsCtn, #videoCtn {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		background-color: #156082;
+		overflow: hidden;
+	}
+
+	.viewer-container {
+		position: relative;
+		width: 100%;
+		max-width: 1280px;
+		margin: 0 auto;
+		aspect-ratio: 16 / 9;
+		background-color: #000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.image-container {
+		width: 90%;
+		height: 100%;
+		position: relative;
+	}
+
+	.webtoon-image {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+
+	.nav-button {
+		position: absolute;
+		top: 50%;
+		width: 50px;
+		height: 50px;
+		background-color: rgba(128, 128, 128, 0.7);
+		border: none;
+		border-radius: 50%;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		font-weight: bold;
+		font-size: 30px;
+		z-index: 10;
+	}
+
+	.prev { left: 10px; transform: translateY(-50%); }
+	.next { right: 10px; transform: translateY(-50%); }
+
+	.page-indicator {
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		gap: 5px;
+	}
+
+	.indicator-box {
+		width: 20px;
+		height: 10px;
+		background-color: #ddd;
+	}
+
+	.indicator-box.active {
+		background-color: #156;
+	}
+
+	.viewer-title {
+		position: absolute;
+		top: 10px;
+		left: 50px;
+		font-size: 24px;
+		color: white;
+		font-family: 'GmarketSans', sans-serif;
+		z-index: 5;
+	}
+
+	video {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+</style>
+</head>
+
+<body style="background-color: #156082; margin: 0; padding: 0; overflow-x: hidden;">
+	<div id="Container" style="background-color: #156082; margin: 0; padding: 0;">
+		<div id="contentsCtn" style="background-color: #156082; margin: 0; padding: 0;">
+			<div id="videoCtn" style="background-color: #156082; margin: 0; padding: 0;">
+				<div class="viewer-container">
+					<div class="viewer-title"><br />『친절 뒤에 그림자』</div>
+					<div class="image-container" id="imageContainer">
+						<img class="webtoon-image" id="currentImage" src="img/001.png" alt="웹툰 페이지">
+					</div>
+						
+					<!-- 네비게이션 버튼 -->
+					<button id="prevBtn1" class="nav-button prev" onclick="prevPage()">〈</button>
+					<button id="nextBtn1" class="nav-button next" onclick="nextPage()">〉</button>
+			
+					<!-- 페이지 인디케이터 -->
+					<div class="page-indicator" id="pageIndicator"></div>
+				</div>
+			</div>
+			<div id="loadCtn"></div>
+			
+			<div id="popupVideoCtn">
+				<div id="popupVideo_bg"></div>
+				<video playsinline id="popupVideo" preload="none" autoplay> </video>
+				<div id="popupVideoSync"><div id="popupVideoSyncText"></div></div>
+				<div id="popupVideo_closeBG"></div>
+				<div id="popupVideo_closeBtn"></div>
+			</div>
+
+			<div class="topMenu">
+				<div id="lec"></div>
+				<div id="chasi_titleBG"></div>
+				<div id="chasi_titleText"></div>
+			</div>
+			
+			<div id="treeMenu" style="display:none">
+				<div id="menuCtn"></div>
+				<div id="bookMarkCtn"></div>
+                <div id="menuTapeBtn"></div>
+				<div id="bookMarkTapeBtn"></div>
+				<div id="menuCloseBtn"></div>
+			</div>
+			
+			<div id="menuMask"></div>
+
+			<div id="scriptCtn">
+				<div id="scriptBG"></div>
+				<div id="closeScript"></div>
+				<div id="scriptText"></div>
+			</div>
+			<div id="bookMark_savePop"></div>
+
+			<div class="bottomMenu">
+				<img id="logo"></img>
+				<div id="line_grup"></div>
+				<div id="discussBtn"></div>
+				<div id="memoBtn"></div>
+				<div id="questionBtn"></div>
+				<div id="learningBtn"></div>				
+				<div id="timeText"></div>
+				<div id="playBtn"></div>
+				<div id="pauseBtn"></div>
+				<div id="reBtn"></div>
+				<div id="fullScreenBtn"></div>
+				<div id="rateBtn"></div>
+				<div id="rate_popCtn"></div>
+				<div id="muteBtn"></div>
+				
+				<div id="prevBtn"></div>
+				<div id="nextBtn"></div>
+				<div id="pageText">
+					<div id="pageDot"></div>
+					<div id="cPage"></div>
+					<div id="tPage"></div>
+				</div>
+				
+				<div class="control-slider"> <div id="slider"></div> </div>
+				<div id="sliderArea"></div>
+				<div class="vol_control-slider"> <div id="vol_slider"></div> </div>
+			</div>
+			
+			<div id="learningPopCtn"></div>
+			<div id="studyPopCtn"></div>
+			<div id="examplePopCtn"></div>
+			<div id="practicePopCtn"></div>
+
+			<audio id="audioCtn" autoplay></audio>
+			<audio class='effect_snd'></audio>
+			<audio loop class='bgm_snd'></audio>
+		</div>
+
+		<div id="mPrevBtn"></div>
+		<div id="mNextBtn"></div>
+		<div id="loadingPop"> <div id="loadingImg"></div> </div>		
+		<div id="messageBox">
+			<div id="messageBox_bg"></div>
+		</div>
+	</div>
+</body>
+</html>
+
+<script>
+	// 전역 변수 설정
+	let currentPage = 1;        // 현재 페이지 번호
+	const totalPages = 5;       // 전체 페이지 수
+	let bgm;                    // 배경음악 변수
+
+	/**
+	 * 페이지 인디케이터 초기화 함수
+	 * - 페이지 수만큼 하단에 동그란 인디케이터를 생성
+	 * - 첫 페이지의 인디케이터를 활성화 상태로 설정
+	 */
+	function initializePageIndicators() {
+		const indicatorContainer = document.getElementById('pageIndicator');
+		// 5개의 페이지 인디케이터 생성
+		for (let i = 1; i <= totalPages; i++) {
+			const indicator = document.createElement('div');
+			// 첫 페이지는 active 클래스 추가				
+			indicator.className = 'indicator-box' + (i === 1 ? ' active' : '');
+			indicatorContainer.appendChild(indicator);
+		}
+	}
+
+	/**
+	 * 이미지 파일명 생성 함수
+	 * @param {number} pageNum - 페이지 번호
+	 * @returns {string} - 형식에 맞는 이미지 파일 경로
+	 * - 페이지 번호를 3자리 숫자로 변환 (예: 1 → 001)
+	 */
+	function getImageFileName(pageNum) {
+		// 페이지 번호를 001, 002, 003, 004, 005 형식으로 변환
+		return `img/${String(pageNum).padStart(3, '0')}.png`;
+	}
+	
+	// 페이지 업데이트 함수
+	function updatePage() {
+		const image = document.getElementById('currentImage');
+		// 현재 페이지에 해당하는 이미지 즉시 로드 (애니메이션 없음)
+		image.src = getImageFileName(currentPage);
+		
+		// 페이지 인디케이터 상태 즉시 업데이트 (애니메이션 없음)
+		const indicators = document.querySelectorAll('.indicator-box');
+		indicators.forEach((indicator, index) => {
+			indicator.className = 'indicator-box' + (index + 1 === currentPage ? ' active' : '');
+		});
+	}
+
+	/**
+	 * 다음 페이지 이동 함수
+	 * - 마지막 페이지가 아닐 경우 다음 페이지로 애니메이션과 함께 전환
+	 * - 마지막 페이지일 경우 종료 확인 대화상자 표시
+	 */
+	function nextPage() {
+		if (currentPage < totalPages) {
+			currentPage++;
+			updatePage();
+		} else {
+			if (confirm("학습이 끝났습니다. [확인] 클릭 후 우측 상단 X 버튼을 눌러 종료해 주세요")) {
+
+
+				const page = 3;
+				const lesson = 89;
+				const chapter = 84;
+				const contents = 89;
+
+				var datas = "isEnd=true&lesson=" + lesson + "&chapter=" + chapter + "&contents=" + contents;
+				
+				if( page == "end" ) datas = datas + "&page=end";
+				else  datas = datas + "&page=" + page;
+				//else  datas = datas + "&page=" + (page-1); 
+				
+				
+				$.ajax({
+					type: "POST",
+					url: "/Edu/contents_wbt_check_json.php",
+					data: datas,
+					success: function(res){
+							res_data = jQuery.parseJSON(res);
+							if( res_data.res == true ) {
+								//alert( res_data.cc + '/' + res_data.ca );
+								//alert( res_data.msg );
+							} else if( res_data.res == false )  {
+								alert( res_data.msg );
+							} else {
+								alert( res );
+							}
+
+										if (bgm) {
+					bgm.pause();  // 음악 정지
+					bgm.currentTime = 0;  // 음악 위치 초기화
+				}
+				parent.location.reload();
+					},
+					error: function(err){}
+				});
+				if (bgm) {
+					bgm.pause();  // 음악 정지
+					bgm.currentTime = 0;  // 음악 위치 초기화
+				}
+			//	location.reload();
+			}
+		}
+	}
+
+	/**
+	 * 이전 페이지 이동 함수
+	 * - 첫 페이지가 아닐 경우 이전 페이지로 애니메이션과 함께 전환
+	 */
+	function prevPage() {
+		if (currentPage > 1) {
+			currentPage--;
+			updatePage();
+		}
+	}
+
+	// 페이지 로드 완료 시 인디케이터 초기화
+	window.onload = function() {
+		initializePageIndicators();
+		// 애니메이션 효과 제거를 위해 transition 속성 제거
+		const container = document.getElementById('imageContainer');
+		container.style.transition = 'none';  // 애니메이션 효과 제거
+
+		// 배경음악 초기화 및 재생
+		bgm = new Audio('../common/sound/bgm.mp3');
+		bgm.loop = true;  // 반복 재생 설정
+		bgm.volume = 0.5;  // 볼륨 설정 (0.0 ~ 1.0)
+		
+		// 사용자 상호작용 후 자동 재생을 위한 이벤트 리스너
+		document.addEventListener('click', function initAudio() {
+			bgm.play();
+			document.removeEventListener('click', initAudio);
+		}, { once: true });
+	};
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link type="text/css" rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="player-wrap" id="playerWrap">
+		<button type="button" class="close" onclick="playerWrapRemove()"></button>
+		<!-- player 에 lock 클래스 추가시 동영상 스크롤바 잠김 -->
+		<div class="player" id="player">
+			<video id="player1" controls onended="nextPlayer()" src="./video/01.mp4"></video>
+		</div>
+	</div>
+
+	<!-- common -->
+	<script type="text/javascript">
+		function nextPlayer(){
+			if(!document.getElementById('nextBtn')){
+				var nextButton = document.createElement('button')
+				nextButton.type = 'button'
+				nextButton.className = 'next-btn'
+				nextButton.id = 'nextBtn'
+				nextButton.onclick = function() {
+					document.getElementById('player1').remove()
+					document.getElementById('nextBtn').remove()
+
+					var player2 = document.createElement('video')
+					player2.id = 'player2'
+					player2.controls = true
+					player2.src = './video/02.mp4'
+					player2.addEventListener('ended', function(){
+						alert('학습이 완료되었습니다.')
+						playerWrapRemove()
+					});
+
+					document.getElementById('player').appendChild(player2)
+				}
+				document.getElementById('player').appendChild(nextButton)
+			}
+		}
+
+		function playerWrapRemove(){
+			document.getElementById('playerWrap').remove()
+		}
+	</script>
+</body>
+</html>

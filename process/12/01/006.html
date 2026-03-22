@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+<meta name="viewport" content="width=1000">
+<link type="text/css" href="../css/reset.css" rel="stylesheet" />
+<link type="text/css" href="../css/jplayer.css" rel="stylesheet" />
+<link type="text/css" href="../css/content.css" rel="stylesheet" />
+<link type="text/css" href="../css/animate.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jplayer.js"></script>
+<script type="text/javascript" src="../js/transit.js"></script>
+<script type="text/javascript" src="../js/jquery.textillate.js"></script>
+<script type="text/javascript" src="../js/jquery.fittext.js"></script>
+<script type="text/javascript" src="../js/jquery.lettering.js"></script>
+<script type="text/javascript" src="../js/siteSecurity_1.1.js"></script>
+<script type="text/javascript" src="../js/jquery.easing.js"></script>
+<script type="text/javascript" src="pageinfo.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+<div id="allWrap">
+<div id="wrap">
+
+
+	<!-- bg background -->
+	<div class="main_area"></div>
+	<!-- //bg background -->
+		<div id="headTit"><img src="img/title.png" /></div>
+	<!--div id="slogo"><img src="../images/img/s_logo.png"/></div-->
+
+    <div id="jp_container_1" class="jp-video jp-video-360p subVideo" role="application" aria-label="media player">
+		
+
+
+		<!-- 영상 플레이어 -->
+        <div class="jp-type-single">
+            <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+			<div class="jpback"></div>
+			<div class="jp-gui">
+				<div class="jp-video-play"></div>
+				<div class="jp-interface">
+					<div class="jp-inbox">
+						<div class="jp-util">
+							<ul>
+								<li><a href="javascript:;" class="u_index"><span></span></a></li>
+							</ul>
+						</div>
+						<div class="jp-progress">
+							<div class="jp-seek-bar">
+								<div class="jp-play-bar"></div>
+							</div>
+						</div>
+						<div class="jp-controls-holder">
+							<div class="jp-controls">
+							<button class="jp-script" role="button" tabindex="0">script</button>	
+								<button class="jp-play" role="button" tabindex="0">play</button>								
+								<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+								
+								<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+							</div>
+						</div>
+						<div class="jp-volume-controls">
+							<button class="jp-mute" role="button" tabindex="0">mute</button>
+							<div class="jp-volume-bar">
+								<div class="jp-volume-bar-value"></div>
+							</div>
+						</div>
+						<div class="jp-toggles">
+							<div class="jp-speed">
+								<div class="jp-toggles-text">SPEED</div>
+								<button class="speed sp2" data-speed="0">0.5</button>
+								<button class="speed sp3" data-speed="2">1.0</button>
+								<button class="speed sp4" data-speed="4">1.5</button>
+								<button class="speed sp5" data-speed="6">2.0</button>  
+							</div>
+						</div>
+					</div>
+					<div id="paging">
+						<a href="javascript:prev(6);" class="pagePrev"></a>
+						<span><strong>06</strong> / 09</span>
+						<a href="javascript:;" class="nextFunc pageNext" data-page="6"></a>
+						<div class="click"><a href="javascript:next(6);"><img src="../images/img/btn_click.png" alt="" /></a></div>
+					</div>
+					<div class="jp-limit"></div> <!-- 컨트롤차단 -->
+				</div>
+				<!-- 스크립트 -->
+				<div id="scriptBox">
+					<div class="scHead">
+						<div class="scTit"></div>
+						<a href="javascript:;" class="scClose"><img src="../images/img/img_script_close.gif" alt="CLOSE" /></a>
+					</div>
+					<div class="scConfBox">
+						<div class="scConf">
+							<p>오늘의 사례는 윤리적 직무수행 위반 사례로, 첫 번째는 부당한 명절 선물 구입 및 제공 지시의 수행에 대한 내용입니다. 모 공직유관단체 직원이 지역본부장의 지시로 지역본부장 가족이 운영하는 가게에서 선물을 구입하고, 본부장의 부당한 지시를 거부하거나 행동강령책임관과 상담하지 않고 그대로 따른 것인데요. 이는 본인 가족 가게에서 물품을 구입하게 한 지역본부장 및 상급자가 명백하게 부당한 업무지시를 하였음에도 거부나 상담절차 없이 해당 지시를 이행한 직원 A 등도 공직자 행동강령 위반입니다.
+							두 번째는 특정업체에 물품 구매를 지시한 사례입니다. 모 중앙행정기관의 과장이 모 문구회사와 문구류 구매를 지시하였는데, 서무담당인 주무관이 일정액 이상의 물품구매 시 3개 이상의 업체로부터 비교 견적을 받아 처리해야 할 것을 말했으나, 결국 ○○문구와 해당 물품에 대한 수의계약을 체결하고 납품을 받은 사례입니다. 이는 공무원 행동강령 제4조(공정한 직무수행을 저해하는 지시에 대한 처리) 위반입니다.
+							세 번째는 용역사업 수행 중 이해관계 직무회피의 불이행 사례입니다. 모 대학교 설계학과 교수가 용역 선정 과정에서 을 업체 중 자신의 처가 등기이사로 있는 을 업체도 포함된 사실을 인지하고, 결국 을 업체가 낙찰되도록 하였습니다. 이는 공무원 행동강령 제5조(이해관계 직무의 회피)에 따라 소속기관장 또는 행동강령책임관과 상담 후 처리하여야 하나, 이를 결함으로써 행동강령을 위반한 것입니다.
+							네 번째는 손실보상 안내공문에 특정 세무사를 소개한 사례입니다. 모 군청 해수욕장 경영사업소 직원이 손실을 보상받을 대상자 848명에게 군청과 손실보상 협의를 요청하도록 안내하는 문서를 발송하였는데, 동향 후배인 특정 세무사의 이름과 사무실 전화번호를 명시하고 직접 연락하라는 문구를 삽입했습니다. 이는 안내 공문 등에 특정 사업과 이해관계가 있는 특정인(업체)을 표기하는 행위는 특정인을 대상으로 특혜를 부여하는 것으로 공무원 행동 강령 제6조(특혜의 배제) 위반입니다.
+							다섯 번째는 퇴직 공무원 모임의 현장견학 지원에 관한 사례인데요. 모 기관 직원은 해당 기관 퇴직 공무원들을 위해 관련 규정의 근거 없이 해당 연구회 회원의 현장견학을 위한 차량 임차비를 지원하였는데요. 이는 공무원 행동강령 제7조(예산의 목적 외 사용금지) 위반입니다.
+							여섯 번째는 초과근무 수당 부당 수령에 관한 내용입니다. 모 공직유관단체 회계담당자는 직원 3명과 공모하여 휴일근무기록을 조작하여 초과근무 수당을 부당 수령하였는데요. 이는 공직자 행동강령상 예산의 목적 외 사용 금지 조항을 위반한 것입니다.
+							일곱 번째는 공직유관단체 임직원 경력 산정 특혜를 제공한 사례입니다. 모 공직유관단체 인사팀장은 자신의 직속상관의 채용 전 경력을 부풀려 급여를 과다 지급하고, 경쟁관계에 있는 팀장에게는 경력을 차감해 급여를 적게 지급하였습니다. 이는 공직자 행동강령상 이권 개입 등의 금지 위반입니다.
+							여덟 번째는 국립대학교 교수의 소속기관 명칭의 사적 사용에 대한 사례입니다. 모 대학 교수는 자신이 대표이사로 재직중인 회사에서 개발한 제품을 마치 해당 국립대학교에서 생산한 것처럼 광고하였습니다. 이는 공무원 행동강령 제10 조의2(직위의 사적 이용 금지) 위반입니다.
+							아홉 번째는 직무 관련 정보를 이용한 주식 매입 사례입니다. 모 중앙행정기관 조사담당 공무원이 한 건설업체가 대규모 토목공사를 수주하게 된 사실을 미리 알고, 동료 직원과 함께 해당 업체의 주식을 다량 매입하였고 매각하여 거액의 차액을 남겼습니다. 이는 공무원 행동강령 제12조(직무 관련 정보를 이용한 거래 등의 제한) 위반입니다.
+
+
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- //스크립트 -->				<!-- 인덱스 메뉴 -->
+				<div id="indexNavi"></div>
+				<!-- //인덱스 메뉴 -->
+
+			</div>
+        </div>
+		<!-- //영상 플레이어 -->
+		
+
+        <a href="javascript:;" class="play"><img src="../images/img/btn_play.png" alt="play" /></a>
+    </div>
+
+
+
+</div>
+</div>
+
+
+<div class="effectspeak01"><audio controls muted preload="auto"><source type="audio/mp3" src="../mp3/next.mp3" /></audio></div>
+
+
+<link type="text/css" href="../css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var effectAudio01 = function(){  $('.effectspeak01').find('audio')[0].play(); $('.effectspeak01').find('audio')[0].muted = false;};
+	
+
+    // win height
+    var winHChk = function(){
+        var winH = $(window).height();
+        $('#allWrap').css('height',winH);
+    }
+    winHChk();
+    pageInit();
+    $(window).resize(function(){winHChk();});
+	
+	// next 넘기기, 클릭유도
+	var nextEnd = false;
+    var endClick = function(){
+		$('.click').fadeIn(600,function(){
+			$(this).fadeOut(600,function(){
+				$(this).fadeIn(600,function(){
+					$(this).fadeOut(600,function(){
+						$(this).fadeIn(600);
+					});
+				});
+			})
+		}); 
+		effectAudio01();
+		nextEnd = true;
+		playbar = true;
+		playControl();
+	}
+	
+	$('.nextFunc').bind('click',function(){
+		var mypage = parseInt($(this).attr('data-page'));
+		if (nextEnd == true){
+			next(mypage);
+		} else {
+			//next(mypage);
+			alert("학습을 완료해주세요.")
+			return false;
+		}
+	});
+
+	// player bar
+	var playbar = true;
+	var playControl = function(){
+		if (playbar == false){
+			$('.jp-seek-bar').css('display','none');
+		} else {
+			$('.jp-seek-bar').css('display','block');
+			$('.jp-progress').unbind('click');
+		}
+	}
+	$('.jp-progress').bind('click',function(){		
+		next(mypage);
+		return false;
+	});
+	playControl();
+
+
+    // movie
+    var movieUrl = [mp4_Name]; // 1300k, 500k
+        function jplayerControll(a){
+		var mUrl = movieUrl[a];
+		$('#jquery_jplayer_1').jPlayer({			
+			ready: function (event) {
+				$(this).jPlayer('setMedia', {
+					m4v: mUrl,
+					poster: '../images/img/cover.jpg'
+				});
+
+				if(!navigator.userAgent.match(/Android|Mobile|iP(hone|od|ad)|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/)){
+					$(this).jPlayer('play');
+				}
+			
+			},
+			swfPath:'js',
+			supplied:'m4v',
+			size: {
+				width:'1280px',
+				height:'720px',
+				cssClass:'jp-video-360p'
+			},
+			useStateClassSkin: true,
+			autoBlur: false,
+			smoothPlayBar: true,
+			keyEnabled: true,
+			remainingDuration: false,
+			toggleDuration: false,
+		//	autohide: {restored: true, fadeIn:200},
+			volume: 0.5,
+			ended : function(){
+                endClick();
+			}
+		});
+	}
+
+	var nowspeed = function(){
+		var nows = $('.jp-speed').children('.on').index()-1;		
+		setTimeout( function() { $('.speed').eq(nows).click(); },200);
+	}
+
+	$('.play').bind('click',function(){
+		$('#jquery_jplayer_1').jPlayer('play');
+		$(this).fadeOut();
+		nowspeed();
+	});
+
+	$('.jp-stop').bind('click',function(){
+		$('.play').fadeIn();
+		nowspeed();
+	});
+
+	$('.jp-play').bind('click',function(){
+		if ($('#jp_container_1').is('.jp-state-playing')){
+			$('.play').fadeIn();
+		} else {
+			$('.play').fadeOut();
+		}
+		nowspeed();
+	});
+
+	if(!navigator.userAgent.match(/Android|Mobile|iP(hone|od|ad)|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/)){
+		$('.play').fadeOut();
+	} else {
+		$('.play').fadeIn();
+	}
+
+	// 스피드 변경
+	$('.speed').each(function(){
+		$(this).bind('click',function(){
+			if (!$(this).hasClass('on')){
+				var dataNum = $(this).attr('data-speed');
+				var speed = [0.5, 0.8, 1, 1.2, 1.5, 1.8, 2];
+				$('.speed').removeClass('on');
+				$(this).addClass('on');				
+				$('#jquery_jplayer_1').jPlayer('option','playbackRate',speed[dataNum]);
+			}
+		});
+	});
+	$('.speed').eq(1).click();
+
+	// 해상도 변경
+	$('.resolution').each(function(){
+		$(this).bind('click',function(index){
+			if (!$(this).hasClass('active')){
+				var dataType = $(this).attr('data-type');
+				$('.resolution').removeClass('active');
+				$(this).addClass('active');
+	
+				$('#jquery_jplayer_1').jPlayer('destroy');
+				if (dataType == 'high'){ jplayerControll(0);
+				} else { jplayerControll(1); }
+	//			setTimeout(function() { $('#jquery_jplayer_1').jPlayer('play'); },1200);
+			}
+		});
+	});
+
+
+
+	// replay
+	$('.jp-replay').bind('click',function(){
+		$('#jquery_jplayer_1').jPlayer('stop');
+		$('#jquery_jplayer_1').jPlayer('play');
+		nowspeed();
+	});
+
+	jplayerControll(0);
+
+    $(window).load(function(){
+        $('.jp-gui').css('opacity','1');
+    });
+
+
+
+
+	// 교안 다운로드
+	$('#tgDown').load('teacher_guide.html');
+
+	// 놀이영상
+	$('#tgMovie').load('movie_list.html');
+	
+	// 인덱스 네비
+	var depth1 = 2; // 1차뎁스
+	var depth2 = 3; // 2차뎁스
+	$('#indexNavi').load('index_navi.html',function(){
+		var de1 = depth1 - 1;
+		var de2 = depth2 - 1;
+		$('#navigation > ul > li:eq('+de1+') > a').addClass('on');
+		$('#navigation > ul > li:eq('+de1+') ul li:eq('+de2+') a').addClass('on');
+	});
+	
+	// 스크립트 스크롤바
+	$(".scConf").mCustomScrollbar({theme:'dark',mouseWheelPixels:150});
+
+
+	// 보안
+	$('body').siteSecurity({
+	//	f12:'y',         //f12키 막기
+		rightclick: 'y' //우클릭 막기
+	});
+
+});
+</script>
+
+
+
+
+</body>
+</html>

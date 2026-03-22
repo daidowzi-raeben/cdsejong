@@ -1,0 +1,22 @@
+
+@font-face {
+  font-family: 'NotoSansKR-Bold';
+  font-style: normal;
+  
+  src: url(Noto_Sans_KR/NotoSansKR-Bold.woff) format('woff');
+}
+
+
+@font-face {
+  font-family: 'NotoSansKR-Medium';
+  font-style: normal;
+  
+  src: url(Noto_Sans_KR/NotoSansKR-Medium.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'NotoSansKR-Regular';
+  font-style: normal;
+  
+  src: url(Noto_Sans_KR/NotoSansKR-Regular.woff) format('woff');
+}
