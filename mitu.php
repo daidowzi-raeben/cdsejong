@@ -67,7 +67,7 @@ if (date("ymd") == '240908') {
 		<div class="inner">
 
 			<form name="flogin" action="/bbs/login_check.php" onsubmit="return flogin_submit(this);" method="post" autocomplete="off">
-				<input type="hidden" name="url" value="/Edu/class.php?lssn=85">
+				<input type="hidden" name="url" value="/Edu/class.php?lssn=92">
 
 				<fieldset id="login_fs">
 				<div>
