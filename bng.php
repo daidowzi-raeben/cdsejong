@@ -215,7 +215,7 @@ $aa = '';
 
             <form name="flogin" action="/bbs/login_check.php" onsubmit="return flogin_submit(this);" method="post"
                 autocomplete="off">
-                <input type="hidden" name="url" value="/Edu/class.php?lssn=89">
+                <input type="hidden" name="url" value="/Edu/class.php?lssn=94">
 
                 <fieldset id="login_fs">
                     <div>
