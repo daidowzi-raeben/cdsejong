@@ -17,8 +17,8 @@ $foldName = $LESSON['lssn_div'];
 
 
 if (!$CHAPTER) {
-    $rtn[res] = false;
-    $rtn[msg] = "차시정보가 존재하지 않습니다.";
+    $rtn['res'] = false;
+    $rtn['msg'] = "차시정보가 존재하지 않습니다.";
     echo json_encode($rtn);
     exit;
 }
@@ -57,20 +57,20 @@ if ($attend_info) {
         $open_page = 1;
     else
         $open_page = $attend_info['att_study_page'];
-}
-else
+} else
     $open_page = 1;
 
-if ($LESSON['lssn_status'] == 'A')
-    $page_url = G5_URL . "/process/{$foldName}/{$CONTENTS['c_url']}/" . sprintf("%02d", $open_page) . ".htm";
-else if ($LESSON['lssn_status'] == 'B')
+if ($LESSON['lssn_status'] == 'A') {
+    $ext = ($l_no == 92) ? ".html" : ".htm";
+    $page_url = G5_URL . "/process/{$foldName}/{$CONTENTS['c_url']}/" . sprintf("%02d", $open_page) . $ext;
+} else if ($LESSON['lssn_status'] == 'B')
     $page_url = G5_URL . "/process/{$foldName}/{$CONTENTS['c_url']}/01/" . sprintf("%03d", $open_page) . ".html";
 else if ($LESSON['lssn_status'] == 'C')
     $page_url = G5_URL . "/process/{$foldName}/{$CONTENTS['c_url']}/" . sprintf("%02d", $open_page) . ".html";
 else if ($LESSON['lssn_status'] == 'D')
     $page_url = G5_URL . "/process/{$foldName}/{$CONTENTS['c_url']}/{$CONTENTS['c_url']}_" . sprintf("%02d", $open_page) . ".html";
 else if ($LESSON['lssn_status'] == 'E')
-    $page_url = G5_URL . "/process/{$foldName}/{$CONTENTS['c_url']}/01/" . sprintf("%03d", $open_page) . ".htm";
+    $page_url = G5_URL . "/process/{$foldName}/{$CONTENTS['c_url']}/01/" . sprintf("%03d", $open_page) . ".html";
 else if ($LESSON['lssn_status'] == 'F')
     $page_url = G5_URL . "/process/{$foldName}/{$CONTENTS['c_url']}/01/" . sprintf("%03d", $open_page) . ".htm";
 #echo $page_url;
@@ -78,8 +78,7 @@ else if ($LESSON['lssn_status'] == 'F')
 ## 컨트롤바 상태
 if ($LESSON['lssn_controlbar'] == "Y") {
     $controlbar_enable = "yes";
-}
-else {
+} else {
     $controlbar_enable = "No";
 }
 
@@ -95,11 +94,11 @@ $result2 = sql_fetch("SELECT * FROM cd_lms_contents WHERE c_no = '" . $CHAPTER['
     <title>
         <?php echo $config['cf_title']; ?>
     </title>
-    <link type="text/css" rel="stylesheet" media="all" href="<?php echo CD_THEME_CSS_URL?>/common.css" />
-    <link type="text/css" rel="stylesheet" media="all" href="<?php echo CD_THEME_CSS_URL?>/styleDefault.css" />
-    <link type="text/css" rel="stylesheet" media="all" href="<?php echo CD_THEME_CSS_URL?>/content.css" />
-    <script type="text/javascript" src="<?php echo CD_THEME_JS_URL?>/jquery/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="<?php echo CD_THEME_JS_URL?>/jquery/jquery.easing.1.3.js"></script>
+    <link type="text/css" rel="stylesheet" media="all" href="<?php echo CD_THEME_CSS_URL ?>/common.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="<?php echo CD_THEME_CSS_URL ?>/styleDefault.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="<?php echo CD_THEME_CSS_URL ?>/content.css" />
+    <script type="text/javascript" src="<?php echo CD_THEME_JS_URL ?>/jquery/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="<?php echo CD_THEME_JS_URL ?>/jquery/jquery.easing.1.3.js"></script>
     <script>
         var urls = 'pop02.php'
         var width = 1080;
@@ -121,7 +120,7 @@ $result2 = sql_fetch("SELECT * FROM cd_lms_contents WHERE c_no = '" . $CHAPTER['
             location.reload();
         }
     </script>
-    <script src="<?php echo CD_THEME_JS_URL?>/contents.js?v2210" type="text/javascript"></script>
+    <script src="<?php echo CD_THEME_JS_URL ?>/contents.js?v2210" type="text/javascript"></script>
     <script type="text/javascript">
         $(function () {
             $(".con03 dt").click(function () {
@@ -132,10 +131,10 @@ $result2 = sql_fetch("SELECT * FROM cd_lms_contents WHERE c_no = '" . $CHAPTER['
             });
         });
 
-        controlbar_enable = "<?php echo $controlbar_enable?>";
+        controlbar_enable = "<?php echo $controlbar_enable ?>";
     </script>
 </head>
-<!-- onLoad="check_contents_wbt(<?php echo $open_page?>)" -->
+<!-- onLoad="check_contents_wbt(<?php echo $open_page ?>)" -->
 
 <body id="pop">
     <div style="width:100%;height:100vh;position:absolute;left:0;top:0;">
@@ -144,8 +143,8 @@ $result2 = sql_fetch("SELECT * FROM cd_lms_contents WHERE c_no = '" . $CHAPTER['
             var pp = 0;
             var control_enable = '';
             setClass(<?php echo $LESSON['lssn_no'] ?>, <?php echo $CHAPTER['cpt_no'] ?>, <?php echo $CONTENTS['c_no'] ?>);
-            setClassUrl("<?php echo $page_url?>");
-            // check_contents_wbt2(<?php echo $CONTENTS['c_no']?> ,<?php echo $LESSON['lssn_no']?>)
+            setClassUrl("<?php echo $page_url ?>");
+            // check_contents_wbt2(<?php echo $CONTENTS['c_no'] ?> ,<?php echo $LESSON['lssn_no'] ?>)
             function isPage(v) {
 
                 check_contents_wbt(<?php echo $open_page ?> + pp)
@@ -157,23 +156,23 @@ $result2 = sql_fetch("SELECT * FROM cd_lms_contents WHERE c_no = '" . $CHAPTER['
                     a = Number(a.split('.')[a.split('.').length - 2].split('/')[a.split('.')[a.split('.').length - 2].split('/').length - 1])
                 }
 
-                var f = "<?php echo $result2['c_page']?>";
-                var d = "<?php echo $open_page?>";
+                var f = "<?php echo $result2['c_page'] ?>";
+                var d = "<?php echo $open_page ?>";
 
                 if (f == d) {
-                    check_contents_wbt2(<?php echo $CONTENTS['c_no'] ?> ,<?php echo $LESSON['lssn_no'] ?>)
+                    check_contents_wbt2(<?php echo $CONTENTS['c_no'] ?>, <?php echo $LESSON['lssn_no'] ?>)
                 }
 
             }
         </script>
         <?php
-if ($open_page >= 2) {
-?>n
-        <script type="text/javascript">
-            //index_move(<?php echo $open_page?>);
-        </script>
-        <?php
-}?>
+        if ($open_page >= 2) {
+            ?>n
+            <script type="text/javascript">
+                //index_move(<?php echo $open_page ?>);
+            </script>
+            <?php
+        } ?>
     </div>
 </body>
 
