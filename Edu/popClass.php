@@ -70,7 +70,7 @@ else if ($LESSON['lssn_status'] == 'C')
 else if ($LESSON['lssn_status'] == 'D')
     $page_url = G5_URL . "/process/{$foldName}/{$CONTENTS['c_url']}/{$CONTENTS['c_url']}_" . sprintf("%02d", $open_page) . ".html";
 else if ($LESSON['lssn_status'] == 'E')
-    $page_url = G5_URL . "/process/{$foldName}/{$CONTENTS['c_url']}/01/" . sprintf("%03d", $open_page) . ".html";
+    $page_url = G5_URL . "/process/{$foldName}/{$CONTENTS['c_url']}/" . sprintf("%03d", $open_page) . ".html";
 else if ($LESSON['lssn_status'] == 'F')
     $page_url = G5_URL . "/process/{$foldName}/{$CONTENTS['c_url']}/01/" . sprintf("%03d", $open_page) . ".htm";
 #echo $page_url;
