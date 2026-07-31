@@ -76,15 +76,20 @@ if ($page_url == "") {
         exit;
     }
 
-    // 상태값에 따른 경로 처리 (신규 과정은 보통 E 또는 B 상태임)
+    // 상태값에 따른 경로 처리
     if ($LESSON['lssn_status'] == 'A') {
-        $page_url = G5_URL . "/process/{$foldName}/{$CONTENTS['c_url']}/" . sprintf("%02d", $open_page) . ".htm";
-    } else if ($LESSON['lssn_status'] == 'B' || $LESSON['lssn_status'] == 'E' || $LESSON['lssn_status'] == 'F') {
-        $page_url = G5_URL . "/process/{$foldName}/{$CONTENTS['c_url']}/01/" . sprintf("%02d", $open_page) . ".html";
+        $ext = ($l_no == 92) ? ".html" : ".htm";
+        $page_url = G5_URL . "/process/{$foldName}/{$CONTENTS['c_url']}/" . sprintf("%02d", $open_page) . $ext;
+    } else if ($LESSON['lssn_status'] == 'B') {
+        $page_url = G5_URL . "/process/{$foldName}/{$CONTENTS['c_url']}/01/" . sprintf("%03d", $open_page) . ".html";
     } else if ($LESSON['lssn_status'] == 'C') {
         $page_url = G5_URL . "/process/{$foldName}/{$CONTENTS['c_url']}/" . sprintf("%02d", $open_page) . ".html";
     } else if ($LESSON['lssn_status'] == 'D') {
         $page_url = G5_URL . "/process/{$foldName}/{$CONTENTS['c_url']}/{$CONTENTS['c_url']}_" . sprintf("%02d", $open_page) . ".html";
+    } else if ($LESSON['lssn_status'] == 'E') {
+        $page_url = G5_URL . "/process/{$foldName}/{$CONTENTS['c_url']}/" . sprintf("%03d", $open_page) . ".html";
+    } else if ($LESSON['lssn_status'] == 'F') {
+        $page_url = G5_URL . "/process/{$foldName}/{$CONTENTS['c_url']}/01/" . sprintf("%03d", $open_page) . ".htm";
     }
 }
 
@@ -101,7 +106,7 @@ $result2 = sql_fetch("SELECT * FROM cd_lms_contents WHERE c_no = '" . $CHAPTER['
     <script src="<?php echo CD_THEME_JS_URL?>/contents.js?v2210" type="text/javascript"></script>
     <script type="text/javascript">
         if (typeof jQuery !== 'undefined' && typeof jQuery.easing !== 'undefined') {
-            jQuery.easing.def = 'swing';
+            jQuery.easing.def = 'swin
         }
 
         var pp = 0;
