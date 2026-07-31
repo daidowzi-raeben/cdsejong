@@ -126,6 +126,7 @@ include_once(G5_THEME_PATH.'/head.php');
         <div class="msec-notice">
 		<?php
 			echo latest('theme/notice', 'notice', 4, 23);		// 최소설치시 자동생성되는 공지사항게시판
+			// echo latest('pic_list', 'notice', 4, 23);
 		?>
         </div>
 	</div>

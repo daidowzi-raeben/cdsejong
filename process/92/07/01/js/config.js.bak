@@ -1,0 +1,34 @@
+var titleName = "윤리청렴 힐링캠프";
+
+/* 현재 차시 */
+const currChasi = 1;
+
+/* 영상 스킵 가능 여부 */
+const skipable = true;
+
+/* 인덱스 리스트
+ * [메뉴이름,이동할페이지, <-title
+ *      [메뉴이름,이동할페이지] <-sub
+ * ]
+ */
+const indexlist = [
+    ['Intro',1],
+    ['학습목표',2],
+    ['사전테스트',3],
+    ['Chapter 1. 본 학습강의',4],
+    ['중간평가',5],
+    ['Chapter 2. 핵심강의',6],
+    ['핵심요약',7]
+
+];
+
+//현재페이지 정보
+var dir=location.href;
+dir=dir.split("/");
+var thisUrl=dir[dir.length-1];
+var	isPageNum=thisUrl.slice(0,2);
+thisNum = parseInt(isPageNum,10);
+
+
+var	isTotalNum    = "4"  // 현재 차시 총 페이지 수;
+

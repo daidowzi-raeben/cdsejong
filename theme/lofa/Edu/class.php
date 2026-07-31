@@ -209,7 +209,7 @@ if($userLessData['app_study_rate'] == 100 && $member['mb_profile'] == '금호건
 
 							// if문
 
-							if ($checkDate >= $startDate && $checkDate <= $endDate) {
+							if (($checkDate >= $startDate && $checkDate <= $endDate) || in_array($member['mb_id'], array('m001', 'm002', 'm003'))) {
 								?>
 									<a href="#" class="cg-btn active"><span class="enterClass" lno="<?php echo $lssn_no?>" cno="<?php echo $row['cpt_no']?>">학습하기</span></a>
 									<?
@@ -228,7 +228,7 @@ if($userLessData['app_study_rate'] == 100 && $member['mb_profile'] == '금호건
 						<a href="#" onclick="$('.new__pop').show();" class="cg-btn"><span class="enterClass" lno="<?php echo $lssn_no?>" cno="<?php echo $row['cpt_no']?>">학습완료</span></a>
 					
 					<?php
-					} elseif( $cpt_study_rate[$i-1] >= 100 || $i == 1 ) {
+					} elseif( $cpt_study_rate[$i-1] >= 100 || $i == 1  ) {
 					?>
 
 						<?php 
@@ -242,7 +242,7 @@ if($userLessData['app_study_rate'] == 100 && $member['mb_profile'] == '금호건
 
 							// if문
 
-							if ($checkDate >= $startDate && $checkDate <= $endDate) {
+							if (($checkDate >= $startDate && $checkDate <= $endDate) || in_array($member['mb_id'], array('m001', 'm002', 'm003'))) {
 								?>
 									<!--<a href="#" class="cg-btn active"><span class="enterClass" lno="<?php echo $lssn_no?>" cno="<?php echo $row['cpt_no']?>">학습하기</span></a>-->
 									<?

@@ -21,6 +21,11 @@ function responsive() {
     $("#container").css('transform', 'translate(-50%, -50%) scale(' + Math.min(scaleX, scaleY) + ')');
 }
 
+/* 다음 페이지 버튼 즉시 활성화 */
+$(document).ready(function() {
+    $("#toolbar>.page-wrapper>.btn-next").addClass('on');
+});
+
 /* 이펙트 사운드 오브젝트 */
 let effect_snd = new Audio();
 function effect_play(src) {

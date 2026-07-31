@@ -138,6 +138,7 @@ $colspan = 10;
 				<option value="2023" <?php if($y == "2023") echo "selected";?>>2023</option>
 				<option value="2024" <?php if($y == "2024") echo "selected";?>>2024</option>
 				<option value="2025" <?php if($y == "2025") echo "selected";?>>2025</option>
+				<option value="2026" <?php if($y == "2026") echo "selected";?>>2026</option>
 				</select>
 
 

@@ -1,0 +1,19 @@
+#top-wrapper .chapter {
+    background-image: url(../img/chapter.png);
+}
+
+/* =========================================================
+   [2026-03-06] 동영상 진행바 수동 컨트롤(시킹) 허용
+   - common/css/player.css 에서 timebar에 pointer-events:none 로 입력이 차단되어
+     클릭/드래그가 동작하지 않음 → 커스텀 CSS에서 덮어써서 수동 조작 가능하게 함
+   ========================================================= */
+#toolbar > .timebar-wrapper > .timebar {
+    pointer-events: auto !important;
+}
+/* 슬라이더 핸들 조작성을 위해 명시 */
+#toolbar > .timebar-wrapper > .timebar .ui-slider-handle {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+#prequiz-wrapper>#prequiz-content>.quiz-question{top:235px !important;}
