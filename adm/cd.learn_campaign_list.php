@@ -81,7 +81,7 @@ $colspan = $result_cnt['cnt'];
 				</select>
 	</div>
 	<div class="r_div">
-		<?php if ($is_admin == 'super') { ?>
+		<?php if ($is_admin == 'super' || $member['mb_id'] == 'bng2026') { ?>
 			<a href="./cd.learn_campaign_excel_down.php?company=<?php echo $company?>&lssn=<?php echo $app_lssn_no?>&amp;sfl=<?php echo $sfl ?>&amp;str=1" target="_blank" id="member_add" class="btn btn_04">EXCEL</a>
 		<?php } ?>
 	</div>
