@@ -148,6 +148,11 @@ if (defined('G5_THEME_PATH')) {
 	return;
 }
 
+if (defined('G5_THEME_PATH')) {
+	require_once(G5_THEME_PATH . '/index.php');
+	return;
+}
+
 if (G5_IS_MOBILE) {
 	include_once(G5_MOBILE_PATH . '/index.php');
 	return;
