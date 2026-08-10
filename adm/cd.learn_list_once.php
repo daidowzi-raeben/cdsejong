@@ -127,6 +127,7 @@ $colspan = 10;
 <div class="local_ov02">
 	<div class="l_div">
 		<span class="btn_ov01"><span class="ov_txt">Total </span><span class="ov_num"> <?php echo number_format($total_count) ?> 건 </span></span>
+			<?php if ($is_admin == 'super' || empty($member['mb_profile'])) { ?>
 			<select class="" name="lssn_company" onChange="selectLocation(this)">
 				<option value="">선택</option>
 						<?php 
@@ -157,6 +158,7 @@ $colspan = 10;
 				<option value="<?php echo $row['lssn_title']?>" <?php if($t == $row['lssn_title']) { echo ' selected ';} ?>><?php echo $row['lssn_title']?></option>
 			<?php }?>
 				</select>
+			<?php } ?>
 
 
 
