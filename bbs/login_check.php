@@ -90,7 +90,9 @@ if (isset($auto_login) && $auto_login) {
     set_cookie('ck_auto', '', 0);
 }
 
-if ($url) {
+if (!empty($mb['mb_profile']) && $mb['mb_level'] > 1) {
+    $link = G5_ADMIN_URL . '/cd.learn_list_once.php?company=' . urlencode($mb['mb_profile']);
+} else if ($url) {
     // url 체크
     check_url_host($url, '', G5_URL, true);
 
@@ -117,8 +119,7 @@ if ($url) {
             $split = "&amp;";
         }
     }
-
-} else  {
+} else {
     $link = G5_URL;
 }
 

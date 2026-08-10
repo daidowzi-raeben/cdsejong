@@ -223,6 +223,9 @@ ini_set("session.cookie_domain", G5_COOKIE_DOMAIN);
 // 기본환경설정
 // 기본적으로 사용하는 필드만 얻은 후 상황에 따라 필드를 추가로 얻음
 $config = get_config(true);
+if (!isset($config['cf_theme']) || !$config['cf_theme']) {
+    $config['cf_theme'] = 'lofa';
+}
 
 // 본인인증 또는 쇼핑몰 사용시에만 secure; SameSite=None 로 설정합니다.
 if( $config['cf_cert_use'] || (defined('G5_YOUNGCART_VER') && G5_YOUNGCART_VER) ) {

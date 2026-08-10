@@ -41,9 +41,24 @@ include_once(G5_THEME_PATH.'/head.php');
 						</p>
 					</li>
 				</ul>
-            <button class="login-btn"><span>로그인</span></button>
+				<button class="login-btn"><span>로그인</span></button>
 			</div>
 			</form>
+			<script>
+			function flogin_submit(f) {
+				if (!f.mb_id.value || f.mb_id.value == '아이디') {
+					alert("아이디를 입력하세요.");
+					f.mb_id.focus();
+					return false;
+				}
+				if (!f.mb_password.value || f.mb_password.value == '비밀번호') {
+					alert("비밀번호를 입력하세요.");
+					f.mb_password.focus();
+					return false;
+				}
+				return true;
+			}
+			</script>
 			<?php }?>
 			<!--e: 로그인 -->
 			<ul class="login-other" style="display: none;">

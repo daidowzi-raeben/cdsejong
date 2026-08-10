@@ -71,23 +71,22 @@ function get_board_db($bo_table, $is_cache=false){
     static $cache = array();
 
     $bo_table = preg_replace('/[^a-z0-9_]/i', '', $bo_table);
-    $cache = run_replace('get_board_db_cache', $cache, $bo_table, $is_cache);
+    if (!$bo_table) {
+        return array('bo_table'=>'', 'bo_skin'=>'', 'bo_mobile_skin'=>'', 'bo_upload_count' => 0, 'bo_use_dhtml_editor'=>'', 'bo_subject'=>'', 'bo_image_width'=>0);
+    }
+
     $key = md5($bo_table);
 
-    if( $is_cache && isset($cache[$key]) ){
+    if( $is_cache && isset($cache[$key]) && !empty($cache[$key]['bo_table']) ){
         return $cache[$key];
     }
 
-    if( !($cache[$key] = run_replace('get_board_db', array(), $bo_table)) ){
+    $sql = " select * from {$g5['board_table']} where bo_table = '$bo_table' ";
+    $board = sql_fetch($sql);
+    
+    $board_defaults = array('bo_table'=>'', 'bo_skin'=>'', 'bo_mobile_skin'=>'', 'bo_upload_count' => 0, 'bo_use_dhtml_editor'=>'', 'bo_subject'=>'', 'bo_image_width'=>0);
 
-        $sql = " select * from {$g5['board_table']} where bo_table = '$bo_table' ";
-
-        $board = sql_fetch($sql);
-        
-        $board_defaults = array('bo_table'=>'', 'bo_skin'=>'', 'bo_mobile_skin'=>'', 'bo_upload_count' => 0, 'bo_use_dhtml_editor'=>'', 'bo_subject'=>'', 'bo_image_width'=>0);
-
-        $cache[$key] = array_merge($board_defaults, (array) $board);
-    }
+    $cache[$key] = array_merge($board_defaults, (array) $board);
 
     return $cache[$key];
 }

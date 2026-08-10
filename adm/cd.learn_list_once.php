@@ -4,6 +4,10 @@ include_once('./_common.php');
 
 auth_check($auth[$sub_menu], 'r');
 
+if ($is_admin != 'super' && !empty($member['mb_profile'])) {
+    $company = $member['mb_profile'];
+}
+
 $sql_common = " from {$g5['member_table']} as m ";
 
 $sql_search = "  ";

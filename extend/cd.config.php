@@ -8,9 +8,15 @@ define('CD_LMS_VER',	    '0.1');
 define('CD_CSS_VER',	    '230314');
 define('CD_JS_VER',		    '210315');
 //클린데스크 테마 js, css, img 파일 경로
-define('CD_THEME_JS_URL',	G5_THEME_URL.'/_Js');
-define('CD_THEME_CSS_URL',	G5_THEME_URL.'/_Css');
-define('CD_THEME_IMG_URL',	G5_THEME_URL.'/_Img');
+if (defined('G5_THEME_URL')) {
+	define('CD_THEME_JS_URL',	G5_THEME_URL.'/_Js');
+	define('CD_THEME_CSS_URL',	G5_THEME_URL.'/_Css');
+	define('CD_THEME_IMG_URL',	G5_THEME_URL.'/_Img');
+} else {
+	define('CD_THEME_JS_URL',	G5_URL.'/theme/lofa/_Js');
+	define('CD_THEME_CSS_URL',	G5_URL.'/theme/lofa/_Css');
+	define('CD_THEME_IMG_URL',	G5_URL.'/theme/lofa/_Img');
+}
 
 //게시판 링크 갯수
 define('CD_LINK_COUNT', 0);

@@ -88,3 +88,19 @@ $aa = '1';
 		</div>
 	</div>
 </div>
+
+<script>
+function flogin_submit(f) {
+    if (!f.mb_id.value) {
+        alert("사번을 입력하세요.");
+        f.mb_id.focus();
+        return false;
+    }
+    if (!f.mb_password.value) {
+        alert("비밀번호를 입력하세요.");
+        f.mb_password.focus();
+        return false;
+    }
+    return true;
+}
+</script>
