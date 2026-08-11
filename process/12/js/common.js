@@ -109,13 +109,17 @@ var nowIndex = document.URL.split(makeName)[0];
 var chapter = nowIndex.substring(nowIndex.length - 6, nowIndex.length - 4);
 var page = nowIndex.substring(nowIndex.length - 2, nowIndex.length);
 
-//진도 체크
-p = parseInt(page, 10);
-parent.pageCheck(p);
-
 var mURL = "../mp4/";
 //var mURL = "http://nstest.sejong21.co.kr/process/ethic2209/mp4/";
 var mp4_Name = mURL + chapter + "_" + page + ".mp4";
+
+//진도 체크
+p = parseInt(page, 10);
+try {
+  if (typeof parent !== 'undefined' && typeof parent.pageCheck === 'function') {
+    parent.pageCheck(p);
+  }
+} catch (e) { }
 
 var topTitle = "나와 조직을 지키는 청렴윤리 가이드라인";	// 브라우저 타이틀
 document.title = topTitle;
