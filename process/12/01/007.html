@@ -138,7 +138,7 @@
 						<div class="anwtit">정답 : 3</div>
 						<div class="anwtxt">		
 						<div class="scConf">	
-							<p>윤리적 딜레마 상황에 직면할 때 활용할 자문(自問)으로는 <불법 또는 비윤리적인 행위로 의심되지는 않는가?>, <이 결정이 신문에 보도되거나 가족과 친구들에게 이야기할 경우 어떻게 비춰질 것인가?>, <거짓되거나 그릇된 내용이 포함되어 있는 것은 아닌가?>, <다른 사람들의 안전이나 건강을 위험에 빠뜨리는 것은 아닌가?>, <회사의 명성에 피해가 갈만한 것은 아닌가?>, <정당한 사업 목적을 가지고 있는가?> 등입니다. 딜레마 상황에서 자신이 생각하고 있는 행동 방침이 위 질문들 중 어느 하나에라도 저촉될 경우, 조언을 구하거나 자신의 결정을 재고해 보아야 합니다.</p>
+							<p>윤리적 딜레마 상황에 직면할 때 활용할 자문(自問)으로는 &lt;불법 또는 비윤리적인 행위로 의심되지는 않는가?&gt;, &lt;이 결정이 신문에 보도되거나 가족과 친구들에게 이야기할 경우 어떻게 비춰질 것인가?&gt;, &lt;거짓되거나 그릇된 내용이 포함되어 있는 것은 아닌가?&gt;, &lt;다른 사람들의 안전이나 건강을 위험에 빠뜨리는 것은 아닌가?&gt;, &lt;회사의 명성에 피해가 갈만한 것은 아닌가?&gt;, &lt;정당한 사업 목적을 가지고 있는가?&gt; 등입니다. 딜레마 상황에서 자신이 생각하고 있는 행동 방침이 위 질문들 중 어느 하나에라도 저촉될 경우, 조언을 구하거나 자신의 결정을 재고해 보아야 합니다.</p>
 						</div>
 						</div>
 					</div>
@@ -280,7 +280,7 @@ $(function(){
 		pageNum = pageNum+1;
 		$('.quiz').css('display','none');
 		$('.quiz').eq(pageNum).fadeIn(300);
-		$('.quiz').feedback. css('display','hidden');
+		$('.quiz').find('.feedback').css('display','none');
 		$('.quizTabs ul li').removeClass('on');
 		$('.quizTabs ul li').eq(pageNum).addClass('on');
 	});
@@ -500,7 +500,7 @@ $(function(){
 
 
     // movie
-    var movieUrl = [mURL+'/quiz.mp4']; // 1300k, 500k
+    var movieUrl = [mURL + 'Quiz.mp4']; // 1300k, 500k
        function jplayerControll(a){
 		var mUrl = movieUrl[a];
 		$('#jquery_jplayer_1').jPlayer({			
@@ -515,7 +515,7 @@ $(function(){
 				}
 			
 			},
-			swfPath:'js',
+			swfPath:'../js',
 			supplied:'m4v',
 			size: {
 				width:'1280px',

@@ -1,7 +1,7 @@
 /**
  * jQuery printPage Plugin
  * @version: 1.0
- * @author: Cedric Dugas, http://www.position-absolute.com
+ * @author: Cedric Dugas, https://www.position-absolute.com
  * @licence: MIT
  * @desciption: jQuery page print plugin help you print your page in a better way
  */

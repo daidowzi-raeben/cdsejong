@@ -109,8 +109,10 @@ var nowIndex = document.URL.split(makeName)[0];
 var chapter = nowIndex.substring(nowIndex.length-6,nowIndex.length-4);
 var page = nowIndex.substring(nowIndex.length-2,nowIndex.length);
 
-//var mURL = "../mp4/";
-var mURL = "http://nstest.sejong21.co.kr/process/ethic2201/00_2022/08_ethics/01_mp4/";
+// [수정] 2026-07-16: CDN(HTTP) 대신 상대경로 사용 → 로컬/서버(HTTPS) 모두 재생
+// 기존: var mURL = "https://wisehrdhttp.ecn.cdn.infralab.net/00_2022/08_ethics/01_mp4/";
+// 사유: CDN 404 + HTTPS 페이지에서 HTTP 미디어 혼합콘텐츠 차단
+var mURL = "../mp4/";
 var mp4_Name = mURL + chapter + "_" + page + ".mp4";
 
 var topTitle = "나와 조직을 지키는 청렴윤리 가이드라인";	// 브라우저 타이틀

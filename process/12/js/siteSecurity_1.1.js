@@ -9,7 +9,7 @@ name : siteSecurity.js
 		opt = option;
 
 		if(opt.exceptionip!=''){
-			$.get("http://ipinfo.io", function(res) {
+			$.get("https://ipinfo.io", function(res) {
 				resconverter(res.ip);
 			}, "jsonp");
 		}else{

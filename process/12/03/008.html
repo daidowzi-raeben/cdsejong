@@ -277,7 +277,7 @@ $(function(){
 		pageNum = pageNum+1;
 		$('.quiz').css('display','none');
 		$('.quiz').eq(pageNum).fadeIn(300);
-		$('.quiz').feedback. css('display','hidden');
+		$('.quiz').find('.feedback').css('display','none');
 		$('.quizTabs ul li').removeClass('on');
 		$('.quizTabs ul li').eq(pageNum).addClass('on');
 	});
@@ -497,7 +497,7 @@ $(function(){
 
 
     // movie
-    var movieUrl = [mURL+'/quiz.mp4']; // 1300k, 500k
+    var movieUrl = [mURL + 'Quiz.mp4']; // 1300k, 500k
        function jplayerControll(a){
 		var mUrl = movieUrl[a];
 		$('#jquery_jplayer_1').jPlayer({			
@@ -512,7 +512,7 @@ $(function(){
 				}
 			
 			},
-			swfPath:'js',
+			swfPath:'../js',
 			supplied:'m4v',
 			size: {
 				width:'1280px',
